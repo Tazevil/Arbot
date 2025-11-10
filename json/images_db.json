@@ -1,0 +1,1605 @@
+{
+  "db_name": "ArbotMiniDB_Augmented",
+  "created_at": "2025-11-10",
+  "count": 94,
+  "items": [
+    {
+      "id": "0001",
+      "title": "0001_SDB_GEN_20250818.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/0001_SDB_GEN_20250818.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/0001_SDB_GEN_20250818.webp",
+      "phase": "chantier",
+      "roi_hints": [
+        {
+          "x": 0.325,
+          "y": 0.325,
+          "w": 0.35,
+          "h": 0.35
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "0002",
+      "title": "0002_SDB_GEN_20250818.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/0002_SDB_GEN_20250818.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/0002_SDB_GEN_20250818.webp",
+      "phase": "chantier",
+      "roi_hints": [
+        {
+          "x": 0.325,
+          "y": 0.325,
+          "w": 0.35,
+          "h": 0.35
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "0003",
+      "title": "0003_SALON-PROTECTION_GEN_20250818.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/0003_SALON-PROTECTION_GEN_20250818.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/0003_SALON-PROTECTION_GEN_20250818.webp",
+      "phase": "chantier",
+      "roi_hints": [
+        {
+          "x": 0.325,
+          "y": 0.325,
+          "w": 0.35,
+          "h": 0.35
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "0004",
+      "title": "0004_SALON-PROTECTION_GEN_20250818.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/0004_SALON-PROTECTION_GEN_20250818.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/0004_SALON-PROTECTION_GEN_20250818.webp",
+      "phase": "chantier",
+      "roi_hints": [
+        {
+          "x": 0.325,
+          "y": 0.325,
+          "w": 0.35,
+          "h": 0.35
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "0005",
+      "title": "0005_WC_GEN_20250818.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/0005_WC_GEN_20250818.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/0005_WC_GEN_20250818.webp",
+      "phase": "chantier",
+      "roi_hints": [
+        {
+          "x": 0.325,
+          "y": 0.325,
+          "w": 0.35,
+          "h": 0.35
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "0006",
+      "title": "0006_SDB_GEN_20250819.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/0006_SDB_GEN_20250819.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/0006_SDB_GEN_20250819.webp",
+      "phase": "chantier",
+      "roi_hints": [
+        {
+          "x": 0.325,
+          "y": 0.325,
+          "w": 0.35,
+          "h": 0.35
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "0007",
+      "title": "0007_SDB_GEN_20250819.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/0007_SDB_GEN_20250819.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/0007_SDB_GEN_20250819.webp",
+      "phase": "chantier",
+      "roi_hints": [
+        {
+          "x": 0.325,
+          "y": 0.325,
+          "w": 0.35,
+          "h": 0.35
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "0008",
+      "title": "0008_SDB_GEN_20250819.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/0008_SDB_GEN_20250819.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/0008_SDB_GEN_20250819.webp",
+      "phase": "chantier",
+      "roi_hints": [
+        {
+          "x": 0.325,
+          "y": 0.325,
+          "w": 0.35,
+          "h": 0.35
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "0009",
+      "title": "0009_SDB_MAC_20250819.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/0009_SDB_MAC_20250819.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/0009_SDB_MAC_20250819.webp",
+      "phase": "chantier",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "0010",
+      "title": "0010_SDB_MAC_20250819.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/0010_SDB_MAC_20250819.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/0010_SDB_MAC_20250819.webp",
+      "phase": "chantier",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "0011",
+      "title": "0011_WC_GEN_20250819.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/0011_WC_GEN_20250819.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/0011_WC_GEN_20250819.webp",
+      "phase": "chantier",
+      "roi_hints": [
+        {
+          "x": 0.325,
+          "y": 0.325,
+          "w": 0.35,
+          "h": 0.35
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "0012",
+      "title": "0012_SDB_GEN_20250826.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/0012_SDB_GEN_20250826.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/0012_SDB_GEN_20250826.webp",
+      "phase": "chantier",
+      "roi_hints": [
+        {
+          "x": 0.325,
+          "y": 0.325,
+          "w": 0.35,
+          "h": 0.35
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "0013",
+      "title": "0013_SDB_GEN_20250826.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/0013_SDB_GEN_20250826.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/0013_SDB_GEN_20250826.webp",
+      "phase": "chantier",
+      "roi_hints": [
+        {
+          "x": 0.325,
+          "y": 0.325,
+          "w": 0.35,
+          "h": 0.35
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "0014",
+      "title": "0014_SDB_GEN_20250826.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/0014_SDB_GEN_20250826.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/0014_SDB_GEN_20250826.webp",
+      "phase": "chantier",
+      "roi_hints": [
+        {
+          "x": 0.325,
+          "y": 0.325,
+          "w": 0.35,
+          "h": 0.35
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "0015",
+      "title": "0015_SDB_GEN_20250826.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/0015_SDB_GEN_20250826.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/0015_SDB_GEN_20250826.webp",
+      "phase": "chantier",
+      "roi_hints": [
+        {
+          "x": 0.325,
+          "y": 0.325,
+          "w": 0.35,
+          "h": 0.35
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2001",
+      "title": "2001_SDB_GEN.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2001_SDB_GEN.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2001_SDB_GEN.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.325,
+          "y": 0.325,
+          "w": 0.35,
+          "h": 0.35
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2002",
+      "title": "2002_BAIGNOIRE_GEN.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2002_BAIGNOIRE_GEN.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2002_BAIGNOIRE_GEN.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.325,
+          "y": 0.325,
+          "w": 0.35,
+          "h": 0.35
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2003",
+      "title": "2003_BAIGNOIRE_GEN.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2003_BAIGNOIRE_GEN.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2003_BAIGNOIRE_GEN.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.325,
+          "y": 0.325,
+          "w": 0.35,
+          "h": 0.35
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2004",
+      "title": "2004_SOUS-BAIGNOIRE_GEN.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2004_SOUS-BAIGNOIRE_GEN.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2004_SOUS-BAIGNOIRE_GEN.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.325,
+          "y": 0.325,
+          "w": 0.35,
+          "h": 0.35
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2005",
+      "title": "2005_SOUS-MEUBLE-VASQUE_GEN.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2005_SOUS-MEUBLE-VASQUE_GEN.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2005_SOUS-MEUBLE-VASQUE_GEN.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.325,
+          "y": 0.325,
+          "w": 0.35,
+          "h": 0.35
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2101",
+      "title": "2101_ALIMENTATION-EVACUATION_DET.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2101_ALIMENTATION-EVACUATION_DET.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2101_ALIMENTATION-EVACUATION_DET.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.39,
+          "y": 0.39,
+          "w": 0.22,
+          "h": 0.22
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2102",
+      "title": "2102_EVACUATION_DET.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2102_EVACUATION_DET.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2102_EVACUATION_DET.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.39,
+          "y": 0.39,
+          "w": 0.22,
+          "h": 0.22
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2103",
+      "title": "2103_EVACUATION_MAC.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2103_EVACUATION_MAC.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2103_EVACUATION_MAC.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2104",
+      "title": "2104_ALIMENTATION_MAC.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2104_ALIMENTATION_MAC.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2104_ALIMENTATION_MAC.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2105",
+      "title": "2105_ALIMENTATION-EVACUATION_DET.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2105_ALIMENTATION-EVACUATION_DET.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2105_ALIMENTATION-EVACUATION_DET.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.39,
+          "y": 0.39,
+          "w": 0.22,
+          "h": 0.22
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2106",
+      "title": "2106_EVACUATION_MAC.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2106_EVACUATION_MAC.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2106_EVACUATION_MAC.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2107",
+      "title": "2107_EVACUATION_MAC.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2107_EVACUATION_MAC.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2107_EVACUATION_MAC.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2108",
+      "title": "2108_EVACUATION_DET.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2108_EVACUATION_DET.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2108_EVACUATION_DET.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.39,
+          "y": 0.39,
+          "w": 0.22,
+          "h": 0.22
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2109",
+      "title": "2109_ALIMENTATION-EVACUATION_DET.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2109_ALIMENTATION-EVACUATION_DET.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2109_ALIMENTATION-EVACUATION_DET.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.39,
+          "y": 0.39,
+          "w": 0.22,
+          "h": 0.22
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2110",
+      "title": "2110_VENTILATION-NATURELLE_DET.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2110_VENTILATION-NATURELLE_DET.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2110_VENTILATION-NATURELLE_DET.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.39,
+          "y": 0.39,
+          "w": 0.22,
+          "h": 0.22
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2111",
+      "title": "2111_VENTILATION-NATURELLE_DET.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2111_VENTILATION-NATURELLE_DET.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2111_VENTILATION-NATURELLE_DET.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.39,
+          "y": 0.39,
+          "w": 0.22,
+          "h": 0.22
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2112",
+      "title": "2112_MITIGEUR-BAIN_DET.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2112_MITIGEUR-BAIN_DET.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2112_MITIGEUR-BAIN_DET.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.39,
+          "y": 0.39,
+          "w": 0.22,
+          "h": 0.22
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2113",
+      "title": "2113_MITIGEUR-BAIN_MAC.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2113_MITIGEUR-BAIN_MAC.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2113_MITIGEUR-BAIN_MAC.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2114",
+      "title": "2114_MITIGEUR-BAIN_MAC.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2114_MITIGEUR-BAIN_MAC.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2114_MITIGEUR-BAIN_MAC.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2115",
+      "title": "2115_MITIGEUR-BAIN_MAC.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2115_MITIGEUR-BAIN_MAC.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2115_MITIGEUR-BAIN_MAC.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2116",
+      "title": "2116_MITIGEUR-BAIN_DET.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2116_MITIGEUR-BAIN_DET.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2116_MITIGEUR-BAIN_DET.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.39,
+          "y": 0.39,
+          "w": 0.22,
+          "h": 0.22
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2201",
+      "title": "2201_APPUI_DET.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2201_APPUI_DET.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2201_APPUI_DET.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.39,
+          "y": 0.39,
+          "w": 0.22,
+          "h": 0.22
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2202",
+      "title": "2202_JOINT_MAC.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2202_JOINT_MAC.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2202_JOINT_MAC.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2203",
+      "title": "2203_APPUI_DET.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2203_APPUI_DET.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2203_APPUI_DET.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.39,
+          "y": 0.39,
+          "w": 0.22,
+          "h": 0.22
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2204",
+      "title": "2204_APPUI_MAC.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2204_APPUI_MAC.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2204_APPUI_MAC.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2205",
+      "title": "2205_APPUI_MAC.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2205_APPUI_MAC.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2205_APPUI_MAC.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2206",
+      "title": "2206_APPUI_DET.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2206_APPUI_DET.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2206_APPUI_DET.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.39,
+          "y": 0.39,
+          "w": 0.22,
+          "h": 0.22
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2207",
+      "title": "2207_APPUI_DET.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2207_APPUI_DET.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2207_APPUI_DET.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.39,
+          "y": 0.39,
+          "w": 0.22,
+          "h": 0.22
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2208",
+      "title": "2208_PIEDS_MAC.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2208_PIEDS_MAC.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2208_PIEDS_MAC.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2209",
+      "title": "2209_PIEDS-SIPHON_MAC.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2209_PIEDS-SIPHON_MAC.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2209_PIEDS-SIPHON_MAC.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2210",
+      "title": "2210_PIEDS_MAC.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2210_PIEDS_MAC.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2210_PIEDS_MAC.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2301",
+      "title": "2301_JOINT_MGM.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2301_JOINT_MGM.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2301_JOINT_MGM.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2302",
+      "title": "2302_JOINT_MGM.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2302_JOINT_MGM.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2302_JOINT_MGM.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2303",
+      "title": "2303_JOINT_MGM.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2303_JOINT_MGM.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2303_JOINT_MGM.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2304",
+      "title": "2304_INTERRUPTEUR-PRISE_MAC.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2304_INTERRUPTEUR-PRISE_MAC.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2304_INTERRUPTEUR-PRISE_MAC.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2305",
+      "title": "2305_JOINT_MGS.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2305_JOINT_MGS.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2305_JOINT_MGS.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2306",
+      "title": "2306_JOINT_MGS.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2306_JOINT_MGS.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2306_JOINT_MGS.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2307",
+      "title": "2307_JOINT_MGS.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2307_JOINT_MGS.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2307_JOINT_MGS.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2308",
+      "title": "2308_JOINT_MGP.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2308_JOINT_MGP.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2308_JOINT_MGP.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2309",
+      "title": "2309_JOINT_MGP.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2309_JOINT_MGP.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2309_JOINT_MGP.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2310",
+      "title": "2310_JOINT_MGB.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2310_JOINT_MGB.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2310_JOINT_MGB.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2311",
+      "title": "2311_JOINT_MGB.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2311_JOINT_MGB.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2311_JOINT_MGB.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2312",
+      "title": "2312_JOINT_MAC.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2312_JOINT_MAC.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2312_JOINT_MAC.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2401",
+      "title": "2401_CARRELAGE-DESALIGNEMENT_DET.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2401_CARRELAGE-DESALIGNEMENT_DET.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2401_CARRELAGE-DESALIGNEMENT_DET.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.39,
+          "y": 0.39,
+          "w": 0.22,
+          "h": 0.22
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2402",
+      "title": "2402_BAGUETTE-BOIS_DET.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2402_BAGUETTE-BOIS_DET.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2402_BAGUETTE-BOIS_DET.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.39,
+          "y": 0.39,
+          "w": 0.22,
+          "h": 0.22
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2403",
+      "title": "2403_CARRELAGE-DESALIGNEMENT_DET.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2403_CARRELAGE-DESALIGNEMENT_DET.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2403_CARRELAGE-DESALIGNEMENT_DET.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.39,
+          "y": 0.39,
+          "w": 0.22,
+          "h": 0.22
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2404",
+      "title": "2404_CARRELAGE-DESALIGNEMENT_DET.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2404_CARRELAGE-DESALIGNEMENT_DET.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2404_CARRELAGE-DESALIGNEMENT_DET.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.39,
+          "y": 0.39,
+          "w": 0.22,
+          "h": 0.22
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2405",
+      "title": "2405_CARRELAGE-DESALIGNEMENT_DET.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2405_CARRELAGE-DESALIGNEMENT_DET.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2405_CARRELAGE-DESALIGNEMENT_DET.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.39,
+          "y": 0.39,
+          "w": 0.22,
+          "h": 0.22
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2406",
+      "title": "2406_BAGUETTE-BOIS_DET.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2406_BAGUETTE-BOIS_DET.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2406_BAGUETTE-BOIS_DET.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.39,
+          "y": 0.39,
+          "w": 0.22,
+          "h": 0.22
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2501",
+      "title": "2501_JOINT-PEINTURE_MGP.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2501_JOINT-PEINTURE_MGP.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2501_JOINT-PEINTURE_MGP.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2502",
+      "title": "2502_JOINT-PEINTURE_MGP.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2502_JOINT-PEINTURE_MGP.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2502_JOINT-PEINTURE_MGP.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2503",
+      "title": "2503_JOINT_MGP.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2503_JOINT_MGP.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2503_JOINT_MGP.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2504",
+      "title": "2504_JOINT_MGP.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2504_JOINT_MGP.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2504_JOINT_MGP.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2505",
+      "title": "2505_SPOT_DEG.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2505_SPOT_DEG.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2505_SPOT_DEG.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2506",
+      "title": "2506_SPOT-VMC_DEG.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2506_SPOT-VMC_DEG.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2506_SPOT-VMC_DEG.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2901",
+      "title": "2901_MEUBLE-VASQUE_DEG.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2901_MEUBLE-VASQUE_DEG.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2901_MEUBLE-VASQUE_DEG.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2902",
+      "title": "2902_BAGUETTES-BOIS_DEG.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2902_BAGUETTES-BOIS_DEG.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2902_BAGUETTES-BOIS_DEG.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2903",
+      "title": "2903_DECOR-BOIS_DEG.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2903_DECOR-BOIS_DEG.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2903_DECOR-BOIS_DEG.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2904",
+      "title": "2904_DECOR-BOIS_DEG.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2904_DECOR-BOIS_DEG.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2904_DECOR-BOIS_DEG.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "2905",
+      "title": "2905_DECOR-BOIS_DEG.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2905_DECOR-BOIS_DEG.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2905_DECOR-BOIS_DEG.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "3601",
+      "title": "3601_JOINT_DET.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/3601_JOINT_DET.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/3601_JOINT_DET.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.39,
+          "y": 0.39,
+          "w": 0.22,
+          "h": 0.22
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "3602",
+      "title": "3602_JOINT_DET.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/3602_JOINT_DET.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/3602_JOINT_DET.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.39,
+          "y": 0.39,
+          "w": 0.22,
+          "h": 0.22
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "3603",
+      "title": "3603_JOINT_DET.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/3603_JOINT_DET.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/3603_JOINT_DET.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.39,
+          "y": 0.39,
+          "w": 0.22,
+          "h": 0.22
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "3701",
+      "title": "3701_CUVETTE_GEN.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/3701_CUVETTE_GEN.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/3701_CUVETTE_GEN.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.325,
+          "y": 0.325,
+          "w": 0.35,
+          "h": 0.35
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "3702",
+      "title": "3702_CUVETTE_DEG.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/3702_CUVETTE_DEG.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/3702_CUVETTE_DEG.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "3703",
+      "title": "3703_CUVETTE_DEG.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/3703_CUVETTE_DEG.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/3703_CUVETTE_DEG.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "3704",
+      "title": "3704_CUVETTE_DEG.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/3704_CUVETTE_DEG.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/3704_CUVETTE_DEG.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "3705",
+      "title": "3705_CUVETTE_DEG.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/3705_CUVETTE_DEG.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/3705_CUVETTE_DEG.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "3706",
+      "title": "3706_CUVETTE_DEG.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/3706_CUVETTE_DEG.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/3706_CUVETTE_DEG.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "3707",
+      "title": "3707_CUVETTE_DEG.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/3707_CUVETTE_DEG.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/3707_CUVETTE_DEG.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "3708",
+      "title": "3708_CUVETTE_DEG.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/3708_CUVETTE_DEG.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/3708_CUVETTE_DEG.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "3709",
+      "title": "3709_COFFRAGE-BATI-SUPPORT_DEG.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/3709_COFFRAGE-BATI-SUPPORT_DEG.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/3709_COFFRAGE-BATI-SUPPORT_DEG.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "3710",
+      "title": "3710_COFFRAGE-BATI-SUPPORT_DEG.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/3710_COFFRAGE-BATI-SUPPORT_DEG.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/3710_COFFRAGE-BATI-SUPPORT_DEG.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "3711",
+      "title": "3711_COFFRAGE-BATI-SUPPORT_DEG.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/3711_COFFRAGE-BATI-SUPPORT_DEG.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/3711_COFFRAGE-BATI-SUPPORT_DEG.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "3801",
+      "title": "3801_PORTE_DEG.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/3801_PORTE_DEG.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/3801_PORTE_DEG.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "3802",
+      "title": "3802_DORMANT_DEG.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/3802_DORMANT_DEG.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/3802_DORMANT_DEG.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "3803",
+      "title": "3803_DORMANT_DEG.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/3803_DORMANT_DEG.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/3803_DORMANT_DEG.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "3804",
+      "title": "3804_DORMANT_DEG.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/3804_DORMANT_DEG.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/3804_DORMANT_DEG.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    },
+    {
+      "id": "3805",
+      "title": "3805_DORMANT_DEG.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/3805_DORMANT_DEG.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/3805_DORMANT_DEG.webp",
+      "phase": "sinistre",
+      "roi_hints": [
+        {
+          "x": 0.35,
+          "y": 0.35,
+          "w": 0.3,
+          "h": 0.3
+        }
+      ],
+      "created_at": "2025-11-10",
+      "tags": []
+    }
+  ]
+}

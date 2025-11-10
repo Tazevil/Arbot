@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "errors": [],
+  "warnings": [
+    "Doc 4: Spaces in filename 'Les travaux prévus en détails (1).pdf' (check URL encoding)",
+    "Doc 5: Spaces in filename 'Les travaux prévus en détails.pdf' (check URL encoding)",
+    "Doc OTHER-005: URL contains unencoded spaces",
+    "Doc OTHER-006: URL contains unencoded spaces"
+  ],
+  "info": [
+    "[OK] Loaded images_db.json with 94 items",
+    "[OK] Loaded docs_index.json with 16 documents",
+    "[OK] images_db structure validated (94 items)",
+    "[OK] docs_index structure validated (16 documents)",
+    "[OK] All 94 images found on disk",
+    "[OK] All 94 WebP previews found",
+    "[OK] All 16 documents found",
+    "[!] Found 2 data quality issues",
+    "[!] Found 2 URL consistency issues",
+    "[OK] images_db count matches items (94)",
+    "[OK] docs_index count matches documents (16)",
+    "[OK] No duplicate IDs in either database"
+  ],
+  "summary": {
+    "total_errors": 0,
+    "total_warnings": 4,
+    "images_count": 94,
+    "docs_count": 16
+  }
+}

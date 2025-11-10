@@ -1,0 +1,34 @@
+{
+  "recommendations": [
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "ms-python.debugpy",
+    "yzhang.markdown-all-in-one",
+    "shd101wyy.markdown-preview-enhanced",
+    "eamodio.gitlens",
+    "esbenp.prettier-vscode",
+    "redhat.vscode-yaml",
+    "usernamehw.errorlens",
+    "kisstkondoros.vscode-gutter-preview",
+    "formulahendry.auto-rename-tag",
+    "formulahendry.auto-close-tag",
+    "christian-kohler.path-intellisense",
+    "streetsidesoftware.code-spell-checker",
+    "gruntfuggly.todo-tree",
+    "aaron-bond.better-comments",
+    "oderwat.indent-rainbow",
+    "ritwickdey.liveserver",
+    "pkief.material-icon-theme",
+    "dbaeumer.vscode-eslint",
+    "redhat.vscode-xml",
+    "naumovs.color-highlight",
+    "wayou.vscode-todo-highlight",
+    "ms-vscode.hexeditor",
+    "ms-vscode.vscode-json",
+    "mikestead.dotenv",
+    "humao.rest-client",
+    "formulahendry.code-runner"
+  ],
+  "unwantedRecommendations": []
+}
+

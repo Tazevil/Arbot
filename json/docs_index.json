@@ -1,0 +1,264 @@
+{
+  "db_name": "ArBot_Docs_Index",
+  "version": "1.0.1",
+  "created_at": "2025-11-10T22:16:37.123173+00:00Z",
+  "total_documents": 16,
+  "documents": [
+    {
+      "id": "CR-001",
+      "filename": "CR_60.1_2025.pdf",
+      "path": "docs/Normes/CR/CR_60.1_2025.pdf",
+      "type": "CR",
+      "category": "Compliance Reports",
+      "code": "CR",
+      "title": "CR 60.1 2025",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/docs/Normes/CR/CR_60.1_2025.pdf",
+      "size_kb": 106.9,
+      "created_at": "2025-11-10",
+      "tags": [
+        "cr",
+        "compliance-reports"
+      ]
+    },
+    {
+      "id": "CR-002",
+      "filename": "CR_Normes-SDB_2025.pdf",
+      "path": "docs/Normes/CR/CR_Normes-SDB_2025.pdf",
+      "type": "CR",
+      "category": "Compliance Reports",
+      "code": "CR",
+      "title": "CR Normes-SDB 2025",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/docs/Normes/CR/CR_Normes-SDB_2025.pdf",
+      "size_kb": 311.3,
+      "created_at": "2025-11-10",
+      "tags": [
+        "cr",
+        "compliance-reports"
+      ]
+    },
+    {
+      "id": "CR-003",
+      "filename": "CR_Placo-SDB_2025.pdf",
+      "path": "docs/Normes/CR/CR_Placo-SDB_2025.pdf",
+      "type": "CR",
+      "category": "Compliance Reports",
+      "code": "CR",
+      "title": "CR Placo-SDB 2025",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/docs/Normes/CR/CR_Placo-SDB_2025.pdf",
+      "size_kb": 244.1,
+      "created_at": "2025-11-10",
+      "tags": [
+        "cr",
+        "compliance-reports"
+      ]
+    },
+    {
+      "id": "CR-004",
+      "filename": "CR_Renovation-SDB_2025.pdf",
+      "path": "docs/Normes/CR/CR_Renovation-SDB_2025.pdf",
+      "type": "CR",
+      "category": "Compliance Reports",
+      "code": "CR",
+      "title": "CR Renovation-SDB 2025",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/docs/Normes/CR/CR_Renovation-SDB_2025.pdf",
+      "size_kb": 47.7,
+      "created_at": "2025-11-10",
+      "tags": [
+        "cr",
+        "compliance-reports"
+      ]
+    },
+    {
+      "id": "OTHER-005",
+      "filename": "Les travaux prévus en détails (1).pdf",
+      "path": "docs/Normes/CR/Les travaux prévus en détails (1).pdf",
+      "type": "OTHER",
+      "category": "Compliance Reports",
+      "code": null,
+      "title": "Les travaux prévus en détails (1)",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/docs/Normes/CR/Les travaux prévus en détails (1).pdf",
+      "size_kb": 170.6,
+      "created_at": "2025-11-10",
+      "tags": [
+        "other",
+        "compliance-reports"
+      ]
+    },
+    {
+      "id": "OTHER-006",
+      "filename": "Les travaux prévus en détails.pdf",
+      "path": "docs/Normes/CR/Les travaux prévus en détails.pdf",
+      "type": "OTHER",
+      "category": "Compliance Reports",
+      "code": null,
+      "title": "Les travaux prévus en détails",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/docs/Normes/CR/Les travaux prévus en détails.pdf",
+      "size_kb": 170.6,
+      "created_at": "2025-11-10",
+      "tags": [
+        "other",
+        "compliance-reports"
+      ]
+    },
+    {
+      "id": "DTU-007",
+      "filename": "DTU_25.41_1993.pdf",
+      "path": "docs/Normes/DTU/DTU_25.41_1993.pdf",
+      "type": "DTU",
+      "category": "Standards",
+      "code": "DTU",
+      "title": "DTU 25.41 1993",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/docs/Normes/DTU/DTU_25.41_1993.pdf",
+      "size_kb": 1006.6,
+      "created_at": "2025-11-10",
+      "tags": [
+        "dtu",
+        "standards"
+      ]
+    },
+    {
+      "id": "DTU-008",
+      "filename": "DTU_25.42.P2_2012.pdf",
+      "path": "docs/Normes/DTU/DTU_25.42.P2_2012.pdf",
+      "type": "DTU",
+      "category": "Standards",
+      "code": "DTU",
+      "title": "DTU 25.42.P2 2012",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/docs/Normes/DTU/DTU_25.42.P2_2012.pdf",
+      "size_kb": 61.0,
+      "created_at": "2025-11-10",
+      "tags": [
+        "dtu",
+        "standards"
+      ]
+    },
+    {
+      "id": "DTU-009",
+      "filename": "DTU_52.2_2022.pdf",
+      "path": "docs/Normes/DTU/DTU_52.2_2022.pdf",
+      "type": "DTU",
+      "category": "Standards",
+      "code": "DTU",
+      "title": "DTU 52.2 2022",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/docs/Normes/DTU/DTU_52.2_2022.pdf",
+      "size_kb": 399.6,
+      "created_at": "2025-11-10",
+      "tags": [
+        "dtu",
+        "standards"
+      ]
+    },
+    {
+      "id": "DTU-010",
+      "filename": "DTU_60.1_2012.pdf",
+      "path": "docs/Normes/DTU/DTU_60.1_2012.pdf",
+      "type": "DTU",
+      "category": "Standards",
+      "code": "DTU",
+      "title": "DTU 60.1 2012",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/docs/Normes/DTU/DTU_60.1_2012.pdf",
+      "size_kb": 204.6,
+      "created_at": "2025-11-10",
+      "tags": [
+        "dtu",
+        "standards"
+      ]
+    },
+    {
+      "id": "NOTICE-011",
+      "filename": "NOTICE_CSTB-SPEC_2021.pdf",
+      "path": "docs/Normes/DTU/NOTICE_CSTB-SPEC_2021.pdf",
+      "type": "NOTICE",
+      "category": "Standards",
+      "code": "NOTICE",
+      "title": "NOTICE CSTB-SPEC 2021",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/docs/Normes/DTU/NOTICE_CSTB-SPEC_2021.pdf",
+      "size_kb": 7012.3,
+      "created_at": "2025-11-10",
+      "tags": [
+        "notice",
+        "standards"
+      ]
+    },
+    {
+      "id": "FT-012",
+      "filename": "FT_Baignoire_E6D122.pdf",
+      "path": "docs/Normes/FT/FT_Baignoire_E6D122.pdf",
+      "type": "FT",
+      "category": "Technical Sheets",
+      "code": "FT",
+      "title": "FT Baignoire E6D122",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/docs/Normes/FT/FT_Baignoire_E6D122.pdf",
+      "size_kb": 286.0,
+      "created_at": "2025-11-10",
+      "tags": [
+        "ft",
+        "technical-sheets"
+      ]
+    },
+    {
+      "id": "FT-013",
+      "filename": "FT_Carrelage_4263895.pdf",
+      "path": "docs/Normes/FT/FT_Carrelage_4263895.pdf",
+      "type": "FT",
+      "category": "Technical Sheets",
+      "code": "FT",
+      "title": "FT Carrelage 4263895",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/docs/Normes/FT/FT_Carrelage_4263895.pdf",
+      "size_kb": 115.4,
+      "created_at": "2025-11-10",
+      "tags": [
+        "ft",
+        "technical-sheets"
+      ]
+    },
+    {
+      "id": "FT-014",
+      "filename": "FT_Mitigeur_GROTHERM2000.pdf",
+      "path": "docs/Normes/FT/FT_Mitigeur_GROTHERM2000.pdf",
+      "type": "FT",
+      "category": "Technical Sheets",
+      "code": "FT",
+      "title": "FT Mitigeur GROTHERM2000",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/docs/Normes/FT/FT_Mitigeur_GROTHERM2000.pdf",
+      "size_kb": 452.5,
+      "created_at": "2025-11-10",
+      "tags": [
+        "ft",
+        "technical-sheets"
+      ]
+    },
+    {
+      "id": "FT-015",
+      "filename": "FT_Vidange_E6D124.pdf",
+      "path": "docs/Normes/FT/FT_Vidange_E6D124.pdf",
+      "type": "FT",
+      "category": "Technical Sheets",
+      "code": "FT",
+      "title": "FT Vidange E6D124",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/docs/Normes/FT/FT_Vidange_E6D124.pdf",
+      "size_kb": 210.9,
+      "created_at": "2025-11-10",
+      "tags": [
+        "ft",
+        "technical-sheets"
+      ]
+    },
+    {
+      "id": "NOTICE-016",
+      "filename": "NOTICE_Bain-Acrylique_v7.pdf",
+      "path": "docs/Normes/FT/NOTICE_Bain-Acrylique_v7.pdf",
+      "type": "NOTICE",
+      "category": "Technical Sheets",
+      "code": "NOTICE",
+      "title": "NOTICE Bain-Acrylique v7",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/docs/Normes/FT/NOTICE_Bain-Acrylique_v7.pdf",
+      "size_kb": 3336.9,
+      "created_at": "2025-11-10",
+      "tags": [
+        "notice",
+        "technical-sheets"
+      ]
+    }
+  ]
+}
