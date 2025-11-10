@@ -5,12 +5,13 @@
   "pattern": "^(?<file_ID>\\d{4})_(?<detail>[A-Z0-9À-ÖØ-Ý]+(?:-[A-Z0-9À-ÖØ-Ý]+)*)_(?<viewtype>[A-Z]{3})\\.(?<ext>jpg|jpeg|png|webp|tiff)$",
   "fields": {
     "zone_ID": "int [0..9]",
-    "cat_ID": "int [0..99]",
-    "cat_img_ID": "int [1..99]",
-    "file_ID_formula": "zone_ID*1000 + cat_ID*100 + cat_img_ID*10",
-    "file_ID_padding": "filename uses file_ID padded to 4 digits",
-    "detail": "UPPERCASE, accents allowed, hyphens, no spaces",
-    "viewtype": "enum code",
+    "cat_ID": "int [0..9]",
+    "cat_img_ID": "int [0..99]",
+    "file_ID_formula": "zone_ID*1000 + cat_ID*100 + cat_img_ID",
+    "file_ID_formula_explanation": "file_ID encodes: zone in thousands place, category in hundreds place, image number in ones/tens places",
+    "file_ID_padding": "filename uses file_ID padded to 4 digits with leading zeros",
+    "detail": "UPPERCASE, accents allowed (À-ÖØ-Ý), hyphens allowed, NO spaces",
+    "viewtype": "Exactly 3 uppercase letters - enum code",
     "ext": [
       "jpg",
       "jpeg",
@@ -120,7 +121,7 @@
     ]
   },
   "validations": {
-    "id_consistency": "file_ID == zone_ID*1000 + cat_ID*100 + cat_img_ID*10",
+    "id_consistency": "file_ID == zone_ID*1000 + cat_ID*100 + cat_img_ID",
     "id_uniqueness_scope": "cat_img_ID unique per (zone_ID, cat_ID)",
     "detail_charset": "^[A-Z0-9À-ÖØ-Ý]+(?:-[A-Z0-9À-ÖØ-Ý]+)*$",
     "no_spaces_in_detail": true,

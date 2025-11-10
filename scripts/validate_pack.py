@@ -23,19 +23,32 @@ from pathlib import Path
 from collections import defaultdict
 
 # ----- Config dictionnaires (donnés par l'utilisateur)
+# REFERENCE: docs/knowledge/name_convention.json (v1.5, 2025-10-15)
 ZONES = {0: "CHANTIER", 1: "PLAN", 2: "SDB", 3: "WC"}
 CATS  = {0: "VUE GENERALE", 1: "PLOMBERIE", 2: "BAIGNOIRE", 3: "CARRELAGE", 4: "FENETRE",
-         5: "PLAFOND", 6: "PLATERIE", 7: "SANITAIRE", 8: "PLACARD"}
+         5: "PLAFOND", 6: "PLATRERIE", 7: "SANITAIRE", 8: "PLACARD", 9: "EXISTANT"}
 SPECS_ALLOWED = {"PAN","GEN","DET","MAC","MGM","MGS","MGP","MGB","DEG"}
 EXT_ALLOWED = {"jpg","jpeg","png","webp","tiff"}
 
 # Optionnel: mapping numérique pour Id_Spec (non fourni) → UNKNOWN par défaut
 SPEC2ID = {s: "UNKNOWN" for s in SPECS_ALLOWED}
 
-# ----- Regex (sensibles à la casse: majuscules attendues)
-RX_A = re.compile(r'^(\d{4})_([A-Z0-9]+(?:-[A-Z0-9]+)*)_([A-Z0-9]{2,6})_(\d{8})\.(jpg|jpeg|png|webp|tiff)$')
-RX_B = re.compile(r'^(\d{4})_([A-Z0-9]+(?:-[A-Z0-9]+)*)_(\d{4})\.(jpg|jpeg|png|webp|tiff)$')
-RX_C = re.compile(r'^(\d{4})_([A-Z0-9]+(?:-[A-Z0-9]+)*)_([A-Z0-9]{2,6})\.(jpg|jpeg|png|webp|tiff)$')
+# ----- Regex (Official NameGen v1.5 pattern - sensibles à la casse: majuscules attendues)
+# REFERENCE: docs/knowledge/name_convention.json
+# Pattern: NNNN_DETAIL_VIEWTYPE[_YYYYMMDD].ext
+# - NNNN: 4 digits (file ID = zone*1000 + cat*100 + img*10)
+# - DETAIL: UPPERCASE, accents allowed (À-ÖØ-Ý), hyphens OK, NO spaces
+# - VIEWTYPE: EXACTLY 3 UPPERCASE letters (PAN, GEN, DET, MAC, MGM, MGS, MGP, MGB, DEG)
+# - YYYYMMDD: Optional 8-digit date suffix (for CHANTIER zone 0 photos)
+# - ext: lowercase (jpg, jpeg, png, webp, tiff)
+RX_OFFICIAL = re.compile(
+    r'^(?P<file_ID>\d{4})_'
+    r'(?P<detail>[A-Z0-9À-ÖØ-Ý]+(?:-[A-Z0-9À-ÖØ-Ý]+)*)_'
+    r'(?P<viewtype>[A-Z]{3})'
+    r'(?:_(?P<date>\d{8}))?'
+    r'\.(?P<ext>jpg|jpeg|png|webp|tiff)$',
+    re.UNICODE
+)
 
 def decode_id_file(id_file: int):
     id_zone = id_file // 1000
@@ -50,74 +63,44 @@ def classify(has_date: bool) -> str:
     return "chantier" if has_date else "sinistre"
 
 def parse_filename(fname: str):
-    """Retourne dict normalisé ou lève ValueError détaillé."""
+    """Retourne dict normalisé ou lève ValueError détaillé.
+    Utilise pattern officiel NameGen v1.5 (NNNN_DETAIL_VIEWTYPE[_YYYYMMDD].ext)
+    """
     name = fname
     lowext = fname.split('.')[-1].lower()
     if lowext not in EXT_ALLOWED:
         raise ValueError(f"extension interdite: .{lowext}")
 
-    mA = RX_A.match(fname)
-    mB = RX_B.match(fname)
-    mC = RX_C.match(fname)
+    m = RX_OFFICIAL.match(fname)
+    if not m:
+        raise ValueError("Fichier n'adhère pas au pattern officiel NameGen v1.5: NNNN_DETAIL_VIEWTYPE[_YYYYMMDD].ext")
 
-    if mA:
-        id_file   = int(mA.group(1))
-        detail    = mA.group(2)
-        spec      = mA.group(3)
-        date      = mA.group(4)
-        ext       = mA.group(5).lower()
-        id_zone, id_cat, id_image = decode_id_file(id_file)
-        if id_zone != 0:
-            raise ValueError("Cas A attendu uniquement si Id_Zone=0 (CHANTIER)")
-        if spec not in SPECS_ALLOWED:
-            raise ValueError(f"Spec inconnue pour cas A: {spec}")
-        return {
-            "case": "A",
-            "id_file": id_file, "Id_File_str": f"{id_file}",
-            "Id_Zone": id_zone, "Id_Cat": id_cat, "id_image": id_image,
-            "detail": detail, "Spec": spec, "Id_Spec": SPEC2ID.get(spec, "UNKNOWN"),
-            "ext": ext, "date_yyyymmdd": date, "year": "",
-            "classification": classify(True)
-        }
+    gd = m.groupdict()
+    id_file = int(gd["file_ID"])
+    detail = gd["detail"]
+    viewtype = gd["viewtype"]
+    date = gd.get("date") or ""
+    ext = gd["ext"].lower()
 
-    if mB:
-        id_file   = int(mB.group(1))
-        detail    = mB.group(2)
-        year      = mB.group(3)
-        ext       = mB.group(4).lower() if hasattr(mB, "group") else lowext
-        id_zone, id_cat, id_image = decode_id_file(id_file)
-        if id_zone != 1:
-            raise ValueError("Cas B attendu uniquement si Id_Zone=1 (PLAN)")
-        # year → id_spec selon règle
-        return {
-            "case": "B",
-            "id_file": id_file, "Id_File_str": f"{id_file}",
-            "Id_Zone": id_zone, "Id_Cat": id_cat, "id_image": id_image,
-            "detail": detail, "Spec": year, "Id_Spec": year,
-            "ext": ext, "date_yyyymmdd": "", "year": year,
-            "classification": classify(False)
-        }
+    if viewtype not in SPECS_ALLOWED:
+        raise ValueError(f"Viewtype '{viewtype}' not in approved enum: {SPECS_ALLOWED}")
 
-    if mC:
-        id_file   = int(mC.group(1))
-        detail    = mC.group(2)
-        spec      = mC.group(3)
-        ext       = mC.group(4).lower()
-        id_zone, id_cat, id_image = decode_id_file(id_file)
-        if id_zone in (0,1):
-            raise ValueError("Cas C interdit pour Id_Zone in {0,1}")
-        if spec not in SPECS_ALLOWED:
-            raise ValueError(f"Spec inconnue pour cas C: {spec}")
-        return {
-            "case": "C",
-            "id_file": id_file, "Id_File_str": f"{id_file}",
-            "Id_Zone": id_zone, "Id_Cat": id_cat, "id_image": id_image,
-            "detail": detail, "Spec": spec, "Id_Spec": SPEC2ID.get(spec, "UNKNOWN"),
-            "ext": ext, "date_yyyymmdd": "", "year": "",
-            "classification": classify(False)
-        }
+    id_zone, id_cat, id_image = decode_id_file(id_file)
 
-    raise ValueError("Aucun pattern ne correspond (A/B/C)")
+    return {
+        "id_file": id_file,
+        "Id_File_str": gd["file_ID"],  # garde le padding "0001"
+        "Id_Zone": id_zone,
+        "Id_Cat": id_cat,
+        "id_image": id_image,
+        "detail": detail,
+        "Spec": viewtype,
+        "Id_Spec": SPEC2ID.get(viewtype, "UNKNOWN"),
+        "ext": ext,
+        "date_yyyymmdd": date,
+        "year": "",
+        "classification": classify(bool(date))
+    }
 
 def main():
     ap = argparse.ArgumentParser()

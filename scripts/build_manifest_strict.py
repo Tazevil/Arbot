@@ -103,11 +103,12 @@ def main():
                 continue
 
             # derive IDs
+            # Formula: file_ID = zone_ID*1000 + cat_ID*100 + cat_img_ID
             zone_ID = file_ID // 1000
             cat_ID = (file_ID % 1000) // 100
             cat_img_ID = file_ID % 100
 
-            id_ok = (file_ID == zone_ID*1000 + cat_ID*100 + cat_img_ID*10)
+            id_ok = (file_ID == zone_ID*1000 + cat_ID*100 + cat_img_ID)
 
             # names
             zone_name = ZONE.get(zone_ID, "UNKNOWN")

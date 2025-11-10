@@ -1,12 +1,43 @@
 {
   "version": "1.0.0",
-  "generated_at": "2025-11-06T00:00:00Z",
+  "generated_at": "2025-11-10T00:00:00Z",
+  "updated_at": "2025-11-10T00:00:00Z",
   "checksum_sha256": "UNKNOWN",
   "counts": {
-    "images": 3,
-    "docs": 3,
-    "json": 2
+    "images": 94,
+    "docs": 40,
+    "json": 15
   },
-  "folders": ["images", "docs", "json"],
-  "notes": "Mini base ArBot pour tests de pipeline Vision/Doc"
+  "folders": ["images", "docs", "json", "scripts"],
+  "notes": "Mini base ArBot pour tests de pipeline Vision/Doc - Dataset complet avec photos, documentations techniques, et base de connaissance",
+  "image_naming_convention": {
+    "version": "v1.5",
+    "date_defined": "2025-10-15",
+    "pattern": "^(?<file_ID>\\d{4})_(?<detail>[A-Z0-9À-ÖØ-Ý]+(?:-[A-Z0-9À-ÖØ-Ý]+)*)_(?<viewtype>[A-Z]{3})\\.(?<ext>jpg|jpeg|png|webp|tiff)$",
+    "description": "Image filenames follow NNNN_DETAIL_VIEWTYPE.ext format",
+    "rules": {
+      "file_ID": "4-digit code encoding zone + category + image number (zone_ID*1000 + cat_ID*100 + cat_img_ID*10)",
+      "detail": "UPPERCASE detail name, accents allowed, hyphens OK, NO spaces",
+      "viewtype": "Exactly 3 uppercase letters from approved enum (PAN, GEN, DET, MAC, MGM, MGS, MGP, MGB, DEG)",
+      "extension": "jpg, jpeg, png, webp, or tiff (lowercase)"
+    },
+    "zone_IDs": {
+      "0": "CHANTIER (worksite/construction photos)",
+      "1": "PLAN (plans and designs)",
+      "2": "SDB (bathroom damage/repair)",
+      "3": "WC (toilet damage/repair)"
+    },
+    "viewtype_codes": {
+      "PAN": "Panoramic view",
+      "GEN": "General view",
+      "DET": "Close-up detail",
+      "MAC": "Macro view",
+      "MGM": "Wall-to-wall interaction",
+      "MGS": "Wall-to-floor interaction",
+      "MGP": "Wall-to-ceiling interaction",
+      "MGB": "Wall-to-tub interaction",
+      "DEG": "Damage to existing"
+    },
+    "reference_file": "docs/knowledge/name_convention.json"
+  }
 }
