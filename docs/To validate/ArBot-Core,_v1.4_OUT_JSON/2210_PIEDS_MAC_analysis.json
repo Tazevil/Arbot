@@ -1,0 +1,274 @@
+{
+  "meta": {
+    "SOP_name": "ArBot-Core",
+    "SOP_ver": "v1.4",
+    "generated_at": "2025-10-16T14:46:00Z",
+    "tool_list": [
+      "vision",
+      "knowledge",
+      "repair",
+      "normalize"
+    ],
+    "schema_ref": "schemas/arbot-vision-analysis.schema.json",
+    "schema_ver": "v1.0.1",
+    "ingestion_log": {
+      "mode": "GDocs-repair"
+    }
+  },
+  "context": {
+    "project_ID": "EX70",
+    "project_name": "Sinistre baignoire RDC",
+    "project_type": "Expertise Sinistre",
+    "phase_ID": "PH2",
+    "phase_name": "Diagnostic sinistre"
+  },
+  "source_file": {
+    "file_cat": "Photo",
+    "file_ID": "2210",
+    "file_name": "2210_PIEDS_MAC.jpg",
+    "file_ext": "jpg",
+    "file_img_width": 1884,
+    "file_img_height": 4080,
+    "file_date": "2025-08-18",
+    "zone_ID": 2,
+    "zone_name": "SDB",
+    "cat_ID": 2,
+    "cat_img_ID": "10",
+    "cat_name": "BAIGNOIRE",
+    "viewtype_ID": "MAC",
+    "viewtype_name": "VUE MACRO",
+    "full_exif_data": {
+      "enabled": true
+    }
+  },
+  "vision": {
+    "passes": 3,
+    "scales": [
+      1,
+      0.75,
+      0.5
+    ],
+    "nms_iou": 0.5,
+    "refine_below": 0.82,
+    "trust_score": 0.98,
+    "focus_type": "métrique",
+    "target_zone": "MGS",
+    "viewtype_ID": "MAC",
+    "viewtype_name": "VUE MACRO",
+    "evidence_crops": [
+      "2210_crop1.jpg"
+    ],
+    "annotations": [
+      {
+        "ann_ID": "2210_D01_A01",
+        "ann_type": "point",
+        "ann_label": "Mesure du pied",
+        "ann_linked_def_ID": "2210_M01",
+        "ann_layer": "métrique",
+        "ann_confidence": 0.99,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#34C759",
+          "stroke_width": 2,
+          "fill": "#34C759",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2210_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.4,
+          0.5,
+          0.5,
+          0.6
+        ]
+      },
+      {
+        "ann_ID": "2210_D02_A01",
+        "ann_type": "polygon",
+        "ann_label": "Absence de SPEC",
+        "ann_linked_def_ID": "2210_D01",
+        "ann_layer": "étanchéité",
+        "ann_confidence": 0.98,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#800080",
+          "stroke_width": 2,
+          "fill": "#800080",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2210_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.05,
+          0.35,
+          0.4,
+          0.5
+        ],
+        "polygon_norm": [
+          [
+            0.05,
+            0.35
+          ],
+          [
+            0.4,
+            0.35
+          ],
+          [
+            0.4,
+            0.5
+          ],
+          [
+            0.05,
+            0.5
+          ],
+          [
+            0.05,
+            0.35
+          ]
+        ]
+      },
+      {
+        "ann_ID": "2210_D03_A01",
+        "ann_type": "polygon",
+        "ann_label": "Dégradation du support / Débris",
+        "ann_linked_def_ID": "2210_D02",
+        "ann_layer": "revêtement",
+        "ann_confidence": 0.95,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#DC143C",
+          "stroke_width": 2,
+          "fill": "#DC143C",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2210_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.3,
+          0.65,
+          0.95,
+          0.9
+        ],
+        "polygon_norm": [
+          [
+            0.3,
+            0.65
+          ],
+          [
+            0.95,
+            0.65
+          ],
+          [
+            0.95,
+            0.9
+          ],
+          [
+            0.3,
+            0.9
+          ],
+          [
+            0.3,
+            0.65
+          ]
+        ]
+      }
+    ],
+    "metrics": [
+      {
+        "metric_id": "m1",
+        "type": "hauteur_pied_baignoire",
+        "value": 100,
+        "unit": "mm",
+        "expected_min": 90,
+        "status": "conforme (dans la plage attendue)",
+        "annotation_ref": "2210_D01_A01"
+      }
+    ],
+    "defects": [
+      {
+        "rule_type": "Norme",
+        "annotation_refs": [
+          "2210_D02_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Manque de système d'étanchéité (SPEC) sur les murs de support de la baignoire.",
+        "origin_viewtype_ID": "MAC",
+        "origin_focus": "détail",
+        "origin_layer": "étanchéité",
+        "id_defaut": "2210_D01",
+        "categorie": "étanchéité",
+        "type_defaut": "non-conformité SPEC",
+        "resume": "Absence de Système de Protection à l'Eau (SPEC)",
+        "details": "L'application d'un SPEC (ou SEL) est obligatoire sur les supports sensibles à l'eau (plâtre) en zone EB+p (autour de la baignoire). Aucune membrane n'est visible sur le support H1 exposé.",
+        "regle_ref": {
+          "norme": "DTU 25.41_1993",
+          "partie": "Annexe A.1"
+        },
+        "gravite": 1,
+        "priorite": 1,
+        "temps": 1,
+        "conf_score": 0.98,
+        "incertitude": 0.020000000000000018
+      },
+      {
+        "rule_type": "Norme",
+        "annotation_refs": [
+          "2210_D03_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Dégradation du support H1 et présence de gravats sous la baignoire.",
+        "origin_viewtype_ID": "MAC",
+        "origin_focus": "détail",
+        "origin_layer": "revêtement",
+        "id_defaut": "2210_D02",
+        "categorie": "support",
+        "type_defaut": "préparation du support",
+        "resume": "Dégradation du support et présence de débris",
+        "details": "La présence de débris de construction (plâtre, gravats) est visible au sol. Le support doit être sain et propre avant l'installation, et la pose sur mortier/plâtre est interdite.",
+        "regle_ref": {
+          "norme": "DTU 52.2_2022",
+          "partie": "Partie 1-1 > 5.2.2"
+        },
+        "gravite": 2,
+        "priorite": 2,
+        "temps": 1,
+        "conf_score": 0.95,
+        "incertitude": 0.050000000000000044
+      }
+    ],
+    "transform_history": [
+      {
+        "step": "gdocs-repair",
+        "seed": 42
+      }
+    ]
+  },
+  "presentation": {
+    "caption": "Mesure du pied de la baignoire: 100 mm",
+    "padded_bbox_norm": [
+      0.4,
+      0.5,
+      0.5,
+      0.6
+    ],
+    "style": "highlight-color:#00FFFF; opacity:0.35; border:2px solid #00FFFF;",
+    "refined": true,
+    "confidence_before": 0.9,
+    "confidence_after": 0.99
+  },
+  "validation": {
+    "ok": true,
+    "erreurs": [],
+    "avertissements": []
+  },
+  "protocol": {
+    "mode_tracabilite": "EXTENDED_DEBUG",
+    "determinisme": {
+      "force_seed": 42
+    },
+    "exigence_materielle": {
+      "require_certification": [
+        "SPEC/SEL",
+        "Mortier-colle C2-S1/S2",
+        "Plaque H1"
+      ]
+    }
+  }
+}

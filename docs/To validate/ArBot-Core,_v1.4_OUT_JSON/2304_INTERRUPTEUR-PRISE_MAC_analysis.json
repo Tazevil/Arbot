@@ -1,0 +1,175 @@
+{
+  "meta": {
+    "SOP_name": "ArBot-Core",
+    "SOP_ver": "v1.4",
+    "generated_at": "2025-10-16T14:54:00Z",
+    "tool_list": [
+      "vision",
+      "knowledge",
+      "repair",
+      "normalize"
+    ],
+    "schema_ref": "schemas/arbot-vision-analysis.schema.json",
+    "schema_ver": "v1.0.1",
+    "ingestion_log": {
+      "mode": "GDocs-repair"
+    }
+  },
+  "context": {
+    "project_ID": "EX70",
+    "project_name": "Sinistre baignoire RDC",
+    "project_type": "Expertise Sinistre",
+    "phase_ID": "PH2",
+    "phase_name": "Diagnostic sinistre"
+  },
+  "source_file": {
+    "file_cat": "Photo",
+    "file_ID": "2304",
+    "file_name": "2304_INTERRUPTEUR-PRISE_MAC.jpg",
+    "file_ext": "jpg",
+    "file_img_width": 1884,
+    "file_img_height": 4080,
+    "file_date": "2025-08-18",
+    "zone_ID": 3,
+    "zone_name": "WC",
+    "cat_ID": 3,
+    "cat_img_ID": "04",
+    "cat_name": "CARRELAGE",
+    "viewtype_ID": "MAC",
+    "viewtype_name": "VUE MACRO",
+    "full_exif_data": {
+      "enabled": true
+    }
+  },
+  "vision": {
+    "passes": 3,
+    "scales": [
+      1,
+      0.75,
+      0.5
+    ],
+    "nms_iou": 0.5,
+    "refine_below": 0.82,
+    "trust_score": 0.98,
+    "focus_type": "détail",
+    "target_zone": "Finitions",
+    "viewtype_ID": "MAC",
+    "viewtype_name": "VUE MACRO",
+    "evidence_crops": [
+      "2304_crop1.jpg"
+    ],
+    "annotations": [
+      {
+        "ann_ID": "2304_D01_A01",
+        "ann_type": "polygon",
+        "ann_label": "Marques de crayon",
+        "ann_linked_def_ID": "2304_D01",
+        "ann_layer": "finition",
+        "ann_confidence": 0.9,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#D2B48C",
+          "stroke_width": 2,
+          "fill": "#D2B48C",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2304_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.7,
+          0.75,
+          0.85,
+          0.85
+        ],
+        "polygon_norm": [
+          [
+            0.7,
+            0.75
+          ],
+          [
+            0.85,
+            0.75
+          ],
+          [
+            0.85,
+            0.85
+          ],
+          [
+            0.7,
+            0.85
+          ],
+          [
+            0.7,
+            0.75
+          ]
+        ]
+      }
+    ],
+    "metrics": [],
+    "defects": [
+      {
+        "rule_type": "Notice",
+        "annotation_refs": [
+          "2304_D01_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Marques de crayon visibles autour de la prise.",
+        "origin_viewtype_ID": "MAC",
+        "origin_focus": "détail",
+        "origin_layer": "finition",
+        "id_defaut": "2304_D01",
+        "categorie": "finition",
+        "type_defaut": "esthétique",
+        "resume": "Défaut de finition (Marques de crayon)",
+        "details": "Des marques de traçage (crayon/niveau) sont visibles sur la paroi carrelée autour de l'appareillage. Elles doivent être nettoyées avant la réception des travaux.",
+        "regle_ref": {
+          "norme": "DTU 25.42_P2_2012",
+          "partie": "4.2 Travaux ne faisant pas partie du marché"
+        },
+        "gravite": 3,
+        "priorite": 3,
+        "temps": 3,
+        "conf_score": 0.9,
+        "incertitude": 0.09999999999999998
+      }
+    ],
+    "transform_history": [
+      {
+        "step": "gdocs-repair",
+        "seed": 42
+      }
+    ]
+  },
+  "presentation": {
+    "caption": "Défaut de finition (Marques de crayon)",
+    "padded_bbox_norm": [
+      0.69,
+      0.74,
+      0.86,
+      0.86
+    ],
+    "style": "highlight-color:#00FFFF; opacity:0.35; border:2px solid #00FFFF;",
+    "refined": true,
+    "confidence_before": 0.85,
+    "confidence_after": 0.9
+  },
+  "validation": {
+    "ok": true,
+    "erreurs": [],
+    "avertissements": [
+      "Le défaut de non-conformité au volume électrique (G1) a été retiré suite à l'information de l'utilisateur. Seul le défaut de finition subsiste."
+    ]
+  },
+  "protocol": {
+    "mode_tracabilite": "EXTENDED_DEBUG",
+    "determinisme": {
+      "force_seed": 42
+    },
+    "exigence_materielle": {
+      "require_certification": [
+        "SPEC/SEL",
+        "Mortier-colle C2-S1/S2",
+        "Plaque H1"
+      ]
+    }
+  }
+}

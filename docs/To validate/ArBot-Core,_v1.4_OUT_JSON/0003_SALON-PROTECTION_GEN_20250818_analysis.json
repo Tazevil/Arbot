@@ -1,0 +1,240 @@
+{
+  "meta": {
+    "SOP_name": "ArBot-Core",
+    "SOP_ver": "v1.4",
+    "generated_at": "2025-10-17T11:48:00Z",
+    "tool_list": [
+      "vision",
+      "knowledge",
+      "repair",
+      "normalize"
+    ],
+    "schema_ref": "schemas/arbot-vision-analysis.schema.json",
+    "schema_ver": "v1.0.1",
+    "ingestion_log": {
+      "mode": "GDocs-repair"
+    }
+  },
+  "context": {
+    "project_ID": "EX70",
+    "project_name": "Sinistre baignoire RDC",
+    "project_type": "Expertise Sinistre",
+    "phase_ID": "PH2",
+    "phase_name": "Diagnostic sinistre"
+  },
+  "source_file": {
+    "file_cat": "Photo",
+    "file_ID": "0003",
+    "file_name": "0003_SALON-PROTECTION_GEN_20250818.jpg",
+    "file_ext": "jpg",
+    "file_img_width": 1884,
+    "file_img_height": 4080,
+    "file_date": "2025-08-18",
+    "zone_ID": 0,
+    "zone_name": "CHANTIER",
+    "cat_ID": 0,
+    "cat_img_ID": "03",
+    "cat_name": "VUE GENERALE",
+    "viewtype_ID": "GEN",
+    "viewtype_name": "VUE GENERALE",
+    "full_exif_data": {
+      "enabled": true
+    }
+  },
+  "vision": {
+    "passes": 3,
+    "scales": [
+      1,
+      0.75,
+      0.5
+    ],
+    "nms_iou": 0.5,
+    "refine_below": 0.82,
+    "trust_score": 0.95,
+    "focus_type": "contexte",
+    "target_zone": "CHANTIER",
+    "viewtype_ID": "GEN",
+    "viewtype_name": "VUE GENERALE",
+    "evidence_crops": [],
+    "annotations": [
+      {
+        "ann_ID": "0003_D01_A01",
+        "ann_type": "polygon",
+        "ann_label": "Protection insuffisante / Débris",
+        "ann_linked_def_ID": "0003_D01",
+        "ann_layer": "finition",
+        "ann_confidence": 0.95,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#D2B48C",
+          "stroke_width": 2,
+          "fill": "#D2B48C",
+          "opacity": 0.35
+        },
+        "evidence_crop": "",
+        "bbox_xyxy_norm": [
+          0.3,
+          0.5,
+          0.9,
+          0.8
+        ],
+        "polygon_norm": [
+          [
+            0.3,
+            0.5
+          ],
+          [
+            0.9,
+            0.5
+          ],
+          [
+            0.9,
+            0.8
+          ],
+          [
+            0.3,
+            0.8
+          ],
+          [
+            0.3,
+            0.5
+          ]
+        ]
+      },
+      {
+        "ann_ID": "0003_D02_A01",
+        "ann_type": "polygon",
+        "ann_label": "Traces/Salissures sur sols et meubles",
+        "ann_linked_def_ID": "0003_D02",
+        "ann_layer": "finition",
+        "ann_confidence": 0.9,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#DC143C",
+          "stroke_width": 2,
+          "fill": "#DC143C",
+          "opacity": 0.35
+        },
+        "evidence_crop": "",
+        "bbox_xyxy_norm": [
+          0.05,
+          0.7,
+          0.95,
+          0.95
+        ],
+        "polygon_norm": [
+          [
+            0.05,
+            0.7
+          ],
+          [
+            0.95,
+            0.7
+          ],
+          [
+            0.95,
+            0.95
+          ],
+          [
+            0.05,
+            0.95
+          ],
+          [
+            0.05,
+            0.7
+          ]
+        ]
+      }
+    ],
+    "metrics": [],
+    "defects": [
+      {
+        "rule_type": "Classification",
+        "annotation_refs": [
+          "0003_D01_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Matériaux, outils et débris stockés sans protection adéquate dans l'espace de vie.",
+        "origin_viewtype_ID": "GEN",
+        "origin_focus": "général",
+        "origin_layer": "finition",
+        "id_defaut": "0003_D01",
+        "categorie": "finition",
+        "type_defaut": "propreté/protection",
+        "resume": "Protection du chantier insuffisante",
+        "details": "L'espace de vie adjacent (Salon) est en partie non protégé et sert de zone de stockage pour les matériaux et outils, indiquant un manque de soin dans la protection du maître d'ouvrage.",
+        "regle_ref": {
+          "norme": "SDB_def_class.pdf",
+          "partie": "Gravité"
+        },
+        "gravite": 3,
+        "priorite": 3,
+        "temps": 3,
+        "conf_score": 0.95,
+        "incertitude": 0.050000000000000044
+      },
+      {
+        "rule_type": "Classification",
+        "annotation_refs": [
+          "0003_D02_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Débris et salissures sont visibles sur les finitions existantes.",
+        "origin_viewtype_ID": "GEN",
+        "origin_focus": "général",
+        "origin_layer": "finition",
+        "id_defaut": "0003_D02",
+        "categorie": "finition",
+        "type_defaut": "esthétique/propreté",
+        "resume": "Traces/Salissures sur sols et meubles existants",
+        "details": "La présence de débris, de poussière et de traces de travaux sur les sols et les meubles existants indique un défaut de propreté du chantier.",
+        "regle_ref": {
+          "norme": "SDB_def_class.pdf",
+          "partie": "Gravité"
+        },
+        "gravite": 3,
+        "priorite": 3,
+        "temps": 3,
+        "conf_score": 0.9,
+        "incertitude": 0.09999999999999998
+      }
+    ],
+    "transform_history": [
+      {
+        "step": "gdocs-repair",
+        "seed": 42
+      }
+    ]
+  },
+  "presentation": {
+    "caption": "Protection du chantier insuffisante / Débris",
+    "padded_bbox_norm": [
+      0.29,
+      0.49,
+      0.91,
+      0.81
+    ],
+    "style": "highlight-color:#00FFFF; opacity:0.35; border:2px solid #00FFFF;",
+    "refined": true,
+    "confidence_before": 0.9,
+    "confidence_after": 0.95
+  },
+  "validation": {
+    "ok": true,
+    "erreurs": [],
+    "avertissements": []
+  },
+  "protocol": {
+    "mode_tracabilite": "EXTENDED_DEBUG",
+    "determinisme": {
+      "force_seed": 42
+    },
+    "exigence_materielle": {
+      "require_certification": [
+        "SPEC/SEL",
+        "Mortier-colle C2-S1/S2",
+        "Plaque H1"
+      ]
+    }
+  }
+}

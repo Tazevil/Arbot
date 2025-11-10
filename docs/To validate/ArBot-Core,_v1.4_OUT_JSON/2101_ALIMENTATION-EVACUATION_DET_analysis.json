@@ -1,0 +1,380 @@
+{
+  "meta": {
+    "SOP_name": "ArBot-Core",
+    "SOP_ver": "v1.4",
+    "generated_at": "2025-10-17T12:26:00Z",
+    "tool_list": [
+      "vision",
+      "knowledge",
+      "repair",
+      "normalize"
+    ],
+    "schema_ref": "schemas/arbot-vision-analysis.schema.json",
+    "schema_ver": "v1.0.1",
+    "ingestion_log": {
+      "mode": "GDocs-repair"
+    }
+  },
+  "context": {
+    "project_ID": "EX70",
+    "project_name": "Sinistre baignoire RDC",
+    "project_type": "Expertise Sinistre",
+    "phase_ID": "PH2",
+    "phase_name": "Diagnostic sinistre"
+  },
+  "source_file": {
+    "file_cat": "Photo",
+    "file_ID": "2101",
+    "file_name": "2101_ALIMENTATION-EVACUATION_DET.jpg",
+    "file_ext": "jpg",
+    "file_img_width": 1884,
+    "file_img_height": 4080,
+    "file_date": "2025-08-18",
+    "zone_ID": 2,
+    "zone_name": "SDB",
+    "cat_ID": 1,
+    "cat_img_ID": "01",
+    "cat_name": "PLOMBERIE",
+    "viewtype_ID": "DET",
+    "viewtype_name": "VUE PROCHE",
+    "full_exif_data": {
+      "enabled": true
+    }
+  },
+  "vision": {
+    "passes": 3,
+    "scales": [
+      1,
+      0.75,
+      0.5
+    ],
+    "nms_iou": 0.5,
+    "refine_below": 0.82,
+    "trust_score": 0.95,
+    "focus_type": "détail",
+    "target_zone": "MGB",
+    "viewtype_ID": "DET",
+    "viewtype_name": "VUE PROCHE",
+    "evidence_crops": [
+      "2101_crop1.jpg"
+    ],
+    "annotations": [
+      {
+        "ann_ID": "2101_D01_A01",
+        "ann_type": "polygon",
+        "ann_label": "absence de SPEC",
+        "ann_linked_def_ID": "2101_D01",
+        "ann_layer": "étanchéité",
+        "ann_confidence": 0.98,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#FFD700",
+          "stroke_width": 2,
+          "fill": "#FFD700",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2101_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.58,
+          0.48,
+          0.64,
+          0.56
+        ],
+        "polygon_norm": [
+          [
+            0.58,
+            0.54
+          ],
+          [
+            0.63,
+            0.56
+          ],
+          [
+            0.64,
+            0.5
+          ],
+          [
+            0.59,
+            0.48
+          ],
+          [
+            0.58,
+            0.54
+          ]
+        ]
+      },
+      {
+        "ann_ID": "2101_D02_A01",
+        "ann_type": "polygon",
+        "ann_label": "dégradation du support",
+        "ann_linked_def_ID": "2101_D02",
+        "ann_layer": "revêtement",
+        "ann_confidence": 0.95,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#DC143C",
+          "stroke_width": 2,
+          "fill": "#DC143C",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2101_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.38,
+          0.02,
+          0.55,
+          0.12
+        ],
+        "polygon_norm": [
+          [
+            0.38,
+            0.05
+          ],
+          [
+            0.49,
+            0.12
+          ],
+          [
+            0.55,
+            0.08
+          ],
+          [
+            0.42,
+            0.02
+          ],
+          [
+            0.38,
+            0.05
+          ]
+        ]
+      },
+      {
+        "ann_ID": "2101_D03_A01",
+        "ann_type": "polygon",
+        "ann_label": "mauvais traitement des traversées",
+        "ann_linked_def_ID": "2101_D03",
+        "ann_layer": "étanchéité",
+        "ann_confidence": 0.96,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#800080",
+          "stroke_width": 2,
+          "fill": "#800080",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2101_crop2.jpg",
+        "bbox_xyxy_norm": [
+          0.26,
+          0.29,
+          0.31,
+          0.38
+        ],
+        "polygon_norm": [
+          [
+            0.26,
+            0.32
+          ],
+          [
+            0.28,
+            0.38
+          ],
+          [
+            0.31,
+            0.35
+          ],
+          [
+            0.3,
+            0.29
+          ],
+          [
+            0.26,
+            0.32
+          ]
+        ]
+      },
+      {
+        "ann_ID": "2101_D04_A01",
+        "ann_type": "polygon",
+        "ann_label": "traces de rouille sur ossature",
+        "ann_linked_def_ID": "2101_D04",
+        "ann_layer": "structure",
+        "ann_confidence": 0.9,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#D2B48C",
+          "stroke_width": 2,
+          "fill": "#D2B48C",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2101_crop2.jpg",
+        "bbox_xyxy_norm": [
+          0.08,
+          0.54,
+          0.11,
+          0.6
+        ],
+        "polygon_norm": [
+          [
+            0.08,
+            0.56
+          ],
+          [
+            0.1,
+            0.6
+          ],
+          [
+            0.11,
+            0.58
+          ],
+          [
+            0.09,
+            0.54
+          ],
+          [
+            0.08,
+            0.56
+          ]
+        ]
+      }
+    ],
+    "metrics": [],
+    "defects": [
+      {
+        "rule_type": "Norme",
+        "annotation_refs": [
+          "2101_D01_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Manque de système de protection à l'eau sur le mur au niveau de la baignoire. Cette zone est classée EB+.",
+        "origin_viewtype_ID": "DET",
+        "origin_focus": "détail",
+        "origin_layer": "étanchéité",
+        "id_defaut": "2101_D01",
+        "categorie": "étanchéité",
+        "type_defaut": "non-conformité SPEC",
+        "resume": "Absence de SPEC en zone EB+",
+        "details": "Aucune trace de membrane d'étanchéité (SPEC) n'est visible sur le support de plaque de plâtre au droit de la baignoire. Cette zone est considérée comme EB+ et requiert une protection à l'eau sous carrelage.",
+        "regle_ref": {
+          "norme": "DTU 25.41_1993",
+          "partie": "Annexe A"
+        },
+        "gravite": 1,
+        "priorite": 1,
+        "temps": 1,
+        "conf_score": 1,
+        "incertitude": 0
+      },
+      {
+        "rule_type": "Norme",
+        "annotation_refs": [
+          "2101_D02_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "La plaque de plâtre est endommagée au niveau de l'évacuation, ne constituant plus un support sain.",
+        "origin_viewtype_ID": "DET",
+        "origin_focus": "détail",
+        "origin_layer": "revêtement",
+        "id_defaut": "2101_D02",
+        "categorie": "support",
+        "type_defaut": "défaut de planéité / propreté",
+        "resume": "Dégradation du support de la plaque de plâtre",
+        "details": "La plaque de plâtre (support) présente des dégradations et des éclats, notamment autour du percement des tuyaux, ne respectant pas les conditions de propreté et d'intégrité requises avant la pose. Le support doit être sain et propre.",
+        "regle_ref": {
+          "norme": "DTU 25.41_1993",
+          "partie": "Chapitre 4.1"
+        },
+        "gravite": 2,
+        "priorite": 2,
+        "temps": 1,
+        "conf_score": 0.95,
+        "incertitude": 0.050000000000000044
+      },
+      {
+        "rule_type": "Notice",
+        "annotation_refs": [
+          "2101_D03_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Les tubes de plomberie traversent la plaque de plâtre sans aucun traitement d'étanchéité visible.",
+        "origin_viewtype_ID": "DET",
+        "origin_focus": "détail",
+        "origin_layer": "étanchéité",
+        "id_defaut": "2101_D03",
+        "categorie": "étanchéité",
+        "type_defaut": "non-conformité SPEC",
+        "resume": "Absence de traitement des traversées",
+        "details": "Les traversées de tuyauteries ne sont pas traitées avec des manchons ou des bandes de renfort, ce qui est impératif avant l'application générale d'un système d'étanchéité.",
+        "regle_ref": {
+          "norme": "NOTICE_CSTB-SPEC_2021",
+          "partie": "Chapitre 3.2"
+        },
+        "gravite": 1,
+        "priorite": 1,
+        "temps": 1,
+        "conf_score": 0.98,
+        "incertitude": 0.020000000000000018
+      },
+      {
+        "rule_type": "Norme",
+        "annotation_refs": [
+          "2101_D04_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Traces de rouille visibles sur le rail métallique en haut de l'image, indiquant une dégradation de l'ossature.",
+        "origin_viewtype_ID": "DET",
+        "origin_focus": "détail",
+        "origin_layer": "structure",
+        "id_defaut": "2101_D04",
+        "categorie": "ossature",
+        "type_defaut": "dégradation",
+        "resume": "Ossature métallique non conforme",
+        "details": "L'ossature métallique présente des traces de rouille. Elle ne doit présenter ni rouille, ni déformation.",
+        "regle_ref": {
+          "norme": "DTU 25.41_1993",
+          "partie": "Chapitre 3.2.1"
+        },
+        "gravite": 2,
+        "priorite": 2,
+        "temps": 1,
+        "conf_score": 0.9,
+        "incertitude": 0.09999999999999998
+      }
+    ],
+    "transform_history": [
+      {
+        "step": "gdocs-repair",
+        "seed": 42
+      }
+    ]
+  },
+  "presentation": {
+    "caption": "Absence de SPEC",
+    "padded_bbox_norm": [
+      0.57,
+      0.47,
+      0.65,
+      0.57
+    ],
+    "style": "highlight-color:#00FFFF; opacity:0.35; border:2px solid #00FFFF;",
+    "refined": true,
+    "confidence_before": 0.9,
+    "confidence_after": 0.98
+  },
+  "validation": {
+    "ok": true,
+    "erreurs": [],
+    "avertissements": []
+  },
+  "protocol": {
+    "mode_tracabilite": "EXTENDED_DEBUG",
+    "determinisme": {
+      "force_seed": 42
+    },
+    "exigence_materielle": {
+      "require_certification": [
+        "SPEC/SEL",
+        "Mortier-colle C2-S1/S2",
+        "Plaque H1"
+      ]
+    }
+  }
+}

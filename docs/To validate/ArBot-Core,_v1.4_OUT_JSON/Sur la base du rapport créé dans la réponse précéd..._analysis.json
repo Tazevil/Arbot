@@ -1,0 +1,39 @@
+{
+  "snapshot_date": "[AAAA-MM-JJTHH:MM:SSZ]",
+  "infos_projet": {
+    "maitre_d_ouvrage": "[Nom du Maître d'Ouvrage]",
+    "beneficiaire": "[Nom du Bénéficiaire]",
+    "site": "[Adresse du site]",
+    "date_fin_chantier": "[AAAA-MM-JJ]",
+    "entreprise": "[Nom de l'entreprise exécutante]"
+  },
+  "constats_valides_count": "[Nombre total de défauts]",
+  "preconisation_globale": "[Résumé de la préconisation principale]",
+  "constats": [
+    {
+      "id_defaut": "DEF-001",
+      "objet_defaut": "[Catégorie du défaut : ex: étanchéité, autre, plomberie]",
+      "description": "[Description technique détaillée du défaut]",
+      "gravite": "[mineure/moderee/majeure/critique]",
+      "priorite": "[basse/moyenne/haute/urgente]"
+    },
+    {
+      "id_defaut": "DEF-002",
+      "objet_defaut": "[...]",
+      "description": "[...]",
+      "gravite": "[...]",
+      "priorite": "[...]"
+    }
+  ],
+  "doutes_a_lever": [
+    {
+      "id": "DL-001",
+      "description": "[Description du doute à lever]",
+      "priorite": "[haute/moyenne/basse]"
+    }
+  ],
+  "index": {
+    "documents_count": "[Nombre de documents analysés]",
+    "photos_count": "[Nombre de photos analysées]"
+  }
+}

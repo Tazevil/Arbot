@@ -1,0 +1,287 @@
+{
+  "meta": {
+    "SOP_name": "ArBot-Core",
+    "SOP_ver": "v1.4",
+    "generated_at": "2025-10-17T11:57:00Z",
+    "tool_list": [
+      "vision",
+      "knowledge",
+      "repair",
+      "normalize"
+    ],
+    "schema_ref": "schemas/arbot-vision-analysis.schema.json",
+    "schema_ver": "v1.0.1",
+    "ingestion_log": {
+      "mode": "GDocs-repair"
+    }
+  },
+  "context": {
+    "project_ID": "EX70",
+    "project_name": "Sinistre baignoire RDC",
+    "project_type": "Expertise Sinistre",
+    "phase_ID": "PH2",
+    "phase_name": "Diagnostic sinistre"
+  },
+  "source_file": {
+    "file_cat": "Photo",
+    "file_ID": "0007",
+    "file_name": "0007_SDB_GEN_20250819.jpg",
+    "file_ext": "jpg",
+    "file_img_width": 3062,
+    "file_img_height": 3780,
+    "file_date": "2025-08-19",
+    "zone_ID": 2,
+    "zone_name": "SDB",
+    "cat_ID": 0,
+    "cat_img_ID": "07",
+    "cat_name": "VUE GENERALE",
+    "viewtype_ID": "GEN",
+    "viewtype_name": "VUE GENERALE",
+    "full_exif_data": {
+      "enabled": true
+    }
+  },
+  "vision": {
+    "passes": 3,
+    "scales": [
+      1,
+      0.75,
+      0.5
+    ],
+    "nms_iou": 0.5,
+    "refine_below": 0.82,
+    "trust_score": 0.98,
+    "focus_type": "contexte",
+    "target_zone": "Murs Placo H1",
+    "viewtype_ID": "GEN",
+    "viewtype_name": "VUE GENERALE",
+    "evidence_crops": [],
+    "annotations": [
+      {
+        "ann_ID": "0007_D01_A01",
+        "ann_type": "polygon",
+        "ann_label": "Absence systémique de SPEC sur H1",
+        "ann_linked_def_ID": "0007_D01",
+        "ann_layer": "étanchéité",
+        "ann_confidence": 0.99,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#800080",
+          "stroke_width": 2,
+          "fill": "#800080",
+          "opacity": 0.35
+        },
+        "evidence_crop": "",
+        "bbox_xyxy_norm": [
+          0.1,
+          0.1,
+          0.9,
+          0.9
+        ],
+        "polygon_norm": [
+          [
+            0.1,
+            0.1
+          ],
+          [
+            0.9,
+            0.1
+          ],
+          [
+            0.9,
+            0.9
+          ],
+          [
+            0.1,
+            0.9
+          ],
+          [
+            0.1,
+            0.1
+          ]
+        ]
+      },
+      {
+        "ann_ID": "0007_D02_A01",
+        "ann_type": "polygon",
+        "ann_label": "Joints de plaque BA13 bruts (non lissés)",
+        "ann_linked_def_ID": "0007_D02",
+        "ann_layer": "platrerie",
+        "ann_confidence": 0.95,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#D2B48C",
+          "stroke_width": 2,
+          "fill": "#D2B48C",
+          "opacity": 0.35
+        },
+        "evidence_crop": "",
+        "bbox_xyxy_norm": [
+          0.25,
+          0.15,
+          0.75,
+          0.85
+        ],
+        "polygon_norm": [
+          [
+            0.25,
+            0.15
+          ],
+          [
+            0.75,
+            0.15
+          ],
+          [
+            0.75,
+            0.85
+          ],
+          [
+            0.25,
+            0.85
+          ],
+          [
+            0.25,
+            0.15
+          ]
+        ]
+      },
+      {
+        "ann_ID": "0007_D03_A01",
+        "ann_type": "point",
+        "ann_label": "Traversées plomberie non scellées",
+        "ann_linked_def_ID": "0007_D03",
+        "ann_layer": "étanchéité",
+        "ann_confidence": 0.98,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#FFD700",
+          "stroke_width": 2,
+          "fill": "#FFD700",
+          "opacity": 0.35
+        },
+        "evidence_crop": "",
+        "bbox_xyxy_norm": [
+          0.7,
+          0.45,
+          0.8,
+          0.55
+        ]
+      }
+    ],
+    "metrics": [],
+    "defects": [
+      {
+        "rule_type": "Norme",
+        "annotation_refs": [
+          "0007_D01_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "La surface des plaques H1 est exempte de membrane SPEC.",
+        "origin_viewtype_ID": "GEN",
+        "origin_focus": "systémique",
+        "origin_layer": "étanchéité",
+        "id_defaut": "0007_D01",
+        "categorie": "étanchéité",
+        "type_defaut": "non-conformité SPEC",
+        "resume": "Absence systémique de Système de Protection à l'Eau (SPEC)",
+        "details": "La vue d'ensemble confirme l'absence de membrane SPEC sur les plaques de plâtre hydrofuges (H1) dans l'ensemble de la zone EB+ (SDB), ce qui est une non-conformité fondamentale au DTU et un vice caché.",
+        "regle_ref": {
+          "norme": "DTU 25.41_1993",
+          "partie": "Annexe A.1"
+        },
+        "gravite": 1,
+        "priorite": 1,
+        "temps": 1,
+        "conf_score": 0.99,
+        "incertitude": 0.010000000000000009
+      },
+      {
+        "rule_type": "Norme",
+        "annotation_refs": [
+          "0007_D02_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Joints de plâtre grossiers, visibles sur les cloisons.",
+        "origin_viewtype_ID": "GEN",
+        "origin_focus": "détail",
+        "origin_layer": "platrerie",
+        "id_defaut": "0007_D02",
+        "categorie": "platrerie",
+        "type_defaut": "esthétique",
+        "resume": "Joints de plaque BA13 bruts (non lissés)",
+        "details": "Les bandes d'enduit des joints de plaque sont visibles et brutes, sans lissage ni ponçage. Cette finition est insuffisante et non conforme à l'exigence de 'faire les joints proprement' avant peinture (G3).",
+        "regle_ref": {
+          "norme": "DTU 25.41_1993",
+          "partie": "Chapitre 5.5.1"
+        },
+        "gravite": 3,
+        "priorite": 3,
+        "temps": 3,
+        "conf_score": 0.95,
+        "incertitude": 0.050000000000000044
+      },
+      {
+        "rule_type": "Notice",
+        "annotation_refs": [
+          "0007_D03_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Les attentes de plomberie traversent le mur sans étanchéité visible (manchons).",
+        "origin_viewtype_ID": "GEN",
+        "origin_focus": "détail",
+        "origin_layer": "étanchéité",
+        "id_defaut": "0007_D03",
+        "categorie": "étanchéité",
+        "type_defaut": "non-conformité SPEC/Traversée",
+        "resume": "Absence de traitement étanche des traversées de plomberie",
+        "details": "Les percements de plomberie pour les attentes du mitigeur ne sont pas scellés ni traités avec des manchons d'étanchéité, créant des points d'infiltration critiques.",
+        "regle_ref": {
+          "norme": "NOTICE_CSTB-SPEC_2021",
+          "partie": "Chapitre 3.2"
+        },
+        "gravite": 1,
+        "priorite": 1,
+        "temps": 1,
+        "conf_score": 0.98,
+        "incertitude": 0.020000000000000018
+      }
+    ],
+    "transform_history": [
+      {
+        "step": "gdocs-repair",
+        "seed": 42
+      }
+    ]
+  },
+  "presentation": {
+    "caption": "Absence systémique de Système de Protection à l'Eau (SPEC)",
+    "padded_bbox_norm": [
+      0.09,
+      0.09,
+      0.91,
+      0.91
+    ],
+    "style": "highlight-color:#00FFFF; opacity:0.35; border:2px solid #00FFFF;",
+    "refined": true,
+    "confidence_before": 0.95,
+    "confidence_after": 0.99
+  },
+  "validation": {
+    "ok": true,
+    "erreurs": [],
+    "avertissements": []
+  },
+  "protocol": {
+    "mode_tracabilite": "EXTENDED_DEBUG",
+    "determinisme": {
+      "force_seed": 42
+    },
+    "exigence_materielle": {
+      "require_certification": [
+        "SPEC/SEL",
+        "Mortier-colle C2-S1/S2",
+        "Plaque H1"
+      ]
+    }
+  }
+}

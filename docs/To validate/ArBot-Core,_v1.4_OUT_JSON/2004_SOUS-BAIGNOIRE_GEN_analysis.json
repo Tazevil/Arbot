@@ -1,0 +1,380 @@
+{
+  "meta": {
+    "SOP_name": "ArBot-Core",
+    "SOP_ver": "v1.4",
+    "generated_at": "2025-10-17T12:20:25Z",
+    "tool_list": [
+      "vision",
+      "knowledge",
+      "repair",
+      "normalize"
+    ],
+    "schema_ref": "schemas/arbot-vision-analysis.schema.json",
+    "schema_ver": "v1.0.1",
+    "ingestion_log": {
+      "mode": "GDocs-repair"
+    }
+  },
+  "context": {
+    "project_ID": "EX70",
+    "project_name": "Sinistre baignoire RDC",
+    "project_type": "Expertise Sinistre",
+    "phase_ID": "PH2",
+    "phase_name": "Diagnostic sinistre"
+  },
+  "source_file": {
+    "file_cat": "Photo",
+    "file_ID": "2004",
+    "file_name": "2004_SOUS-BAIGNOIRE_GEN.jpg",
+    "file_ext": "jpg",
+    "file_img_width": 5602,
+    "file_img_height": 11588,
+    "file_date": "2025-08-18",
+    "zone_ID": 2,
+    "zone_name": "SDB",
+    "cat_ID": 2,
+    "cat_img_ID": "04",
+    "cat_name": "BAIGNOIRE",
+    "viewtype_ID": "GEN",
+    "viewtype_name": "VUE GENERALE",
+    "full_exif_data": {
+      "enabled": true
+    }
+  },
+  "vision": {
+    "passes": 3,
+    "scales": [
+      1,
+      0.75,
+      0.5
+    ],
+    "nms_iou": 0.5,
+    "refine_below": 0.82,
+    "trust_score": 0.98,
+    "focus_type": "général",
+    "target_zone": "Sous Baignoire/Évacuation",
+    "viewtype_ID": "GEN",
+    "viewtype_name": "VUE GENERALE",
+    "evidence_crops": [
+      "2004_crop1.jpg"
+    ],
+    "annotations": [
+      {
+        "ann_ID": "2004_D01_A01",
+        "ann_type": "polygon",
+        "ann_label": "Absence de SPEC/Support exposé",
+        "ann_linked_def_ID": "2004_D01",
+        "ann_layer": "étanchéité",
+        "ann_confidence": 0.99,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#800080",
+          "stroke_width": 2,
+          "fill": "#800080",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2004_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.1,
+          0.4,
+          0.85,
+          0.65
+        ],
+        "polygon_norm": [
+          [
+            0.1,
+            0.4
+          ],
+          [
+            0.85,
+            0.4
+          ],
+          [
+            0.85,
+            0.65
+          ],
+          [
+            0.1,
+            0.65
+          ],
+          [
+            0.1,
+            0.4
+          ]
+        ]
+      },
+      {
+        "ann_ID": "2004_D02_A01",
+        "ann_type": "polygon",
+        "ann_label": "Pente d'évacuation insuffisante",
+        "ann_linked_def_ID": "2004_D02",
+        "ann_layer": "plomberie",
+        "ann_confidence": 0.98,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#FFD700",
+          "stroke_width": 2,
+          "fill": "#FFD700",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2004_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.35,
+          0.55,
+          0.7,
+          0.7
+        ],
+        "polygon_norm": [
+          [
+            0.35,
+            0.55
+          ],
+          [
+            0.7,
+            0.55
+          ],
+          [
+            0.7,
+            0.7
+          ],
+          [
+            0.35,
+            0.7
+          ],
+          [
+            0.35,
+            0.55
+          ]
+        ]
+      },
+      {
+        "ann_ID": "2004_D03_A01",
+        "ann_type": "polygon",
+        "ann_label": "Absence de traitement des traversées",
+        "ann_linked_def_ID": "2004_D03",
+        "ann_layer": "étanchéité",
+        "ann_confidence": 0.97,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#800080",
+          "stroke_width": 2,
+          "fill": "#800080",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2004_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.3,
+          0.5,
+          0.55,
+          0.65
+        ],
+        "polygon_norm": [
+          [
+            0.3,
+            0.5
+          ],
+          [
+            0.55,
+            0.6
+          ],
+          [
+            0.55,
+            0.65
+          ],
+          [
+            0.3,
+            0.55
+          ],
+          [
+            0.3,
+            0.5
+          ]
+        ]
+      },
+      {
+        "ann_ID": "2004_D04_A01",
+        "ann_type": "polygon",
+        "ann_label": "Dégradation/Débris au sol",
+        "ann_linked_def_ID": "2004_D04",
+        "ann_layer": "finition",
+        "ann_confidence": 0.95,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#DC143C",
+          "stroke_width": 2,
+          "fill": "#DC143C",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2004_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.1,
+          0.6,
+          0.9,
+          0.85
+        ],
+        "polygon_norm": [
+          [
+            0.1,
+            0.6
+          ],
+          [
+            0.9,
+            0.6
+          ],
+          [
+            0.9,
+            0.85
+          ],
+          [
+            0.1,
+            0.85
+          ],
+          [
+            0.1,
+            0.6
+          ]
+        ]
+      }
+    ],
+    "metrics": [],
+    "defects": [
+      {
+        "rule_type": "Norme",
+        "annotation_refs": [
+          "2004_D01_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Manque de système d'étanchéité (SPEC) sur les murs sous la baignoire.",
+        "origin_viewtype_ID": "GEN",
+        "origin_focus": "général",
+        "origin_layer": "étanchéité",
+        "id_defaut": "2004_D01",
+        "categorie": "étanchéité",
+        "type_defaut": "non-conformité SPEC",
+        "resume": "Absence systémique de Système de Protection à l'Eau (SPEC)",
+        "details": "L'ensemble du support mural exposé (Plaque H1) en zone EB+ est dépourvu de membrane SPEC. Le support est sensible à l'eau et nécessite cette protection obligatoire.",
+        "regle_ref": {
+          "norme": "DTU 25.41_1993",
+          "partie": "Annexe A.1"
+        },
+        "gravite": 1,
+        "priorite": 1,
+        "temps": 1,
+        "conf_score": 0.99,
+        "incertitude": 0.010000000000000009
+      },
+      {
+        "rule_type": "Norme",
+        "annotation_refs": [
+          "2004_D02_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "La pente du tuyau d'évacuation est incorrecte pour un bon écoulement.",
+        "origin_viewtype_ID": "GEN",
+        "origin_focus": "détail",
+        "origin_layer": "plomberie",
+        "id_defaut": "2004_D02",
+        "categorie": "plomberie",
+        "type_defaut": "non-conformité DTU",
+        "resume": "Pente d'évacuation insuffisante",
+        "details": "Le tuyau d'évacuation est visuellement posé avec une pente nulle ou insuffisante (inférieure à 1-3%), ce qui risque de provoquer la stagnation des eaux usées.",
+        "regle_ref": {
+          "norme": "DTU 60.1_2012",
+          "partie": "Chapitre 5.3.1"
+        },
+        "gravite": 1,
+        "priorite": 1,
+        "temps": 1,
+        "conf_score": 0.98,
+        "incertitude": 0.020000000000000018
+      },
+      {
+        "rule_type": "Notice",
+        "annotation_refs": [
+          "2004_D03_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Les tuyaux traversent la cloison sans manchon d'étanchéité visible.",
+        "origin_viewtype_ID": "GEN",
+        "origin_focus": "détail",
+        "origin_layer": "étanchéité",
+        "id_defaut": "2004_D03",
+        "categorie": "étanchéité",
+        "type_defaut": "non-conformité SPEC/Traversée",
+        "resume": "Absence de traitement étanche des traversées de plomberie",
+        "details": "Les percements pour la plomberie ne sont pas traités avec des manchons d'étanchéité intégrés au SPEC, créant des points d'infiltration critiques.",
+        "regle_ref": {
+          "norme": "NOTICE_CSTB-SPEC_2021",
+          "partie": "Chapitre 3.2"
+        },
+        "gravite": 1,
+        "priorite": 1,
+        "temps": 1,
+        "conf_score": 0.97,
+        "incertitude": 0.030000000000000027
+      },
+      {
+        "rule_type": "Norme",
+        "annotation_refs": [
+          "2004_D04_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Débris de maçonnerie et de plâtre sous la baignoire.",
+        "origin_viewtype_ID": "GEN",
+        "origin_focus": "général",
+        "origin_layer": "finition",
+        "id_defaut": "2004_D04",
+        "categorie": "finition",
+        "type_defaut": "propreté/préparation",
+        "resume": "Dégradation du support et débris au sol",
+        "details": "Le support est endommagé à sa base et des débris de construction sont présents au sol, ce qui est contraire aux exigences de propreté et de préparation du support avant la pose (G3).",
+        "regle_ref": {
+          "norme": "DTU 52.2_2022",
+          "partie": "Partie 1-1 > 5.2.2"
+        },
+        "gravite": 3,
+        "priorite": 3,
+        "temps": 3,
+        "conf_score": 0.95,
+        "incertitude": 0.050000000000000044
+      }
+    ],
+    "transform_history": [
+      {
+        "step": "gdocs-repair",
+        "seed": 42
+      }
+    ]
+  },
+  "presentation": {
+    "caption": "Absence systémique de Système de Protection à l'Eau (SPEC)",
+    "padded_bbox_norm": [
+      0.09,
+      0.39,
+      0.86,
+      0.66
+    ],
+    "style": "highlight-color:#00FFFF; opacity:0.35; border:2px solid #00FFFF;",
+    "refined": true,
+    "confidence_before": 0.95,
+    "confidence_after": 0.99
+  },
+  "validation": {
+    "ok": true,
+    "erreurs": [],
+    "avertissements": []
+  },
+  "protocol": {
+    "mode_tracabilite": "EXTENDED_DEBUG",
+    "determinisme": {
+      "force_seed": 42
+    },
+    "exigence_materielle": {
+      "require_certification": [
+        "SPEC/SEL",
+        "Mortier-colle C2-S1/S2",
+        "Plaque H1"
+      ]
+    }
+  }
+}

@@ -1,0 +1,380 @@
+{
+  "meta": {
+    "SOP_name": "ArBot-Core",
+    "SOP_ver": "v1.4",
+    "generated_at": "2025-10-16T14:44:10Z",
+    "tool_list": [
+      "vision",
+      "knowledge",
+      "repair",
+      "normalize"
+    ],
+    "schema_ref": "schemas/arbot-vision-analysis.schema.json",
+    "schema_ver": "v1.0.1",
+    "ingestion_log": {
+      "mode": "GDocs-repair"
+    }
+  },
+  "context": {
+    "project_ID": "EX70",
+    "project_name": "Sinistre baignoire RDC",
+    "project_type": "Expertise Sinistre",
+    "phase_ID": "PH2",
+    "phase_name": "Diagnostic sinistre"
+  },
+  "source_file": {
+    "file_cat": "Photo",
+    "file_ID": "2209",
+    "file_name": "2209_PIEDS-SIPHON_MAC.jpg",
+    "file_ext": "jpg",
+    "file_img_width": 1884,
+    "file_img_height": 4080,
+    "file_date": "2025-08-18",
+    "zone_ID": 2,
+    "zone_name": "SDB",
+    "cat_ID": 2,
+    "cat_img_ID": "09",
+    "cat_name": "BAIGNOIRE",
+    "viewtype_ID": "MAC",
+    "viewtype_name": "VUE MACRO",
+    "full_exif_data": {
+      "enabled": true
+    }
+  },
+  "vision": {
+    "passes": 3,
+    "scales": [
+      1,
+      0.75,
+      0.5
+    ],
+    "nms_iou": 0.5,
+    "refine_below": 0.82,
+    "trust_score": 0.98,
+    "focus_type": "détail",
+    "target_zone": "MGS",
+    "viewtype_ID": "MAC",
+    "viewtype_name": "VUE MACRO",
+    "evidence_crops": [
+      "2209_crop1.jpg"
+    ],
+    "annotations": [
+      {
+        "ann_ID": "2209_D01_A01",
+        "ann_type": "polygon",
+        "ann_label": "Pente d'évacuation insuffisante",
+        "ann_linked_def_ID": "2209_D01",
+        "ann_layer": "plomberie",
+        "ann_confidence": 0.99,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#FFD700",
+          "stroke_width": 2,
+          "fill": "#FFD700",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2209_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.6,
+          0.4,
+          0.9,
+          0.55
+        ],
+        "polygon_norm": [
+          [
+            0.6,
+            0.4
+          ],
+          [
+            0.85,
+            0.55
+          ],
+          [
+            0.9,
+            0.5
+          ],
+          [
+            0.65,
+            0.4
+          ],
+          [
+            0.6,
+            0.4
+          ]
+        ]
+      },
+      {
+        "ann_ID": "2209_D02_A01",
+        "ann_type": "polygon",
+        "ann_label": "Absence de SPEC",
+        "ann_linked_def_ID": "2209_D02",
+        "ann_layer": "étanchéité",
+        "ann_confidence": 0.98,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#800080",
+          "stroke_width": 2,
+          "fill": "#800080",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2209_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.1,
+          0.15,
+          0.6,
+          0.4
+        ],
+        "polygon_norm": [
+          [
+            0.1,
+            0.15
+          ],
+          [
+            0.6,
+            0.15
+          ],
+          [
+            0.6,
+            0.4
+          ],
+          [
+            0.1,
+            0.4
+          ],
+          [
+            0.1,
+            0.15
+          ]
+        ]
+      },
+      {
+        "ann_ID": "2209_D03_A01",
+        "ann_type": "polygon",
+        "ann_label": "Absence de test d'étanchéité / scellement",
+        "ann_linked_def_ID": "2209_D03",
+        "ann_layer": "étanchéité",
+        "ann_confidence": 0.97,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#ADD8E6",
+          "stroke_width": 2,
+          "fill": "#ADD8E6",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2209_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.45,
+          0.35,
+          0.65,
+          0.5
+        ],
+        "polygon_norm": [
+          [
+            0.45,
+            0.35
+          ],
+          [
+            0.65,
+            0.35
+          ],
+          [
+            0.65,
+            0.5
+          ],
+          [
+            0.45,
+            0.5
+          ],
+          [
+            0.45,
+            0.35
+          ]
+        ]
+      },
+      {
+        "ann_ID": "2209_D04_A01",
+        "ann_type": "polygon",
+        "ann_label": "Dégradation du support / Débris au sol",
+        "ann_linked_def_ID": "2209_D04",
+        "ann_layer": "revêtement",
+        "ann_confidence": 0.96,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#DC143C",
+          "stroke_width": 2,
+          "fill": "#DC143C",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2209_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.05,
+          0.65,
+          0.95,
+          0.8
+        ],
+        "polygon_norm": [
+          [
+            0.05,
+            0.65
+          ],
+          [
+            0.95,
+            0.65
+          ],
+          [
+            0.95,
+            0.8
+          ],
+          [
+            0.05,
+            0.8
+          ],
+          [
+            0.05,
+            0.65
+          ]
+        ]
+      }
+    ],
+    "metrics": [],
+    "defects": [
+      {
+        "rule_type": "Norme",
+        "annotation_refs": [
+          "2209_D01_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "La pente du tuyau flexible n'est pas correcte pour un bon écoulement.",
+        "origin_viewtype_ID": "MAC",
+        "origin_focus": "détail",
+        "origin_layer": "plomberie",
+        "id_defaut": "2209_D01",
+        "categorie": "plomberie",
+        "type_defaut": "non-conformité DTU",
+        "resume": "Pente d'évacuation insuffisante",
+        "details": "Le tuyau d'évacuation flexible horizontal présente une pente insuffisante (inférieure à 1-3%), ce qui favorise la stagnation des eaux usées et des dépôts.",
+        "regle_ref": {
+          "norme": "DTU 60.1_2012",
+          "partie": "Chapitre 5.3.1"
+        },
+        "gravite": 1,
+        "priorite": 1,
+        "temps": 1,
+        "conf_score": 0.99,
+        "incertitude": 0.010000000000000009
+      },
+      {
+        "rule_type": "Norme",
+        "annotation_refs": [
+          "2209_D02_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Manque de système d'étanchéité (SPEC) sur les murs de support de la baignoire.",
+        "origin_viewtype_ID": "MAC",
+        "origin_focus": "détail",
+        "origin_layer": "étanchéité",
+        "id_defaut": "2209_D02",
+        "categorie": "étanchéité",
+        "type_defaut": "non-conformité SPEC",
+        "resume": "Absence de Système de Protection à l'Eau (SPEC)",
+        "details": "L'application d'un SPEC (ou SEL) est obligatoire sur les supports sensibles à l'eau (plâtre) en zone EB+p (autour de la baignoire). Aucune membrane n'est visible sur le support exposé.",
+        "regle_ref": {
+          "norme": "DTU 25.41_1993",
+          "partie": "Annexe A.1"
+        },
+        "gravite": 1,
+        "priorite": 1,
+        "temps": 1,
+        "conf_score": 0.98,
+        "incertitude": 0.020000000000000018
+      },
+      {
+        "rule_type": "Notice",
+        "annotation_refs": [
+          "2209_D03_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Le montage du vidage est exposé et doit être testé avant habillage.",
+        "origin_viewtype_ID": "MAC",
+        "origin_focus": "détail",
+        "origin_layer": "étanchéité",
+        "id_defaut": "2209_D03",
+        "categorie": "étanchéité",
+        "type_defaut": "non-conformité mise en œuvre",
+        "resume": "Absence de test d'étanchéité du vidage",
+        "details": "Le raccordement du vidage/siphon doit être vérifié par un test d'étanchéité (laisser en eau 30 min) avant tout habillage définitif de la baignoire.",
+        "regle_ref": {
+          "norme": "FT_Vidange_E6D124.pdf",
+          "partie": "Étape 4: Test d'étanchéité"
+        },
+        "gravite": 1,
+        "priorite": 1,
+        "temps": 1,
+        "conf_score": 0.97,
+        "incertitude": 0.030000000000000027
+      },
+      {
+        "rule_type": "Norme",
+        "annotation_refs": [
+          "2209_D04_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Dégradation du support et présence de gravats sous la baignoire.",
+        "origin_viewtype_ID": "MAC",
+        "origin_focus": "détail",
+        "origin_layer": "revêtement",
+        "id_defaut": "2209_D04",
+        "categorie": "support",
+        "type_defaut": "préparation du support",
+        "resume": "Dégradation du support et présence de débris",
+        "details": "Le support mural est dégradé (plâtre arraché) et des débris de construction sont présents au sol. Le support doit être sain et propre; la pose sur lit de mortier/plâtre est interdite.",
+        "regle_ref": {
+          "norme": "DTU 52.2_2022",
+          "partie": "Partie 1-1 > 5.2.2"
+        },
+        "gravite": 2,
+        "priorite": 2,
+        "temps": 1,
+        "conf_score": 0.96,
+        "incertitude": 0.040000000000000036
+      }
+    ],
+    "transform_history": [
+      {
+        "step": "gdocs-repair",
+        "seed": 42
+      }
+    ]
+  },
+  "presentation": {
+    "caption": "Pente d'évacuation insuffisante",
+    "padded_bbox_norm": [
+      0.59,
+      0.39,
+      0.91,
+      0.56
+    ],
+    "style": "highlight-color:#00FFFF; opacity:0.35; border:2px solid #00FFFF;",
+    "refined": true,
+    "confidence_before": 0.95,
+    "confidence_after": 0.99
+  },
+  "validation": {
+    "ok": true,
+    "erreurs": [],
+    "avertissements": []
+  },
+  "protocol": {
+    "mode_tracabilite": "EXTENDED_DEBUG",
+    "determinisme": {
+      "force_seed": 42
+    },
+    "exigence_materielle": {
+      "require_certification": [
+        "SPEC/SEL",
+        "Mortier-colle C2-S1/S2",
+        "Plaque H1"
+      ]
+    }
+  }
+}

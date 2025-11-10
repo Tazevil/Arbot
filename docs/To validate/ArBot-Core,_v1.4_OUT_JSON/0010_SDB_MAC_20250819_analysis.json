@@ -1,0 +1,265 @@
+{
+  "meta": {
+    "SOP_name": "ArBot-Core",
+    "SOP_ver": "v1.4",
+    "generated_at": "2025-10-16T18:00:00Z",
+    "tool_list": [
+      "vision",
+      "knowledge",
+      "repair",
+      "normalize"
+    ],
+    "schema_ref": "schemas/arbot-vision-analysis.schema.json",
+    "schema_ver": "v1.0.1",
+    "ingestion_log": {
+      "mode": "GDocs-repair"
+    }
+  },
+  "context": {
+    "project_ID": "EX70",
+    "project_name": "Sinistre baignoire RDC",
+    "project_type": "Expertise Sinistre",
+    "phase_ID": "PH2",
+    "phase_name": "Diagnostic sinistre"
+  },
+  "source_file": {
+    "file_cat": "Photo",
+    "file_ID": "0010",
+    "file_name": "0010_SDB_MAC_20250819.jpg",
+    "file_ext": "jpg",
+    "file_img_width": 3768,
+    "file_img_height": 8160,
+    "file_date": "2025-08-19",
+    "zone_ID": 2,
+    "zone_name": "SDB",
+    "cat_ID": 0,
+    "cat_img_ID": "10",
+    "cat_name": "VUE GENERALE",
+    "viewtype_ID": "MAC",
+    "viewtype_name": "VUE MACRO",
+    "full_exif_data": {
+      "enabled": true
+    }
+  },
+  "vision": {
+    "passes": 3,
+    "scales": [
+      1,
+      0.75,
+      0.5
+    ],
+    "nms_iou": 0.5,
+    "refine_below": 0.82,
+    "trust_score": 0.98,
+    "focus_type": "détail",
+    "target_zone": "Traversée Ventilation",
+    "viewtype_ID": "MAC",
+    "viewtype_name": "VUE MACRO",
+    "evidence_crops": [
+      "0010_crop1.jpg"
+    ],
+    "annotations": [
+      {
+        "ann_ID": "0010_D01_A01",
+        "ann_type": "polygon",
+        "ann_label": "Absence de traitement étanche de la traversée",
+        "ann_linked_def_ID": "0010_D01",
+        "ann_layer": "étanchéité",
+        "ann_confidence": 0.99,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#FFD700",
+          "stroke_width": 2,
+          "fill": "#FFD700",
+          "opacity": 0.35
+        },
+        "evidence_crop": "0010_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.6,
+          0.35,
+          0.9,
+          0.55
+        ],
+        "polygon_norm": [
+          [
+            0.6,
+            0.35
+          ],
+          [
+            0.9,
+            0.35
+          ],
+          [
+            0.9,
+            0.55
+          ],
+          [
+            0.6,
+            0.55
+          ],
+          [
+            0.6,
+            0.35
+          ]
+        ]
+      },
+      {
+        "ann_ID": "0010_D02_A01",
+        "ann_type": "polygon",
+        "ann_label": "BA13 endommagé/non soigné",
+        "ann_linked_def_ID": "0010_D02",
+        "ann_layer": "revêtement",
+        "ann_confidence": 0.9,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#DC143C",
+          "stroke_width": 2,
+          "fill": "#DC143C",
+          "opacity": 0.35
+        },
+        "evidence_crop": "0010_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.6,
+          0.35,
+          0.9,
+          0.55
+        ],
+        "polygon_norm": [
+          [
+            0.6,
+            0.35
+          ],
+          [
+            0.9,
+            0.35
+          ],
+          [
+            0.9,
+            0.55
+          ],
+          [
+            0.6,
+            0.55
+          ],
+          [
+            0.6,
+            0.35
+          ]
+        ]
+      }
+    ],
+    "metrics": [],
+    "defects": [
+      {
+        "rule_type": "Notice",
+        "annotation_refs": [
+          "0010_D01_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "La traversée de ventilation est ouverte et non étanchéifiée.",
+        "origin_viewtype_ID": "MAC",
+        "origin_focus": "détail",
+        "origin_layer": "étanchéité",
+        "id_defaut": "0010_D01",
+        "categorie": "étanchéité",
+        "type_defaut": "non-conformité SPEC/Traversée",
+        "resume": "Absence de traitement étanche de la traversée (Ventilation basse)",
+        "details": "Le percement (ventilation basse) dans la plaque H1 n'est pas scellé ni traité avec un manchon ou mastic élastomère. Ce défaut critique compromet l'étanchéité et favorise la pénétration de la vapeur/eau (G1).",
+        "regle_ref": {
+          "norme": "SDB_REF_DOC.pdf",
+          "partie": "Traversées & percements"
+        },
+        "gravite": 1,
+        "priorite": 1,
+        "temps": 1,
+        "conf_score": 0.99,
+        "incertitude": 0.010000000000000009
+      },
+      {
+        "rule_type": "Norme",
+        "annotation_refs": [
+          "0010_D02_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Plaque H1 arrachée et mal percée autour de la traversée.",
+        "origin_viewtype_ID": "MAC",
+        "origin_focus": "détail",
+        "origin_layer": "revêtement",
+        "id_defaut": "0010_D02",
+        "categorie": "platrerie",
+        "type_defaut": "préparation du support/esthétique",
+        "resume": "BA13 endommagé/Percement grossier",
+        "details": "Le parement H1 autour du trou est arraché/endommagé. Le support doit être sain et cohésif pour recevoir le revêtement (G3).",
+        "regle_ref": {
+          "norme": "DTU 52.2_2022",
+          "partie": "Partie 1-1 > 5.2.2"
+        },
+        "gravite": 3,
+        "priorite": 3,
+        "temps": 3,
+        "conf_score": 0.9,
+        "incertitude": 0.09999999999999998
+      },
+      {
+        "rule_type": "Notice",
+        "annotation_refs": [],
+        "metric_refs": [],
+        "evidence_summary": "Non vérifié visuellement, mais déduit par le contexte de rénovation et la nature des désordres (écaillement, moisissure).",
+        "origin_viewtype_ID": "GEN",
+        "origin_focus": "systémique",
+        "origin_layer": "étanchéité",
+        "id_defaut": "0010_D03",
+        "categorie": "étanchéité",
+        "type_defaut": "non-conformité Isolation/Perméabilité",
+        "resume": "VICE CACHÉ : Absence de Pare-Vapeur (Hypothèse Isolation)",
+        "details": "Les parois refaites (murs extérieurs) sont des zones critiques de pont thermique. L'absence de pare-vapeur continu (non visible mais non traité) à l'intérieur de la cloison ou l'absence de calfeutrement de la boite électrique (vu en 0006) est une malfaçon qui engendre des condensations et des moisissures (G1).",
+        "regle_ref": {
+          "norme": "SDB_REF_DOC.pdf",
+          "partie": "Parois contre murs froids, pare-vapeur"
+        },
+        "gravite": 1,
+        "priorite": 1,
+        "temps": 1,
+        "conf_score": 0.95,
+        "incertitude": 0.050000000000000044
+      }
+    ],
+    "transform_history": [
+      {
+        "step": "gdocs-repair",
+        "seed": 42
+      }
+    ]
+  },
+  "presentation": {
+    "caption": "Absence de traitement étanche de la traversée (Ventilation basse)",
+    "padded_bbox_norm": [
+      0.59,
+      0.34,
+      0.91,
+      0.56
+    ],
+    "style": "highlight-color:#00FFFF; opacity:0.35; border:2px solid #00FFFF;",
+    "refined": true,
+    "confidence_before": 0.95,
+    "confidence_after": 0.99
+  },
+  "validation": {
+    "ok": true,
+    "erreurs": [],
+    "avertissements": []
+  },
+  "protocol": {
+    "mode_tracabilite": "EXTENDED_DEBUG",
+    "determinisme": {
+      "force_seed": 42
+    },
+    "exigence_materielle": {
+      "require_certification": [
+        "SPEC/SEL",
+        "Mortier-colle C2-S1/S2",
+        "Plaque H1"
+      ]
+    }
+  }
+}

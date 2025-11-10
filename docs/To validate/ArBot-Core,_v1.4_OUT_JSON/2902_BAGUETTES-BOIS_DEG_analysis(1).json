@@ -1,0 +1,311 @@
+{
+  "meta": {
+    "SOP_name": "ArBot-Core",
+    "SOP_ver": "v1.4",
+    "generated_at": "2025-10-16T15:58:00Z",
+    "tool_list": [
+      "vision",
+      "knowledge",
+      "repair",
+      "normalize"
+    ],
+    "schema_ref": "schemas/arbot-vision-analysis.schema.json",
+    "schema_ver": "v1.0.1",
+    "ingestion_log": {
+      "mode": "GDocs-repair"
+    }
+  },
+  "context": {
+    "project_ID": "EX70",
+    "project_name": "Sinistre baignoire RDC",
+    "project_type": "Expertise Sinistre",
+    "phase_ID": "PH2",
+    "phase_name": "Diagnostic sinistre"
+  },
+  "source_file": {
+    "file_cat": "Photo",
+    "file_ID": "2902",
+    "file_name": "2902_BAGUETTES-BOIS_DEG.jpg",
+    "file_ext": "jpg",
+    "file_img_width": 1884,
+    "file_img_height": 4080,
+    "file_date": "2025-08-18",
+    "zone_ID": 2,
+    "zone_name": "SDB",
+    "cat_ID": 9,
+    "cat_img_ID": "02",
+    "cat_name": "MEUBLE-VASQUE",
+    "viewtype_ID": "DEG",
+    "viewtype_name": "DEGAT SUR EXISTANT",
+    "full_exif_data": {
+      "enabled": true
+    }
+  },
+  "vision": {
+    "passes": 3,
+    "scales": [
+      1,
+      0.75,
+      0.5
+    ],
+    "nms_iou": 0.5,
+    "refine_below": 0.82,
+    "trust_score": 0.98,
+    "focus_type": "détail",
+    "target_zone": "MGS/Menuiserie",
+    "viewtype_ID": "DEG",
+    "viewtype_name": "DEGAT SUR EXISTANT",
+    "evidence_crops": [
+      "2902_crop1.jpg"
+    ],
+    "annotations": [
+      {
+        "ann_ID": "2902_D01_A01",
+        "ann_type": "polygon",
+        "ann_label": "Absence de joint d'étanchéité Mur/Bois-Sol",
+        "ann_linked_def_ID": "2902_D01",
+        "ann_layer": "étanchéité",
+        "ann_confidence": 0.99,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#FFD700",
+          "stroke_width": 2,
+          "fill": "#FFD700",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2902_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.6,
+          0.65,
+          0.95,
+          0.8
+        ],
+        "polygon_norm": [
+          [
+            0.6,
+            0.65
+          ],
+          [
+            0.9,
+            0.8
+          ],
+          [
+            0.95,
+            0.75
+          ],
+          [
+            0.65,
+            0.65
+          ],
+          [
+            0.6,
+            0.65
+          ]
+        ]
+      },
+      {
+        "ann_ID": "2902_D02_A01",
+        "ann_type": "polygon",
+        "ann_label": "Non-protection des chants du bois",
+        "ann_linked_def_ID": "2902_D02",
+        "ann_layer": "menuiserie",
+        "ann_confidence": 0.95,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#DC143C",
+          "stroke_width": 2,
+          "fill": "#DC143C",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2902_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.5,
+          0.55,
+          0.7,
+          0.8
+        ],
+        "polygon_norm": [
+          [
+            0.5,
+            0.55
+          ],
+          [
+            0.7,
+            0.55
+          ],
+          [
+            0.7,
+            0.8
+          ],
+          [
+            0.5,
+            0.8
+          ],
+          [
+            0.5,
+            0.55
+          ]
+        ]
+      },
+      {
+        "ann_ID": "2902_D03_A01",
+        "ann_type": "polygon",
+        "ann_label": "Finition du calfeutrement Mur/Bois grossière",
+        "ann_linked_def_ID": "2902_D03",
+        "ann_layer": "finition",
+        "ann_confidence": 0.9,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#D2B48C",
+          "stroke_width": 2,
+          "fill": "#D2B48C",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2902_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.5,
+          0.3,
+          0.65,
+          0.55
+        ],
+        "polygon_norm": [
+          [
+            0.5,
+            0.3
+          ],
+          [
+            0.65,
+            0.3
+          ],
+          [
+            0.65,
+            0.55
+          ],
+          [
+            0.5,
+            0.55
+          ],
+          [
+            0.5,
+            0.3
+          ]
+        ]
+      }
+    ],
+    "metrics": [],
+    "defects": [
+      {
+        "rule_type": "Notice",
+        "annotation_refs": [
+          "2902_D01_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Manque de mastic d'étanchéité souple à la jonction Bois/Sol.",
+        "origin_viewtype_ID": "DEG",
+        "origin_focus": "détail",
+        "origin_layer": "étanchéité",
+        "id_defaut": "2902_D01",
+        "categorie": "étanchéité",
+        "type_defaut": "non-conformité d'interface",
+        "resume": "Absence de joint d'étanchéité périphérique (Mur/Bois-Sol)",
+        "details": "L'interface entre la baguette bois et le sol carrelé est dépourvue de joint élastomère (mastic sanitaire). Cette jonction est critique et son absence entraîne un risque d'infiltration d'eau sous le revêtement de sol (G1).",
+        "regle_ref": {
+          "norme": "SDB_REF_DOC.pdf",
+          "partie": "Interfaces critiques"
+        },
+        "gravite": 1,
+        "priorite": 1,
+        "temps": 1,
+        "conf_score": 0.99,
+        "incertitude": 0.010000000000000009
+      },
+      {
+        "rule_type": "Notice",
+        "annotation_refs": [
+          "2902_D02_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Chant du bois non protégé et en contact direct avec le sol.",
+        "origin_viewtype_ID": "DEG",
+        "origin_focus": "détail",
+        "origin_layer": "menuiserie",
+        "id_defaut": "2902_D02",
+        "categorie": "menuiserie",
+        "type_defaut": "durabilité/mise en œuvre",
+        "resume": "Non-protection des chants du bois exposé",
+        "details": "Le bas de la baguette en bois est en contact direct avec le sol sans protection des chants ni joint, ce qui nuit à sa durabilité (risque de pourrissement) en zone humide (G2).",
+        "regle_ref": {
+          "norme": "SDB_REF_DOC.pdf",
+          "partie": "Choix des parois & systèmes"
+        },
+        "gravite": 2,
+        "priorite": 2,
+        "temps": 3,
+        "conf_score": 0.95,
+        "incertitude": 0.050000000000000044
+      },
+      {
+        "rule_type": "Classification",
+        "annotation_refs": [
+          "2902_D03_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Enduit/mastic grossier et fissuré à la jonction Mur/Bois.",
+        "origin_viewtype_ID": "DEG",
+        "origin_focus": "détail",
+        "origin_layer": "finition",
+        "id_defaut": "2902_D03",
+        "categorie": "finition",
+        "type_defaut": "esthétique",
+        "resume": "Finition du calfeutrement Mur/Bois grossière",
+        "details": "L'enduit ou le mastic appliqué à la jonction Mur/Bois est grossier, débordant et présente des signes de fissuration/écaillement, ce qui est un défaut esthétique et de durabilité (G3).",
+        "regle_ref": {
+          "norme": "SDB_def_class.pdf",
+          "partie": "Gravité"
+        },
+        "gravite": 3,
+        "priorite": 3,
+        "temps": 3,
+        "conf_score": 0.9,
+        "incertitude": 0.09999999999999998
+      }
+    ],
+    "transform_history": [
+      {
+        "step": "gdocs-repair",
+        "seed": 42
+      }
+    ]
+  },
+  "presentation": {
+    "caption": "Absence de joint d'étanchéité périphérique (Mur/Bois-Sol)",
+    "padded_bbox_norm": [
+      0.59,
+      0.64,
+      0.96,
+      0.81
+    ],
+    "style": "highlight-color:#00FFFF; opacity:0.35; border:2px solid #00FFFF;",
+    "refined": true,
+    "confidence_before": 0.95,
+    "confidence_after": 0.99
+  },
+  "validation": {
+    "ok": true,
+    "erreurs": [],
+    "avertissements": []
+  },
+  "protocol": {
+    "mode_tracabilite": "EXTENDED_DEBUG",
+    "determinisme": {
+      "force_seed": 42
+    },
+    "exigence_materielle": {
+      "require_certification": [
+        "SPEC/SEL",
+        "Mortier-colle C2-S1/S2",
+        "Plaque H1"
+      ]
+    }
+  }
+}

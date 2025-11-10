@@ -1,0 +1,242 @@
+{
+  "meta": {
+    "SOP_name": "ArBot-Core",
+    "SOP_ver": "v1.4",
+    "generated_at": "2025-10-17T12:18:45Z",
+    "tool_list": [
+      "vision",
+      "knowledge",
+      "repair",
+      "normalize"
+    ],
+    "schema_ref": "schemas/arbot-vision-analysis.schema.json",
+    "schema_ver": "v1.0.1",
+    "ingestion_log": {
+      "mode": "GDocs-repair"
+    }
+  },
+  "context": {
+    "project_ID": "EX70",
+    "project_name": "Sinistre baignoire RDC",
+    "project_type": "Expertise Sinistre",
+    "phase_ID": "PH2",
+    "phase_name": "Diagnostic sinistre"
+  },
+  "source_file": {
+    "file_cat": "Photo",
+    "file_ID": "2002",
+    "file_name": "2002_BAIGNOIRE_GEN.jpg",
+    "file_ext": "jpg",
+    "file_img_width": 6878,
+    "file_img_height": 4750,
+    "file_date": "2025-08-18",
+    "zone_ID": 2,
+    "zone_name": "SDB",
+    "cat_ID": 2,
+    "cat_img_ID": "02",
+    "cat_name": "BAIGNOIRE",
+    "viewtype_ID": "GEN",
+    "viewtype_name": "VUE GENERALE",
+    "full_exif_data": {
+      "enabled": true
+    }
+  },
+  "vision": {
+    "passes": 3,
+    "scales": [
+      1,
+      0.75,
+      0.5
+    ],
+    "nms_iou": 0.5,
+    "refine_below": 0.82,
+    "trust_score": 0.96,
+    "focus_type": "général",
+    "target_zone": "MGB",
+    "viewtype_ID": "GEN",
+    "viewtype_name": "VUE GENERALE",
+    "evidence_crops": [
+      "2002_crop1.jpg"
+    ],
+    "annotations": [
+      {
+        "ann_ID": "2002_D01_A01",
+        "ann_type": "polygon",
+        "ann_label": "absence de joint d'étanchéité",
+        "ann_linked_def_ID": "2002_D01",
+        "ann_layer": "étanchéité",
+        "ann_confidence": 0.98,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#FFD700",
+          "stroke_width": 2,
+          "fill": "#FFD700",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2002_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.34,
+          0.45,
+          0.6,
+          0.47
+        ],
+        "polygon_norm": [
+          [
+            0.34,
+            0.45
+          ],
+          [
+            0.6,
+            0.45
+          ],
+          [
+            0.6,
+            0.47
+          ],
+          [
+            0.34,
+            0.47
+          ],
+          [
+            0.34,
+            0.45
+          ]
+        ]
+      },
+      {
+        "ann_ID": "2002_D02_A01",
+        "ann_type": "polygon",
+        "ann_label": "support exposé",
+        "ann_linked_def_ID": "2002_D02",
+        "ann_layer": "étanchéité",
+        "ann_confidence": 0.95,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#DC143C",
+          "stroke_width": 2,
+          "fill": "#DC143C",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2002_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.1,
+          0.45,
+          0.25,
+          0.6
+        ],
+        "polygon_norm": [
+          [
+            0.1,
+            0.45
+          ],
+          [
+            0.25,
+            0.55
+          ],
+          [
+            0.25,
+            0.6
+          ],
+          [
+            0.1,
+            0.5
+          ],
+          [
+            0.1,
+            0.45
+          ]
+        ]
+      }
+    ],
+    "metrics": [],
+    "defects": [
+      {
+        "rule_type": "Notice",
+        "annotation_refs": [
+          "2002_D01_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Absence de mastic d'étanchéité sur le pourtour de la baignoire.",
+        "origin_viewtype_ID": "GEN",
+        "origin_focus": "général",
+        "origin_layer": "étanchéité",
+        "id_defaut": "2002_D01",
+        "categorie": "étanchéité",
+        "type_defaut": "non-conformité d'interface",
+        "resume": "Absence de joint d'étanchéité périphérique Mur-Baignoire",
+        "details": "L'absence de joint d'étanchéité entre la baignoire et le mur carrelé est visible. [span_0](start_span)Un joint continu en mastic élastomère est requis pour les interfaces baignoire/mur[span_0](end_span).",
+        "regle_ref": {
+          "norme": "SDB_REF_DOC.pdf",
+          "partie": "Interfaces critiques"
+        },
+        "gravite": 1,
+        "priorite": 1,
+        "temps": 1,
+        "conf_score": 0.98,
+        "incertitude": 0.020000000000000018
+      },
+      {
+        "rule_type": "Notice",
+        "annotation_refs": [
+          "2002_D02_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Le support de la baignoire n'est pas finalisé et est exposé.",
+        "origin_viewtype_ID": "GEN",
+        "origin_focus": "général",
+        "origin_layer": "étanchéité",
+        "id_defaut": "2002_D02",
+        "categorie": "revêtements",
+        "type_defaut": "non-conformité SPEC",
+        "resume": "Support non protégé sur le tablier",
+        "details": "Le tablier de la baignoire, sur le côté gauche, n'est pas revêtu. [span_1](start_span)Le support est exposé à l'humidité et l'absence de SPEC (non visible mais non conforme si absent) constitue un risque d'infiltration[span_1](end_span).",
+        "regle_ref": {
+          "norme": "SDB_REF_DOC.pdf",
+          "partie": "Choix des parois & systèmes"
+        },
+        "gravite": 1,
+        "priorite": 1,
+        "temps": 1,
+        "conf_score": 0.95,
+        "incertitude": 0.050000000000000044
+      }
+    ],
+    "transform_history": [
+      {
+        "step": "gdocs-repair",
+        "seed": 42
+      }
+    ]
+  },
+  "presentation": {
+    "caption": "Absence de joint d'étanchéité périphérique Mur-Baignoire",
+    "padded_bbox_norm": [
+      0.33,
+      0.44,
+      0.61,
+      0.48
+    ],
+    "style": "highlight-color:#00FFFF; opacity:0.35; border:2px solid #00FFFF;",
+    "refined": true,
+    "confidence_before": 0.9,
+    "confidence_after": 0.98
+  },
+  "validation": {
+    "ok": true,
+    "erreurs": [],
+    "avertissements": []
+  },
+  "protocol": {
+    "mode_tracabilite": "EXTENDED_DEBUG",
+    "determinisme": {
+      "force_seed": 42
+    },
+    "exigence_materielle": {
+      "require_certification": [
+        "SPEC/SEL",
+        "Mortier-colle C2-S1/S2",
+        "Plaque H1"
+      ]
+    }
+  }
+}

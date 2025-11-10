@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographie : Chronologie d'un Sinistre</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .flowchart-box {
+            border: 2px solid #778DA9;
+            background-color: #E0E1DD;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            font-weight: 600;
+            color: #1B263B;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+        .flowchart-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #415A77;
+            padding: 0 0.5rem;
+        }
+         .timeline {
+            position: relative;
+            padding-left: 2rem;
+            border-left: 3px solid #778DA9;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        .timeline-dot {
+            position: absolute;
+            left: -2.7rem;
+            top: 0.1rem;
+            height: 1.25rem;
+            width: 1.25rem;
+            border-radius: 9999px;
+            background-color: #0077B6;
+            border: 3px solid #E0E1DD;
+        }
+    </style>
+</head>
+<body class="bg-[#0D1B2A] text-[#E0E1DD]">
+
+    <div class="container mx-auto p-4 md:p-8">
+        
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">Chronique d'un Sinistre</h1>
+            <p class="text-lg text-[#778DA9]">Une analyse visuelle de 11 mois de gestion de dossier (Déc. 2024 - Oct. 2025)</p>
+        </header>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 text-center">
+            <div class="bg-[#1B263B] p-6 rounded-lg shadow-lg">
+                <h3 class="text-5xl font-bold text-[#00B4D8]">11</h3>
+                <p class="text-[#778DA9] mt-2">Mois de procédure</p>
+            </div>
+            <div class="bg-[#1B263B] p-6 rounded-lg shadow-lg">
+                <h3 class="text-5xl font-bold text-[#00B4D8]">> 70</h3>
+                <p class="text-[#778DA9] mt-2">Emails échangés</p>
+            </div>
+            <div class="bg-[#1B263B] p-6 rounded-lg shadow-lg">
+                <h3 class="text-5xl font-bold text-[#00B4D8]">> 8</h3>
+                <p class="text-[#778DA9] mt-2">Interlocuteurs distincts</p>
+            </div>
+        </section>
+
+        <main class="space-y-8">
+
+            <div class="bg-[#1B263B] p-6 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-bold mb-4 text-white">Le Labyrinthe des Intervenants</h2>
+                <p class="text-[#778DA9] mb-6">La gestion du sinistre a impliqué une multitude d'acteurs, complexifiant la communication et la prise de décision. Le schéma ci-dessous illustre le flux de communication principal entre les différentes parties.</p>
+                <div class="grid grid-cols-1 md:grid-cols-5 items-center gap-4 text-sm">
+                    <div class="flowchart-box">Vous (Assuré)</div>
+                    <div class="flowchart-arrow hidden md:flex">↔</div>
+                    <div class="flowchart-box">MAAF (Assureur)</div>
+                    <div class="flowchart-arrow hidden md:flex">→</div>
+                    <div class="flowchart-box">GEOP / GM Consultant (Gestionnaire / Expert)</div>
+                </div>
+                 <div class="flex justify-center my-4">
+                     <div class="flowchart-arrow text-4xl transform -rotate-90 md:rotate-0">↓</div>
+                 </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 items-center gap-4 text-sm md:ml-[33%] lg:ml-[40%]">
+                    <div class="flowchart-arrow hidden md:flex">↔</div>
+                    <div class="flowchart-box">Artisans (Rhône Bâtiment)</div>
+                     <div class="flowchart-arrow hidden md:flex">↔</div>
+                    <div class="flowchart-box">Experts Techniques (Centre d'Expertise Lyon 2)</div>
+                </div>
+            </div>
+
+            <div class="bg-[#1B263B] p-6 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-bold mb-4 text-white">La Bataille du Budget : Le Cas de la Baignoire</h2>
+                <p class="text-[#778DA9] mb-6">Un point de friction majeur a été la confusion autour du budget alloué pour la baignoire et ses accessoires. Les informations contradictoires entre l'artisan et le gestionnaire GEOP ont nécessité plusieurs semaines d'échanges pour obtenir une clarification.</p>
+                <div class="chart-container">
+                    <canvas id="budgetChart"></canvas>
+                </div>
+            </div>
+
+             <div class="bg-[#1B263B] p-6 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-bold mb-4 text-white">Reports et Délais : Une Patience à Toute Épreuve</h2>
+                <p class="text-[#778DA9] mb-6">Le calendrier initial des travaux a été marqué par plusieurs reports, générant une frustration croissante et un sentiment d'incertitude quant à la résolution du sinistre.</p>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <h4 class="font-semibold text-white">7 Juillet 2025</h4>
+                        <p class="text-[#778DA9]">L'artisan annonce un premier report de l'intervention, la décalant au 30 juillet.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <h4 class="font-semibold text-white">1 Août 2025</h4>
+                        <p class="text-[#778DA9]">Annonce d'un nouveau report la veille de l'intervention prévue, sans nouvelle date fixée, déclenchant un email de mécontentement.</p>
+                    </div>
+                     <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <h4 class="font-semibold text-white">18 Août 2025</h4>
+                        <p class="text-[#778DA9]">GEOP demande à l'assuré de commander lui-même la baignoire en raison de "problèmes de fourniture", une demande inhabituelle qui ajoute à la complexité de la situation.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="bg-[#1B263B] p-6 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-bold mb-4 text-white">Le Point de Rupture : Malfaçons et Réclamation</h2>
+                <p class="text-[#778DA9] mb-6">Après une intervention finalement réalisée, la découverte de malfaçons a mené à un refus de réception des travaux et à l'ouverture d'une réclamation officielle. L'analyse des communications en septembre montre l'effort conséquent de l'assuré pour faire valoir ses droits.</p>
+                <div class="chart-container">
+                    <canvas id="communicationChart"></canvas>
+                </div>
+            </div>
+
+             <div class="text-center mt-12">
+                <h2 class="text-3xl font-bold text-white">Situation en Octobre 2025 : Non Résolue</h2>
+                <p class="text-lg text-[#778DA9] mt-2">Plus d'un mois après le constat des malfaçons, le dossier reste en attente d'une intervention corrective, malgré plusieurs relances.</p>
+            </div>
+            
+        </main>
+    </div>
+
+    <script>
+        function wrapLabel(str, maxLen) {
+            if (typeof str !== 'string' || str.length <= maxLen) {
+                return str;
+            }
+            const words = str.split(' ');
+            const lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + ' ' + word).trim().length > maxLen && currentLine.length > 0) {
+                    lines.push(currentLine);
+                    currentLine = word;
+                } else {
+                    currentLine = (currentLine + ' ' + word).trim();
+                }
+            }
+            if (currentLine.length > 0) {
+                lines.push(currentLine);
+            }
+            return lines;
+        }
+
+        const commonTooltipOptions = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                                return label.join(' ');
+                            }
+                            return label;
+                        }
+                    }
+                }
+            }
+        };
+
+        const chartColors = ['#0077B6', '#00B4D8', '#ADE8F4', '#CAF0F8'];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            const budgetCtx = document.getElementById('budgetChart').getContext('2d');
+            new Chart(budgetCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Budget annoncé par l\'artisan', 'Budget annoncé par GEOP', 'Budget final validé (fournitures)'],
+                    datasets: [{
+                        label: 'Montant en € TTC',
+                        data: [450, 600, 1078],
+                        backgroundColor: chartColors,
+                        borderColor: '#1B263B',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y',
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            ticks: { color: '#E0E1DD' },
+                            grid: { color: '#415A77' }
+                        },
+                        y: {
+                            ticks: { color: '#E0E1DD' }
+                        }
+                    },
+                    plugins: {
+                         ...commonTooltipOptions.plugins,
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
+
+            const communicationCtx = document.getElementById('communicationChart').getContext('2d');
+            new Chart(communicationCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Emails envoyés par l\'assuré', 'Emails reçus (GEOP)', 'Emails reçus (Artisan)'],
+                    datasets: [{
+                        label: 'Nombre d\'emails en Septembre 2025',
+                        data: [10, 4, 4], 
+                        backgroundColor: chartColors,
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                         ...commonTooltipOptions.plugins,
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                color: '#E0E1DD'
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

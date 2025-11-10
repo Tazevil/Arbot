@@ -1,0 +1,242 @@
+{
+  "meta": {
+    "SOP_name": "ArBot-Core",
+    "SOP_ver": "v1.4",
+    "generated_at": "2025-10-16T17:40:00Z",
+    "tool_list": [
+      "vision",
+      "knowledge",
+      "repair",
+      "normalize"
+    ],
+    "schema_ref": "schemas/arbot-vision-analysis.schema.json",
+    "schema_ver": "v1.0.1",
+    "ingestion_log": {
+      "mode": "GDocs-repair"
+    }
+  },
+  "context": {
+    "project_ID": "EX70",
+    "project_name": "Sinistre baignoire RDC",
+    "project_type": "Expertise Sinistre",
+    "phase_ID": "PH2",
+    "phase_name": "Diagnostic sinistre"
+  },
+  "source_file": {
+    "file_cat": "Photo",
+    "file_ID": "2113",
+    "file_name": "2113_MITIGEUR-BAIN_MAC.jpg",
+    "file_ext": "jpg",
+    "file_img_width": 1884,
+    "file_img_height": 4080,
+    "file_date": "2025-08-18",
+    "zone_ID": 2,
+    "zone_name": "SDB",
+    "cat_ID": 1,
+    "cat_img_ID": "13",
+    "cat_name": "PLOMBERIE",
+    "viewtype_ID": "MAC",
+    "viewtype_name": "VUE MACRO",
+    "full_exif_data": {
+      "enabled": true
+    }
+  },
+  "vision": {
+    "passes": 3,
+    "scales": [
+      1,
+      0.75,
+      0.5
+    ],
+    "nms_iou": 0.5,
+    "refine_below": 0.82,
+    "trust_score": 0.99,
+    "focus_type": "détail",
+    "target_zone": "Moisissure/Raccord",
+    "viewtype_ID": "MAC",
+    "viewtype_name": "VUE MACRO",
+    "evidence_crops": [
+      "2113_crop1.jpg"
+    ],
+    "annotations": [
+      {
+        "ann_ID": "2113_D01_A01",
+        "ann_type": "polygon",
+        "ann_label": "Moisissure/Infiltration immédiate (Verdâtre)",
+        "ann_linked_def_ID": "2113_D01",
+        "ann_layer": "étanchéité",
+        "ann_confidence": 0.99,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#34C759",
+          "stroke_width": 2,
+          "fill": "#34C759",
+          "opacity": 0.5
+        },
+        "evidence_crop": "2113_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.7,
+          0.35,
+          0.9,
+          0.55
+        ],
+        "polygon_norm": [
+          [
+            0.7,
+            0.4
+          ],
+          [
+            0.85,
+            0.55
+          ],
+          [
+            0.9,
+            0.5
+          ],
+          [
+            0.75,
+            0.35
+          ],
+          [
+            0.7,
+            0.4
+          ]
+        ]
+      },
+      {
+        "ann_ID": "2113_D02_A01",
+        "ann_type": "polygon",
+        "ann_label": "Béance/Matériau poreux utilisé",
+        "ann_linked_def_ID": "2113_D02",
+        "ann_layer": "revêtement",
+        "ann_confidence": 0.98,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#DC143C",
+          "stroke_width": 2,
+          "fill": "#DC143C",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2113_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.6,
+          0.35,
+          0.95,
+          0.75
+        ],
+        "polygon_norm": [
+          [
+            0.6,
+            0.35
+          ],
+          [
+            0.95,
+            0.35
+          ],
+          [
+            0.95,
+            0.75
+          ],
+          [
+            0.6,
+            0.75
+          ],
+          [
+            0.6,
+            0.35
+          ]
+        ]
+      }
+    ],
+    "metrics": [],
+    "defects": [
+      {
+        "rule_type": "Notice",
+        "annotation_refs": [
+          "2113_D01_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Preuve de l'échec de l'étanchéité et apparition de moisissure (vert) après une courte période d'utilisation.",
+        "origin_viewtype_ID": "MAC",
+        "origin_focus": "détail",
+        "origin_layer": "étanchéité",
+        "id_defaut": "2113_D01",
+        "categorie": "étanchéité",
+        "type_defaut": "fuite/infiltration/moisissure",
+        "resume": "Infiltration immédiate et moisissure à la traversée de mitigeur",
+        "details": "La présence d'une altération verdâtre (moisissure) autour du raccord prouve l'échec de l'étanchéité et une infiltration rapide. Ceci est dû à l'absence de manchons SPEC et au calfeutrement avec un enduit poreux (plâtre/ciment) rigide.",
+        "regle_ref": {
+          "norme": "NOTICE_CSTB-SPEC_2021",
+          "partie": "Chapitre 3.2"
+        },
+        "gravite": 1,
+        "priorite": 1,
+        "temps": 1,
+        "conf_score": 1,
+        "incertitude": 0
+      },
+      {
+        "rule_type": "Notice",
+        "annotation_refs": [
+          "2113_D02_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Calfeutrement visiblement non étanche et friable.",
+        "origin_viewtype_ID": "MAC",
+        "origin_focus": "détail",
+        "origin_layer": "revêtement",
+        "id_defaut": "2113_D02",
+        "categorie": "revêtement",
+        "type_defaut": "non-conformité mise en œuvre",
+        "resume": "Matériau poreux/rigide utilisé pour calfeutrement",
+        "details": "L'utilisation de plâtre/enduit poreux pour calfeutrer l'espace autour du raccord est non conforme pour une zone EB+, ne pouvant pas absorber les mouvements ni assurer l'étanchéité.",
+        "regle_ref": {
+          "norme": "SDB_REF_DOC.pdf",
+          "partie": "Interfaces critiques"
+        },
+        "gravite": 1,
+        "priorite": 1,
+        "temps": 3,
+        "conf_score": 0.98,
+        "incertitude": 0.020000000000000018
+      }
+    ],
+    "transform_history": [
+      {
+        "step": "gdocs-repair",
+        "seed": 42
+      }
+    ]
+  },
+  "presentation": {
+    "caption": "Moisissure due à l'infiltration immédiate",
+    "padded_bbox_norm": [
+      0.69,
+      0.34,
+      0.91,
+      0.56
+    ],
+    "style": "highlight-color:#00FFFF; opacity:0.35; border:2px solid #00FFFF;",
+    "refined": true,
+    "confidence_before": 0.95,
+    "confidence_after": 0.99
+  },
+  "validation": {
+    "ok": true,
+    "erreurs": [],
+    "avertissements": []
+  },
+  "protocol": {
+    "mode_tracabilite": "EXTENDED_DEBUG",
+    "determinisme": {
+      "force_seed": 42
+    },
+    "exigence_materielle": {
+      "require_certification": [
+        "SPEC/SEL",
+        "Mortier-colle C2-S1/S2",
+        "Plaque H1"
+      ]
+    }
+  }
+}

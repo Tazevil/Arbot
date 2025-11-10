@@ -1,0 +1,242 @@
+{
+  "meta": {
+    "SOP_name": "ArBot-Core",
+    "SOP_ver": "v1.4",
+    "generated_at": "2025-10-16T16:40:12Z",
+    "tool_list": [
+      "vision",
+      "knowledge",
+      "repair",
+      "normalize"
+    ],
+    "schema_ref": "schemas/arbot-vision-analysis.schema.json",
+    "schema_ver": "v1.0.1",
+    "ingestion_log": {
+      "mode": "GDocs-repair"
+    }
+  },
+  "context": {
+    "project_ID": "EX70",
+    "project_name": "Sinistre baignoire RDC",
+    "project_type": "Expertise Sinistre",
+    "phase_ID": "PH2",
+    "phase_name": "Diagnostic sinistre"
+  },
+  "source_file": {
+    "file_cat": "Photo",
+    "file_ID": "3601",
+    "file_name": "3601_JOINT_DET.jpg",
+    "file_ext": "jpg",
+    "file_img_width": 1884,
+    "file_img_height": 4080,
+    "file_date": "2025-08-18",
+    "zone_ID": 3,
+    "zone_name": "WC",
+    "cat_ID": 6,
+    "cat_img_ID": "01",
+    "cat_name": "PLATRERIE",
+    "viewtype_ID": "DET",
+    "viewtype_name": "VUE PROCHE",
+    "full_exif_data": {
+      "enabled": true
+    }
+  },
+  "vision": {
+    "passes": 3,
+    "scales": [
+      1,
+      0.75,
+      0.5
+    ],
+    "nms_iou": 0.5,
+    "refine_below": 0.82,
+    "trust_score": 0.97,
+    "focus_type": "détail",
+    "target_zone": "MGS",
+    "viewtype_ID": "DET",
+    "viewtype_name": "VUE PROCHE",
+    "evidence_crops": [
+      "3601_crop1.jpg"
+    ],
+    "annotations": [
+      {
+        "ann_ID": "3601_D01_A01",
+        "ann_type": "polygon",
+        "ann_label": "Absence de joint d'étanchéité Mur-Sol",
+        "ann_linked_def_ID": "3601_D01",
+        "ann_layer": "étanchéité",
+        "ann_confidence": 0.99,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#FFD700",
+          "stroke_width": 2,
+          "fill": "#FFD700",
+          "opacity": 0.35
+        },
+        "evidence_crop": "3601_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.6,
+          0.65,
+          0.95,
+          0.8
+        ],
+        "polygon_norm": [
+          [
+            0.6,
+            0.65
+          ],
+          [
+            0.9,
+            0.8
+          ],
+          [
+            0.95,
+            0.75
+          ],
+          [
+            0.65,
+            0.65
+          ],
+          [
+            0.6,
+            0.65
+          ]
+        ]
+      },
+      {
+        "ann_ID": "3601_D02_A01",
+        "ann_type": "polygon",
+        "ann_label": "Défaut de finition/Irrégularité Mur-Sol",
+        "ann_linked_def_ID": "3601_D02",
+        "ann_layer": "finition",
+        "ann_confidence": 0.95,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#D2B48C",
+          "stroke_width": 2,
+          "fill": "#D2B48C",
+          "opacity": 0.35
+        },
+        "evidence_crop": "3601_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.5,
+          0.55,
+          0.75,
+          0.75
+        ],
+        "polygon_norm": [
+          [
+            0.5,
+            0.55
+          ],
+          [
+            0.75,
+            0.55
+          ],
+          [
+            0.75,
+            0.75
+          ],
+          [
+            0.5,
+            0.75
+          ],
+          [
+            0.5,
+            0.55
+          ]
+        ]
+      }
+    ],
+    "metrics": [],
+    "defects": [
+      {
+        "rule_type": "Notice",
+        "annotation_refs": [
+          "3601_D01_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Manque de mastic d'étanchéité souple à la jonction Mur-Sol (risque d'infiltration).",
+        "origin_viewtype_ID": "DET",
+        "origin_focus": "détail",
+        "origin_layer": "étanchéité",
+        "id_defaut": "3601_D01",
+        "categorie": "étanchéité",
+        "type_defaut": "non-conformité d'interface",
+        "resume": "Absence de joint d'étanchéité périphérique Mur-Sol",
+        "details": "La jonction Mur-Sol est dépourvue de joint élastomère (mastic sanitaire). L'étanchéité est requise aux jonctions pour prévenir l'infiltration d'eau de nettoyage ou en cas de fuite du WC/bâti-support.",
+        "regle_ref": {
+          "norme": "SDB_REF_DOC.pdf",
+          "partie": "Interfaces critiques"
+        },
+        "gravite": 1,
+        "priorite": 1,
+        "temps": 1,
+        "conf_score": 0.99,
+        "incertitude": 0.010000000000000009
+      },
+      {
+        "rule_type": "Classification",
+        "annotation_refs": [
+          "3601_D02_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Irrégularité de l'enduit/peinture au niveau de la jonction Mur-Sol.",
+        "origin_viewtype_ID": "DET",
+        "origin_focus": "détail",
+        "origin_layer": "finition",
+        "id_defaut": "3601_D02",
+        "categorie": "finition",
+        "type_defaut": "esthétique/planéité",
+        "resume": "Défaut de finition/Irrégularité Mur-Sol",
+        "details": "La finition de l'enduit/peinture au bas du mur (MGS) est irrégulière et grossière, créant un défaut esthétique (G3) et compliquant la mise en œuvre d'un joint d'étanchéité conforme.",
+        "regle_ref": {
+          "norme": "SDB_def_class.pdf",
+          "partie": "Gravité"
+        },
+        "gravite": 3,
+        "priorite": 3,
+        "temps": 3,
+        "conf_score": 0.95,
+        "incertitude": 0.050000000000000044
+      }
+    ],
+    "transform_history": [
+      {
+        "step": "gdocs-repair",
+        "seed": 42
+      }
+    ]
+  },
+  "presentation": {
+    "caption": "Absence de joint d'étanchéité périphérique Mur-Sol",
+    "padded_bbox_norm": [
+      0.59,
+      0.64,
+      0.96,
+      0.81
+    ],
+    "style": "highlight-color:#00FFFF; opacity:0.35; border:2px solid #00FFFF;",
+    "refined": true,
+    "confidence_before": 0.95,
+    "confidence_after": 0.98
+  },
+  "validation": {
+    "ok": true,
+    "erreurs": [],
+    "avertissements": []
+  },
+  "protocol": {
+    "mode_tracabilite": "EXTENDED_DEBUG",
+    "determinisme": {
+      "force_seed": 42
+    },
+    "exigence_materielle": {
+      "require_certification": [
+        "SPEC/SEL",
+        "Mortier-colle C2-S1/S2",
+        "Plaque H1"
+      ]
+    }
+  }
+}

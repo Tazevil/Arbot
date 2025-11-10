@@ -1,0 +1,242 @@
+{
+  "meta": {
+    "SOP_name": "ArBot-Core",
+    "SOP_ver": "v1.4",
+    "generated_at": "2025-10-16T14:10:45Z",
+    "tool_list": [
+      "vision",
+      "knowledge",
+      "repair",
+      "normalize"
+    ],
+    "schema_ref": "schemas/arbot-vision-analysis.schema.json",
+    "schema_ver": "v1.0.1",
+    "ingestion_log": {
+      "mode": "GDocs-repair"
+    }
+  },
+  "context": {
+    "project_ID": "EX70",
+    "project_name": "Sinistre baignoire RDC",
+    "project_type": "Expertise Sinistre",
+    "phase_ID": "PH2",
+    "phase_name": "Diagnostic sinistre"
+  },
+  "source_file": {
+    "file_cat": "Photo",
+    "file_ID": "2110",
+    "file_name": "2110_VENTILATION-NATURELLE_DET.jpg",
+    "file_ext": "jpg",
+    "file_img_width": 1884,
+    "file_img_height": 4080,
+    "file_date": "2025-08-18",
+    "zone_ID": 2,
+    "zone_name": "SDB",
+    "cat_ID": 1,
+    "cat_img_ID": "10",
+    "cat_name": "PLOMBERIE",
+    "viewtype_ID": "DET",
+    "viewtype_name": "VUE PROCHE",
+    "full_exif_data": {
+      "enabled": true
+    }
+  },
+  "vision": {
+    "passes": 3,
+    "scales": [
+      1,
+      0.75,
+      0.5
+    ],
+    "nms_iou": 0.5,
+    "refine_below": 0.82,
+    "trust_score": 0.95,
+    "focus_type": "détail",
+    "target_zone": "MGP",
+    "viewtype_ID": "DET",
+    "viewtype_name": "VUE PROCHE",
+    "evidence_crops": [
+      "2110_crop1.jpg"
+    ],
+    "annotations": [
+      {
+        "ann_ID": "2110_D01_A01",
+        "ann_type": "polygon",
+        "ann_label": "absence de VMC",
+        "ann_linked_def_ID": "2110_D01",
+        "ann_layer": "ventilation",
+        "ann_confidence": 0.98,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#FFD700",
+          "stroke_width": 2,
+          "fill": "#FFD700",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2110_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.6,
+          0.35,
+          0.8,
+          0.55
+        ],
+        "polygon_norm": [
+          [
+            0.6,
+            0.4
+          ],
+          [
+            0.75,
+            0.55
+          ],
+          [
+            0.8,
+            0.5
+          ],
+          [
+            0.65,
+            0.35
+          ],
+          [
+            0.6,
+            0.4
+          ]
+        ]
+      },
+      {
+        "ann_ID": "2110_D02_A01",
+        "ann_type": "polygon",
+        "ann_label": "conduit endommagé",
+        "ann_linked_def_ID": "2110_D02",
+        "ann_layer": "ventilation",
+        "ann_confidence": 0.95,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#DC143C",
+          "stroke_width": 2,
+          "fill": "#DC143C",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2110_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.65,
+          0.35,
+          0.85,
+          0.45
+        ],
+        "polygon_norm": [
+          [
+            0.65,
+            0.38
+          ],
+          [
+            0.8,
+            0.45
+          ],
+          [
+            0.85,
+            0.42
+          ],
+          [
+            0.7,
+            0.35
+          ],
+          [
+            0.65,
+            0.38
+          ]
+        ]
+      }
+    ],
+    "metrics": [],
+    "defects": [
+      {
+        "rule_type": "Notice",
+        "annotation_refs": [
+          "2110_D01_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Aucun système de ventilation mécanique n'est visible, uniquement un conduit rudimentaire.",
+        "origin_viewtype_ID": "DET",
+        "origin_focus": "détail",
+        "origin_layer": "ventilation",
+        "id_defaut": "2110_D01",
+        "categorie": "ventilation",
+        "type_defaut": "non-conformité",
+        "resume": "Absence de VMC ou d'extraction",
+        "details": "L'installation montre une ventilation naturelle ou ponctuelle inefficace, sans VMC ou extracteur pour assurer le renouvellement d'air dans un local humide, ce qui est contraire aux bonnes pratiques et risque de créer des problèmes de condensation.",
+        "regle_ref": {
+          "norme": "SDB_REF_DOC.pdf",
+          "partie": "6) Ventilation"
+        },
+        "gravite": 1,
+        "priorite": 1,
+        "temps": 2,
+        "conf_score": 0.98,
+        "incertitude": 0.020000000000000018
+      },
+      {
+        "rule_type": "Notice",
+        "annotation_refs": [
+          "2110_D02_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Le conduit est visiblement cassé et non scellé, ce qui le rend inopérant.",
+        "origin_viewtype_ID": "DET",
+        "origin_focus": "détail",
+        "origin_layer": "ventilation",
+        "id_defaut": "2110_D02",
+        "categorie": "ventilation",
+        "type_defaut": "dégradation",
+        "resume": "Conduit de ventilation endommagé",
+        "details": "Le conduit de ventilation est endommagé, ce qui compromet son bon fonctionnement et l'efficacité du système, qu'il soit naturel ou mécanique.",
+        "regle_ref": {
+          "norme": "SDB_REF_DOC.pdf",
+          "partie": "6) Ventilation"
+        },
+        "gravite": 2,
+        "priorite": 2,
+        "temps": 2,
+        "conf_score": 0.95,
+        "incertitude": 0.050000000000000044
+      }
+    ],
+    "transform_history": [
+      {
+        "step": "gdocs-repair",
+        "seed": 42
+      }
+    ]
+  },
+  "presentation": {
+    "caption": "Absence de VMC ou d'extraction",
+    "padded_bbox_norm": [
+      0.59,
+      0.34,
+      0.81,
+      0.56
+    ],
+    "style": "highlight-color:#00FFFF; opacity:0.35; border:2px solid #00FFFF;",
+    "refined": true,
+    "confidence_before": 0.9,
+    "confidence_after": 0.98
+  },
+  "validation": {
+    "ok": true,
+    "erreurs": [],
+    "avertissements": []
+  },
+  "protocol": {
+    "mode_tracabilite": "EXTENDED_DEBUG",
+    "determinisme": {
+      "force_seed": 42
+    },
+    "exigence_materielle": {
+      "require_certification": [
+        "SPEC/SEL",
+        "Mortier-colle C2-S1/S2",
+        "Plaque H1"
+      ]
+    }
+  }
+}

@@ -1,0 +1,311 @@
+{
+  "meta": {
+    "SOP_name": "ArBot-Core",
+    "SOP_ver": "v1.4",
+    "generated_at": "2025-10-16T15:08:00Z",
+    "tool_list": [
+      "vision",
+      "knowledge",
+      "repair",
+      "normalize"
+    ],
+    "schema_ref": "schemas/arbot-vision-analysis.schema.json",
+    "schema_ver": "v1.0.1",
+    "ingestion_log": {
+      "mode": "GDocs-repair"
+    }
+  },
+  "context": {
+    "project_ID": "EX70",
+    "project_name": "Sinistre baignoire RDC",
+    "project_type": "Expertise Sinistre",
+    "phase_ID": "PH2",
+    "phase_name": "Diagnostic sinistre"
+  },
+  "source_file": {
+    "file_cat": "Photo",
+    "file_ID": "2403",
+    "file_name": "2403_CARRELAGE-DESALIGNEMENT_DET.jpg",
+    "file_ext": "jpg",
+    "file_img_width": 3768,
+    "file_img_height": 8160,
+    "file_date": "2025-08-18",
+    "zone_ID": 2,
+    "zone_name": "SDB",
+    "cat_ID": 4,
+    "cat_img_ID": "03",
+    "cat_name": "FENETRE",
+    "viewtype_ID": "DET",
+    "viewtype_name": "VUE PROCHE",
+    "full_exif_data": {
+      "enabled": true
+    }
+  },
+  "vision": {
+    "passes": 3,
+    "scales": [
+      1,
+      0.75,
+      0.5
+    ],
+    "nms_iou": 0.5,
+    "refine_below": 0.82,
+    "trust_score": 0.95,
+    "focus_type": "détail",
+    "target_zone": "Menuiseries",
+    "viewtype_ID": "DET",
+    "viewtype_name": "VUE PROCHE",
+    "evidence_crops": [
+      "2403_crop1.jpg"
+    ],
+    "annotations": [
+      {
+        "ann_ID": "2403_D01_A01",
+        "ann_type": "polygon",
+        "ann_label": "Absence/Défaillance du joint d'étanchéité",
+        "ann_linked_def_ID": "2403_D01",
+        "ann_layer": "étanchéité",
+        "ann_confidence": 0.98,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#FFD700",
+          "stroke_width": 2,
+          "fill": "#FFD700",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2403_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.35,
+          0.35,
+          0.65,
+          0.5
+        ],
+        "polygon_norm": [
+          [
+            0.35,
+            0.35
+          ],
+          [
+            0.65,
+            0.35
+          ],
+          [
+            0.65,
+            0.5
+          ],
+          [
+            0.35,
+            0.5
+          ],
+          [
+            0.35,
+            0.35
+          ]
+        ]
+      },
+      {
+        "ann_ID": "2403_D02_A01",
+        "ann_type": "polygon",
+        "ann_label": "Finition du calfeutrement grossière",
+        "ann_linked_def_ID": "2403_D02",
+        "ann_layer": "finition",
+        "ann_confidence": 0.9,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#D2B48C",
+          "stroke_width": 2,
+          "fill": "#D2B48C",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2403_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.3,
+          0.4,
+          0.65,
+          0.55
+        ],
+        "polygon_norm": [
+          [
+            0.3,
+            0.4
+          ],
+          [
+            0.65,
+            0.4
+          ],
+          [
+            0.65,
+            0.55
+          ],
+          [
+            0.3,
+            0.55
+          ],
+          [
+            0.3,
+            0.4
+          ]
+        ]
+      },
+      {
+        "ann_ID": "2403_D03_A01",
+        "ann_type": "polygon",
+        "ann_label": "Décalage du carrelage/joint vertical",
+        "ann_linked_def_ID": "2403_D03",
+        "ann_layer": "revêtement",
+        "ann_confidence": 0.95,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#DC143C",
+          "stroke_width": 2,
+          "fill": "#DC143C",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2403_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.3,
+          0.25,
+          0.5,
+          0.4
+        ],
+        "polygon_norm": [
+          [
+            0.3,
+            0.25
+          ],
+          [
+            0.5,
+            0.25
+          ],
+          [
+            0.5,
+            0.4
+          ],
+          [
+            0.3,
+            0.4
+          ],
+          [
+            0.3,
+            0.25
+          ]
+        ]
+      }
+    ],
+    "metrics": [],
+    "defects": [
+      {
+        "rule_type": "Notice",
+        "annotation_refs": [
+          "2403_D01_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Absence de joint souple d'étanchéité autour de l'encadrement de la menuiserie.",
+        "origin_viewtype_ID": "DET",
+        "origin_focus": "détail",
+        "origin_layer": "étanchéité",
+        "id_defaut": "2403_D01",
+        "categorie": "étanchéité",
+        "type_defaut": "non-conformité d'interface",
+        "resume": "Absence/Défaillance du joint d'étanchéité Menuiserie/Carrelage",
+        "details": "L'interface entre le carrelage et le cadre de la menuiserie est mal traitée (joint rigide ou discontinu). Le traitement des points singuliers de menuiserie requiert une étanchéité périphérique (mastic élastomère) pour empêcher les entrées d'eau.",
+        "regle_ref": {
+          "norme": "SDB_REF_DOC.pdf",
+          "partie": "Interfaces critiques"
+        },
+        "gravite": 1,
+        "priorite": 1,
+        "temps": 1,
+        "conf_score": 0.98,
+        "incertitude": 0.020000000000000018
+      },
+      {
+        "rule_type": "Notice",
+        "annotation_refs": [
+          "2403_D02_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Bavures et manque de lissage du joint de calfeutrement.",
+        "origin_viewtype_ID": "DET",
+        "origin_focus": "détail",
+        "origin_layer": "finition",
+        "id_defaut": "2403_D02",
+        "categorie": "finition",
+        "type_defaut": "esthétique",
+        "resume": "Finition du calfeutrement grossière",
+        "details": "Le calfeutrement de l'interface carrelage/appui de fenêtre est appliqué grossièrement, avec des bavures et une finition non nette, ce qui est contraire aux exigences de finition propre.",
+        "regle_ref": {
+          "norme": "SDB_REF_DOC.pdf",
+          "partie": "Interfaces critiques"
+        },
+        "gravite": 3,
+        "priorite": 3,
+        "temps": 3,
+        "conf_score": 0.9,
+        "incertitude": 0.09999999999999998
+      },
+      {
+        "rule_type": "Norme",
+        "annotation_refs": [
+          "2403_D03_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Joints de carrelage désalignés ou irréguliers par rapport aux éléments fixes.",
+        "origin_viewtype_ID": "DET",
+        "origin_focus": "détail",
+        "origin_layer": "revêtement",
+        "id_defaut": "2403_D03",
+        "categorie": "revêtement",
+        "type_defaut": "esthétique/mise en œuvre",
+        "resume": "Défaut de calepinage/Décalage du carrelage",
+        "details": "Le joint horizontal du carrelage ne s'aligne pas avec l'angle de la menuiserie et le joint vertical est irrégulier (visible aussi en 2405). Ce désalignement est un défaut de calepinage et d'esthétique (G3).",
+        "regle_ref": {
+          "norme": "DTU 52.2_2022",
+          "partie": "Partie 1-1 > 7"
+        },
+        "gravite": 3,
+        "priorite": 3,
+        "temps": 3,
+        "conf_score": 0.95,
+        "incertitude": 0.050000000000000044
+      }
+    ],
+    "transform_history": [
+      {
+        "step": "gdocs-repair",
+        "seed": 42
+      }
+    ]
+  },
+  "presentation": {
+    "caption": "Absence/Défaillance du joint d'étanchéité Menuiserie/Carrelage",
+    "padded_bbox_norm": [
+      0.34,
+      0.34,
+      0.66,
+      0.51
+    ],
+    "style": "highlight-color:#00FFFF; opacity:0.35; border:2px solid #00FFFF;",
+    "refined": true,
+    "confidence_before": 0.95,
+    "confidence_after": 0.98
+  },
+  "validation": {
+    "ok": true,
+    "erreurs": [],
+    "avertissements": []
+  },
+  "protocol": {
+    "mode_tracabilite": "EXTENDED_DEBUG",
+    "determinisme": {
+      "force_seed": 42
+    },
+    "exigence_materielle": {
+      "require_certification": [
+        "SPEC/SEL",
+        "Mortier-colle C2-S1/S2",
+        "Plaque H1"
+      ]
+    }
+  }
+}

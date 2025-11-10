@@ -1,0 +1,311 @@
+{
+  "meta": {
+    "SOP_name": "ArBot-Core",
+    "SOP_ver": "v1.4",
+    "generated_at": "2025-10-16T15:51:49Z",
+    "tool_list": [
+      "vision",
+      "knowledge",
+      "repair",
+      "normalize"
+    ],
+    "schema_ref": "schemas/arbot-vision-analysis.schema.json",
+    "schema_ver": "v1.0.1",
+    "ingestion_log": {
+      "mode": "GDocs-repair"
+    }
+  },
+  "context": {
+    "project_ID": "EX70",
+    "project_name": "Sinistre baignoire RDC",
+    "project_type": "Expertise Sinistre",
+    "phase_ID": "PH2",
+    "phase_name": "Diagnostic sinistre"
+  },
+  "source_file": {
+    "file_cat": "Photo",
+    "file_ID": "2503",
+    "file_name": "2503_JOINT_MGP.jpg",
+    "file_ext": "jpg",
+    "file_img_width": 1884,
+    "file_img_height": 4080,
+    "file_date": "2025-08-18",
+    "zone_ID": 2,
+    "zone_name": "SDB",
+    "cat_ID": 3,
+    "cat_img_ID": "03",
+    "cat_name": "CARRELAGE",
+    "viewtype_ID": "MGP",
+    "viewtype_name": "INTERACTION MUR-PLAFOND",
+    "full_exif_data": {
+      "enabled": true
+    }
+  },
+  "vision": {
+    "passes": 3,
+    "scales": [
+      1,
+      0.75,
+      0.5
+    ],
+    "nms_iou": 0.5,
+    "refine_below": 0.82,
+    "trust_score": 0.96,
+    "focus_type": "détail",
+    "target_zone": "MGS/Menuiserie",
+    "viewtype_ID": "MGP",
+    "viewtype_name": "INTERACTION MUR-PLAFOND",
+    "evidence_crops": [
+      "2503_crop1.jpg"
+    ],
+    "annotations": [
+      {
+        "ann_ID": "2503_D01_A01",
+        "ann_type": "polygon",
+        "ann_label": "Absence de joint d'étanchéité Menuiserie/Mur",
+        "ann_linked_def_ID": "2503_D01",
+        "ann_layer": "étanchéité",
+        "ann_confidence": 0.98,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#FFD700",
+          "stroke_width": 2,
+          "fill": "#FFD700",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2503_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.6,
+          0.45,
+          0.9,
+          0.6
+        ],
+        "polygon_norm": [
+          [
+            0.6,
+            0.45
+          ],
+          [
+            0.9,
+            0.45
+          ],
+          [
+            0.9,
+            0.6
+          ],
+          [
+            0.6,
+            0.6
+          ],
+          [
+            0.6,
+            0.45
+          ]
+        ]
+      },
+      {
+        "ann_ID": "2503_D02_A01",
+        "ann_type": "polygon",
+        "ann_label": "Finition du calfeutrement/Peinture grossière",
+        "ann_linked_def_ID": "2503_D02",
+        "ann_layer": "finition",
+        "ann_confidence": 0.95,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#D2B48C",
+          "stroke_width": 2,
+          "fill": "#D2B48C",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2503_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.75,
+          0.45,
+          0.95,
+          0.6
+        ],
+        "polygon_norm": [
+          [
+            0.75,
+            0.45
+          ],
+          [
+            0.95,
+            0.45
+          ],
+          [
+            0.95,
+            0.6
+          ],
+          [
+            0.75,
+            0.6
+          ],
+          [
+            0.75,
+            0.45
+          ]
+        ]
+      },
+      {
+        "ann_ID": "2503_D03_A01",
+        "ann_type": "polygon",
+        "ann_label": "Absence de calfeutrement étanche Menuiserie/Sol",
+        "ann_linked_def_ID": "2503_D03",
+        "ann_layer": "étanchéité",
+        "ann_confidence": 0.9,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#800080",
+          "stroke_width": 2,
+          "fill": "#800080",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2503_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.55,
+          0.7,
+          0.95,
+          0.85
+        ],
+        "polygon_norm": [
+          [
+            0.55,
+            0.7
+          ],
+          [
+            0.95,
+            0.7
+          ],
+          [
+            0.95,
+            0.85
+          ],
+          [
+            0.55,
+            0.85
+          ],
+          [
+            0.55,
+            0.7
+          ]
+        ]
+      }
+    ],
+    "metrics": [],
+    "defects": [
+      {
+        "rule_type": "Notice",
+        "annotation_refs": [
+          "2503_D01_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Manque de joint souple d'étanchéité à la jonction Menuiserie/Mur.",
+        "origin_viewtype_ID": "MGP",
+        "origin_focus": "détail",
+        "origin_layer": "étanchéité",
+        "id_defaut": "2503_D01",
+        "categorie": "étanchéité",
+        "type_defaut": "non-conformité d'interface",
+        "resume": "Absence/Défaillance du joint d'étanchéité Menuiserie/Mur",
+        "details": "L'interface entre le dormant en bois existant et le mur est mal scellée. Le joint doit être en mastic élastomère pour assurer l'étanchéité périphérique et prévenir les infiltrations (G1).",
+        "regle_ref": {
+          "norme": "SDB_REF_DOC.pdf",
+          "partie": "Interfaces critiques"
+        },
+        "gravite": 1,
+        "priorite": 1,
+        "temps": 1,
+        "conf_score": 0.98,
+        "incertitude": 0.020000000000000018
+      },
+      {
+        "rule_type": "Notice",
+        "annotation_refs": [
+          "2503_D02_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Bavures d'enduit et finition non nette à l'interface.",
+        "origin_viewtype_ID": "MGP",
+        "origin_focus": "détail",
+        "origin_layer": "finition",
+        "id_defaut": "2503_D02",
+        "categorie": "finition",
+        "type_defaut": "esthétique",
+        "resume": "Finition du calfeutrement/Peinture grossière",
+        "details": "Le calfeutrement de l'interface Mur-Menuiserie est appliqué de manière irrégulière et grossière (bavures, enduit non lissé) ce qui est un défaut esthétique.",
+        "regle_ref": {
+          "norme": "SDB_REF_DOC.pdf",
+          "partie": "Revêtements & pentes"
+        },
+        "gravite": 3,
+        "priorite": 3,
+        "temps": 3,
+        "conf_score": 0.95,
+        "incertitude": 0.050000000000000044
+      },
+      {
+        "rule_type": "Notice",
+        "annotation_refs": [
+          "2503_D03_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Manque de mastic souple à la jonction Dormant/Sol.",
+        "origin_viewtype_ID": "MGP",
+        "origin_focus": "détail",
+        "origin_layer": "étanchéité",
+        "id_defaut": "2503_D03",
+        "categorie": "étanchéité",
+        "type_defaut": "non-conformité d'interface",
+        "resume": "Absence de joint d'étanchéité Menuiserie/Sol",
+        "details": "Le joint entre le dormant bois existant et le sol est absent ou rigide. Cette interface (MGS) est critique et doit être traitée par un joint élastomère pour éviter l'infiltration d'eau sous le revêtement de sol (G1).",
+        "regle_ref": {
+          "norme": "SDB_REF_DOC.pdf",
+          "partie": "Interfaces critiques"
+        },
+        "gravite": 1,
+        "priorite": 1,
+        "temps": 1,
+        "conf_score": 0.9,
+        "incertitude": 0.09999999999999998
+      }
+    ],
+    "transform_history": [
+      {
+        "step": "gdocs-repair",
+        "seed": 42
+      }
+    ]
+  },
+  "presentation": {
+    "caption": "Absence/Défaillance du joint d'étanchéité Menuiserie/Mur",
+    "padded_bbox_norm": [
+      0.59,
+      0.44,
+      0.91,
+      0.61
+    ],
+    "style": "highlight-color:#00FFFF; opacity:0.35; border:2px solid #00FFFF;",
+    "refined": true,
+    "confidence_before": 0.95,
+    "confidence_after": 0.98
+  },
+  "validation": {
+    "ok": true,
+    "erreurs": [],
+    "avertissements": []
+  },
+  "protocol": {
+    "mode_tracabilite": "EXTENDED_DEBUG",
+    "determinisme": {
+      "force_seed": 42
+    },
+    "exigence_materielle": {
+      "require_certification": [
+        "SPEC/SEL",
+        "Mortier-colle C2-S1/S2",
+        "Plaque H1"
+      ]
+    }
+  }
+}

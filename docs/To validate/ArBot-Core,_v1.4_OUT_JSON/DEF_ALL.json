@@ -1,0 +1,4304 @@
+{
+  "meta": {
+    "SOP_name": "ArBot-Core",
+    "SOP_ver": "v2.0",
+    "generated_at": "2025-10-17T23:04:04.459Z",
+    "tool_list": [
+      "merge",
+      "normalize"
+    ],
+    "schema_ref": "schemas/arbot-def_all.schema.json",
+    "schema_ver": "v1.0.1"
+  },
+  "items": [
+    {
+      "image_ref": "0006_SDB_GEN_20250819.jpg",
+      "id_defaut": "0006_D03",
+      "categorie": "électricité",
+      "type_defaut": "non-conformité traversée",
+      "resume": "Absence de calfeutrement étanche de la boite électrique (Plafond)",
+      "details": "La boite de raccordement électrique au plafond n'est pas scellée ni calfeutrée de manière étanche. Ceci est impératif pour l'étanchéité à la vapeur et à l'air dans la pièce humide (G2).",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Traversées & percements"
+      },
+      "gravite": 2,
+      "priorite": 2,
+      "temps": 3,
+      "conf_score": 0.9,
+      "incertitude": 0.09999999999999998,
+      "annotation_refs": [
+        "0006_D03_A01"
+      ],
+      "source_generated_at": "2025-10-16T17:50:00Z"
+    },
+    {
+      "image_ref": "2113_MITIGEUR-BAIN_MAC.jpg",
+      "id_defaut": "2113_D01",
+      "categorie": "étanchéité",
+      "type_defaut": "fuite/infiltration/moisissure",
+      "resume": "Infiltration immédiate et moisissure à la traversée de mitigeur",
+      "details": "La présence d'une altération verdâtre (moisissure) autour du raccord prouve l'échec de l'étanchéité et une infiltration rapide. Ceci est dû à l'absence de manchons SPEC et au calfeutrement avec un enduit poreux (plâtre/ciment) rigide.",
+      "regle_ref": {
+        "norme": "NOTICE_CSTB-SPEC_2021",
+        "partie": "Chapitre 3.2"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 1,
+      "incertitude": 0,
+      "annotation_refs": [
+        "2113_D01_A01"
+      ],
+      "source_generated_at": "2025-10-16T17:40:00Z"
+    },
+    {
+      "image_ref": "3702_CUVETTE_DEG.jpg",
+      "id_defaut": "3702_D01",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité d'hygiène/étanchéité",
+      "resume": "Absence/Défaillance du joint de calfeutrement Cuvette/Sol",
+      "details": "La jonction Cuvette/Sol est dépourvue de joint élastomère (mastic sanitaire). L'étanchéité est requise pour des raisons d'hygiène et pour prévenir l'infiltration d'eau de nettoyage dans le support, ce qui est critique pour un WC (G1).",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Interfaces critiques"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.99,
+      "incertitude": 0.010000000000000009,
+      "annotation_refs": [
+        "3702_D01_A01"
+      ],
+      "source_generated_at": "2025-10-16T16:55:00Z"
+    },
+    {
+      "image_ref": "3704_CUVETTE_DEG.jpg",
+      "id_defaut": "3704_D01",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité d'hygiène/étanchéité",
+      "resume": "Absence de joint de calfeutrement Cuvette/Mur",
+      "details": "L'interface supérieure entre la cuvette WC et l'habillage mural n'est pas calfeutrée (jour important visible). Un joint élastomère sanitaire est obligatoire pour des raisons d'hygiène et pour prévenir la pénétration de l'eau de nettoyage dans le bâti-support.",
+      "regle_ref": {
+        "norme": "Joints périphériques / mastic sanitaire",
+        "partie": "produits"
+      },
+      "gravite": 2,
+      "priorite": 2,
+      "temps": 3,
+      "conf_score": 0.99,
+      "incertitude": 0.010000000000000009,
+      "annotation_refs": [
+        "3704_D01_A01"
+      ],
+      "source_generated_at": "2025-10-16T16:47:00Z"
+    },
+    {
+      "image_ref": "3705_CUVETTE_DEG.jpg",
+      "id_defaut": "3705_D01",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité d'hygiène/étanchéité",
+      "resume": "Absence de joint de calfeutrement Cuvette/Mur",
+      "details": "L'interface supérieure entre la cuvette WC et l'habillage mural n'est pas calfeutrée (jour important visible). Un joint élastomère sanitaire est obligatoire pour des raisons d'hygiène et pour prévenir la pénétration de l'eau de nettoyage dans le bâti-support.",
+      "regle_ref": {
+        "norme": "Joints périphériques / mastic sanitaire",
+        "partie": "produits"
+      },
+      "gravite": 2,
+      "priorite": 2,
+      "temps": 3,
+      "conf_score": 0.99,
+      "incertitude": 0.010000000000000009,
+      "annotation_refs": [
+        "3705_D01_A01"
+      ],
+      "source_generated_at": "2025-10-17T13:30:15Z"
+    },
+    {
+      "image_ref": "0005_WC_GEN_20250818.jpg",
+      "id_defaut": "0005_D02",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité d'interface",
+      "resume": "Absence de joint d'étanchéité périphérique Mur-Sol",
+      "details": "La jonction Mur-Sol (local WC, zone EA) est dépourvue de joint élastomère (mastic sanitaire). L'étanchéité est requise pour prévenir l'infiltration d'eau de nettoyage ou de fuite du WC/bâti-support (G1 potentiel).",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Interfaces critiques"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.98,
+      "incertitude": 0.020000000000000018,
+      "annotation_refs": [
+        "0005_D02_A01"
+      ],
+      "source_generated_at": "2025-10-17T11:53:11Z"
+    },
+    {
+      "image_ref": "0008_SDB_GEN_20250819.jpg",
+      "id_defaut": "0008_D02",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité d'interface",
+      "resume": "Absence de joint d'étanchéité périphérique Dormant/Mur",
+      "details": "La jonction entre le dormant de la porte (au centre) et le mur rénové est dépourvue de joint élastomère. Ce raccord rigide ou non scellé crée un risque d'infiltration d'air et de vapeur dans la cloison.",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Interfaces critiques"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.98,
+      "incertitude": 0.020000000000000018,
+      "annotation_refs": [
+        "0008_D02_A01"
+      ],
+      "source_generated_at": "2025-10-17T11:59:45Z"
+    },
+    {
+      "image_ref": "0013_SDB_GEN_20250826.jpg",
+      "id_defaut": "0013_D02",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité d'interface",
+      "resume": "Absence de joint d'étanchéité Meuble Vasque/Mur",
+      "details": "Le meuble vasque (existant) est en contact direct avec le mur (zone de projection) sans joint élastomère. Cette absence est critique pour prévenir l'infiltration d'eau derrière le meuble et sa dégradation.",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Interfaces critiques"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "0013_D02_A01"
+      ],
+      "source_generated_at": "2025-10-17T12:05:16Z"
+    },
+    {
+      "image_ref": "0014_SDB_GEN_20250826.jpg",
+      "id_defaut": "0014_D01",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité d'interface",
+      "resume": "Absence de joint d'étanchéité périphérique Mur-Baignoire",
+      "details": "L'interface Mur-Baignoire (MGB) est dépourvue de joint élastomère (mastic sanitaire), ce qui est obligatoire pour prévenir l'infiltration d'eau derrière la baignoire.",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Interfaces critiques"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.99,
+      "incertitude": 0.010000000000000009,
+      "annotation_refs": [
+        "0014_D01_A01"
+      ],
+      "source_generated_at": "2025-10-16T15:22:00Z"
+    },
+    {
+      "image_ref": "0015_SDB_GEN_20250826.jpg",
+      "id_defaut": "0015_D01",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité d'interface",
+      "resume": "Absence de joint d'étanchéité périphérique Mur-Baignoire",
+      "details": "L'interface Mur-Baignoire (MGB) est dépourvue de joint élastomère (mastic sanitaire), ce qui est obligatoire pour prévenir l'infiltration d'eau derrière la baignoire. Défaut de G1 systémique.",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Interfaces critiques"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.99,
+      "incertitude": 0.010000000000000009,
+      "annotation_refs": [
+        "0015_D01_A01"
+      ],
+      "source_generated_at": "2025-10-17T12:09:40Z"
+    },
+    {
+      "image_ref": "2001_SDB_GEN.jpg",
+      "id_defaut": "2001_D01",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité d'interface",
+      "resume": "Absence de joint d'étanchéité périphérique Mur-Baignoire",
+      "details": "L'interface Mur-Baignoire est dépourvue de joint élastomère (mastic sanitaire), ce qui est obligatoire pour prévenir l'infiltration d'eau derrière la baignoire.",
+      "regle_ref": {
+        "norme": "FT_Baignoire_E6D122.pdf",
+        "partie": "Étanchéité et finitions"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.99,
+      "incertitude": 0.010000000000000009,
+      "annotation_refs": [
+        "2001_D01_A01"
+      ],
+      "source_generated_at": "2025-10-17T12:17:15Z"
+    },
+    {
+      "image_ref": "2001_SDB_GEN.jpg",
+      "id_defaut": "2001_D02",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité d'interface",
+      "resume": "Absence de joint d'étanchéité Meuble Vasque/Mur",
+      "details": "L'interface entre le meuble vasque existant et le mur (zone de projection) est dépourvue de joint élastomère (mastic sanitaire), créant un point d'infiltration d'eau.",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Interfaces critiques"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.98,
+      "incertitude": 0.020000000000000018,
+      "annotation_refs": [
+        "2001_D02_A01"
+      ],
+      "source_generated_at": "2025-10-17T12:17:15Z"
+    },
+    {
+      "image_ref": "2002_BAIGNOIRE_GEN.jpg",
+      "id_defaut": "2002_D01",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité d'interface",
+      "resume": "Absence de joint d'étanchéité périphérique Mur-Baignoire",
+      "details": "L'absence de joint d'étanchéité entre la baignoire et le mur carrelé est visible. [span_0](start_span)Un joint continu en mastic élastomère est requis pour les interfaces baignoire/mur[span_0](end_span).",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Interfaces critiques"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.98,
+      "incertitude": 0.020000000000000018,
+      "annotation_refs": [
+        "2002_D01_A01"
+      ],
+      "source_generated_at": "2025-10-17T12:18:45Z"
+    },
+    {
+      "image_ref": "2003_BAIGNOIRE GEN.jpg",
+      "id_defaut": "2003_D01",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité d'interface",
+      "resume": "Absence de joint d'étanchéité périphérique Mur-Baignoire",
+      "details": "L'interface Mur-Baignoire est dépourvue de joint élastomère (mastic sanitaire), ce qui est obligatoire pour prévenir l'infiltration d'eau derrière la baignoire (G1).",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Interfaces critiques"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.99,
+      "incertitude": 0.010000000000000009,
+      "annotation_refs": [
+        "2003_D01_A01"
+      ],
+      "source_generated_at": "2025-10-17T12:19:07Z"
+    },
+    {
+      "image_ref": "2114_MITIGEUR-BAIN_MAC.jpg",
+      "id_defaut": "2114_D01",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité d'interface",
+      "resume": "Joint de scellement des raccords non conforme/poreux",
+      "details": "Le scellement des raccords sur le carrelage est réalisé avec un matériau poreux (plâtre/mortier) au lieu d'un mastic silicone sanitaire fongicide ou d'une platine d'étanchéité appropriée, ce qui crée un risque direct d'infiltration d'eau derrière le carrelage.",
+      "regle_ref": {
+        "norme": "Joints périphériques / mastic sanitaire",
+        "partie": "produits"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.99,
+      "incertitude": 0.010000000000000009,
+      "annotation_refs": [
+        "2114_D01_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:24:00Z"
+    },
+    {
+      "image_ref": "2114_MITIGEUR-BAIN_MAC.jpg",
+      "id_defaut": "2114_D04",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité d'interface",
+      "resume": "Absence de joint d'étanchéité périphérique (baignoire/mur)",
+      "details": "L'absence de joint silicone sanitaire entre le bord de la baignoire et le carrelage (visible sur la vue d'ensemble 2002) permet l'infiltration d'eau derrière le tablier et le mur.",
+      "regle_ref": {
+        "norme": "FT_Baignoire_E6D122.pdf",
+        "partie": "Étanchéité et finitions"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.98,
+      "incertitude": 0.020000000000000018,
+      "annotation_refs": [
+        "2114_D04_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:24:00Z"
+    },
+    {
+      "image_ref": "2303_JOINT_MGM.jpg",
+      "id_defaut": "2301_D01",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité d'interface",
+      "resume": "Absence de joint d'étanchéité périphérique (Mur-Mur)",
+      "details": "L'absence de joint silicone/élastomère est visible à la jonction entre le mur carrelé et le mur adjacent (noir). Cette zone doit être traitée par un joint souple pour assurer la continuité d'étanchéité aux jonctions.",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Interfaces critiques"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.99,
+      "incertitude": 0.010000000000000009,
+      "annotation_refs": [
+        "2301_D01_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:46:00Z"
+    },
+    {
+      "image_ref": "2303_JOINT_MGM.jpg",
+      "id_defaut": "2301_D02",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité d'interface",
+      "resume": "Absence de joint d'étanchéité périphérique (Mur-Sol)",
+      "details": "L'absence de joint silicone/élastomère est visible à la jonction entre le mur carrelé et le sol. Cette zone doit être traitée par un joint souple pour éviter l'infiltration d'eau derrière le carrelage.",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Interfaces critiques"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.98,
+      "incertitude": 0.020000000000000018,
+      "annotation_refs": [
+        "2301_D02_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:46:00Z"
+    },
+    {
+      "image_ref": "2306_JOINT_MGS.jpg",
+      "id_defaut": "2306_D01",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité d'interface",
+      "resume": "Absence de joint d'étanchéité périphérique Mur-Sol",
+      "details": "La jonction Mur-Sol (WC, local EA) est dépourvue de joint élastomère (mastic sanitaire). L'étanchéité est requise aux jonctions pour prévenir l'infiltration d'eau de nettoyage/fuite (G1).",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Interfaces critiques"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.99,
+      "incertitude": 0.010000000000000009,
+      "annotation_refs": [
+        "2306_D01_A01"
+      ],
+      "source_generated_at": "2025-10-17T12:59:45Z"
+    },
+    {
+      "image_ref": "2308_JOINT_MGP.jpg",
+      "id_defaut": "2308_D02",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité d'interface",
+      "resume": "Joint Mur-Plafond non conforme/absence de mastic",
+      "details": "L'interface Mur-Plafond est critique pour l'étanchéité à l'air/vapeur. L'absence de joint élastomère (mastic souple) peut entraîner des micro-fissures et des infiltrations de vapeur, favorisant les dégâts (G2).",
+      "regle_ref": {
+        "norme": "DTU 25.42_P2_2012",
+        "partie": "4.1 Généralités"
+      },
+      "gravite": 2,
+      "priorite": 2,
+      "temps": 3,
+      "conf_score": 0.9,
+      "incertitude": 0.09999999999999998,
+      "annotation_refs": [
+        "2308_D02_A01"
+      ],
+      "source_generated_at": "2025-10-16T15:02:00Z"
+    },
+    {
+      "image_ref": "2309_JOINT_MGP.jpg",
+      "id_defaut": "2309_D02",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité d'interface",
+      "resume": "Joint Mur-Plafond non conforme/absence de mastic",
+      "details": "L'interface Mur-Plafond est critique pour l'étanchéité à l'air/vapeur. L'absence de joint élastomère (mastic souple) peut entraîner des micro-fissures et des infiltrations de vapeur, favorisant les dégâts (G2).",
+      "regle_ref": {
+        "norme": "DTU 25.42_P2_2012",
+        "partie": "4.1 Généralités"
+      },
+      "gravite": 2,
+      "priorite": 2,
+      "temps": 3,
+      "conf_score": 0.9,
+      "incertitude": 0.09999999999999998,
+      "annotation_refs": [
+        "2309_D02_A01"
+      ],
+      "source_generated_at": "2025-10-17T13:10:00Z"
+    },
+    {
+      "image_ref": "2310__JOINT_MGB.jpg",
+      "id_defaut": "2310_D01",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité d'interface",
+      "resume": "Rupture de joint d'étanchéité périphérique (MGB)",
+      "details": "Une rupture du joint d'étanchéité est visible à l'interface Mur-Baignoire-Menuiserie. Un joint élastomère (mastic sanitaire) continu est requis à cette interface pour prévenir les infiltrations.",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Interfaces critiques"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.99,
+      "incertitude": 0.010000000000000009,
+      "annotation_refs": [
+        "2310_D01_A01"
+      ],
+      "source_generated_at": "2025-10-16T15:03:00Z"
+    },
+    {
+      "image_ref": "2312__JOINT_MAC.jpg",
+      "id_defaut": "2312_D03",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité d'interface",
+      "resume": "Finition de l'angle Mur-Mur (Joint non souple)",
+      "details": "L'angle rentrant Mur-Mur doit être traité par un joint souple (mastic élastomère) pour absorber les mouvements et assurer l'étanchéité. L'aspect rigide du joint ici est une non-conformité potentielle qui peut entraîner des fissures (G2).",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Interfaces critiques"
+      },
+      "gravite": 2,
+      "priorite": 2,
+      "temps": 3,
+      "conf_score": 0.85,
+      "incertitude": 0.15000000000000002,
+      "annotation_refs": [
+        "2312_D03_A01"
+      ],
+      "source_generated_at": "2025-10-16T15:06:00Z"
+    },
+    {
+      "image_ref": "2402_BAGUETTE-BOIS_DET.jpg",
+      "id_defaut": "2402_D01",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité d'interface",
+      "resume": "Absence/Défaillance du joint d'étanchéité Menuiserie/Revêtement",
+      "details": "L'interface entre la baguette/menuiserie et la traverse horizontale est dépourvue de joint élastomère (mastic sanitaire). Le joint est rigide ou rompu, créant un point d'infiltration majeur.",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Interfaces critiques"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.98,
+      "incertitude": 0.020000000000000018,
+      "annotation_refs": [
+        "2402_D01_A01"
+      ],
+      "source_generated_at": "2025-10-16T15:12:00Z"
+    },
+    {
+      "image_ref": "2403_CARRELAGE-DESALIGNEMENT_DET.jpg",
+      "id_defaut": "2403_D01",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité d'interface",
+      "resume": "Absence/Défaillance du joint d'étanchéité Menuiserie/Carrelage",
+      "details": "L'interface entre le carrelage et le cadre de la menuiserie est mal traitée (joint rigide ou discontinu). Le traitement des points singuliers de menuiserie requiert une étanchéité périphérique (mastic élastomère) pour empêcher les entrées d'eau.",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Interfaces critiques"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.98,
+      "incertitude": 0.020000000000000018,
+      "annotation_refs": [
+        "2403_D01_A01"
+      ],
+      "source_generated_at": "2025-10-16T15:08:00Z"
+    },
+    {
+      "image_ref": "2404_CARRELAGE-DESALIGNEMENT_DET.jpg",
+      "id_defaut": "2404_D01",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité d'interface",
+      "resume": "Absence/Défaillance du joint d'étanchéité Menuiserie/Appui",
+      "details": "L'interface entre le cadre de la menuiserie existante et l'appui de fenêtre est dépourvue de joint élastomère (mastic sanitaire). Le traitement des points singuliers des menuiseries requiert une étanchéité périphérique pour empêcher les entrées d'eau.",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Interfaces critiques"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.98,
+      "incertitude": 0.020000000000000018,
+      "annotation_refs": [
+        "2404_D01_A01"
+      ],
+      "source_generated_at": "2025-10-16T15:42:25Z"
+    },
+    {
+      "image_ref": "2405_CARRELAGE-DESALIGNEMENT_DET.jpg",
+      "id_defaut": "2405_D01",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité d'interface",
+      "resume": "Absence/Défaillance du joint d'étanchéité Menuiserie/Carrelage (Structure existante)",
+      "details": "L'interface entre le nouveau carrelage et la structure bois existante est dépourvue d'un joint élastomère (mastic sanitaire). Cette jonction est critique et l'absence de joint souple entraîne un risque majeur d'infiltration dans la structure existante.",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Interfaces critiques"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.99,
+      "incertitude": 0.010000000000000009,
+      "annotation_refs": [
+        "2405_D01_A01"
+      ],
+      "source_generated_at": "2025-10-17T13:21:45Z"
+    },
+    {
+      "image_ref": "2406_BAGUETTE-BOIS_DET.jpg",
+      "id_defaut": "2406_D01",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité d'interface",
+      "resume": "Absence/Défaillance du joint d'étanchéité Baguette/Mur",
+      "details": "L'interface entre la baguette verticale et le mur/l'encadrement de la fenêtre est dépourvue de joint élastomère (mastic sanitaire). Le joint est rigide ou rompu, créant un point d'infiltration majeur (G1).",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Interfaces critiques"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.98,
+      "incertitude": 0.020000000000000018,
+      "annotation_refs": [
+        "2406_D01_A01"
+      ],
+      "source_generated_at": "2025-10-16T15:25:00Z"
+    },
+    {
+      "image_ref": "2406_BAGUETTE-BOIS_DET.jpg",
+      "id_defaut": "2406_D02",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité d'interface",
+      "resume": "Finition du joint Mur-Plafond non souple/conforme",
+      "details": "Le joint MGP est rigide (enduit) ou présente une discontinuité/fissure. L'étanchéité à l'air et à la vapeur à cette jonction est critique dans les locaux humides (G2).",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Interfaces critiques"
+      },
+      "gravite": 2,
+      "priorite": 2,
+      "temps": 3,
+      "conf_score": 0.9,
+      "incertitude": 0.09999999999999998,
+      "annotation_refs": [
+        "2406_D02_A01"
+      ],
+      "source_generated_at": "2025-10-16T15:25:00Z"
+    },
+    {
+      "image_ref": "2502_JOINT-PEINTURE_MGP.jpg",
+      "id_defaut": "2502_D02",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité d'interface",
+      "resume": "Absence/Défaillance du joint d'étanchéité Menuiserie/Mur",
+      "details": "Le joint à l'interface entre la menuiserie existante et le mur/encadrement bois (coin supérieur droit) est absent ou rigide. L'étanchéité périphérique (mastic élastomère) est requise pour les menuiseries afin de prévenir les entrées d'eau (G1).",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Interfaces critiques"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.98,
+      "incertitude": 0.020000000000000018,
+      "annotation_refs": [
+        "2502_D02_A01"
+      ],
+      "source_generated_at": "2025-10-16T15:26:00Z"
+    },
+    {
+      "image_ref": "2503_JOINT_MGP.jpg",
+      "id_defaut": "2503_D01",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité d'interface",
+      "resume": "Absence/Défaillance du joint d'étanchéité Menuiserie/Mur",
+      "details": "L'interface entre le dormant en bois existant et le mur est mal scellée. Le joint doit être en mastic élastomère pour assurer l'étanchéité périphérique et prévenir les infiltrations (G1).",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Interfaces critiques"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.98,
+      "incertitude": 0.020000000000000018,
+      "annotation_refs": [
+        "2503_D01_A01"
+      ],
+      "source_generated_at": "2025-10-16T15:51:49Z"
+    },
+    {
+      "image_ref": "2503_JOINT_MGP.jpg",
+      "id_defaut": "2503_D03",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité d'interface",
+      "resume": "Absence de joint d'étanchéité Menuiserie/Sol",
+      "details": "Le joint entre le dormant bois existant et le sol est absent ou rigide. Cette interface (MGS) est critique et doit être traitée par un joint élastomère pour éviter l'infiltration d'eau sous le revêtement de sol (G1).",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Interfaces critiques"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.9,
+      "incertitude": 0.09999999999999998,
+      "annotation_refs": [
+        "2503_D03_A01"
+      ],
+      "source_generated_at": "2025-10-16T15:51:49Z"
+    },
+    {
+      "image_ref": "2504_JOINT_MGP.jpg",
+      "id_defaut": "2504_D01",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité d'interface",
+      "resume": "Absence/Défaillance du joint d'étanchéité Menuiserie/Mur",
+      "details": "L'interface entre l'encadrement en bois existant et le mur est mal scellée. Le joint doit être en mastic élastomère pour assurer l'étanchéité périphérique et prévenir les infiltrations (G1).",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Interfaces critiques"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.98,
+      "incertitude": 0.020000000000000018,
+      "annotation_refs": [
+        "2504_D01_A01"
+      ],
+      "source_generated_at": "2025-10-16T15:51:49Z"
+    },
+    {
+      "image_ref": "2506_SPOT-VMC_DEG.jpg",
+      "id_defaut": "2506_D01",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité d'interface",
+      "resume": "Finition du joint Mur-Plafond non souple/conforme",
+      "details": "Le joint Mur-Plafond est rigide (enduit) ou présente une discontinuité/fissure. L'étanchéité à l'air et à la vapeur à cette jonction est critique dans les locaux humides (G2).",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Interfaces critiques"
+      },
+      "gravite": 2,
+      "priorite": 2,
+      "temps": 3,
+      "conf_score": 0.9,
+      "incertitude": 0.09999999999999998,
+      "annotation_refs": [
+        "2506_D01_A01"
+      ],
+      "source_generated_at": "2025-10-17T13:30:15Z"
+    },
+    {
+      "image_ref": "2901_MEUBLE-VASQUE_DEG.jpg",
+      "id_defaut": "2901_D01",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité d'interface",
+      "resume": "Absence de joint d'étanchéité Meuble/Mur",
+      "details": "L'interface entre le meuble vasque (existant) et le mur est dépourvue d'un joint élastomère (mastic sanitaire). Cette absence est critique pour prévenir l'infiltration d'eau et de vapeur derrière le meuble.",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Interfaces critiques"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.99,
+      "incertitude": 0.010000000000000009,
+      "annotation_refs": [
+        "2901_D01_A01"
+      ],
+      "source_generated_at": "2025-10-16T15:53:00Z"
+    },
+    {
+      "image_ref": "2902_BAGUETTES-BOIS_DEG.jpg",
+      "id_defaut": "2902_D01",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité d'interface",
+      "resume": "Absence de joint d'étanchéité périphérique (Mur/Bois-Sol)",
+      "details": "L'interface entre la baguette bois et le sol carrelé est dépourvue de joint élastomère (mastic sanitaire). Cette jonction est critique et son absence entraîne un risque d'infiltration d'eau sous le revêtement de sol (G1).",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Interfaces critiques"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.99,
+      "incertitude": 0.010000000000000009,
+      "annotation_refs": [
+        "2902_D01_A01"
+      ],
+      "source_generated_at": "2025-10-16T15:58:00Z"
+    },
+    {
+      "image_ref": "2905_DECOR-BOIS_DEG.jpg",
+      "id_defaut": "2905_D01",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité d'interface",
+      "resume": "Absence de joint d'étanchéité périphérique (Horizontal/Contre le mur)",
+      "details": "L'interface entre le support horizontal (meuble/appui) et le mur vertical est dépourvue d'un joint élastomère (mastic sanitaire). Cette absence est critique pour prévenir l'infiltration d'eau et de vapeur derrière le support.",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Interfaces critiques"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.98,
+      "incertitude": 0.020000000000000018,
+      "annotation_refs": [
+        "2905_D01_A01"
+      ],
+      "source_generated_at": "2025-10-16T15:55:00Z"
+    },
+    {
+      "image_ref": "3601_JOINT_DET.jpg",
+      "id_defaut": "3601_D01",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité d'interface",
+      "resume": "Absence de joint d'étanchéité périphérique Mur-Sol",
+      "details": "La jonction Mur-Sol est dépourvue de joint élastomère (mastic sanitaire). L'étanchéité est requise aux jonctions pour prévenir l'infiltration d'eau de nettoyage ou en cas de fuite du WC/bâti-support.",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Interfaces critiques"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.99,
+      "incertitude": 0.010000000000000009,
+      "annotation_refs": [
+        "3601_D01_A01"
+      ],
+      "source_generated_at": "2025-10-16T16:40:12Z"
+    },
+    {
+      "image_ref": "3802_DORMANT_DEG.jpg",
+      "id_defaut": "3802_D01",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité d'interface",
+      "resume": "Absence/Défaillance du joint d'étanchéité Dormant/Mur",
+      "details": "L'interface entre le dormant de la porte/encadrement et le mur rénové présente un jour visible et l'absence de joint élastomère (mastic sanitaire). Le joint est rigide ou rompu, créant un point d'infiltration d'air et de vapeur.",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Interfaces critiques"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.98,
+      "incertitude": 0.020000000000000018,
+      "annotation_refs": [
+        "3802_D01_A01"
+      ],
+      "source_generated_at": "2025-10-17T13:46:15Z"
+    },
+    {
+      "image_ref": "3803_DORMANT_DEG.jpg",
+      "id_defaut": "3803_D01",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité d'interface",
+      "resume": "Absence/Défaillance du joint d'étanchéité Dormant/Mur",
+      "details": "L'interface entre le dormant de la porte/encadrement et le mur rénové est dépourvue de joint élastomère. Ce raccord rigide ou non scellé crée un risque d'infiltration d'air et de vapeur.",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Interfaces critiques"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.98,
+      "incertitude": 0.020000000000000018,
+      "annotation_refs": [
+        "3803_D01_A01"
+      ],
+      "source_generated_at": "2025-10-16T17:10:00Z"
+    },
+    {
+      "image_ref": "3804_DORMANT_DEG.jpg",
+      "id_defaut": "3804_D01",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité d'interface",
+      "resume": "Absence de joint d'étanchéité Dormant/Mur (Béance)",
+      "details": "L'interface entre le dormant de la porte existante et le mur rénové présente un jour visible et l'absence de joint élastomère (mastic sanitaire). Le joint est rigide ou rompu, créant un point d'infiltration d'air et de vapeur (G1).",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Interfaces critiques"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.99,
+      "incertitude": 0.010000000000000009,
+      "annotation_refs": [
+        "3804_D01_A01"
+      ],
+      "source_generated_at": "2025-10-16T17:10:00Z"
+    },
+    {
+      "image_ref": "0002_SDB_GEN_20250818.jpg",
+      "id_defaut": "0002_D02",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité d'interface/infiltration",
+      "resume": "VICE CACHÉ : Absence de traitement élastomère Plaque H1 / Dormant Menuiserie",
+      "details": "L'interface entre la plaque H1 et le dormant de la fenêtre est comblée avec un enduit/plâtre rigide, sans manchon ni joint élastomère. Ce traitement garantit la fissuration et l'infiltration d'eau et de vapeur derrière le revêtement (G1).",
+      "regle_ref": {
+        "norme": "NOTICE_CSTB-SPEC_2021",
+        "partie": "Chapitre 3.2"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.98,
+      "incertitude": 0.020000000000000018,
+      "annotation_refs": [
+        "0002_D02_A01"
+      ],
+      "source_generated_at": "2025-10-17T11:43:43Z"
+    },
+    {
+      "image_ref": "0006_SDB_GEN_20250819.jpg",
+      "id_defaut": "0006_D01",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité d'interface/infiltration",
+      "resume": "VICE CACHÉ : Absence de traitement élastomère Plaque H1 / Menuiserie existante",
+      "details": "L'interface entre le nouveau doublage (Plaque H1) et le dormant de la fenêtre existante est comblée avec un enduit/plâtre rigide, sans manchon ni joint élastomère. Ce traitement est une malfaçon qui garantit la fissuration et l'infiltration d'eau et de vapeur derrière le revêtement, annulant l'étanchéité de la paroi.",
+      "regle_ref": {
+        "norme": "NOTICE_CSTB-SPEC_2021",
+        "partie": "Chapitre 3.2"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.99,
+      "incertitude": 0.010000000000000009,
+      "annotation_refs": [
+        "0006_D01_A01"
+      ],
+      "source_generated_at": "2025-10-16T17:50:00Z"
+    },
+    {
+      "image_ref": "0013_SDB_GEN_20250826.jpg",
+      "id_defaut": "0013_D01",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité d'interface/infiltration",
+      "resume": "Absence de joint d'étanchéité Menuiserie/Appui (Vice Caché)",
+      "details": "L'interface entre le cadre de la menuiserie existante et l'appui de fenêtre est dépourvue de joint élastomère (mastic sanitaire). Cette défaillance est un point d'entrée pour l'eau, exacerbé par l'écaillement de peinture adjacent.",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Interfaces critiques"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.98,
+      "incertitude": 0.020000000000000018,
+      "annotation_refs": [
+        "0013_D01_A01"
+      ],
+      "source_generated_at": "2025-10-17T12:05:16Z"
+    },
+    {
+      "image_ref": "0010_SDB_MAC_20250819.jpg",
+      "id_defaut": "0010_D03",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité Isolation/Perméabilité",
+      "resume": "VICE CACHÉ : Absence de Pare-Vapeur (Hypothèse Isolation)",
+      "details": "Les parois refaites (murs extérieurs) sont des zones critiques de pont thermique. L'absence de pare-vapeur continu (non visible mais non traité) à l'intérieur de la cloison ou l'absence de calfeutrement de la boite électrique (vu en 0006) est une malfaçon qui engendre des condensations et des moisissures (G1).",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Parois contre murs froids, pare-vapeur"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [],
+      "source_generated_at": "2025-10-16T18:00:00Z"
+    },
+    {
+      "image_ref": "2209_PIEDS-SIPHON_MAC.jpg",
+      "id_defaut": "2209_D03",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité mise en œuvre",
+      "resume": "Absence de test d'étanchéité du vidage",
+      "details": "Le raccordement du vidage/siphon doit être vérifié par un test d'étanchéité (laisser en eau 30 min) avant tout habillage définitif de la baignoire.",
+      "regle_ref": {
+        "norme": "FT_Vidange_E6D124.pdf",
+        "partie": "Étape 4: Test d'étanchéité"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.97,
+      "incertitude": 0.030000000000000027,
+      "annotation_refs": [
+        "2209_D03_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:44:10Z"
+    },
+    {
+      "image_ref": "2310__JOINT_MGB.jpg",
+      "id_defaut": "2310_D02",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité mise en œuvre",
+      "resume": "Matériau de calfeutrement non conforme/poreux",
+      "details": "Un matériau de calfeutrement grossier et non étanche (similaire à du plâtre/enduit) est visible sous la menuiserie et le joint. Ce matériau est inadéquat pour assurer l'étanchéité durable dans une zone EB+.",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Interfaces critiques"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 3,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "2310_D02_A01"
+      ],
+      "source_generated_at": "2025-10-16T15:03:00Z"
+    },
+    {
+      "image_ref": "2402_BAGUETTE-BOIS_DET.jpg",
+      "id_defaut": "2402_D02",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité mise en œuvre",
+      "resume": "Calfeutrement/joint grossier et non étanche",
+      "details": "Le matériau visible sous la baguette est appliqué grossièrement et n'est pas un mastic sanitaire élastomère. Ce calfeutrement est poreux et non conforme pour une interface en zone humide.",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Interfaces critiques"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 3,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "2402_D02_A01"
+      ],
+      "source_generated_at": "2025-10-16T15:12:00Z"
+    },
+    {
+      "image_ref": "2106_EVACUATION_MAC.jpg",
+      "id_defaut": "2106_D02",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité plomberie",
+      "resume": "Absence de joint d'étanchéité à la connexion",
+      "details": "No visible gasket or sealing joint is present at the pipe connection to the T-joint, posing a high risk of leakage.",
+      "regle_ref": {
+        "norme": "FT_Vidange_E6D124.pdf",
+        "partie": "Étape 4: Test d'étanchéité"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.97,
+      "incertitude": 0.030000000000000027,
+      "annotation_refs": [
+        "2106_D02_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:05:11Z"
+    },
+    {
+      "image_ref": "0001_SDB_GEN_20250818.jpg",
+      "id_defaut": "0001_D01",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité SPEC",
+      "resume": "Absence systémique de Système de Protection à l'Eau (SPEC)",
+      "details": "La vue générale confirme l'absence de membrane SPEC sur les plaques de plâtre hydrofuges (H1) dans l'ensemble de la zone EB+ (SDB), ce qui est une non-conformité fondamentale au DTU et un vice caché.",
+      "regle_ref": {
+        "norme": "DTU 25.41_1993",
+        "partie": "Annexe A.1"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.99,
+      "incertitude": 0.010000000000000009,
+      "annotation_refs": [
+        "0001_D01_A01"
+      ],
+      "source_generated_at": "2025-10-17T11:08:15Z"
+    },
+    {
+      "image_ref": "0006_SDB_GEN_20250819.jpg",
+      "id_defaut": "0006_D02",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité SPEC",
+      "resume": "Absence systémique de Système de Protection à l'Eau (SPEC)",
+      "details": "Aucune membrane SPEC n'est appliquée sur les plaques de plâtre hydrofuges (H1) dans toute la zone EB+ (murs et plafond), ce qui est une non-conformité fondamentale au DTU et un vice caché.",
+      "regle_ref": {
+        "norme": "DTU 25.41_1993",
+        "partie": "Annexe A.1"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.99,
+      "incertitude": 0.010000000000000009,
+      "annotation_refs": [
+        "0006_D02_A01"
+      ],
+      "source_generated_at": "2025-10-16T17:50:00Z"
+    },
+    {
+      "image_ref": "0007_SDB_GEN_20250819.jpg",
+      "id_defaut": "0007_D01",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité SPEC",
+      "resume": "Absence systémique de Système de Protection à l'Eau (SPEC)",
+      "details": "La vue d'ensemble confirme l'absence de membrane SPEC sur les plaques de plâtre hydrofuges (H1) dans l'ensemble de la zone EB+ (SDB), ce qui est une non-conformité fondamentale au DTU et un vice caché.",
+      "regle_ref": {
+        "norme": "DTU 25.41_1993",
+        "partie": "Annexe A.1"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.99,
+      "incertitude": 0.010000000000000009,
+      "annotation_refs": [
+        "0007_D01_A01"
+      ],
+      "source_generated_at": "2025-10-17T11:57:00Z"
+    },
+    {
+      "image_ref": "0014_SDB_GEN_20250826.jpg",
+      "id_defaut": "0014_D04",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité SPEC",
+      "resume": "Absence systémique de Système de Protection à l'Eau (SPEC)",
+      "details": "L'absence de membrane SPEC sous le revêtement (confirmée par les vues de chantier) est une non-conformité fondamentale pour un support H1 en zone EB+p.",
+      "regle_ref": {
+        "norme": "DTU 25.41_1993",
+        "partie": "Annexe A.1"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.99,
+      "incertitude": 0.010000000000000009,
+      "annotation_refs": [],
+      "source_generated_at": "2025-10-16T15:22:00Z"
+    },
+    {
+      "image_ref": "2004_SOUS-BAIGNOIRE_GEN.jpg",
+      "id_defaut": "2004_D01",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité SPEC",
+      "resume": "Absence systémique de Système de Protection à l'Eau (SPEC)",
+      "details": "L'ensemble du support mural exposé (Plaque H1) en zone EB+ est dépourvu de membrane SPEC. Le support est sensible à l'eau et nécessite cette protection obligatoire.",
+      "regle_ref": {
+        "norme": "DTU 25.41_1993",
+        "partie": "Annexe A.1"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.99,
+      "incertitude": 0.010000000000000009,
+      "annotation_refs": [
+        "2004_D01_A01"
+      ],
+      "source_generated_at": "2025-10-17T12:20:25Z"
+    },
+    {
+      "image_ref": "2101_ALIMENTATION-EVACUATION_DET.jpg",
+      "id_defaut": "2101_D01",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité SPEC",
+      "resume": "Absence de SPEC en zone EB+",
+      "details": "Aucune trace de membrane d'étanchéité (SPEC) n'est visible sur le support de plaque de plâtre au droit de la baignoire. Cette zone est considérée comme EB+ et requiert une protection à l'eau sous carrelage.",
+      "regle_ref": {
+        "norme": "DTU 25.41_1993",
+        "partie": "Annexe A"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 1,
+      "incertitude": 0,
+      "annotation_refs": [
+        "2101_D01_A01"
+      ],
+      "source_generated_at": "2025-10-17T12:26:00Z"
+    },
+    {
+      "image_ref": "2101_ALIMENTATION-EVACUATION_DET.jpg",
+      "id_defaut": "2101_D03",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité SPEC",
+      "resume": "Absence de traitement des traversées",
+      "details": "Les traversées de tuyauteries ne sont pas traitées avec des manchons ou des bandes de renfort, ce qui est impératif avant l'application générale d'un système d'étanchéité.",
+      "regle_ref": {
+        "norme": "NOTICE_CSTB-SPEC_2021",
+        "partie": "Chapitre 3.2"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.98,
+      "incertitude": 0.020000000000000018,
+      "annotation_refs": [
+        "2101_D03_A01"
+      ],
+      "source_generated_at": "2025-10-17T12:26:00Z"
+    },
+    {
+      "image_ref": "2102_EVACUATION_DET.jpg",
+      "id_defaut": "2102_D03",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité SPEC",
+      "resume": "Absence de traitement d'étanchéité des traversées",
+      "details": "Les traversées de tuyauteries ne sont pas traitées avec des manchons ou des bandes de renfort, ce qui est impératif pour l'étanchéité en zone EB+.",
+      "regle_ref": {
+        "norme": "NOTICE_CSTB-SPEC_2021",
+        "partie": "Chapitre 3.2"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.96,
+      "incertitude": 0.040000000000000036,
+      "annotation_refs": [
+        "2102_D03_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:00:00Z"
+    },
+    {
+      "image_ref": "2103_EVACUATION_MAC.jpg",
+      "id_defaut": "2103_D02",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité SPEC",
+      "resume": "Absence de traitement de la traversée de cloison",
+      "details": "La traversée de la plaque de plâtre par le tuyau n'est pas scellée ni traitée avec un manchon ou une bande de renfort, ce qui est un manquement critique pour l'étanchéité de la zone EB+.",
+      "regle_ref": {
+        "norme": "NOTICE_CSTB-SPEC_2021",
+        "partie": "Chapitre 3.2"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.96,
+      "incertitude": 0.040000000000000036,
+      "annotation_refs": [
+        "2103_D02_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:01:26Z"
+    },
+    {
+      "image_ref": "2104_ALIMENTATION-EVACUATION_DET.jpg",
+      "id_defaut": "2104_D01",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité SPEC",
+      "resume": "Absence de traitement d'étanchéité des traversées",
+      "details": "Les tuyaux d'alimentation traversent la plaque de plâtre sans manchons d'étanchéité ni bandes de renfort, ce qui est contraire aux prescriptions pour les points singuliers des systèmes SPEC. Ceci est un point de risque majeur d'infiltration d'eau.",
+      "regle_ref": {
+        "norme": "NOTICE_CSTB-SPEC_2021",
+        "partie": "Chapitre 3.2"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.99,
+      "incertitude": 0.010000000000000009,
+      "annotation_refs": [
+        "2104_D01_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:03:05Z"
+    },
+    {
+      "image_ref": "2104_ALIMENTATION-EVACUATION_DET.jpg",
+      "id_defaut": "2104_D03",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité SPEC",
+      "resume": "Absence de SPEC en zone EB+",
+      "details": "Aucune membrane d'étanchéité (SPEC) n'est visible sur la plaque de plâtre, pourtant obligatoire dans cette zone de baignoire classée EB+.",
+      "regle_ref": {
+        "norme": "DTU 52.2_2022",
+        "partie": "Annexe C.2.1"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.98,
+      "incertitude": 0.020000000000000018,
+      "annotation_refs": [
+        "2104_D03_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:03:05Z"
+    },
+    {
+      "image_ref": "2105_ALIMENTATION-EVACUATION_DET.jpg",
+      "id_defaut": "2105_D03",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité SPEC",
+      "resume": "Absence de SPEC en zone EB+",
+      "details": "Aucun SPEC n'est visible sur le support en plâtre derrière la baignoire. Cette zone, classée EB+p, exige un système de protection à l'eau sous carrelage.",
+      "regle_ref": {
+        "norme": "DTU 25.41_1993",
+        "partie": "Annexe A.1"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.97,
+      "incertitude": 0.030000000000000027,
+      "annotation_refs": [
+        "2105_D03_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:04:12Z"
+    },
+    {
+      "image_ref": "2106_EVACUATION_MAC.jpg",
+      "id_defaut": "2106_D04",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité SPEC",
+      "resume": "Absence de SPEC et de traitement de traversée",
+      "details": "No SPEC membrane or sealing accessories (like sealing sleeves) are visible around the pipe penetration, which is a required treatment for EB+ zones.",
+      "regle_ref": {
+        "norme": "DTU 25.41_1993",
+        "partie": "Annexe A.1"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.97,
+      "incertitude": 0.030000000000000027,
+      "annotation_refs": [
+        "2106_D04_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:05:11Z"
+    },
+    {
+      "image_ref": "2107_EVACUATION_MAC.jpg",
+      "id_defaut": "2107_D03",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité SPEC",
+      "resume": "Absence de SPEC en zone EB+",
+      "details": "Aucune membrane de protection à l'eau (SPEC) n'est visible sur le support en plâtre, pourtant obligatoire dans cette zone de baignoire classée EB+.",
+      "regle_ref": {
+        "norme": "DTU 25.41_1993",
+        "partie": "Annexe A.1"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.96,
+      "incertitude": 0.040000000000000036,
+      "annotation_refs": [
+        "2107_D03_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:06:14Z"
+    },
+    {
+      "image_ref": "2108_EVACUATION_DET.jpg",
+      "id_defaut": "2108_D03",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité SPEC",
+      "resume": "Absence de SPEC en zone EB+",
+      "details": "Aucune membrane de protection à l'eau (SPEC) n'est visible sur le support en plâtre derrière la baignoire, ce qui est obligatoire dans cette zone classée EB+p.",
+      "regle_ref": {
+        "norme": "DTU 25.41_1993",
+        "partie": "Annexe A.1"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.96,
+      "incertitude": 0.040000000000000036,
+      "annotation_refs": [
+        "2108_D03_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:07:37Z"
+    },
+    {
+      "image_ref": "2201_APPUI_DET.jpg",
+      "id_defaut": "2201_D02",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité SPEC",
+      "resume": "Absence de SPEC en zone EB+",
+      "details": "Aucune membrane de protection à l'eau (SPEC) n'est visible sur le support en plâtre dans la zone EB+p (autour de la baignoire), ce qui est contraire aux règles d'étanchéité pour les supports sensibles à l'eau.",
+      "regle_ref": {
+        "norme": "DTU 25.41_1993",
+        "partie": "Annexe A.1"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.99,
+      "incertitude": 0.010000000000000009,
+      "annotation_refs": [
+        "2201_D02_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:28:00Z"
+    },
+    {
+      "image_ref": "2202_JOINT_MAC.jpg",
+      "id_defaut": "2202_D02",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité SPEC",
+      "resume": "Absence de SPEC en zone EB+",
+      "details": "Aucune membrane de protection à l'eau (SPEC) n'est visible sur la plaque de plâtre (support sensible) dans cette zone de projection d'eau (EB+p), ce qui est obligatoire.",
+      "regle_ref": {
+        "norme": "DTU 25.41_1993",
+        "partie": "Annexe A.1"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.98,
+      "incertitude": 0.020000000000000018,
+      "annotation_refs": [
+        "2202_D02_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:30:10Z"
+    },
+    {
+      "image_ref": "2203_APPUI_DET.jpg",
+      "id_defaut": "2203_D01",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité SPEC",
+      "resume": "Absence de Système de Protection à l'Eau (SPEC)",
+      "details": "L'application d'un SPEC (ou SEL) est obligatoire pour toutes les parois en plaques de plâtre en zone EB+p (autour de la baignoire). Aucune membrane n'est visible sur le support H1 exposé.",
+      "regle_ref": {
+        "norme": "DTU 25.41_1993",
+        "partie": "Annexe A.1"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.99,
+      "incertitude": 0.010000000000000009,
+      "annotation_refs": [
+        "2203_D01_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:32:00Z"
+    },
+    {
+      "image_ref": "2204_APPUI_MAC.jpg",
+      "id_defaut": "2204_D02",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité SPEC",
+      "resume": "Absence de Système de Protection à l'Eau (SPEC)",
+      "details": "Aucune membrane de protection à l'eau (SPEC) n'est visible sur la plaque de plâtre (support sensible) au droit de la baignoire. L'étanchéité complète est obligatoire en zone EB+p.",
+      "regle_ref": {
+        "norme": "DTU 25.41_1993",
+        "partie": "Annexe A.1"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.98,
+      "incertitude": 0.020000000000000018,
+      "annotation_refs": [
+        "2204_D02_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:34:00Z"
+    },
+    {
+      "image_ref": "2205_APPUI_MAC.jpg",
+      "id_defaut": "2205_D02",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité SPEC",
+      "resume": "Absence de Système de Protection à l'Eau (SPEC)",
+      "details": "Aucune membrane de protection à l'eau (SPEC) n'est visible sur le support en plâtre dans cette zone EB+p. L'étanchéité complète est obligatoire avant la pose du carrelage.",
+      "regle_ref": {
+        "norme": "DTU 25.41_1993",
+        "partie": "Annexe A.1"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.99,
+      "incertitude": 0.010000000000000009,
+      "annotation_refs": [
+        "2205_D02_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:36:00Z"
+    },
+    {
+      "image_ref": "2206_APPUI_DET.jpg",
+      "id_defaut": "2206_D02",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité SPEC",
+      "resume": "Absence de Système de Protection à l'Eau (SPEC)",
+      "details": "Aucune membrane de protection à l'eau (SPEC) n'est visible sur le support en plâtre (support H1). L'application du SPEC est obligatoire dans cette zone EB+p (autour de la baignoire) pour les supports sensibles à l'eau.",
+      "regle_ref": {
+        "norme": "DTU 25.41_1993",
+        "partie": "Annexe A.1"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.99,
+      "incertitude": 0.010000000000000009,
+      "annotation_refs": [
+        "2206_D02_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:38:00Z"
+    },
+    {
+      "image_ref": "2207_APPUI_DET.jpg",
+      "id_defaut": "2207_D01",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité SPEC",
+      "resume": "Absence de Système de Protection à l'Eau (SPEC)",
+      "details": "L'application d'un SPEC (ou SEL) est obligatoire pour toutes les parois en plaques de plâtre en zone EB+p (autour de la baignoire). Aucune membrane n'est visible sur le support H1 exposé.",
+      "regle_ref": {
+        "norme": "DTU 25.41_1993",
+        "partie": "Annexe A.1"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.99,
+      "incertitude": 0.010000000000000009,
+      "annotation_refs": [
+        "2207_D01_A01"
+      ],
+      "source_generated_at": "2025-10-17T12:58:45Z"
+    },
+    {
+      "image_ref": "2209_PIEDS-SIPHON_MAC.jpg",
+      "id_defaut": "2209_D02",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité SPEC",
+      "resume": "Absence de Système de Protection à l'Eau (SPEC)",
+      "details": "L'application d'un SPEC (ou SEL) est obligatoire sur les supports sensibles à l'eau (plâtre) en zone EB+p (autour de la baignoire). Aucune membrane n'est visible sur le support exposé.",
+      "regle_ref": {
+        "norme": "DTU 25.41_1993",
+        "partie": "Annexe A.1"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.98,
+      "incertitude": 0.020000000000000018,
+      "annotation_refs": [
+        "2209_D02_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:44:10Z"
+    },
+    {
+      "image_ref": "2210_PIEDS_MAC.jpg",
+      "id_defaut": "2210_D01",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité SPEC",
+      "resume": "Absence de Système de Protection à l'Eau (SPEC)",
+      "details": "L'application d'un SPEC (ou SEL) est obligatoire sur les supports sensibles à l'eau (plâtre) en zone EB+p (autour de la baignoire). Aucune membrane n'est visible sur le support H1 exposé.",
+      "regle_ref": {
+        "norme": "DTU 25.41_1993",
+        "partie": "Annexe A.1"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.98,
+      "incertitude": 0.020000000000000018,
+      "annotation_refs": [
+        "2210_D02_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:46:00Z"
+    },
+    {
+      "image_ref": "0009_SDB_MAC_20250819.jpg",
+      "id_defaut": "0009_D02",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité SPEC/d'interface",
+      "resume": "Absence de SPEC et de calfeutrement étanche de la base de la cloison",
+      "details": "Aucune membrane SPEC n'est visible sur le support H1 exposé, ni aucun joint élastomère au raccord Mur-Sol. Le DTU exige un joint souple au pied des cloisons H1 pour prévenir l'infiltration d'eau de nettoyage/fuite.",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Interfaces critiques"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "0009_D02_A01"
+      ],
+      "source_generated_at": "2025-10-17T12:00:50Z"
+    },
+    {
+      "image_ref": "0007_SDB_GEN_20250819.jpg",
+      "id_defaut": "0007_D03",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité SPEC/Traversée",
+      "resume": "Absence de traitement étanche des traversées de plomberie",
+      "details": "Les percements de plomberie pour les attentes du mitigeur ne sont pas scellés ni traités avec des manchons d'étanchéité, créant des points d'infiltration critiques.",
+      "regle_ref": {
+        "norme": "NOTICE_CSTB-SPEC_2021",
+        "partie": "Chapitre 3.2"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.98,
+      "incertitude": 0.020000000000000018,
+      "annotation_refs": [
+        "0007_D03_A01"
+      ],
+      "source_generated_at": "2025-10-17T11:57:00Z"
+    },
+    {
+      "image_ref": "0010_SDB_MAC_20250819.jpg",
+      "id_defaut": "0010_D01",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité SPEC/Traversée",
+      "resume": "Absence de traitement étanche de la traversée (Ventilation basse)",
+      "details": "Le percement (ventilation basse) dans la plaque H1 n'est pas scellé ni traité avec un manchon ou mastic élastomère. Ce défaut critique compromet l'étanchéité et favorise la pénétration de la vapeur/eau (G1).",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Traversées & percements"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.99,
+      "incertitude": 0.010000000000000009,
+      "annotation_refs": [
+        "0010_D01_A01"
+      ],
+      "source_generated_at": "2025-10-16T18:00:00Z"
+    },
+    {
+      "image_ref": "0012_SDB_GEN_20250826.jpg",
+      "id_defaut": "0012_D03",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité SPEC/Traversée",
+      "resume": "Absence de manchons d'étanchéité aux traversées de plomberie",
+      "details": "Les percements de plomberie à travers la structure/parement (avant fermeture) n'ont pas de manchons ou de membranes d'étanchéité requis pour la zone EB+ (risque d'infiltration).",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Traversées & percements"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.98,
+      "incertitude": 0.020000000000000018,
+      "annotation_refs": [
+        "0012_D03_A01"
+      ],
+      "source_generated_at": "2025-10-16T17:30:00Z"
+    },
+    {
+      "image_ref": "0014_SDB_GEN_20250826.jpg",
+      "id_defaut": "0014_D02",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité SPEC/Traversée",
+      "resume": "Absence de manchons d'étanchéité aux traversées de plomberie",
+      "details": "Les attentes de plomberie ne présentent pas de manchons d'étanchéité intégrés. Le calfeutrement seul est insuffisant pour maintenir la continuité du SPEC derrière le carrelage/revêtement.",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Traversées & percements"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.98,
+      "incertitude": 0.020000000000000018,
+      "annotation_refs": [
+        "0014_D02_A01"
+      ],
+      "source_generated_at": "2025-10-16T15:22:00Z"
+    },
+    {
+      "image_ref": "2001_SDB_GEN.jpg",
+      "id_defaut": "2001_D03",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité SPEC/Traversée",
+      "resume": "Absence de manchon d'étanchéité aux traversées de mitigeur",
+      "details": "L'absence de manchons d'étanchéité et l'échec du calfeutrement (vu sur 2113) confirment une non-conformité G1 aux traversées de plomberie.",
+      "regle_ref": {
+        "norme": "NOTICE_CSTB-SPEC_2021",
+        "partie": "Chapitre 3.2"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.99,
+      "incertitude": 0.010000000000000009,
+      "annotation_refs": [
+        "2001_D03_A01"
+      ],
+      "source_generated_at": "2025-10-17T12:17:15Z"
+    },
+    {
+      "image_ref": "2004_SOUS-BAIGNOIRE_GEN.jpg",
+      "id_defaut": "2004_D03",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité SPEC/Traversée",
+      "resume": "Absence de traitement étanche des traversées de plomberie",
+      "details": "Les percements pour la plomberie ne sont pas traités avec des manchons d'étanchéité intégrés au SPEC, créant des points d'infiltration critiques.",
+      "regle_ref": {
+        "norme": "NOTICE_CSTB-SPEC_2021",
+        "partie": "Chapitre 3.2"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.97,
+      "incertitude": 0.030000000000000027,
+      "annotation_refs": [
+        "2004_D03_A01"
+      ],
+      "source_generated_at": "2025-10-17T12:20:25Z"
+    },
+    {
+      "image_ref": "2005_SOUS-MEUBLE-VASQUE_GEN.jpg",
+      "id_defaut": "2005_D03",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité SPEC/Traversée",
+      "resume": "Absence de traitement étanche de la traversée de siphon",
+      "details": "Le percement pour le siphon de la vasque n'est pas scellé ni traité avec un manchon d'étanchéité dans le mur (vu en contexte), créant un point d'infiltration (G1).",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Traversées & percements"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "2005_D03_A01"
+      ],
+      "source_generated_at": "2025-10-17T12:24:25Z"
+    },
+    {
+      "image_ref": "2112_MITIGEUR-BAIN_DET.jpg",
+      "id_defaut": "2112_D01",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité SPEC/Traversée",
+      "resume": "Absence de traitement étanche des traversées (Mitigeur)",
+      "details": "Les attentes de plomberie traversent le support sans manchons d'étanchéité intégrés au SPEC. Le calfeutrement avec un enduit rigide est inefficace, créant un point d'infiltration majeur (G1).",
+      "regle_ref": {
+        "norme": "NOTICE_CSTB-SPEC_2021",
+        "partie": "Chapitre 3.2"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.99,
+      "incertitude": 0.010000000000000009,
+      "annotation_refs": [
+        "2112_D01_A01"
+      ],
+      "source_generated_at": "2025-10-17T12:44:45Z"
+    },
+    {
+      "image_ref": "2114_MITIGEUR-BAIN_MAC.jpg",
+      "id_defaut": "2114_D02",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité SPEC/Traversée",
+      "resume": "Absence de manchon d'étanchéité SPEC aux traversées",
+      "details": "L'absence de manchons d'étanchéité (Passe-paroi) sous le carrelage, directement sur le support (plâtre) au niveau des traversées, permet la pénétration de l'eau entre le support et le carrelage, annulant la continuité du système SPEC sous-jacent.",
+      "regle_ref": {
+        "norme": "NOTICE_CSTB-SPEC_2021",
+        "partie": "Chapitre 3.2"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.98,
+      "incertitude": 0.020000000000000018,
+      "annotation_refs": [
+        "2114_D02_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:24:00Z"
+    },
+    {
+      "image_ref": "2115_MITIGEUR-BAIN_MAC.jpg",
+      "id_defaut": "2115_D01",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité SPEC/Traversée",
+      "resume": "Absence de traitement étanche des traversées (Mitigeur)",
+      "details": "L'ouverture dans le support est trop large, et aucun manchon d'étanchéité n'est utilisé. L'enduit poreux/rigide ne peut pas remplacer le SPEC, créant un point d'infiltration majeur dans la cloison (G1).",
+      "regle_ref": {
+        "norme": "NOTICE_CSTB-SPEC_2021",
+        "partie": "Chapitre 3.2"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.99,
+      "incertitude": 0.010000000000000009,
+      "annotation_refs": [
+        "2115_D01_A01"
+      ],
+      "source_generated_at": "2025-10-17T12:48:45Z"
+    },
+    {
+      "image_ref": "2116_MITIGEUR-BAIN_DET.jpg",
+      "id_defaut": "2116_D01",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité SPEC/Traversée",
+      "resume": "Absence de traitement étanche des traversées (Mitigeur)",
+      "details": "L'ouverture autour du raccord est trop large et aucun manchon d'étanchéité n'est utilisé. Le calfeutrement avec un enduit rigide est inefficace, créant un point d'infiltration majeur dans la cloison (G1).",
+      "regle_ref": {
+        "norme": "NOTICE_CSTB-SPEC_2021",
+        "partie": "Chapitre 3.2"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.99,
+      "incertitude": 0.010000000000000009,
+      "annotation_refs": [
+        "2116_D01_A01"
+      ],
+      "source_generated_at": "2025-10-17T12:49:50Z"
+    },
+    {
+      "image_ref": "2203_APPUI_DET.jpg",
+      "id_defaut": "2203_D02",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité SPEC/Traversée",
+      "resume": "Absence de traitement d'étanchéité des traversées",
+      "details": "La traversée des tuyauteries n'est pas traitée avec des manchons d'étanchéité intégrés au SPEC, ce qui constitue un point critique de pénétration d'eau.",
+      "regle_ref": {
+        "norme": "NOTICE_CSTB-SPEC_2021",
+        "partie": "Chapitre 3.2"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.98,
+      "incertitude": 0.020000000000000018,
+      "annotation_refs": [
+        "2203_D02_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:32:00Z"
+    },
+    {
+      "image_ref": "2207_APPUI_DET.jpg",
+      "id_defaut": "2207_D02",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité SPEC/Traversée",
+      "resume": "Absence de traitement d'étanchéité des traversées",
+      "details": "La traversée des tuyauteries n'est pas traitée avec des manchons d'étanchéité intégrés au SPEC, ce qui constitue un point critique de pénétration d'eau.",
+      "regle_ref": {
+        "norme": "NOTICE_CSTB-SPEC_2021",
+        "partie": "Chapitre 3.2"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.98,
+      "incertitude": 0.020000000000000018,
+      "annotation_refs": [
+        "2207_D02_A01"
+      ],
+      "source_generated_at": "2025-10-17T12:58:45Z"
+    },
+    {
+      "image_ref": "2504_JOINT_MGP.jpg",
+      "id_defaut": "2504_D03",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité traversée",
+      "resume": "Absence de calfeutrement étanche pour les traversées de tuyaux",
+      "details": "La zone des tuyaux calorifugés (visible dans la vue de contexte 2501) n'est pas scellée de manière étanche. Le matériau poreux ou l'ouverture permet la pénétration de la vapeur et de l'eau, constituant un risque d'infiltration (G1).",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Traversées & percements"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.9,
+      "incertitude": 0.09999999999999998,
+      "annotation_refs": [
+        "2504_D03_A01"
+      ],
+      "source_generated_at": "2025-10-16T15:51:49Z"
+    },
+    {
+      "image_ref": "2506_SPOT-VMC_DEG.jpg",
+      "id_defaut": "2506_D02",
+      "categorie": "étanchéité",
+      "type_defaut": "non-conformité traversée",
+      "resume": "Absence de calfeutrement étanche de la traversée de ventilation",
+      "details": "La traversée du conduit de ventilation au plafond n'est pas scellée de manière étanche. Ceci est impératif pour l'étanchéité à la vapeur et à l'air dans la pièce humide (G1).",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Traversées & percements"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.98,
+      "incertitude": 0.020000000000000018,
+      "annotation_refs": [
+        "2506_D02_A01"
+      ],
+      "source_generated_at": "2025-10-17T13:30:15Z"
+    },
+    {
+      "image_ref": "0014_SDB_GEN_20250826.jpg",
+      "id_defaut": "0014_D03",
+      "categorie": "finition",
+      "type_defaut": "esthétique",
+      "resume": "Défaut de finition (Joints Plafond-Mur)",
+      "details": "Le joint entre le plafond (modifié) et le mur n'est pas finalisé ou présente des traces d'enduit non lissé. Un joint propre et régulier est attendu pour la réception.",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Revêtements & pentes"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.9,
+      "incertitude": 0.09999999999999998,
+      "annotation_refs": [
+        "0014_D03_A01"
+      ],
+      "source_generated_at": "2025-10-16T15:22:00Z"
+    },
+    {
+      "image_ref": "2304_INTERRUPTEUR-PRISE_MAC.jpg",
+      "id_defaut": "2304_D01",
+      "categorie": "finition",
+      "type_defaut": "esthétique",
+      "resume": "Défaut de finition (Marques de crayon)",
+      "details": "Des marques de traçage (crayon/niveau) sont visibles sur la paroi carrelée autour de l'appareillage. Elles doivent être nettoyées avant la réception des travaux.",
+      "regle_ref": {
+        "norme": "DTU 25.42_P2_2012",
+        "partie": "4.2 Travaux ne faisant pas partie du marché"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.9,
+      "incertitude": 0.09999999999999998,
+      "annotation_refs": [
+        "2304_D01_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:54:00Z"
+    },
+    {
+      "image_ref": "2312__JOINT_MAC.jpg",
+      "id_defaut": "2312_D02",
+      "categorie": "finition",
+      "type_defaut": "esthétique",
+      "resume": "Défaut de finition (Salissures/Traces)",
+      "details": "Des traces de traçage ou des salissures sont visibles sur la surface des carreaux. Cela constitue un défaut de propreté et de finition esthétique.",
+      "regle_ref": {
+        "norme": "DTU 25.42_P2_2012",
+        "partie": "4.2 Travaux ne faisant pas partie du marché"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.9,
+      "incertitude": 0.09999999999999998,
+      "annotation_refs": [
+        "2312_D02_A01"
+      ],
+      "source_generated_at": "2025-10-16T15:06:00Z"
+    },
+    {
+      "image_ref": "2403_CARRELAGE-DESALIGNEMENT_DET.jpg",
+      "id_defaut": "2403_D02",
+      "categorie": "finition",
+      "type_defaut": "esthétique",
+      "resume": "Finition du calfeutrement grossière",
+      "details": "Le calfeutrement de l'interface carrelage/appui de fenêtre est appliqué grossièrement, avec des bavures et une finition non nette, ce qui est contraire aux exigences de finition propre.",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Interfaces critiques"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.9,
+      "incertitude": 0.09999999999999998,
+      "annotation_refs": [
+        "2403_D02_A01"
+      ],
+      "source_generated_at": "2025-10-16T15:08:00Z"
+    },
+    {
+      "image_ref": "2406_BAGUETTE-BOIS_DET.jpg",
+      "id_defaut": "2406_D03",
+      "categorie": "finition",
+      "type_defaut": "esthétique",
+      "resume": "Finition grossière de l'enduit/calfeutrement",
+      "details": "Le calfeutrement de l'interface carrelage/encadrement est appliqué grossièrement, avec des bavures et une finition non nette, ce qui est un défaut esthétique.",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Interfaces critiques"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "2406_D03_A01"
+      ],
+      "source_generated_at": "2025-10-16T15:25:00Z"
+    },
+    {
+      "image_ref": "2502_JOINT-PEINTURE_MGP.jpg",
+      "id_defaut": "2502_D01",
+      "categorie": "finition",
+      "type_defaut": "esthétique",
+      "resume": "Finition du joint Mur-Plafond et Mur-Menuiserie grossière",
+      "details": "Le joint d'angle Mur-Plafond et le calfeutrement autour de la menuiserie sont appliqués de manière irrégulière (bavures, épaisseur non uniforme) et sans lissage, ce qui est un défaut de finition esthétique.",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Revêtements & pentes"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "2502_D01_A01"
+      ],
+      "source_generated_at": "2025-10-16T15:26:00Z"
+    },
+    {
+      "image_ref": "2503_JOINT_MGP.jpg",
+      "id_defaut": "2503_D02",
+      "categorie": "finition",
+      "type_defaut": "esthétique",
+      "resume": "Finition du calfeutrement/Peinture grossière",
+      "details": "Le calfeutrement de l'interface Mur-Menuiserie est appliqué de manière irrégulière et grossière (bavures, enduit non lissé) ce qui est un défaut esthétique.",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Revêtements & pentes"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "2503_D02_A01"
+      ],
+      "source_generated_at": "2025-10-16T15:51:49Z"
+    },
+    {
+      "image_ref": "2504_JOINT_MGP.jpg",
+      "id_defaut": "2504_D02",
+      "categorie": "finition",
+      "type_defaut": "esthétique",
+      "resume": "Finition du calfeutrement/Peinture grossière",
+      "details": "Le calfeutrement de l'interface Mur-Menuiserie est appliqué de manière irrégulière et grossière (bavures, enduit non lissé) ce qui est un défaut esthétique.",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Revêtements & pentes"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "2504_D02_A01"
+      ],
+      "source_generated_at": "2025-10-16T15:51:49Z"
+    },
+    {
+      "image_ref": "2506_SPOT-VMC_DEG.jpg",
+      "id_defaut": "2506_D03",
+      "categorie": "finition",
+      "type_defaut": "esthétique",
+      "resume": "Finition grossière de l'enduit/calfeutrement du plafond",
+      "details": "La finition du plafond (nouvelles plaques H1) et le calfeutrement des joints sont grossiers et irréguliers, ce qui est un défaut esthétique majeur (G3).",
+      "regle_ref": {
+        "norme": "DTU 25.41_1993",
+        "partie": "Chapitre 5.5.1"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "2506_D03_A01"
+      ],
+      "source_generated_at": "2025-10-17T13:30:15Z"
+    },
+    {
+      "image_ref": "2901_MEUBLE-VASQUE_DEG.jpg",
+      "id_defaut": "2901_D03",
+      "categorie": "finition",
+      "type_defaut": "esthétique",
+      "resume": "Défaut de finition Plafond/Mur",
+      "details": "La peinture ou l'enduit à la jonction Mur/Plafond présente des boursouflures/écaillements, indiquant un défaut de finition (G3) ou un problème d'humidité sous-jacent (G2).",
+      "regle_ref": {
+        "norme": "SDB_def_class.pdf",
+        "partie": "Gravité"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.9,
+      "incertitude": 0.09999999999999998,
+      "annotation_refs": [
+        "2901_D03_A01"
+      ],
+      "source_generated_at": "2025-10-16T15:53:00Z"
+    },
+    {
+      "image_ref": "2902_BAGUETTES-BOIS_DEG.jpg",
+      "id_defaut": "2902_D03",
+      "categorie": "finition",
+      "type_defaut": "esthétique",
+      "resume": "Finition du calfeutrement Mur/Bois grossière",
+      "details": "L'enduit ou le mastic appliqué à la jonction Mur/Bois est grossier, débordant et présente des signes de fissuration/écaillement, ce qui est un défaut esthétique et de durabilité (G3).",
+      "regle_ref": {
+        "norme": "SDB_def_class.pdf",
+        "partie": "Gravité"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.9,
+      "incertitude": 0.09999999999999998,
+      "annotation_refs": [
+        "2902_D03_A01"
+      ],
+      "source_generated_at": "2025-10-16T15:58:00Z"
+    },
+    {
+      "image_ref": "3702_CUVETTE_DEG.jpg",
+      "id_defaut": "3702_D02",
+      "categorie": "finition",
+      "type_defaut": "esthétique",
+      "resume": "Finition du calfeutrement Mur/Cuve extrêmement grossière",
+      "details": "Le matériau de calfeutrement/peinture à la jonction Mur/Cuve est appliqué de manière extrêmement grossière, débordant et masquant des éclats du support. C'est un défaut esthétique majeur et un signe de négligence (G3).",
+      "regle_ref": {
+        "norme": "SDB_def_class.pdf",
+        "partie": "Gravité"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "3702_D02_A01"
+      ],
+      "source_generated_at": "2025-10-16T16:55:00Z"
+    },
+    {
+      "image_ref": "3704_CUVETTE_DEG.jpg",
+      "id_defaut": "3704_D02",
+      "categorie": "finition",
+      "type_defaut": "esthétique",
+      "resume": "Défaut de finition (irrégularités du support)",
+      "details": "L'habillage du bâti-support (mur blanc) présente des irrégularités et des traces de plâtre/enduit grossier à l'interface avec la cuvette, indiquant un manque de soin dans les finitions.",
+      "regle_ref": {
+        "norme": "SDB_def_class.pdf",
+        "partie": "Gravité"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.9,
+      "incertitude": 0.09999999999999998,
+      "annotation_refs": [
+        "3704_D02_A01"
+      ],
+      "source_generated_at": "2025-10-16T16:47:00Z"
+    },
+    {
+      "image_ref": "3705_CUVETTE_DEG.jpg",
+      "id_defaut": "3705_D02",
+      "categorie": "finition",
+      "type_defaut": "esthétique",
+      "resume": "Défaut de finition (irrégularités du support)",
+      "details": "L'habillage du bâti-support (mur blanc) présente des irrégularités et des traces de plâtre/enduit grossier à l'interface avec la cuvette, indiquant un manque de soin dans les finitions.",
+      "regle_ref": {
+        "norme": "SDB_def_class.pdf",
+        "partie": "Gravité"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.9,
+      "incertitude": 0.09999999999999998,
+      "annotation_refs": [
+        "3705_D02_A01"
+      ],
+      "source_generated_at": "2025-10-17T13:30:15Z"
+    },
+    {
+      "image_ref": "3803_DORMANT_DEG.jpg",
+      "id_defaut": "3803_D02",
+      "categorie": "finition",
+      "type_defaut": "esthétique",
+      "resume": "Finition du calfeutrement/Peinture grossière",
+      "details": "L'enduit ou le mastic appliqué à la jonction Mur/Dormant est appliqué de manière grossière, débordant et irrégulier (G3).",
+      "regle_ref": {
+        "norme": "SDB_def_class.pdf",
+        "partie": "Gravité"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "3803_D02_A01"
+      ],
+      "source_generated_at": "2025-10-16T17:10:00Z"
+    },
+    {
+      "image_ref": "3804_DORMANT_DEG.jpg",
+      "id_defaut": "3804_D02",
+      "categorie": "finition",
+      "type_defaut": "esthétique",
+      "resume": "Finition du calfeutrement/Peinture grossière",
+      "details": "Le matériau blanc utilisé pour le raccordement (enduit/peinture) est appliqué de manière grossière, avec des bavures et un manque de lissage (G3).",
+      "regle_ref": {
+        "norme": "SDB_def_class.pdf",
+        "partie": "Gravité"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "3804_D02_A01"
+      ],
+      "source_generated_at": "2025-10-16T17:10:00Z"
+    },
+    {
+      "image_ref": "0013_SDB_GEN_20250826.jpg",
+      "id_defaut": "0013_D03",
+      "categorie": "finition",
+      "type_defaut": "esthétique/dégradation",
+      "resume": "Dégradation/Écaillement de la peinture de l'appui de fenêtre",
+      "details": "Le revêtement (peinture) de l'appui de fenêtre (existant) présente des signes d'écaillement, preuve de pénétration d'humidité due à l'échec de l'étanchéité (D01).",
+      "regle_ref": {
+        "norme": "SDB_def_class.pdf",
+        "partie": "Gravité"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.9,
+      "incertitude": 0.09999999999999998,
+      "annotation_refs": [
+        "0013_D03_A01"
+      ],
+      "source_generated_at": "2025-10-17T12:05:16Z"
+    },
+    {
+      "image_ref": "2308_JOINT_MGP.jpg",
+      "id_defaut": "2308_D01",
+      "categorie": "finition",
+      "type_defaut": "esthétique/dégradation",
+      "resume": "Peinture/Enduit écaillé à l'angle Mur-Plafond",
+      "details": "L'écaillement de la peinture/l'enduit à l'angle Mur-Plafond et sur le plafond est visible, indiquant un défaut d'adhérence du revêtement de finition, souvent lié à la condensation (manque de ventilation) ou à une mauvaise préparation du support (G3).",
+      "regle_ref": {
+        "norme": "SDB_def_class.pdf",
+        "partie": "Gravité"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "2308_D01_A01"
+      ],
+      "source_generated_at": "2025-10-16T15:02:00Z"
+    },
+    {
+      "image_ref": "2309_JOINT_MGP.jpg",
+      "id_defaut": "2309_D01",
+      "categorie": "finition",
+      "type_defaut": "esthétique/dégradation",
+      "resume": "Peinture/Enduit écaillé à l'angle Mur-Plafond",
+      "details": "L'écaillement de la peinture/l'enduit à l'angle Mur-Plafond et sur le plafond est visible, indiquant un défaut d'adhérence du revêtement de finition, souvent lié à la condensation (manque de ventilation) ou à une mauvaise préparation du support (G3).",
+      "regle_ref": {
+        "norme": "SDB_def_class.pdf",
+        "partie": "Gravité"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "2309_D01_A01"
+      ],
+      "source_generated_at": "2025-10-17T13:10:00Z"
+    },
+    {
+      "image_ref": "2404_CARRELAGE-DESALIGNEMENT_DET.jpg",
+      "id_defaut": "2404_D02",
+      "categorie": "finition",
+      "type_defaut": "esthétique/dégradation",
+      "resume": "Dégradation/Écaillement de la peinture de l'appui de fenêtre",
+      "details": "La peinture sur l'appui de fenêtre est écaillée à l'angle (G3), ce qui peut être un défaut de préparation ou un signe de pénétration d'humidité (G2) au niveau de cette interface critique.",
+      "regle_ref": {
+        "norme": "SDB_def_class.pdf",
+        "partie": "Gravité"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "2404_D02_A01"
+      ],
+      "source_generated_at": "2025-10-16T15:42:25Z"
+    },
+    {
+      "image_ref": "3702_CUVETTE_DEG.jpg",
+      "id_defaut": "3702_D03",
+      "categorie": "finition",
+      "type_defaut": "esthétique/dégradation",
+      "resume": "Dégradation/Éclats sur l'habillage du bâti-support",
+      "details": "L'habillage du bâti-support (partie blanche/jaune) présente des éclats et une dégradation visible (G3), ce qui nuit à l'esthétique et révèle une mauvaise qualité de finition du support.",
+      "regle_ref": {
+        "norme": "SDB_def_class.pdf",
+        "partie": "Gravité"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.9,
+      "incertitude": 0.09999999999999998,
+      "annotation_refs": [
+        "3702_D03_A01"
+      ],
+      "source_generated_at": "2025-10-16T16:55:00Z"
+    },
+    {
+      "image_ref": "2402_BAGUETTE-BOIS_DET.jpg",
+      "id_defaut": "2402_D03",
+      "categorie": "finition",
+      "type_defaut": "esthétique/durabilité",
+      "resume": "Baguette dégradée/non conforme",
+      "details": "La baguette verticale présente des salissures et des traces de dégradation (résidus, effilochage) et n'est pas conforme aux exigences de finition esthétique/durabilité en zone humide.",
+      "regle_ref": {
+        "norme": "SDB_def_class.pdf",
+        "partie": "Gravité"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.9,
+      "incertitude": 0.09999999999999998,
+      "annotation_refs": [
+        "2402_D03_A01"
+      ],
+      "source_generated_at": "2025-10-16T15:12:00Z"
+    },
+    {
+      "image_ref": "3601_JOINT_DET.jpg",
+      "id_defaut": "3601_D02",
+      "categorie": "finition",
+      "type_defaut": "esthétique/planéité",
+      "resume": "Défaut de finition/Irrégularité Mur-Sol",
+      "details": "La finition de l'enduit/peinture au bas du mur (MGS) est irrégulière et grossière, créant un défaut esthétique (G3) et compliquant la mise en œuvre d'un joint d'étanchéité conforme.",
+      "regle_ref": {
+        "norme": "SDB_def_class.pdf",
+        "partie": "Gravité"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "3601_D02_A01"
+      ],
+      "source_generated_at": "2025-10-16T16:40:12Z"
+    },
+    {
+      "image_ref": "0003_SALON-PROTECTION_GEN_20250818.jpg",
+      "id_defaut": "0003_D02",
+      "categorie": "finition",
+      "type_defaut": "esthétique/propreté",
+      "resume": "Traces/Salissures sur sols et meubles existants",
+      "details": "La présence de débris, de poussière et de traces de travaux sur les sols et les meubles existants indique un défaut de propreté du chantier.",
+      "regle_ref": {
+        "norme": "SDB_def_class.pdf",
+        "partie": "Gravité"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.9,
+      "incertitude": 0.09999999999999998,
+      "annotation_refs": [
+        "0003_D02_A01"
+      ],
+      "source_generated_at": "2025-10-17T11:48:00Z"
+    },
+    {
+      "image_ref": "0012_SDB_GEN_20250826.jpg",
+      "id_defaut": "0012_D01",
+      "categorie": "finition",
+      "type_defaut": "esthétique/propreté",
+      "resume": "Salissures/Dommages sur le décor bois existant (Propreté)",
+      "details": "La structure de décoration bois existante n'a pas été protégée et présente des traces de poussière/plâtre de chantier. Ceci est un défaut de propreté et un dommage sur l'existant.",
+      "regle_ref": {
+        "norme": "SDB_def_class.pdf",
+        "partie": "Gravité"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "0012_D01_A01"
+      ],
+      "source_generated_at": "2025-10-16T17:30:00Z"
+    },
+    {
+      "image_ref": "0015_SDB_GEN_20250826.jpg",
+      "id_defaut": "0015_D02",
+      "categorie": "finition",
+      "type_defaut": "esthétique/propreté",
+      "resume": "Dommage/Dégradation du dormant de la porte existante",
+      "details": "Le dormant de la porte existante (côté gauche) présente des salissures de plâtre/peinture et des dommages causés par les travaux, indiquant un manque de protection lors du chantier (Défaut G3 sur existant).",
+      "regle_ref": {
+        "norme": "SDB_def_class.pdf",
+        "partie": "Gravité"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "0015_D02_A01"
+      ],
+      "source_generated_at": "2025-10-17T12:09:40Z"
+    },
+    {
+      "image_ref": "2306_JOINT_MGS.jpg",
+      "id_defaut": "2306_D02",
+      "categorie": "finition",
+      "type_defaut": "esthétique/propreté",
+      "resume": "Débris et salissures au sol",
+      "details": "La présence de débris de construction, de poussière et de résidus est visible au sol. Cela constitue un défaut de propreté et de finition.",
+      "regle_ref": {
+        "norme": "DTU 52.2_2022",
+        "partie": "Partie 1-1 > 5.2.2"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "2306_D02_A01"
+      ],
+      "source_generated_at": "2025-10-17T12:59:45Z"
+    },
+    {
+      "image_ref": "2405_CARRELAGE-DESALIGNEMENT_DET.jpg",
+      "id_defaut": "2405_D03",
+      "categorie": "finition",
+      "type_defaut": "esthétique/propreté",
+      "resume": "Résidus de mortier/laitance sur carrelage",
+      "details": "Des traces de mortier ou de joint (laitance) sont visibles sur la surface du carrelage et sur la structure en bois existante. Ceci est un défaut de propreté qui n'est pas conforme aux exigences de finition.",
+      "regle_ref": {
+        "norme": "DTU 52.2_2022",
+        "partie": "Partie 1-1 > 8"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.9,
+      "incertitude": 0.09999999999999998,
+      "annotation_refs": [
+        "2405_D03_A01"
+      ],
+      "source_generated_at": "2025-10-17T13:21:45Z"
+    },
+    {
+      "image_ref": "2905_DECOR-BOIS_DEG.jpg",
+      "id_defaut": "2905_D03",
+      "categorie": "finition",
+      "type_defaut": "esthétique/propreté",
+      "resume": "Salissures/Poussière de construction",
+      "details": "La présence de poussière de construction et de salissures est visible sur la surface existante (noire/grise) et dans les interstices. Cela constitue un défaut de propreté et de finition esthétique.",
+      "regle_ref": {
+        "norme": "SDB_def_class.pdf",
+        "partie": "Gravité"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.9,
+      "incertitude": 0.09999999999999998,
+      "annotation_refs": [
+        "2905_D03_A01"
+      ],
+      "source_generated_at": "2025-10-16T15:55:00Z"
+    },
+    {
+      "image_ref": "3802_DORMANT_DEG.jpg",
+      "id_defaut": "3802_D02",
+      "categorie": "finition",
+      "type_defaut": "esthétique/propreté",
+      "resume": "Traces/Salissures sur la peinture/Menuiserie",
+      "details": "Présence de traces d'enduit ou de peinture sur les éléments existants (dormant, quincaillerie) et sur la peinture du mur. Ceci est un défaut de propreté et de finition esthétique.",
+      "regle_ref": {
+        "norme": "SDB_def_class.pdf",
+        "partie": "Gravité"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "3802_D02_A01"
+      ],
+      "source_generated_at": "2025-10-17T13:46:15Z"
+    },
+    {
+      "image_ref": "0005_WC_GEN_20250818.jpg",
+      "id_defaut": "0005_D03",
+      "categorie": "finition",
+      "type_defaut": "propreté",
+      "resume": "Salissures au sol / Propreté insuffisante",
+      "details": "Des résidus de plâtre et de laitance sont visibles au sol autour de la cuvette, indiquant un manque de propreté et de nettoyage final du chantier.",
+      "regle_ref": {
+        "norme": "SDB_def_class.pdf",
+        "partie": "Gravité"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.9,
+      "incertitude": 0.09999999999999998,
+      "annotation_refs": [
+        "0005_D03_A01"
+      ],
+      "source_generated_at": "2025-10-17T11:53:11Z"
+    },
+    {
+      "image_ref": "2005_SOUS-MEUBLE-VASQUE_GEN.jpg",
+      "id_defaut": "2005_D02",
+      "categorie": "finition",
+      "type_defaut": "propreté",
+      "resume": "Débris et salissures au sol",
+      "details": "Des débris et salissures sont visibles sous le meuble et sur le sol, indiquant un manque de propreté du chantier (G3).",
+      "regle_ref": {
+        "norme": "DTU 52.2_2022",
+        "partie": "Partie 1-1 > 5.2.2"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.9,
+      "incertitude": 0.09999999999999998,
+      "annotation_refs": [
+        "2005_D02_A01"
+      ],
+      "source_generated_at": "2025-10-17T12:24:25Z"
+    },
+    {
+      "image_ref": "0001_SDB_GEN_20250818.jpg",
+      "id_defaut": "0001_D02",
+      "categorie": "finition",
+      "type_defaut": "propreté/préparation",
+      "resume": "Chantier Sale / Propreté insuffisante",
+      "details": "La zone de travail et le sol sont encombrés de débris, de seaux et d'une échelle, indiquant un manque de propreté du chantier, ce qui est contraire aux bonnes pratiques et aux exigences de préparation du support.",
+      "regle_ref": {
+        "norme": "DTU 52.2_2022",
+        "partie": "Partie 1-1 > 5.2.2"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "0001_D02_A01"
+      ],
+      "source_generated_at": "2025-10-17T11:08:15Z"
+    },
+    {
+      "image_ref": "0002_SDB_GEN_20250818.jpg",
+      "id_defaut": "0002_D03",
+      "categorie": "finition",
+      "type_defaut": "propreté/préparation",
+      "resume": "Chantier Sale / Propreté insuffisante",
+      "details": "Le chantier est encombré de débris (poussière, plâtre, outils) sur le sol et dans l'espace de travail, ce qui est contraire aux bonnes pratiques de propreté et aux exigences de préparation du support.",
+      "regle_ref": {
+        "norme": "DTU 52.2_2022",
+        "partie": "Partie 1-1 > 5.2.2"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.9,
+      "incertitude": 0.09999999999999998,
+      "annotation_refs": [
+        "0002_D03_A01"
+      ],
+      "source_generated_at": "2025-10-17T11:43:43Z"
+    },
+    {
+      "image_ref": "2004_SOUS-BAIGNOIRE_GEN.jpg",
+      "id_defaut": "2004_D04",
+      "categorie": "finition",
+      "type_defaut": "propreté/préparation",
+      "resume": "Dégradation du support et débris au sol",
+      "details": "Le support est endommagé à sa base et des débris de construction sont présents au sol, ce qui est contraire aux exigences de propreté et de préparation du support avant la pose (G3).",
+      "regle_ref": {
+        "norme": "DTU 52.2_2022",
+        "partie": "Partie 1-1 > 5.2.2"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "2004_D04_A01"
+      ],
+      "source_generated_at": "2025-10-17T12:20:25Z"
+    },
+    {
+      "image_ref": "2303_JOINT_MGM.jpg",
+      "id_defaut": "2301_D04",
+      "categorie": "finition",
+      "type_defaut": "propreté/préparation",
+      "resume": "Dégradation et débris au sol",
+      "details": "La présence de débris de construction (plâtre, mortier) et de salissures au sol est un défaut de finition et de propreté du chantier.",
+      "regle_ref": {
+        "norme": "DTU 52.2_2022",
+        "partie": "Partie 1-1 > 5.2.2"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.9,
+      "incertitude": 0.09999999999999998,
+      "annotation_refs": [
+        "2301_D04_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:46:00Z"
+    },
+    {
+      "image_ref": "0003_SALON-PROTECTION_GEN_20250818.jpg",
+      "id_defaut": "0003_D01",
+      "categorie": "finition",
+      "type_defaut": "propreté/protection",
+      "resume": "Protection du chantier insuffisante",
+      "details": "L'espace de vie adjacent (Salon) est en partie non protégé et sert de zone de stockage pour les matériaux et outils, indiquant un manque de soin dans la protection du maître d'ouvrage.",
+      "regle_ref": {
+        "norme": "SDB_def_class.pdf",
+        "partie": "Gravité"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "0003_D01_A01"
+      ],
+      "source_generated_at": "2025-10-17T11:48:00Z"
+    },
+    {
+      "image_ref": "0004_SALON-PROTECTION_GEN_20250818.jpg",
+      "id_defaut": "0004_D01",
+      "categorie": "finition",
+      "type_defaut": "propreté/protection",
+      "resume": "Protection du chantier et propreté insuffisantes",
+      "details": "La zone adjacente au chantier (Salon) présente des débris, de la poussière et des matériaux stockés sans protection adéquate sur les finitions existantes (sols, meubles), ce qui est contraire aux obligations de propreté et de protection du maître d'ouvrage.",
+      "regle_ref": {
+        "norme": "SDB_def_class.pdf",
+        "partie": "Gravité"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "0004_D01_A01"
+      ],
+      "source_generated_at": "2025-10-16T16:21:49Z"
+    },
+    {
+      "image_ref": "2001_SDB_GEN.jpg",
+      "id_defaut": "2001_D05",
+      "categorie": "menuiserie",
+      "type_defaut": "dégradation sur existant",
+      "resume": "Dommages sur le meuble vasque existant",
+      "details": "Le meuble vasque existant présente des signes de dégradation (rayures, salissures de plâtre/peinture) causés par le manque de protection et les travaux (Défaut G3 sur existant).",
+      "regle_ref": {
+        "norme": "SDB_def_class.pdf",
+        "partie": "Gravité"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "2001_D05_A01"
+      ],
+      "source_generated_at": "2025-10-17T12:17:15Z"
+    },
+    {
+      "image_ref": "2404_CARRELAGE-DESALIGNEMENT_DET.jpg",
+      "id_defaut": "2404_D03",
+      "categorie": "menuiserie",
+      "type_defaut": "durabilité",
+      "resume": "Bois de structure/encadrement non protégé",
+      "details": "Les éléments de bois adjacents (structure existante) sont directement exposés à l'environnement humide de la salle de bains sans protection ou revêtement adéquat, nuisant à leur durabilité.",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Choix des parois & systèmes"
+      },
+      "gravite": 2,
+      "priorite": 2,
+      "temps": 3,
+      "conf_score": 0.9,
+      "incertitude": 0.09999999999999998,
+      "annotation_refs": [
+        "2404_D03_A01"
+      ],
+      "source_generated_at": "2025-10-16T15:42:25Z"
+    },
+    {
+      "image_ref": "2901_MEUBLE-VASQUE_DEG.jpg",
+      "id_defaut": "2901_D02",
+      "categorie": "menuiserie",
+      "type_defaut": "durabilité",
+      "resume": "Non-protection du bois du meuble à l'interface",
+      "details": "Le bord supérieur du meuble vasque (existant) est en contact direct avec l'humidité sans protection des chants ou traitement d'étanchéité visible, ce qui nuit à sa durabilité (risque de pourrissement/déformation).",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Choix des parois & systèmes"
+      },
+      "gravite": 2,
+      "priorite": 2,
+      "temps": 3,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "2901_D02_A01"
+      ],
+      "source_generated_at": "2025-10-16T15:53:00Z"
+    },
+    {
+      "image_ref": "2905_DECOR-BOIS_DEG.jpg",
+      "id_defaut": "2905_D02",
+      "categorie": "menuiserie",
+      "type_defaut": "durabilité",
+      "resume": "Non-protection des chants/Bois exposé",
+      "details": "Le bois de la structure adjacente (existant) est exposé à l'humidité sans protection des chants ni traitement d'étanchéité adéquat, ce qui nuit à sa durabilité (risque de pourrissement).",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Choix des parois & systèmes"
+      },
+      "gravite": 2,
+      "priorite": 2,
+      "temps": 3,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "2905_D02_A01"
+      ],
+      "source_generated_at": "2025-10-16T15:55:00Z"
+    },
+    {
+      "image_ref": "0002_SDB_GEN_20250818.jpg",
+      "id_defaut": "0002_D01",
+      "categorie": "menuiserie",
+      "type_defaut": "durabilité/dommage sur existant",
+      "resume": "Non-protection de la structure bois existante (Durabilité)",
+      "details": "La structure de décoration bois existante (côté droit) est exposée et n'est pas protégée contre l'humidité de la SDB. Ceci nuit à la durabilité du bois et est un dommage sur l'existant non modifiable.",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Choix des parois & systèmes"
+      },
+      "gravite": 2,
+      "priorite": 2,
+      "temps": 3,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "0002_D01_A01"
+      ],
+      "source_generated_at": "2025-10-17T11:43:43Z"
+    },
+    {
+      "image_ref": "0014_SDB_GEN_20250826.jpg",
+      "id_defaut": "0014_D05",
+      "categorie": "menuiserie",
+      "type_defaut": "durabilité/étanchéité",
+      "resume": "Meuble vasque non protégé/étanchéifié au mur",
+      "details": "Le meuble en bois pour la vasque est en contact direct avec le mur (zone de projection) et l'absence de joint périphérique ou de protection des chants risque de nuire à la durabilité du meuble.",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Choix des parois & systèmes"
+      },
+      "gravite": 2,
+      "priorite": 2,
+      "temps": 3,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [],
+      "source_generated_at": "2025-10-16T15:22:00Z"
+    },
+    {
+      "image_ref": "2005_SOUS-MEUBLE-VASQUE_GEN.jpg",
+      "id_defaut": "2005_D01",
+      "categorie": "menuiserie",
+      "type_defaut": "durabilité/étanchéité",
+      "resume": "Meuble vasque existant non protégé/étanchéifié au mur",
+      "details": "Le meuble en bois existant est en contact direct avec le mur (zone de projection) et l'absence de joint périphérique ou de protection des chants risque de nuire à sa durabilité (G2).",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Choix des parois & systèmes"
+      },
+      "gravite": 2,
+      "priorite": 2,
+      "temps": 3,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "2005_D01_A01"
+      ],
+      "source_generated_at": "2025-10-17T12:24:25Z"
+    },
+    {
+      "image_ref": "2310__JOINT_MGB.jpg",
+      "id_defaut": "2310_D03",
+      "categorie": "menuiserie",
+      "type_defaut": "durabilité/mise en œuvre",
+      "resume": "Menuiserie bois non protégée au contact de l'eau",
+      "details": "Le bois est en contact direct avec la zone de projection d'eau et le bord de la baignoire, sans traitement de chant ni protection visible. Cela nuit à la durabilité du matériau (risque de pourrissement).",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Choix des parois & systèmes"
+      },
+      "gravite": 2,
+      "priorite": 2,
+      "temps": 3,
+      "conf_score": 0.9,
+      "incertitude": 0.09999999999999998,
+      "annotation_refs": [
+        "2310_D03_A01"
+      ],
+      "source_generated_at": "2025-10-16T15:03:00Z"
+    },
+    {
+      "image_ref": "2902_BAGUETTES-BOIS_DEG.jpg",
+      "id_defaut": "2902_D02",
+      "categorie": "menuiserie",
+      "type_defaut": "durabilité/mise en œuvre",
+      "resume": "Non-protection des chants du bois exposé",
+      "details": "Le bas de la baguette en bois est en contact direct avec le sol sans protection des chants ni joint, ce qui nuit à sa durabilité (risque de pourrissement) en zone humide (G2).",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Choix des parois & systèmes"
+      },
+      "gravite": 2,
+      "priorite": 2,
+      "temps": 3,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "2902_D02_A01"
+      ],
+      "source_generated_at": "2025-10-16T15:58:00Z"
+    },
+    {
+      "image_ref": "3802_DORMANT_DEG.jpg",
+      "id_defaut": "3802_D03",
+      "categorie": "menuiserie",
+      "type_defaut": "esthétique/dégradation",
+      "resume": "Dégradation/Éclats de la finition du dormant",
+      "details": "La finition (peinture) sur le dormant de la porte présente des éclats ou des dégradations, ce qui est un défaut esthétique sur un élément existant.",
+      "regle_ref": {
+        "norme": "SDB_def_class.pdf",
+        "partie": "Gravité"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.9,
+      "incertitude": 0.09999999999999998,
+      "annotation_refs": [
+        "3802_D03_A01"
+      ],
+      "source_generated_at": "2025-10-17T13:46:15Z"
+    },
+    {
+      "image_ref": "0008_SDB_GEN_20250819.jpg",
+      "id_defaut": "0008_D03",
+      "categorie": "menuiserie",
+      "type_defaut": "esthétique/propreté",
+      "resume": "Dommage/Salissures sur Ossature/Décor Bois Existant",
+      "details": "La structure bois existante (côté gauche) présente des salissures de plâtre/enduit, indiquant un manque de protection lors des travaux de platrerie. Dommage esthétique sur un élément existant.",
+      "regle_ref": {
+        "norme": "SDB_def_class.pdf",
+        "partie": "Gravité"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "0008_D03_A01"
+      ],
+      "source_generated_at": "2025-10-17T11:59:45Z"
+    },
+    {
+      "image_ref": "3803_DORMANT_DEG.jpg",
+      "id_defaut": "3803_D03",
+      "categorie": "menuiserie",
+      "type_defaut": "esthétique/propreté",
+      "resume": "Dégradation/Salissures sur le dormant existant",
+      "details": "Le dormant (existant) présente des traces et des salissures (matière blanche) dues aux travaux, indiquant un manque de protection et de nettoyage des éléments existants.",
+      "regle_ref": {
+        "norme": "SDB_def_class.pdf",
+        "partie": "Gravité"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.9,
+      "incertitude": 0.09999999999999998,
+      "annotation_refs": [
+        "3803_D03_A01"
+      ],
+      "source_generated_at": "2025-10-16T17:10:00Z"
+    },
+    {
+      "image_ref": "3804_DORMANT_DEG.jpg",
+      "id_defaut": "3804_D03",
+      "categorie": "menuiserie",
+      "type_defaut": "esthétique/propreté",
+      "resume": "Dégradation/Salissures sur le dormant existant",
+      "details": "Le dormant (existant) présente des traces blanches (salissures, peinture) et des dégradations, indiquant un manque de protection et de nettoyage des éléments existants pendant les travaux (G3).",
+      "regle_ref": {
+        "norme": "SDB_def_class.pdf",
+        "partie": "Gravité"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.9,
+      "incertitude": 0.09999999999999998,
+      "annotation_refs": [
+        "3804_D03_A01"
+      ],
+      "source_generated_at": "2025-10-16T17:10:00Z"
+    },
+    {
+      "image_ref": "2101_ALIMENTATION-EVACUATION_DET.jpg",
+      "id_defaut": "2101_D04",
+      "categorie": "ossature",
+      "type_defaut": "dégradation",
+      "resume": "Ossature métallique non conforme",
+      "details": "L'ossature métallique présente des traces de rouille. Elle ne doit présenter ni rouille, ni déformation.",
+      "regle_ref": {
+        "norme": "DTU 25.41_1993",
+        "partie": "Chapitre 3.2.1"
+      },
+      "gravite": 2,
+      "priorite": 2,
+      "temps": 1,
+      "conf_score": 0.9,
+      "incertitude": 0.09999999999999998,
+      "annotation_refs": [
+        "2101_D04_A01"
+      ],
+      "source_generated_at": "2025-10-17T12:26:00Z"
+    },
+    {
+      "image_ref": "0005_WC_GEN_20250818.jpg",
+      "id_defaut": "0005_D01",
+      "categorie": "platrerie",
+      "type_defaut": "esthétique",
+      "resume": "Joints de plaque BA13 non lissés",
+      "details": "Les bandes d'enduit des joints de plaque (Plaque H1) sont visibles et brutes, sans lissage ni ponçage. Ce défaut de finition contrevient à l'exigence de 'faire les joints proprement' avant peinture.",
+      "regle_ref": {
+        "norme": "DTU 25.41_1993",
+        "partie": "Chapitre 5.5.1"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "0005_D01_A01"
+      ],
+      "source_generated_at": "2025-10-17T11:53:11Z"
+    },
+    {
+      "image_ref": "0006_SDB_GEN_20250819.jpg",
+      "id_defaut": "0006_D04",
+      "categorie": "platrerie",
+      "type_defaut": "esthétique",
+      "resume": "Joints de plaque BA13 bruts (non lissés)",
+      "details": "Les bandes d'enduit des joints de plaque sont visibles et brutes (non lissées, non poncées). Cette finition est insuffisante et non conforme à l'exigence de 'faire les joints proprement' avant peinture (G3).",
+      "regle_ref": {
+        "norme": "DTU 25.41_1993",
+        "partie": "Chapitre 5.5.1"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "0006_D04_A01"
+      ],
+      "source_generated_at": "2025-10-16T17:50:00Z"
+    },
+    {
+      "image_ref": "0007_SDB_GEN_20250819.jpg",
+      "id_defaut": "0007_D02",
+      "categorie": "platrerie",
+      "type_defaut": "esthétique",
+      "resume": "Joints de plaque BA13 bruts (non lissés)",
+      "details": "Les bandes d'enduit des joints de plaque sont visibles et brutes, sans lissage ni ponçage. Cette finition est insuffisante et non conforme à l'exigence de 'faire les joints proprement' avant peinture (G3).",
+      "regle_ref": {
+        "norme": "DTU 25.41_1993",
+        "partie": "Chapitre 5.5.1"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "0007_D02_A01"
+      ],
+      "source_generated_at": "2025-10-17T11:57:00Z"
+    },
+    {
+      "image_ref": "0008_SDB_GEN_20250819.jpg",
+      "id_defaut": "0008_D01",
+      "categorie": "platrerie",
+      "type_defaut": "esthétique",
+      "resume": "Finition du mur Placo H1 non lissée (Joints bruts)",
+      "details": "La surface de la plaque H1 (partie blanche enduite) présente des joints bruts, rugueux et non poncés/lissés. Cette finition est insuffisante avant l'application de la peinture et ne respecte pas l'exigence de faire les joints proprement.",
+      "regle_ref": {
+        "norme": "DTU 25.41_1993",
+        "partie": "Chapitre 5.5.1"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "0008_D01_A01"
+      ],
+      "source_generated_at": "2025-10-17T11:59:45Z"
+    },
+    {
+      "image_ref": "0015_SDB_GEN_20250826.jpg",
+      "id_defaut": "0015_D03",
+      "categorie": "platrerie",
+      "type_defaut": "esthétique",
+      "resume": "Joints de plaque Mur-Plafond non lissés",
+      "details": "Les bandes d'enduit des joints Mur-Plafond sont visibles et brutes, sans lissage ni ponçage, ce qui est une finition insuffisante avant l'application de la peinture (Défaut G3).",
+      "regle_ref": {
+        "norme": "DTU 25.41_1993",
+        "partie": "Chapitre 5.5.1"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.9,
+      "incertitude": 0.09999999999999998,
+      "annotation_refs": [
+        "0015_D03_A01"
+      ],
+      "source_generated_at": "2025-10-17T12:09:40Z"
+    },
+    {
+      "image_ref": "2104_ALIMENTATION-EVACUATION_DET.jpg",
+      "id_defaut": "2104_D02",
+      "categorie": "platrerie",
+      "type_defaut": "préparation du support",
+      "resume": "Dégradation du support en plaques de plâtre",
+      "details": "Le support en plaques de plâtre est endommagé avec une découpe grossière et des parties arrachées, ce qui est contraire aux exigences d'un support sain et cohésif avant la mise en œuvre de l'étanchéité et du revêtement.",
+      "regle_ref": {
+        "norme": "DTU 52.2_2022",
+        "partie": "Partie 1-1 > 5.2"
+      },
+      "gravite": 2,
+      "priorite": 2,
+      "temps": 1,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "2104_D02_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:03:05Z"
+    },
+    {
+      "image_ref": "2105_ALIMENTATION-EVACUATION_DET.jpg",
+      "id_defaut": "2105_D04",
+      "categorie": "platrerie",
+      "type_defaut": "préparation du support",
+      "resume": "Dégradation du support en plaques de plâtre",
+      "details": "Le support en plâtre est abîmé, avec des bords irréguliers et des parties manquantes, ce qui ne permet pas une mise en œuvre correcte de l'étanchéité et du revêtement final.",
+      "regle_ref": {
+        "norme": "DTU 52.2_2022",
+        "partie": "Partie 1-1 > 5.2.2"
+      },
+      "gravite": 2,
+      "priorite": 2,
+      "temps": 1,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "2105_D04_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:04:12Z"
+    },
+    {
+      "image_ref": "2106_EVACUATION_MAC.jpg",
+      "id_defaut": "2106_D03",
+      "categorie": "platrerie",
+      "type_defaut": "préparation du support",
+      "resume": "Support de plaque de plâtre dégradé",
+      "details": "The plasterboard is damaged around the pipe, failing to provide a sound and cohesive surface for proper sealing and finishing.",
+      "regle_ref": {
+        "norme": "DTU 52.2_2022",
+        "partie": "Partie 1-1 > 5.2.2"
+      },
+      "gravite": 2,
+      "priorite": 2,
+      "temps": 1,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "2106_D03_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:05:11Z"
+    },
+    {
+      "image_ref": "2108_EVACUATION_DET.jpg",
+      "id_defaut": "2108_D04",
+      "categorie": "platrerie",
+      "type_defaut": "préparation du support",
+      "resume": "Dégradation du support en plaques de plâtre",
+      "details": "Le support en plâtre est abîmé, avec des bords irréguliers et des parties manquantes, ce qui ne permet pas une mise en œuvre correcte de l'étanchéité et du revêtement final.",
+      "regle_ref": {
+        "norme": "DTU 52.2_2022",
+        "partie": "Partie 1-1 > 5.2.2"
+      },
+      "gravite": 2,
+      "priorite": 2,
+      "temps": 1,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "2108_D04_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:07:37Z"
+    },
+    {
+      "image_ref": "0010_SDB_MAC_20250819.jpg",
+      "id_defaut": "0010_D02",
+      "categorie": "platrerie",
+      "type_defaut": "préparation du support/esthétique",
+      "resume": "BA13 endommagé/Percement grossier",
+      "details": "Le parement H1 autour du trou est arraché/endommagé. Le support doit être sain et cohésif pour recevoir le revêtement (G3).",
+      "regle_ref": {
+        "norme": "DTU 52.2_2022",
+        "partie": "Partie 1-1 > 5.2.2"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.9,
+      "incertitude": 0.09999999999999998,
+      "annotation_refs": [
+        "0010_D02_A01"
+      ],
+      "source_generated_at": "2025-10-16T18:00:00Z"
+    },
+    {
+      "image_ref": "2116_MITIGEUR-BAIN_DET.jpg",
+      "id_defaut": "2116_D03",
+      "categorie": "plomberie",
+      "type_defaut": "esthétique/étanchéité",
+      "resume": "Absence de rosaces étanches",
+      "details": "Les raccords de plomberie ne sont pas équipés de rosaces étanches pour masquer l'interface avec le mur et renforcer l'étanchéité de surface (Défaut G2).",
+      "regle_ref": {
+        "norme": "Robinetterie, bondes, trop-plein",
+        "partie": "Sorties murales"
+      },
+      "gravite": 2,
+      "priorite": 2,
+      "temps": 3,
+      "conf_score": 0.9,
+      "incertitude": 0.09999999999999998,
+      "annotation_refs": [
+        "2116_D03_A01"
+      ],
+      "source_generated_at": "2025-10-17T12:49:50Z"
+    },
+    {
+      "image_ref": "0012_SDB_GEN_20250826.jpg",
+      "id_defaut": "0012_D02",
+      "categorie": "plomberie",
+      "type_defaut": "mise en œuvre",
+      "resume": "Contact Plomberie/Décor bois existant (Malfaçon d'interface)",
+      "details": "Les conduites de plomberie sont installées au contact direct de la structure bois existante non modifiable. Ceci est une malfaçon qui risque d'engendrer des contraintes mécaniques et la rétention d'humidité, nuisant à la durabilité du bois.",
+      "regle_ref": {
+        "norme": "NF DTU 60.1",
+        "partie": "5.2.3 (Règles de pose des canalisations)"
+      },
+      "gravite": 2,
+      "priorite": 2,
+      "temps": 1,
+      "conf_score": 0.9,
+      "incertitude": 0.09999999999999998,
+      "annotation_refs": [
+        "0012_D02_A01"
+      ],
+      "source_generated_at": "2025-10-16T17:30:00Z"
+    },
+    {
+      "image_ref": "2004_SOUS-BAIGNOIRE_GEN.jpg",
+      "id_defaut": "2004_D02",
+      "categorie": "plomberie",
+      "type_defaut": "non-conformité DTU",
+      "resume": "Pente d'évacuation insuffisante",
+      "details": "Le tuyau d'évacuation est visuellement posé avec une pente nulle ou insuffisante (inférieure à 1-3%), ce qui risque de provoquer la stagnation des eaux usées.",
+      "regle_ref": {
+        "norme": "DTU 60.1_2012",
+        "partie": "Chapitre 5.3.1"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.98,
+      "incertitude": 0.020000000000000018,
+      "annotation_refs": [
+        "2004_D02_A01"
+      ],
+      "source_generated_at": "2025-10-17T12:20:25Z"
+    },
+    {
+      "image_ref": "2102_EVACUATION_DET.jpg",
+      "id_defaut": "2102_D01",
+      "categorie": "plomberie",
+      "type_defaut": "non-conformité DTU",
+      "resume": "Pente d'évacuation insuffisante",
+      "details": "Le tuyau d'évacuation de la baignoire ne présente pas la pente requise (1% à 3%). Une pente visuellement faible ou nulle est un risque de stagnation des eaux usées.",
+      "regle_ref": {
+        "norme": "DTU 60.1_2012",
+        "partie": "Chapitre 5.3.1"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.98,
+      "incertitude": 0.020000000000000018,
+      "annotation_refs": [
+        "2102_D01_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:00:00Z"
+    },
+    {
+      "image_ref": "2103_EVACUATION_MAC.jpg",
+      "id_defaut": "2103_D01",
+      "categorie": "plomberie",
+      "type_defaut": "non-conformité DTU",
+      "resume": "Pente d'évacuation insuffisante",
+      "details": "Le tuyau d'évacuation horizontal ne présente pas la pente requise (1% à 3%), avec un risque de stagnation d'eau et d'odeurs.",
+      "regle_ref": {
+        "norme": "DTU 60.1_2012",
+        "partie": "Chapitre 5.3.1"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.98,
+      "incertitude": 0.020000000000000018,
+      "annotation_refs": [
+        "2103_D01_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:01:26Z"
+    },
+    {
+      "image_ref": "2103_EVACUATION_MAC.jpg",
+      "id_defaut": "2103_D03",
+      "categorie": "plomberie",
+      "type_defaut": "non-conformité DTU",
+      "resume": "Raccordement en té non réglementaire",
+      "details": "Le raccordement du tuyau d'évacuation a été réalisé avec un Té, ce qui est contraire aux prescriptions du DTU qui autorise uniquement les culottes à 87°30 sur les chutes.",
+      "regle_ref": {
+        "norme": "DTU 60.1_2012",
+        "partie": "Chapitre 5.3.4.1"
+      },
+      "gravite": 2,
+      "priorite": 2,
+      "temps": 1,
+      "conf_score": 0.9,
+      "incertitude": 0.09999999999999998,
+      "annotation_refs": [
+        "2103_D03_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:01:26Z"
+    },
+    {
+      "image_ref": "2105_ALIMENTATION-EVACUATION_DET.jpg",
+      "id_defaut": "2105_D01",
+      "categorie": "plomberie",
+      "type_defaut": "non-conformité DTU",
+      "resume": "Pente d'évacuation insuffisante",
+      "details": "Le tuyau d'évacuation ne présente pas la pente régulière de 1 à 3% exigée par le DTU, ce qui risque de provoquer des stagnations d'eau et des bouchons.",
+      "regle_ref": {
+        "norme": "DTU 60.1_2012",
+        "partie": "Chapitre 5.3.1"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.98,
+      "incertitude": 0.020000000000000018,
+      "annotation_refs": [
+        "2105_D01_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:04:12Z"
+    },
+    {
+      "image_ref": "2105_ALIMENTATION-EVACUATION_DET.jpg",
+      "id_defaut": "2105_D02",
+      "categorie": "plomberie",
+      "type_defaut": "non-conformité DTU",
+      "resume": "Raccordement d'évacuation non conforme",
+      "details": "Le raccordement est réalisé avec un raccord en Té, ce qui n'est pas autorisé par les prescriptions du DTU pour les raccordements sur collecteur.",
+      "regle_ref": {
+        "norme": "DTU 60.1_2012",
+        "partie": "Chapitre 5.3.4.1"
+      },
+      "gravite": 2,
+      "priorite": 2,
+      "temps": 1,
+      "conf_score": 0.9,
+      "incertitude": 0.09999999999999998,
+      "annotation_refs": [
+        "2105_D02_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:04:12Z"
+    },
+    {
+      "image_ref": "2106_EVACUATION_MAC.jpg",
+      "id_defaut": "2106_D01",
+      "categorie": "plomberie",
+      "type_defaut": "non-conformité DTU",
+      "resume": "Pente d'évacuation insuffisante",
+      "details": "The horizontal evacuation pipe appears to have a slight counter-slope or an insufficient slope, which does not comply with the DTU 60.1 requirement of a 1% to 3% slope.",
+      "regle_ref": {
+        "norme": "DTU 60.1_2012",
+        "partie": "Chapitre 5.3.1"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.98,
+      "incertitude": 0.020000000000000018,
+      "annotation_refs": [
+        "2106_D01_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:05:11Z"
+    },
+    {
+      "image_ref": "2107_EVACUATION_MAC.jpg",
+      "id_defaut": "2107_D01",
+      "categorie": "plomberie",
+      "type_defaut": "non-conformité DTU",
+      "resume": "Pente d'évacuation insuffisante",
+      "details": "Le tuyau d'évacuation ne présente pas la pente requise de 1 à 3% selon le DTU 60.1, ce qui risque d'entraîner des problèmes d'écoulement et des odeurs.",
+      "regle_ref": {
+        "norme": "DTU 60.1_2012",
+        "partie": "Chapitre 5.3.1"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.97,
+      "incertitude": 0.030000000000000027,
+      "annotation_refs": [
+        "2107_D01_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:06:14Z"
+    },
+    {
+      "image_ref": "2108_EVACUATION_DET.jpg",
+      "id_defaut": "2108_D01",
+      "categorie": "plomberie",
+      "type_defaut": "non-conformité DTU",
+      "resume": "Pente d'évacuation insuffisante",
+      "details": "Le tuyau d'évacuation ne présente pas la pente requise de 1 à 3% exigée par le DTU 60.1, ce qui peut engendrer des stagnations d'eau et des problèmes d'évacuation.",
+      "regle_ref": {
+        "norme": "DTU 60.1_2012",
+        "partie": "Chapitre 5.3.1"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.98,
+      "incertitude": 0.020000000000000018,
+      "annotation_refs": [
+        "2108_D01_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:07:37Z"
+    },
+    {
+      "image_ref": "2108_EVACUATION_DET.jpg",
+      "id_defaut": "2108_D02",
+      "categorie": "plomberie",
+      "type_defaut": "non-conformité DTU",
+      "resume": "Raccordement d'évacuation non conforme",
+      "details": "Le raccordement est réalisé avec un raccord en Té, ce qui est contraire aux prescriptions du DTU pour les raccordements sur collecteur d'évacuation.",
+      "regle_ref": {
+        "norme": "DTU 60.1_2012",
+        "partie": "Chapitre 5.3.4.1"
+      },
+      "gravite": 2,
+      "priorite": 2,
+      "temps": 1,
+      "conf_score": 0.9,
+      "incertitude": 0.09999999999999998,
+      "annotation_refs": [
+        "2108_D02_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:07:37Z"
+    },
+    {
+      "image_ref": "2209_PIEDS-SIPHON_MAC.jpg",
+      "id_defaut": "2209_D01",
+      "categorie": "plomberie",
+      "type_defaut": "non-conformité DTU",
+      "resume": "Pente d'évacuation insuffisante",
+      "details": "Le tuyau d'évacuation flexible horizontal présente une pente insuffisante (inférieure à 1-3%), ce qui favorise la stagnation des eaux usées et des dépôts.",
+      "regle_ref": {
+        "norme": "DTU 60.1_2012",
+        "partie": "Chapitre 5.3.1"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.99,
+      "incertitude": 0.010000000000000009,
+      "annotation_refs": [
+        "2209_D01_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:44:10Z"
+    },
+    {
+      "image_ref": "2303_JOINT_MGM.jpg",
+      "id_defaut": "2301_D03",
+      "categorie": "revêtement",
+      "type_defaut": "esthétique/finition",
+      "resume": "Joints de carrelage inadéquats/incomplets",
+      "details": "Le joint horizontal entre les carreaux est irrégulier et ne présente pas la qualité de finition requise. Les carreaux doivent être posés avec un joint minimal de 2 mm (L $\\le$ 60 cm) et correctement remplis.",
+      "regle_ref": {
+        "norme": "DTU 52.2_2022",
+        "partie": "Partie 1-1 > 8.1.1"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "2301_D03_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:46:00Z"
+    },
+    {
+      "image_ref": "2112_MITIGEUR-BAIN_DET.jpg",
+      "id_defaut": "2112_D03",
+      "categorie": "revêtement",
+      "type_defaut": "esthétique/mise en œuvre",
+      "resume": "Dégradation du support / Percement grossier",
+      "details": "Le percement dans le support (plaque H1/carrelage) est grossier et endommagé, ce qui est un défaut de mise en œuvre et d'esthétique.",
+      "regle_ref": {
+        "norme": "DTU 52.2_2022",
+        "partie": "Partie 1-1 > 7"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.9,
+      "incertitude": 0.09999999999999998,
+      "annotation_refs": [
+        "2112_D03_A01"
+      ],
+      "source_generated_at": "2025-10-17T12:44:45Z"
+    },
+    {
+      "image_ref": "2308_JOINT_MGP.jpg",
+      "id_defaut": "2308_D03",
+      "categorie": "revêtement",
+      "type_defaut": "esthétique/mise en œuvre",
+      "resume": "Finition des joints de carrelage insuffisante",
+      "details": "Les joints de carrelage sont irréguliers ou mal remplis, ne respectant pas l'exigence de finition esthétique.",
+      "regle_ref": {
+        "norme": "DTU 52.2_2022",
+        "partie": "Partie 1-1 > 8"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.92,
+      "incertitude": 0.07999999999999996,
+      "annotation_refs": [
+        "2308_D03_A01"
+      ],
+      "source_generated_at": "2025-10-16T15:02:00Z"
+    },
+    {
+      "image_ref": "2309_JOINT_MGP.jpg",
+      "id_defaut": "2309_D03",
+      "categorie": "revêtement",
+      "type_defaut": "esthétique/mise en œuvre",
+      "resume": "Finition des joints de carrelage insuffisante",
+      "details": "Les joints de carrelage sont irréguliers ou mal remplis, ne respectant pas l'exigence de finition esthétique.",
+      "regle_ref": {
+        "norme": "DTU 52.2_2022",
+        "partie": "Partie 1-1 > 8"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.92,
+      "incertitude": 0.07999999999999996,
+      "annotation_refs": [
+        "2309_D03_A01"
+      ],
+      "source_generated_at": "2025-10-17T13:10:00Z"
+    },
+    {
+      "image_ref": "2312__JOINT_MAC.jpg",
+      "id_defaut": "2312_D01",
+      "categorie": "revêtement",
+      "type_defaut": "esthétique/mise en œuvre",
+      "resume": "Joint de carrelage horizontal incomplet/rompu",
+      "details": "Le joint horizontal présente une rupture ou est mal rempli. Ceci est un défaut de finition (G3) qui pourrait également devenir un point faible d'infiltration de vapeur (G2).",
+      "regle_ref": {
+        "norme": "DTU 52.2_2022",
+        "partie": "Partie 1-1 > 8.1.1"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "2312_D01_A01"
+      ],
+      "source_generated_at": "2025-10-16T15:06:00Z"
+    },
+    {
+      "image_ref": "2403_CARRELAGE-DESALIGNEMENT_DET.jpg",
+      "id_defaut": "2403_D03",
+      "categorie": "revêtement",
+      "type_defaut": "esthétique/mise en œuvre",
+      "resume": "Défaut de calepinage/Décalage du carrelage",
+      "details": "Le joint horizontal du carrelage ne s'aligne pas avec l'angle de la menuiserie et le joint vertical est irrégulier (visible aussi en 2405). Ce désalignement est un défaut de calepinage et d'esthétique (G3).",
+      "regle_ref": {
+        "norme": "DTU 52.2_2022",
+        "partie": "Partie 1-1 > 7"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "2403_D03_A01"
+      ],
+      "source_generated_at": "2025-10-16T15:08:00Z"
+    },
+    {
+      "image_ref": "2404_CARRELAGE-DESALIGNEMENT_DET.jpg",
+      "id_defaut": "2404_D04",
+      "categorie": "revêtement",
+      "type_defaut": "esthétique/mise en œuvre",
+      "resume": "Défaut de calepinage/Finition du carrelage",
+      "details": "La coupe du carrelage (visible sur 2403) est irrégulière et le joint d'angle est mal fini ou trop large à l'interface de la menuiserie existante. Ceci est un défaut de calepinage et d'esthétique (G3).",
+      "regle_ref": {
+        "norme": "DTU 52.2_2022",
+        "partie": "Partie 1-1 > 7"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "2404_D04_A01"
+      ],
+      "source_generated_at": "2025-10-16T15:42:25Z"
+    },
+    {
+      "image_ref": "2405_CARRELAGE-DESALIGNEMENT_DET.jpg",
+      "id_defaut": "2405_D02",
+      "categorie": "revêtement",
+      "type_defaut": "esthétique/mise en œuvre",
+      "resume": "Défaut de calepinage/Coupe irrégulière du carrelage",
+      "details": "La coupe du carrelage à l'angle (jonction de la menuiserie) est irrégulière, entraînant un joint de taille non uniforme ou trop large. Ceci est un défaut esthétique de mise en œuvre (G3).",
+      "regle_ref": {
+        "norme": "DTU 52.2_2022",
+        "partie": "Partie 1-1 > 7"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "2405_D02_A01"
+      ],
+      "source_generated_at": "2025-10-17T13:21:45Z"
+    },
+    {
+      "image_ref": "2112_MITIGEUR-BAIN_DET.jpg",
+      "id_defaut": "2112_D02",
+      "categorie": "revêtement",
+      "type_defaut": "mise en œuvre",
+      "resume": "Matériau poreux/rigide utilisé pour calfeutrement",
+      "details": "L'utilisation de plâtre/enduit poreux pour calfeutrer l'espace autour du raccord est non conforme et annule l'étanchéité du système.",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Interfaces critiques"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 3,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "2112_D02_A01"
+      ],
+      "source_generated_at": "2025-10-17T12:44:45Z"
+    },
+    {
+      "image_ref": "2115_MITIGEUR-BAIN_MAC.jpg",
+      "id_defaut": "2115_D02",
+      "categorie": "revêtement",
+      "type_defaut": "mise en œuvre",
+      "resume": "Matériau poreux/rigide utilisé pour calfeutrement",
+      "details": "L'utilisation de plâtre/enduit poreux pour calfeutrer l'espace autour du raccord est non conforme pour une zone EB+, ne pouvant pas absorber les mouvements ni assurer l'étanchéité.",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Interfaces critiques"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 3,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "2115_D02_A01"
+      ],
+      "source_generated_at": "2025-10-17T12:48:45Z"
+    },
+    {
+      "image_ref": "2116_MITIGEUR-BAIN_DET.jpg",
+      "id_defaut": "2116_D02",
+      "categorie": "revêtement",
+      "type_defaut": "mise en œuvre",
+      "resume": "Matériau poreux/rigide utilisé pour calfeutrement",
+      "details": "L'utilisation de plâtre/enduit poreux pour calfeutrer l'espace autour du raccord est non conforme pour une zone EB+, ne pouvant pas absorber les mouvements ni assurer l'étanchéité.",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Interfaces critiques"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 3,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "2116_D02_A01"
+      ],
+      "source_generated_at": "2025-10-17T12:49:50Z"
+    },
+    {
+      "image_ref": "2202_JOINT_MAC.jpg",
+      "id_defaut": "2202_D01",
+      "categorie": "revêtement",
+      "type_defaut": "mise en œuvre",
+      "resume": "Traitement de joint non conforme (Enduit/Bande)",
+      "details": "Le traitement des joints entre les plaques de plâtre (angle supérieur gauche) est incomplet et présente une mauvaise finition, ce qui est contraire à l'obligation d'utilisation d'enduit spécifique et de bande de renfort.",
+      "regle_ref": {
+        "norme": "DTU 25.41_1993",
+        "partie": "Chapitre 5.5.1"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "2202_D01_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:30:10Z"
+    },
+    {
+      "image_ref": "2206_APPUI_DET.jpg",
+      "id_defaut": "2206_D03",
+      "categorie": "revêtement",
+      "type_defaut": "mise en œuvre / finition",
+      "resume": "Calfeutrement grossier et non conforme",
+      "details": "Un matériau de calfeutrement poreux (enduit/plâtre) a été appliqué grossièrement (bavures) sur la plaque de plâtre. Ce matériau ne peut pas remplacer un joint d'étanchéité élastomère et est contraire aux exigences de propreté et de préparation du support.",
+      "regle_ref": {
+        "norme": "DTU 52.2_2022",
+        "partie": "Partie 1-1 > 5.2.2"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.9,
+      "incertitude": 0.09999999999999998,
+      "annotation_refs": [
+        "2206_D03_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:38:00Z"
+    },
+    {
+      "image_ref": "2204_APPUI_MAC.jpg",
+      "id_defaut": "2204_D03",
+      "categorie": "revêtement",
+      "type_defaut": "mise en œuvre / planéité",
+      "resume": "Enduit et finition grossiers/non conformes",
+      "details": "L'enduit de calfeutrement/préparation du support est appliqué grossièrement (bavures, épaisseur inégale) et risque de ne pas respecter les tolérances de planéité pour le carrelage (DTU 52.2).",
+      "regle_ref": {
+        "norme": "DTU 52.2_2022",
+        "partie": "Partie 1-1 > 5.2.2"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "2204_D03_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:34:00Z"
+    },
+    {
+      "image_ref": "2113_MITIGEUR-BAIN_MAC.jpg",
+      "id_defaut": "2113_D02",
+      "categorie": "revêtement",
+      "type_defaut": "non-conformité mise en œuvre",
+      "resume": "Matériau poreux/rigide utilisé pour calfeutrement",
+      "details": "L'utilisation de plâtre/enduit poreux pour calfeutrer l'espace autour du raccord est non conforme pour une zone EB+, ne pouvant pas absorber les mouvements ni assurer l'étanchéité.",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Interfaces critiques"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 3,
+      "conf_score": 0.98,
+      "incertitude": 0.020000000000000018,
+      "annotation_refs": [
+        "2113_D02_A01"
+      ],
+      "source_generated_at": "2025-10-16T17:40:00Z"
+    },
+    {
+      "image_ref": "0009_SDB_MAC_20250819.jpg",
+      "id_defaut": "0009_D01",
+      "categorie": "revêtement",
+      "type_defaut": "préparation du support",
+      "resume": "Dégradation du support et présence de débris de maçonnerie",
+      "details": "Le support de plaque de plâtre est arraché au niveau du sol, exposant le gros œuvre et des débris (briques, mortier) sur le sol. Le support doit être sain et propre avant la mise en œuvre de l'étanchéité et du revêtement.",
+      "regle_ref": {
+        "norme": "DTU 52.2_2022",
+        "partie": "Partie 1-1 > 5.2.2"
+      },
+      "gravite": 2,
+      "priorite": 2,
+      "temps": 1,
+      "conf_score": 0.98,
+      "incertitude": 0.020000000000000018,
+      "annotation_refs": [
+        "0009_D01_A01"
+      ],
+      "source_generated_at": "2025-10-17T12:00:50Z"
+    },
+    {
+      "image_ref": "2201_APPUI_DET.jpg",
+      "id_defaut": "2201_D03",
+      "categorie": "revêtement",
+      "type_defaut": "préparation du support",
+      "resume": "Dégradation du support / Enduit non conforme",
+      "details": "Le support en plâtre est abîmé (arraché) et l'enduit est appliqué grossièrement, risquant de ne pas respecter les tolérances de planéité requises pour un support de carrelage.",
+      "regle_ref": {
+        "norme": "DTU 52.2_2022",
+        "partie": "Partie 1-1 > 5.2.2"
+      },
+      "gravite": 2,
+      "priorite": 2,
+      "temps": 3,
+      "conf_score": 0.96,
+      "incertitude": 0.040000000000000036,
+      "annotation_refs": [
+        "2201_D03_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:28:00Z"
+    },
+    {
+      "image_ref": "2203_APPUI_DET.jpg",
+      "id_defaut": "2203_D03",
+      "categorie": "revêtement",
+      "type_defaut": "préparation du support",
+      "resume": "Dégradation du support et présence de débris",
+      "details": "Le bas de la plaque de plâtre est dégradé, et des débris sont présents au sol, rendant le support non sain et non propre, ce qui est contraire aux exigences de préparation du support avant pose du revêtement ou du tablier.",
+      "regle_ref": {
+        "norme": "DTU 52.2_2022",
+        "partie": "Partie 1-1 > 5.2.2"
+      },
+      "gravite": 2,
+      "priorite": 2,
+      "temps": 1,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "2203_D03_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:32:00Z"
+    },
+    {
+      "image_ref": "2207_APPUI_DET.jpg",
+      "id_defaut": "2207_D04",
+      "categorie": "revêtement",
+      "type_defaut": "préparation du support",
+      "resume": "Dégradation du support et présence de débris",
+      "details": "Le bas de la plaque de plâtre est dégradé, et des débris sont présents au sol, rendant le support non sain et non propre, ce qui est contraire aux exigences de préparation du support avant pose du revêtement ou du tablier.",
+      "regle_ref": {
+        "norme": "DTU 52.2_2022",
+        "partie": "Partie 1-1 > 5.2.2"
+      },
+      "gravite": 2,
+      "priorite": 2,
+      "temps": 1,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "2207_D04_A01"
+      ],
+      "source_generated_at": "2025-10-17T12:58:45Z"
+    },
+    {
+      "image_ref": "2114_MITIGEUR-BAIN_MAC.jpg",
+      "id_defaut": "2114_D03",
+      "categorie": "revêtements",
+      "type_defaut": "esthétique/mise en œuvre",
+      "resume": "Dégradation du carrelage / Mauvais percement",
+      "details": "Le carrelage est percé de manière grossière, au-delà des dimensions nécessaires, et est endommagé autour des raccords, ce qui est un défaut d'exécution et compromet l'esthétique et la zone de scellement.",
+      "regle_ref": {
+        "norme": "DTU 52.2_2022",
+        "partie": "Partie 1-1 > 7"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "2114_D03_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:24:00Z"
+    },
+    {
+      "image_ref": "2002_BAIGNOIRE_GEN.jpg",
+      "id_defaut": "2002_D02",
+      "categorie": "revêtements",
+      "type_defaut": "non-conformité SPEC",
+      "resume": "Support non protégé sur le tablier",
+      "details": "Le tablier de la baignoire, sur le côté gauche, n'est pas revêtu. [span_1](start_span)Le support est exposé à l'humidité et l'absence de SPEC (non visible mais non conforme si absent) constitue un risque d'infiltration[span_1](end_span).",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Choix des parois & systèmes"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "2002_D02_A01"
+      ],
+      "source_generated_at": "2025-10-17T12:18:45Z"
+    },
+    {
+      "image_ref": "2003_BAIGNOIRE GEN.jpg",
+      "id_defaut": "2003_D02",
+      "categorie": "revêtements",
+      "type_defaut": "non-conformité SPEC",
+      "resume": "Support non protégé sur le tablier",
+      "details": "Le tablier de la baignoire, sur le côté gauche, n'est pas revêtu ni protégé. Le support (probablement BA13 H1) est exposé et l'absence de SPEC (non visible mais non conforme si absent) constitue un risque d'infiltration.",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "Choix des parois & systèmes"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 1,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "2003_D02_A01"
+      ],
+      "source_generated_at": "2025-10-17T12:19:07Z"
+    },
+    {
+      "image_ref": "2102_EVACUATION_DET.jpg",
+      "id_defaut": "2102_D02",
+      "categorie": "sanitaire",
+      "type_defaut": "non-conformité Notice fabricant",
+      "resume": "Pose de la baignoire non conforme (mortier)",
+      "details": "La baignoire ne doit pas être posée sur un lit de plâtre ou de mortier. La présence de gravats et de mortier autour des pieds est contraire aux instructions du fabricant et peut compromettre la stabilité de l'appareil.",
+      "regle_ref": {
+        "norme": "NOTICE_Bain-Acrylique_v7",
+        "partie": "Chapitre 2.2"
+      },
+      "gravite": 2,
+      "priorite": 2,
+      "temps": 1,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "2102_D02_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:00:00Z"
+    },
+    {
+      "image_ref": "2201_APPUI_DET.jpg",
+      "id_defaut": "2201_D01",
+      "categorie": "structure",
+      "type_defaut": "non-conformité",
+      "resume": "Ossature métallique exposée",
+      "details": "Le rail métallique de l'ossature est visible et non protégé par un revêtement continu. L'exposition à l'humidité due à l'absence de SPEC risque de provoquer la corrosion et de compromettre la stabilité de la cloison.",
+      "regle_ref": {
+        "norme": "DTU 25.41_1993",
+        "partie": "Chapitre 3.2.1"
+      },
+      "gravite": 2,
+      "priorite": 2,
+      "temps": 1,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "2201_D01_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:28:00Z"
+    },
+    {
+      "image_ref": "2202_JOINT_MAC.jpg",
+      "id_defaut": "2202_D03",
+      "categorie": "structure",
+      "type_defaut": "non-conformité",
+      "resume": "Ossature métallique exposée",
+      "details": "L'ossature métallique est visiblement exposée à l'angle, ce qui, combiné à l'absence de SPEC, risque de provoquer la corrosion de l'acier galvanisé et de compromettre la stabilité de la cloison.",
+      "regle_ref": {
+        "norme": "DTU 25.41_1993",
+        "partie": "Chapitre 3.2.1"
+      },
+      "gravite": 2,
+      "priorite": 2,
+      "temps": 1,
+      "conf_score": 0.9,
+      "incertitude": 0.09999999999999998,
+      "annotation_refs": [
+        "2202_D03_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:30:10Z"
+    },
+    {
+      "image_ref": "2203_APPUI_DET.jpg",
+      "id_defaut": "2203_D04",
+      "categorie": "structure",
+      "type_defaut": "non-conformité",
+      "resume": "Ossature métallique exposée",
+      "details": "Le rail métallique est visible en haut du mur. L'exposition à l'humidité risque de provoquer la corrosion de l'acier galvanisé, compromettant la stabilité de la cloison.",
+      "regle_ref": {
+        "norme": "DTU 25.41_1993",
+        "partie": "Chapitre 3.2.1"
+      },
+      "gravite": 2,
+      "priorite": 2,
+      "temps": 1,
+      "conf_score": 0.9,
+      "incertitude": 0.09999999999999998,
+      "annotation_refs": [
+        "2203_D04_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:32:00Z"
+    },
+    {
+      "image_ref": "2204_APPUI_MAC.jpg",
+      "id_defaut": "2204_D01",
+      "categorie": "structure",
+      "type_defaut": "non-conformité",
+      "resume": "Ossature métallique exposée",
+      "details": "Le rail métallique de l'ossature est visible et non protégé. Son exposition dans cette zone humide (EB+p) risque d'entraîner sa corrosion et de compromettre la stabilité mécanique de la cloison.",
+      "regle_ref": {
+        "norme": "DTU 25.41_1993",
+        "partie": "Chapitre 3.2.1"
+      },
+      "gravite": 2,
+      "priorite": 2,
+      "temps": 1,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "2204_D01_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:34:00Z"
+    },
+    {
+      "image_ref": "2205_APPUI_MAC.jpg",
+      "id_defaut": "2205_D01",
+      "categorie": "structure",
+      "type_defaut": "non-conformité",
+      "resume": "Ossature métallique exposée et non protégée",
+      "details": "Le rail métallique est visible à l'interface avec la baignoire. L'absence de calfeutrement adéquat et l'exposition à l'humidité, due à l'absence de SPEC, risque d'entraîner la corrosion de l'acier galvanisé.",
+      "regle_ref": {
+        "norme": "DTU 25.41_1993",
+        "partie": "Chapitre 3.2.1"
+      },
+      "gravite": 2,
+      "priorite": 2,
+      "temps": 1,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "2205_D01_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:36:00Z"
+    },
+    {
+      "image_ref": "2206_APPUI_DET.jpg",
+      "id_defaut": "2206_D01",
+      "categorie": "structure",
+      "type_defaut": "non-conformité",
+      "resume": "Ossature métallique exposée",
+      "details": "Le rail métallique de l'ossature est visible le long du bord de la plaque de plâtre. L'exposition à l'humidité (due à l'absence de SPEC) risque de provoquer la corrosion de l'acier galvanisé, ce qui est contraire aux normes sur la stabilité mécanique.",
+      "regle_ref": {
+        "norme": "DTU 25.41_1993",
+        "partie": "Chapitre 3.2.1"
+      },
+      "gravite": 2,
+      "priorite": 2,
+      "temps": 1,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "2206_D01_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:38:00Z"
+    },
+    {
+      "image_ref": "2207_APPUI_DET.jpg",
+      "id_defaut": "2207_D03",
+      "categorie": "structure",
+      "type_defaut": "non-conformité",
+      "resume": "Ossature métallique exposée",
+      "details": "Le rail métallique est visible en haut du mur. L'exposition à l'humidité risque de provoquer la corrosion de l'acier galvanisé, compromettant la stabilité de la cloison.",
+      "regle_ref": {
+        "norme": "DTU 25.41_1993",
+        "partie": "Chapitre 3.2.1"
+      },
+      "gravite": 2,
+      "priorite": 2,
+      "temps": 1,
+      "conf_score": 0.9,
+      "incertitude": 0.09999999999999998,
+      "annotation_refs": [
+        "2207_D03_A01"
+      ],
+      "source_generated_at": "2025-10-17T12:58:45Z"
+    },
+    {
+      "image_ref": "0009_SDB_MAC_20250819.jpg",
+      "id_defaut": "0009_D03",
+      "categorie": "structure",
+      "type_defaut": "propreté/mise en œuvre",
+      "resume": "Exposition du Gros Œuvre / Mauvaise gestion des débris",
+      "details": "L'intérieur de la maçonnerie est exposé à travers la dégradation du BA13, et des débris de briques et de plâtre remplissent l'interstice. Ceci est un défaut de propreté et un risque de compromettre la pose future de l'habillage.",
+      "regle_ref": {
+        "norme": "DTU 25.41_1993",
+        "partie": "Chapitre 4.1"
+      },
+      "gravite": 3,
+      "priorite": 3,
+      "temps": 3,
+      "conf_score": 0.9,
+      "incertitude": 0.09999999999999998,
+      "annotation_refs": [
+        "0009_D03_A01"
+      ],
+      "source_generated_at": "2025-10-17T12:00:50Z"
+    },
+    {
+      "image_ref": "2101_ALIMENTATION-EVACUATION_DET.jpg",
+      "id_defaut": "2101_D02",
+      "categorie": "support",
+      "type_defaut": "défaut de planéité / propreté",
+      "resume": "Dégradation du support de la plaque de plâtre",
+      "details": "La plaque de plâtre (support) présente des dégradations et des éclats, notamment autour du percement des tuyaux, ne respectant pas les conditions de propreté et d'intégrité requises avant la pose. Le support doit être sain et propre.",
+      "regle_ref": {
+        "norme": "DTU 25.41_1993",
+        "partie": "Chapitre 4.1"
+      },
+      "gravite": 2,
+      "priorite": 2,
+      "temps": 1,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "2101_D02_A01"
+      ],
+      "source_generated_at": "2025-10-17T12:26:00Z"
+    },
+    {
+      "image_ref": "2107_EVACUATION_MAC.jpg",
+      "id_defaut": "2107_D02",
+      "categorie": "support",
+      "type_defaut": "préparation du support",
+      "resume": "Présence de débris de maçonnerie",
+      "details": "Des débris de maçonnerie et de plâtre sont présents sous le tuyau et sur le sol, ce qui est contraire aux exigences de propreté et de préparation du support avant la pose.",
+      "regle_ref": {
+        "norme": "DTU 52.2_2022",
+        "partie": "Partie 1-1 > 5.2.2"
+      },
+      "gravite": 2,
+      "priorite": 2,
+      "temps": 1,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "2107_D02_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:06:14Z"
+    },
+    {
+      "image_ref": "2209_PIEDS-SIPHON_MAC.jpg",
+      "id_defaut": "2209_D04",
+      "categorie": "support",
+      "type_defaut": "préparation du support",
+      "resume": "Dégradation du support et présence de débris",
+      "details": "Le support mural est dégradé (plâtre arraché) et des débris de construction sont présents au sol. Le support doit être sain et propre; la pose sur lit de mortier/plâtre est interdite.",
+      "regle_ref": {
+        "norme": "DTU 52.2_2022",
+        "partie": "Partie 1-1 > 5.2.2"
+      },
+      "gravite": 2,
+      "priorite": 2,
+      "temps": 1,
+      "conf_score": 0.96,
+      "incertitude": 0.040000000000000036,
+      "annotation_refs": [
+        "2209_D04_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:44:10Z"
+    },
+    {
+      "image_ref": "2210_PIEDS_MAC.jpg",
+      "id_defaut": "2210_D02",
+      "categorie": "support",
+      "type_defaut": "préparation du support",
+      "resume": "Dégradation du support et présence de débris",
+      "details": "La présence de débris de construction (plâtre, gravats) est visible au sol. Le support doit être sain et propre avant l'installation, et la pose sur mortier/plâtre est interdite.",
+      "regle_ref": {
+        "norme": "DTU 52.2_2022",
+        "partie": "Partie 1-1 > 5.2.2"
+      },
+      "gravite": 2,
+      "priorite": 2,
+      "temps": 1,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "2210_D03_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:46:00Z"
+    },
+    {
+      "image_ref": "2110_VENTILATION-NATURELLE_DET.jpg",
+      "id_defaut": "2110_D02",
+      "categorie": "ventilation",
+      "type_defaut": "dégradation",
+      "resume": "Conduit de ventilation endommagé",
+      "details": "Le conduit de ventilation est endommagé, ce qui compromet son bon fonctionnement et l'efficacité du système, qu'il soit naturel ou mécanique.",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "6) Ventilation"
+      },
+      "gravite": 2,
+      "priorite": 2,
+      "temps": 2,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "2110_D02_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:10:45Z"
+    },
+    {
+      "image_ref": "2111_VENTILATION-NATURELLE_DET.jpg",
+      "id_defaut": "2111_D01",
+      "categorie": "ventilation",
+      "type_defaut": "dégradation",
+      "resume": "Conduit de ventilation endommagé",
+      "details": "Le conduit de ventilation est endommagé et mal fixé, ce qui compromet son bon fonctionnement et l'efficacité du système, qu'il soit naturel ou mécanique.",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "6) Ventilation"
+      },
+      "gravite": 2,
+      "priorite": 2,
+      "temps": 2,
+      "conf_score": 0.95,
+      "incertitude": 0.050000000000000044,
+      "annotation_refs": [
+        "2111_D01_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:13:08Z"
+    },
+    {
+      "image_ref": "2001_SDB_GEN.jpg",
+      "id_defaut": "2001_D04",
+      "categorie": "ventilation",
+      "type_defaut": "non-conformité",
+      "resume": "Ventilation insuffisante ou non conforme",
+      "details": "L'extraction visible au plafond n'est pas une garantie de VMC conforme. Les analyses contextuelles ont montré des défauts du conduit (2110), suggérant une ventilation inefficace, cause probable des écaillements de peinture.",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "6) Ventilation"
+      },
+      "gravite": 2,
+      "priorite": 2,
+      "temps": 2,
+      "conf_score": 0.9,
+      "incertitude": 0.09999999999999998,
+      "annotation_refs": [
+        "2001_D04_A01"
+      ],
+      "source_generated_at": "2025-10-17T12:17:15Z"
+    },
+    {
+      "image_ref": "2110_VENTILATION-NATURELLE_DET.jpg",
+      "id_defaut": "2110_D01",
+      "categorie": "ventilation",
+      "type_defaut": "non-conformité",
+      "resume": "Absence de VMC ou d'extraction",
+      "details": "L'installation montre une ventilation naturelle ou ponctuelle inefficace, sans VMC ou extracteur pour assurer le renouvellement d'air dans un local humide, ce qui est contraire aux bonnes pratiques et risque de créer des problèmes de condensation.",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "6) Ventilation"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 2,
+      "conf_score": 0.98,
+      "incertitude": 0.020000000000000018,
+      "annotation_refs": [
+        "2110_D01_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:10:45Z"
+    },
+    {
+      "image_ref": "2111_VENTILATION-NATURELLE_DET.jpg",
+      "id_defaut": "2111_D02",
+      "categorie": "ventilation",
+      "type_defaut": "non-conformité",
+      "resume": "Absence de VMC ou d'extraction",
+      "details": "L'installation montre une ventilation naturelle ou ponctuelle inefficace, sans VMC ou extracteur pour assurer le renouvellement d'air dans un local humide, ce qui est contraire aux bonnes pratiques et risque de créer des problèmes de condensation.",
+      "regle_ref": {
+        "norme": "SDB_REF_DOC.pdf",
+        "partie": "6) Ventilation"
+      },
+      "gravite": 1,
+      "priorite": 1,
+      "temps": 2,
+      "conf_score": 0.98,
+      "incertitude": 0.020000000000000018,
+      "annotation_refs": [
+        "2111_D02_A01"
+      ],
+      "source_generated_at": "2025-10-16T14:13:08Z"
+    }
+  ],
+  "validation": {
+    "ok": true,
+    "erreurs": [],
+    "avertissements": []
+  },
+  "merge_report": {
+    "inputs_count": 94,
+    "defects_merged": 204,
+    "rejected_or_invalid": 0,
+    "policy": "conf_score desc; incertitude asc; generated_at récent"
+  }
+}

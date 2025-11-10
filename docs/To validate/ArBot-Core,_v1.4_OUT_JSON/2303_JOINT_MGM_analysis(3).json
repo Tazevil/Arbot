@@ -1,0 +1,380 @@
+{
+  "meta": {
+    "SOP_name": "ArBot-Core",
+    "SOP_ver": "v1.4",
+    "generated_at": "2025-10-17T12:59:45Z",
+    "tool_list": [
+      "vision",
+      "knowledge",
+      "repair",
+      "normalize"
+    ],
+    "schema_ref": "schemas/arbot-vision-analysis.schema.json",
+    "schema_ver": "v1.0.1",
+    "ingestion_log": {
+      "mode": "GDocs-repair"
+    }
+  },
+  "context": {
+    "project_ID": "EX70",
+    "project_name": "Sinistre baignoire RDC",
+    "project_type": "Expertise Sinistre",
+    "phase_ID": "PH2",
+    "phase_name": "Diagnostic sinistre"
+  },
+  "source_file": {
+    "file_cat": "Photo",
+    "file_ID": "2303",
+    "file_name": "2303_JOINT_MGM.jpg",
+    "file_ext": "jpg",
+    "file_img_width": 1884,
+    "file_img_height": 4080,
+    "file_date": "2025-08-18",
+    "zone_ID": 3,
+    "zone_name": "WC",
+    "cat_ID": 3,
+    "cat_img_ID": "03",
+    "cat_name": "CARRELAGE",
+    "viewtype_ID": "MGM",
+    "viewtype_name": "INTERACTION MUR-MUR",
+    "full_exif_data": {
+      "enabled": true
+    }
+  },
+  "vision": {
+    "passes": 3,
+    "scales": [
+      1,
+      0.75,
+      0.5
+    ],
+    "nms_iou": 0.5,
+    "refine_below": 0.82,
+    "trust_score": 0.96,
+    "focus_type": "détail",
+    "target_zone": "MGM",
+    "viewtype_ID": "MGM",
+    "viewtype_name": "VUE MACRO",
+    "evidence_crops": [
+      "2303_crop1.jpg"
+    ],
+    "annotations": [
+      {
+        "ann_ID": "2301_D01_A01",
+        "ann_type": "polygon",
+        "ann_label": "Absence de joint d'étanchéité (Mur-Mur)",
+        "ann_linked_def_ID": "2301_D01",
+        "ann_layer": "étanchéité",
+        "ann_confidence": 0.99,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#FFD700",
+          "stroke_width": 2,
+          "fill": "#FFD700",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2301_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.6,
+          0,
+          0.7,
+          0.2
+        ],
+        "polygon_norm": [
+          [
+            0.6,
+            0.05
+          ],
+          [
+            0.65,
+            0.2
+          ],
+          [
+            0.7,
+            0.15
+          ],
+          [
+            0.65,
+            0
+          ],
+          [
+            0.6,
+            0.05
+          ]
+        ]
+      },
+      {
+        "ann_ID": "2301_D02_A01",
+        "ann_type": "polygon",
+        "ann_label": "Absence de joint d'étanchéité (Mur-Sol)",
+        "ann_linked_def_ID": "2301_D02",
+        "ann_layer": "étanchéité",
+        "ann_confidence": 0.98,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#800080",
+          "stroke_width": 2,
+          "fill": "#800080",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2301_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.55,
+          0.4,
+          0.95,
+          0.55
+        ],
+        "polygon_norm": [
+          [
+            0.55,
+            0.4
+          ],
+          [
+            0.95,
+            0.4
+          ],
+          [
+            0.95,
+            0.55
+          ],
+          [
+            0.55,
+            0.55
+          ],
+          [
+            0.55,
+            0.4
+          ]
+        ]
+      },
+      {
+        "ann_ID": "2301_D03_A01",
+        "ann_type": "polygon",
+        "ann_label": "Joints de carrelage inadéquats",
+        "ann_linked_def_ID": "2301_D03",
+        "ann_layer": "revêtement",
+        "ann_confidence": 0.95,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#DC143C",
+          "stroke_width": 2,
+          "fill": "#DC143C",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2301_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.65,
+          0.05,
+          0.8,
+          0.25
+        ],
+        "polygon_norm": [
+          [
+            0.65,
+            0.05
+          ],
+          [
+            0.8,
+            0.05
+          ],
+          [
+            0.8,
+            0.25
+          ],
+          [
+            0.65,
+            0.25
+          ],
+          [
+            0.65,
+            0.05
+          ]
+        ]
+      },
+      {
+        "ann_ID": "2301_D04_A01",
+        "ann_type": "polygon",
+        "ann_label": "Finitions/Débris au sol",
+        "ann_linked_def_ID": "2301_D04",
+        "ann_layer": "finition",
+        "ann_confidence": 0.9,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#D2B48C",
+          "stroke_width": 2,
+          "fill": "#D2B48C",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2301_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.05,
+          0.5,
+          0.65,
+          0.85
+        ],
+        "polygon_norm": [
+          [
+            0.05,
+            0.5
+          ],
+          [
+            0.65,
+            0.5
+          ],
+          [
+            0.65,
+            0.85
+          ],
+          [
+            0.05,
+            0.85
+          ],
+          [
+            0.05,
+            0.5
+          ]
+        ]
+      }
+    ],
+    "metrics": [],
+    "defects": [
+      {
+        "rule_type": "Notice",
+        "annotation_refs": [
+          "2301_D01_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Manque de mastic d'étanchéité à la jonction Mur-Mur.",
+        "origin_viewtype_ID": "MGM",
+        "origin_focus": "détail",
+        "origin_layer": "étanchéité",
+        "id_defaut": "2301_D01",
+        "categorie": "étanchéité",
+        "type_defaut": "non-conformité d'interface",
+        "resume": "Absence de joint d'étanchéité périphérique (Mur-Mur)",
+        "details": "L'absence de joint silicone/élastomère est visible à la jonction entre le mur carrelé et le mur adjacent (noir). Cette zone doit être traitée par un joint souple pour assurer la continuité d'étanchéité aux jonctions.",
+        "regle_ref": {
+          "norme": "SDB_REF_DOC.pdf",
+          "partie": "Interfaces critiques"
+        },
+        "gravite": 1,
+        "priorite": 1,
+        "temps": 1,
+        "conf_score": 0.99,
+        "incertitude": 0.010000000000000009
+      },
+      {
+        "rule_type": "Notice",
+        "annotation_refs": [
+          "2301_D02_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Manque de mastic d'étanchéité à la jonction Mur-Sol.",
+        "origin_viewtype_ID": "MGM",
+        "origin_focus": "détail",
+        "origin_layer": "étanchéité",
+        "id_defaut": "2301_D02",
+        "categorie": "étanchéité",
+        "type_defaut": "non-conformité d'interface",
+        "resume": "Absence de joint d'étanchéité périphérique (Mur-Sol)",
+        "details": "L'absence de joint silicone/élastomère est visible à la jonction entre le mur carrelé et le sol. Cette zone doit être traitée par un joint souple pour éviter l'infiltration d'eau derrière le carrelage.",
+        "regle_ref": {
+          "norme": "SDB_REF_DOC.pdf",
+          "partie": "Interfaces critiques"
+        },
+        "gravite": 1,
+        "priorite": 1,
+        "temps": 1,
+        "conf_score": 0.98,
+        "incertitude": 0.020000000000000018
+      },
+      {
+        "rule_type": "Norme",
+        "annotation_refs": [
+          "2301_D03_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Irrégularité et mauvaise finition des joints de carrelage.",
+        "origin_viewtype_ID": "MGM",
+        "origin_focus": "détail",
+        "origin_layer": "revêtement",
+        "id_defaut": "2301_D03",
+        "categorie": "revêtement",
+        "type_defaut": "esthétique/finition",
+        "resume": "Joints de carrelage inadéquats/incomplets",
+        "details": "Le joint horizontal entre les carreaux est irrégulier et ne présente pas la qualité de finition requise. Les carreaux doivent être posés avec un joint minimal de 2 mm (L $\\le$ 60 cm) et correctement remplis.",
+        "regle_ref": {
+          "norme": "DTU 52.2_2022",
+          "partie": "Partie 1-1 > 8.1.1"
+        },
+        "gravite": 3,
+        "priorite": 3,
+        "temps": 3,
+        "conf_score": 0.95,
+        "incertitude": 0.050000000000000044
+      },
+      {
+        "rule_type": "Norme",
+        "annotation_refs": [
+          "2301_D04_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Débris et salissures au sol dans la zone de jointoiement.",
+        "origin_viewtype_ID": "MGM",
+        "origin_focus": "détail",
+        "origin_layer": "finition",
+        "id_defaut": "2301_D04",
+        "categorie": "finition",
+        "type_defaut": "propreté/préparation",
+        "resume": "Dégradation et débris au sol",
+        "details": "La présence de débris de construction (plâtre, mortier) et de salissures au sol est un défaut de finition et de propreté du chantier.",
+        "regle_ref": {
+          "norme": "DTU 52.2_2022",
+          "partie": "Partie 1-1 > 5.2.2"
+        },
+        "gravite": 3,
+        "priorite": 3,
+        "temps": 3,
+        "conf_score": 0.9,
+        "incertitude": 0.09999999999999998
+      }
+    ],
+    "transform_history": [
+      {
+        "step": "gdocs-repair",
+        "seed": 42
+      }
+    ]
+  },
+  "presentation": {
+    "caption": "Absence de joint d'étanchéité périphérique (Mur-Mur)",
+    "padded_bbox_norm": [
+      0.59,
+      -0.01,
+      0.71,
+      0.21
+    ],
+    "style": "highlight-color:#00FFFF; opacity:0.35; border:2px solid #00FFFF;",
+    "refined": true,
+    "confidence_before": 0.95,
+    "confidence_after": 0.99
+  },
+  "validation": {
+    "ok": true,
+    "erreurs": [],
+    "avertissements": []
+  },
+  "protocol": {
+    "mode_tracabilite": "EXTENDED_DEBUG",
+    "determinisme": {
+      "force_seed": 42
+    },
+    "exigence_materielle": {
+      "require_certification": [
+        "SPEC/SEL",
+        "Mortier-colle C2-S1/S2",
+        "Plaque H1"
+      ]
+    }
+  }
+}

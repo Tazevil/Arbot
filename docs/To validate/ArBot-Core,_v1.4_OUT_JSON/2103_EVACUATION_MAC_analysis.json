@@ -1,0 +1,312 @@
+{
+  "meta": {
+    "SOP_name": "ArBot-Core",
+    "SOP_ver": "v1.4",
+    "generated_at": "2025-10-16T14:01:26Z",
+    "tool_list": [
+      "vision",
+      "knowledge",
+      "repair",
+      "normalize"
+    ],
+    "schema_ref": "schemas/arbot-vision-analysis.schema.json",
+    "schema_ver": "v1.0.1",
+    "ingestion_log": {
+      "mode": "GDocs-repair"
+    }
+  },
+  "context": {
+    "project_ID": "EX70",
+    "project_name": "Sinistre baignoire RDC",
+    "project_type": "Expertise Sinistre",
+    "phase_ID": "PH2",
+    "phase_name": "Diagnostic sinistre"
+  },
+  "source_file": {
+    "file_cat": "Photo",
+    "file_ID": "2103",
+    "file_name": "2103_EVACUATION_MAC.jpg",
+    "file_ext": "jpg",
+    "file_img_width": 1884,
+    "file_img_height": 4080,
+    "file_date": "2025-08-18",
+    "zone_ID": 2,
+    "zone_name": "SDB",
+    "cat_ID": 1,
+    "cat_img_ID": "03",
+    "cat_name": "PLOMBERIE",
+    "viewtype_ID": "MAC",
+    "viewtype_name": "VUE MACRO",
+    "full_exif_data": {
+      "enabled": true
+    }
+  },
+  "vision": {
+    "passes": 3,
+    "scales": [
+      1,
+      0.75,
+      0.5
+    ],
+    "nms_iou": 0.5,
+    "refine_below": 0.82,
+    "trust_score": 0.95,
+    "focus_type": "détail",
+    "target_zone": "MGS",
+    "viewtype_ID": "MAC",
+    "viewtype_name": "VUE MACRO",
+    "evidence_crops": [
+      "2103_crop1.jpg",
+      "2103_crop2.jpg"
+    ],
+    "annotations": [
+      {
+        "ann_ID": "2103_D01_A01",
+        "ann_type": "polygon",
+        "ann_label": "pente d'évacuation non conforme",
+        "ann_linked_def_ID": "2103_D01",
+        "ann_layer": "plomberie",
+        "ann_confidence": 0.98,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#FFD700",
+          "stroke_width": 2,
+          "fill": "#FFD700",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2103_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.58,
+          0.43,
+          0.69,
+          0.52
+        ],
+        "polygon_norm": [
+          [
+            0.58,
+            0.45
+          ],
+          [
+            0.65,
+            0.52
+          ],
+          [
+            0.69,
+            0.5
+          ],
+          [
+            0.62,
+            0.43
+          ],
+          [
+            0.58,
+            0.45
+          ]
+        ]
+      },
+      {
+        "ann_ID": "2103_D02_A01",
+        "ann_type": "polygon",
+        "ann_label": "absence de traitement de traversée",
+        "ann_linked_def_ID": "2103_D02",
+        "ann_layer": "étanchéité",
+        "ann_confidence": 0.96,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#800080",
+          "stroke_width": 2,
+          "fill": "#800080",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2103_crop2.jpg",
+        "bbox_xyxy_norm": [
+          0.35,
+          0.02,
+          0.55,
+          0.15
+        ],
+        "polygon_norm": [
+          [
+            0.35,
+            0.05
+          ],
+          [
+            0.45,
+            0.15
+          ],
+          [
+            0.55,
+            0.1
+          ],
+          [
+            0.4,
+            0.02
+          ],
+          [
+            0.35,
+            0.05
+          ]
+        ]
+      },
+      {
+        "ann_ID": "2103_D03_A01",
+        "ann_type": "polygon",
+        "ann_label": "raccordement non réglementaire",
+        "ann_linked_def_ID": "2103_D03",
+        "ann_layer": "plomberie",
+        "ann_confidence": 0.9,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#ADD8E6",
+          "stroke_width": 2,
+          "fill": "#ADD8E6",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2103_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.8,
+          0.4,
+          0.95,
+          0.55
+        ],
+        "polygon_norm": [
+          [
+            0.8,
+            0.45
+          ],
+          [
+            0.9,
+            0.55
+          ],
+          [
+            0.95,
+            0.5
+          ],
+          [
+            0.85,
+            0.4
+          ],
+          [
+            0.8,
+            0.45
+          ]
+        ]
+      }
+    ],
+    "metrics": [],
+    "defects": [
+      {
+        "rule_type": "Norme",
+        "annotation_refs": [
+          "2103_D01_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "La contre-pente du tuyau d'évacuation est visible, ce qui est une non-conformité majeure.",
+        "origin_viewtype_ID": "MAC",
+        "origin_focus": "détail",
+        "origin_layer": "plomberie",
+        "id_defaut": "2103_D01",
+        "categorie": "plomberie",
+        "type_defaut": "non-conformité DTU",
+        "resume": "Pente d'évacuation insuffisante",
+        "details": "Le tuyau d'évacuation horizontal ne présente pas la pente requise (1% à 3%), avec un risque de stagnation d'eau et d'odeurs.",
+        "regle_ref": {
+          "norme": "DTU 60.1_2012",
+          "partie": "Chapitre 5.3.1"
+        },
+        "gravite": 1,
+        "priorite": 1,
+        "temps": 1,
+        "conf_score": 0.98,
+        "incertitude": 0.020000000000000018
+      },
+      {
+        "rule_type": "Notice",
+        "annotation_refs": [
+          "2103_D02_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Le tuyau d'évacuation traverse la cloison sans aucune protection ni étanchéité visible.",
+        "origin_viewtype_ID": "MAC",
+        "origin_focus": "détail",
+        "origin_layer": "étanchéité",
+        "id_defaut": "2103_D02",
+        "categorie": "étanchéité",
+        "type_defaut": "non-conformité SPEC",
+        "resume": "Absence de traitement de la traversée de cloison",
+        "details": "La traversée de la plaque de plâtre par le tuyau n'est pas scellée ni traitée avec un manchon ou une bande de renfort, ce qui est un manquement critique pour l'étanchéité de la zone EB+.",
+        "regle_ref": {
+          "norme": "NOTICE_CSTB-SPEC_2021",
+          "partie": "Chapitre 3.2"
+        },
+        "gravite": 1,
+        "priorite": 1,
+        "temps": 1,
+        "conf_score": 0.96,
+        "incertitude": 0.040000000000000036
+      },
+      {
+        "rule_type": "Norme",
+        "annotation_refs": [
+          "2103_D03_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "L'angle de raccordement du tuyau est incorrect, ne respectant pas les règles d'installation.",
+        "origin_viewtype_ID": "MAC",
+        "origin_focus": "détail",
+        "origin_layer": "plomberie",
+        "id_defaut": "2103_D03",
+        "categorie": "plomberie",
+        "type_defaut": "non-conformité DTU",
+        "resume": "Raccordement en té non réglementaire",
+        "details": "Le raccordement du tuyau d'évacuation a été réalisé avec un Té, ce qui est contraire aux prescriptions du DTU qui autorise uniquement les culottes à 87°30 sur les chutes.",
+        "regle_ref": {
+          "norme": "DTU 60.1_2012",
+          "partie": "Chapitre 5.3.4.1"
+        },
+        "gravite": 2,
+        "priorite": 2,
+        "temps": 1,
+        "conf_score": 0.9,
+        "incertitude": 0.09999999999999998
+      }
+    ],
+    "transform_history": [
+      {
+        "step": "gdocs-repair",
+        "seed": 42
+      }
+    ]
+  },
+  "presentation": {
+    "caption": "Pente d'évacuation insuffisante",
+    "padded_bbox_norm": [
+      0.57,
+      0.42,
+      0.7,
+      0.53
+    ],
+    "style": "highlight-color:#00FFFF; opacity:0.35; border:2px solid #00FFFF;",
+    "refined": true,
+    "confidence_before": 0.9,
+    "confidence_after": 0.98
+  },
+  "validation": {
+    "ok": true,
+    "erreurs": [],
+    "avertissements": []
+  },
+  "protocol": {
+    "mode_tracabilite": "EXTENDED_DEBUG",
+    "determinisme": {
+      "force_seed": 42
+    },
+    "exigence_materielle": {
+      "require_certification": [
+        "SPEC/SEL",
+        "Mortier-colle C2-S1/S2",
+        "Plaque H1"
+      ]
+    }
+  }
+}

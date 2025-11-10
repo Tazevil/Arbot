@@ -1,0 +1,380 @@
+{
+  "meta": {
+    "SOP_name": "ArBot-Core",
+    "SOP_ver": "v1.4",
+    "generated_at": "2025-10-16T14:24:00Z",
+    "tool_list": [
+      "vision",
+      "knowledge",
+      "repair",
+      "normalize"
+    ],
+    "schema_ref": "schemas/arbot-vision-analysis.schema.json",
+    "schema_ver": "v1.0.1",
+    "ingestion_log": {
+      "mode": "GDocs-repair"
+    }
+  },
+  "context": {
+    "project_ID": "EX70",
+    "project_name": "Sinistre baignoire RDC",
+    "project_type": "Expertise Sinistre",
+    "phase_ID": "PH2",
+    "phase_name": "Diagnostic sinistre"
+  },
+  "source_file": {
+    "file_cat": "Photo",
+    "file_ID": "2114",
+    "file_name": "2114_MITIGEUR-BAIN_MAC.jpg",
+    "file_ext": "jpg",
+    "file_img_width": 1884,
+    "file_img_height": 4080,
+    "file_date": "2025-08-18",
+    "zone_ID": 2,
+    "zone_name": "SDB",
+    "cat_ID": 1,
+    "cat_img_ID": "14",
+    "cat_name": "PLOMBERIE",
+    "viewtype_ID": "MAC",
+    "viewtype_name": "VUE MACRO",
+    "full_exif_data": {
+      "enabled": true
+    }
+  },
+  "vision": {
+    "passes": 3,
+    "scales": [
+      1,
+      0.75,
+      0.5
+    ],
+    "nms_iou": 0.5,
+    "refine_below": 0.82,
+    "trust_score": 0.98,
+    "focus_type": "détail",
+    "target_zone": "MGB",
+    "viewtype_ID": "MAC",
+    "viewtype_name": "VUE MACRO",
+    "evidence_crops": [
+      "2114_crop1.jpg"
+    ],
+    "annotations": [
+      {
+        "ann_ID": "2114_D01_A01",
+        "ann_type": "polygon",
+        "ann_label": "Joint de scellement non conforme/poreux",
+        "ann_linked_def_ID": "2114_D01",
+        "ann_layer": "étanchéité",
+        "ann_confidence": 0.99,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#FFD700",
+          "stroke_width": 2,
+          "fill": "#FFD700",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2114_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.3,
+          0.35,
+          0.7,
+          0.5
+        ],
+        "polygon_norm": [
+          [
+            0.3,
+            0.4
+          ],
+          [
+            0.6,
+            0.5
+          ],
+          [
+            0.7,
+            0.45
+          ],
+          [
+            0.4,
+            0.35
+          ],
+          [
+            0.3,
+            0.4
+          ]
+        ]
+      },
+      {
+        "ann_ID": "2114_D02_A01",
+        "ann_type": "polygon",
+        "ann_label": "Absence de manchon d'étanchéité SPEC",
+        "ann_linked_def_ID": "2114_D02",
+        "ann_layer": "étanchéité",
+        "ann_confidence": 0.98,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#800080",
+          "stroke_width": 2,
+          "fill": "#800080",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2114_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.45,
+          0.45,
+          0.6,
+          0.65
+        ],
+        "polygon_norm": [
+          [
+            0.45,
+            0.5
+          ],
+          [
+            0.55,
+            0.65
+          ],
+          [
+            0.6,
+            0.6
+          ],
+          [
+            0.5,
+            0.45
+          ],
+          [
+            0.45,
+            0.5
+          ]
+        ]
+      },
+      {
+        "ann_ID": "2114_D03_A01",
+        "ann_type": "polygon",
+        "ann_label": "Carrelage percé grossièrement",
+        "ann_linked_def_ID": "2114_D03",
+        "ann_layer": "revêtement",
+        "ann_confidence": 0.95,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#DC143C",
+          "stroke_width": 2,
+          "fill": "#DC143C",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2114_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.35,
+          0.35,
+          0.65,
+          0.55
+        ],
+        "polygon_norm": [
+          [
+            0.35,
+            0.4
+          ],
+          [
+            0.55,
+            0.55
+          ],
+          [
+            0.65,
+            0.5
+          ],
+          [
+            0.45,
+            0.35
+          ],
+          [
+            0.35,
+            0.4
+          ]
+        ]
+      },
+      {
+        "ann_ID": "2114_D04_A01",
+        "ann_type": "polygon",
+        "ann_label": "Absence de joint périphérique (défaut général)",
+        "ann_linked_def_ID": "2114_D04",
+        "ann_layer": "étanchéité",
+        "ann_confidence": 0.98,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#ADD8E6",
+          "stroke_width": 2,
+          "fill": "#ADD8E6",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2114_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.05,
+          0.05,
+          0.95,
+          0.95
+        ],
+        "polygon_norm": [
+          [
+            0.05,
+            0.05
+          ],
+          [
+            0.95,
+            0.05
+          ],
+          [
+            0.95,
+            0.95
+          ],
+          [
+            0.05,
+            0.95
+          ],
+          [
+            0.05,
+            0.05
+          ]
+        ]
+      }
+    ],
+    "metrics": [],
+    "defects": [
+      {
+        "rule_type": "Notice",
+        "annotation_refs": [
+          "2114_D01_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Un matériau poreux est utilisé pour sceller les traversées, créant un risque de fuite localisée.",
+        "origin_viewtype_ID": "MAC",
+        "origin_focus": "détail",
+        "origin_layer": "étanchéité",
+        "id_defaut": "2114_D01",
+        "categorie": "étanchéité",
+        "type_defaut": "non-conformité d'interface",
+        "resume": "Joint de scellement des raccords non conforme/poreux",
+        "details": "Le scellement des raccords sur le carrelage est réalisé avec un matériau poreux (plâtre/mortier) au lieu d'un mastic silicone sanitaire fongicide ou d'une platine d'étanchéité appropriée, ce qui crée un risque direct d'infiltration d'eau derrière le carrelage.",
+        "regle_ref": {
+          "norme": "Joints périphériques / mastic sanitaire",
+          "partie": "produits"
+        },
+        "gravite": 1,
+        "priorite": 1,
+        "temps": 1,
+        "conf_score": 0.99,
+        "incertitude": 0.010000000000000009
+      },
+      {
+        "rule_type": "Notice",
+        "annotation_refs": [
+          "2114_D02_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Absence visible d'accessoire d'étanchéité intégré au système dans la zone critique de la traversée.",
+        "origin_viewtype_ID": "MAC",
+        "origin_focus": "détail",
+        "origin_layer": "étanchéité",
+        "id_defaut": "2114_D02",
+        "categorie": "étanchéité",
+        "type_defaut": "non-conformité SPEC/Traversée",
+        "resume": "Absence de manchon d'étanchéité SPEC aux traversées",
+        "details": "L'absence de manchons d'étanchéité (Passe-paroi) sous le carrelage, directement sur le support (plâtre) au niveau des traversées, permet la pénétration de l'eau entre le support et le carrelage, annulant la continuité du système SPEC sous-jacent.",
+        "regle_ref": {
+          "norme": "NOTICE_CSTB-SPEC_2021",
+          "partie": "Chapitre 3.2"
+        },
+        "gravite": 1,
+        "priorite": 1,
+        "temps": 1,
+        "conf_score": 0.98,
+        "incertitude": 0.020000000000000018
+      },
+      {
+        "rule_type": "Norme",
+        "annotation_refs": [
+          "2114_D03_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Percement irrégulier et dégradé du revêtement céramique autour du raccord.",
+        "origin_viewtype_ID": "MAC",
+        "origin_focus": "détail",
+        "origin_layer": "revêtements",
+        "id_defaut": "2114_D03",
+        "categorie": "revêtements",
+        "type_defaut": "esthétique/mise en œuvre",
+        "resume": "Dégradation du carrelage / Mauvais percement",
+        "details": "Le carrelage est percé de manière grossière, au-delà des dimensions nécessaires, et est endommagé autour des raccords, ce qui est un défaut d'exécution et compromet l'esthétique et la zone de scellement.",
+        "regle_ref": {
+          "norme": "DTU 52.2_2022",
+          "partie": "Partie 1-1 > 7"
+        },
+        "gravite": 3,
+        "priorite": 3,
+        "temps": 3,
+        "conf_score": 0.95,
+        "incertitude": 0.050000000000000044
+      },
+      {
+        "rule_type": "Notice",
+        "annotation_refs": [
+          "2114_D04_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "L'interface baignoire/mur est dépourvue de joint élastomère (Silicone).",
+        "origin_viewtype_ID": "GEN",
+        "origin_focus": "général",
+        "origin_layer": "étanchéité",
+        "id_defaut": "2114_D04",
+        "categorie": "étanchéité",
+        "type_defaut": "non-conformité d'interface",
+        "resume": "Absence de joint d'étanchéité périphérique (baignoire/mur)",
+        "details": "L'absence de joint silicone sanitaire entre le bord de la baignoire et le carrelage (visible sur la vue d'ensemble 2002) permet l'infiltration d'eau derrière le tablier et le mur.",
+        "regle_ref": {
+          "norme": "FT_Baignoire_E6D122.pdf",
+          "partie": "Étanchéité et finitions"
+        },
+        "gravite": 1,
+        "priorite": 1,
+        "temps": 1,
+        "conf_score": 0.98,
+        "incertitude": 0.020000000000000018
+      }
+    ],
+    "transform_history": [
+      {
+        "step": "gdocs-repair",
+        "seed": 42
+      }
+    ]
+  },
+  "presentation": {
+    "caption": "Joint de scellement non conforme/poreux",
+    "padded_bbox_norm": [
+      0.29,
+      0.34,
+      0.71,
+      0.51
+    ],
+    "style": "highlight-color:#00FFFF; opacity:0.35; border:2px solid #00FFFF;",
+    "refined": true,
+    "confidence_before": 0.9,
+    "confidence_after": 0.99
+  },
+  "validation": {
+    "ok": true,
+    "erreurs": [],
+    "avertissements": []
+  },
+  "protocol": {
+    "mode_tracabilite": "EXTENDED_DEBUG",
+    "determinisme": {
+      "force_seed": 42
+    },
+    "exigence_materielle": {
+      "require_certification": [
+        "SPEC/SEL",
+        "Mortier-colle C2-S1/S2",
+        "Plaque H1"
+      ]
+    }
+  }
+}

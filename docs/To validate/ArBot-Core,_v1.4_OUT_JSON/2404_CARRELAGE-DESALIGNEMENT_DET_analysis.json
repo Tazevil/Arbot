@@ -1,0 +1,380 @@
+{
+  "meta": {
+    "SOP_name": "ArBot-Core",
+    "SOP_ver": "v1.4",
+    "generated_at": "2025-10-16T15:42:25Z",
+    "tool_list": [
+      "vision",
+      "knowledge",
+      "repair",
+      "normalize"
+    ],
+    "schema_ref": "schemas/arbot-vision-analysis.schema.json",
+    "schema_ver": "v1.0.1",
+    "ingestion_log": {
+      "mode": "GDocs-repair"
+    }
+  },
+  "context": {
+    "project_ID": "EX70",
+    "project_name": "Sinistre baignoire RDC",
+    "project_type": "Expertise Sinistre",
+    "phase_ID": "PH2",
+    "phase_name": "Diagnostic sinistre"
+  },
+  "source_file": {
+    "file_cat": "Photo",
+    "file_ID": "2404",
+    "file_name": "2404_CARRELAGE-DESALIGNEMENT_DET.jpg",
+    "file_ext": "jpg",
+    "file_img_width": 3768,
+    "file_img_height": 8160,
+    "file_date": "2025-08-18",
+    "zone_ID": 2,
+    "zone_name": "SDB",
+    "cat_ID": 4,
+    "cat_img_ID": "04",
+    "cat_name": "FENETRE",
+    "viewtype_ID": "DET",
+    "viewtype_name": "VUE PROCHE",
+    "full_exif_data": {
+      "enabled": true
+    }
+  },
+  "vision": {
+    "passes": 3,
+    "scales": [
+      1,
+      0.75,
+      0.5
+    ],
+    "nms_iou": 0.5,
+    "refine_below": 0.82,
+    "trust_score": 0.96,
+    "focus_type": "détail",
+    "target_zone": "Menuiseries",
+    "viewtype_ID": "DET",
+    "viewtype_name": "VUE PROCHE",
+    "evidence_crops": [
+      "2404_crop1.jpg"
+    ],
+    "annotations": [
+      {
+        "ann_ID": "2404_D01_A01",
+        "ann_type": "polygon",
+        "ann_label": "Absence/Défaillance du joint Menuiserie",
+        "ann_linked_def_ID": "2404_D01",
+        "ann_layer": "étanchéité",
+        "ann_confidence": 0.98,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#FFD700",
+          "stroke_width": 2,
+          "fill": "#FFD700",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2404_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.6,
+          0.35,
+          0.95,
+          0.5
+        ],
+        "polygon_norm": [
+          [
+            0.6,
+            0.35
+          ],
+          [
+            0.95,
+            0.35
+          ],
+          [
+            0.95,
+            0.5
+          ],
+          [
+            0.6,
+            0.5
+          ],
+          [
+            0.6,
+            0.35
+          ]
+        ]
+      },
+      {
+        "ann_ID": "2404_D02_A01",
+        "ann_type": "polygon",
+        "ann_label": "Dégradation/Écaillement Appui de fenêtre (Conséquence)",
+        "ann_linked_def_ID": "2404_D02",
+        "ann_layer": "finition",
+        "ann_confidence": 0.95,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#DC143C",
+          "stroke_width": 2,
+          "fill": "#DC143C",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2404_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.85,
+          0.7,
+          0.95,
+          0.8
+        ],
+        "polygon_norm": [
+          [
+            0.85,
+            0.7
+          ],
+          [
+            0.95,
+            0.7
+          ],
+          [
+            0.95,
+            0.8
+          ],
+          [
+            0.85,
+            0.8
+          ],
+          [
+            0.85,
+            0.7
+          ]
+        ]
+      },
+      {
+        "ann_ID": "2404_D03_A01",
+        "ann_type": "polygon",
+        "ann_label": "Bois de structure non protégé",
+        "ann_linked_def_ID": "2404_D03",
+        "ann_layer": "menuiserie",
+        "ann_confidence": 0.9,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#D2B48C",
+          "stroke_width": 2,
+          "fill": "#D2B48C",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2404_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.6,
+          0,
+          0.95,
+          0.35
+        ],
+        "polygon_norm": [
+          [
+            0.6,
+            0
+          ],
+          [
+            0.95,
+            0
+          ],
+          [
+            0.95,
+            0.35
+          ],
+          [
+            0.6,
+            0.35
+          ],
+          [
+            0.6,
+            0
+          ]
+        ]
+      },
+      {
+        "ann_ID": "2404_D04_A01",
+        "ann_type": "polygon",
+        "ann_label": "Défaut de calepinage/Finition du carrelage",
+        "ann_linked_def_ID": "2404_D04",
+        "ann_layer": "revêtement",
+        "ann_confidence": 0.95,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#DC143C",
+          "stroke_width": 2,
+          "fill": "#DC143C",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2404_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.55,
+          0.45,
+          0.75,
+          0.6
+        ],
+        "polygon_norm": [
+          [
+            0.55,
+            0.45
+          ],
+          [
+            0.75,
+            0.45
+          ],
+          [
+            0.75,
+            0.6
+          ],
+          [
+            0.55,
+            0.6
+          ],
+          [
+            0.55,
+            0.45
+          ]
+        ]
+      }
+    ],
+    "metrics": [],
+    "defects": [
+      {
+        "rule_type": "Notice",
+        "annotation_refs": [
+          "2404_D01_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Absence de joint souple d'étanchéité au coin de la menuiserie existante, risquant l'infiltration.",
+        "origin_viewtype_ID": "DET",
+        "origin_focus": "détail",
+        "origin_layer": "étanchéité",
+        "id_defaut": "2404_D01",
+        "categorie": "étanchéité",
+        "type_defaut": "non-conformité d'interface",
+        "resume": "Absence/Défaillance du joint d'étanchéité Menuiserie/Appui",
+        "details": "L'interface entre le cadre de la menuiserie existante et l'appui de fenêtre est dépourvue de joint élastomère (mastic sanitaire). Le traitement des points singuliers des menuiseries requiert une étanchéité périphérique pour empêcher les entrées d'eau.",
+        "regle_ref": {
+          "norme": "SDB_REF_DOC.pdf",
+          "partie": "Interfaces critiques"
+        },
+        "gravite": 1,
+        "priorite": 1,
+        "temps": 1,
+        "conf_score": 0.98,
+        "incertitude": 0.020000000000000018
+      },
+      {
+        "rule_type": "Classification",
+        "annotation_refs": [
+          "2404_D02_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Peinture écaillée sur le support horizontal sous la menuiserie.",
+        "origin_viewtype_ID": "DET",
+        "origin_focus": "détail",
+        "origin_layer": "finition",
+        "id_defaut": "2404_D02",
+        "categorie": "finition",
+        "type_defaut": "esthétique/dégradation",
+        "resume": "Dégradation/Écaillement de la peinture de l'appui de fenêtre",
+        "details": "La peinture sur l'appui de fenêtre est écaillée à l'angle (G3), ce qui peut être un défaut de préparation ou un signe de pénétration d'humidité (G2) au niveau de cette interface critique.",
+        "regle_ref": {
+          "norme": "SDB_def_class.pdf",
+          "partie": "Gravité"
+        },
+        "gravite": 3,
+        "priorite": 3,
+        "temps": 3,
+        "conf_score": 0.95,
+        "incertitude": 0.050000000000000044
+      },
+      {
+        "rule_type": "Notice",
+        "annotation_refs": [
+          "2404_D03_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Le bois est exposé et non traité pour l'humidité.",
+        "origin_viewtype_ID": "DET",
+        "origin_focus": "détail",
+        "origin_layer": "menuiserie",
+        "id_defaut": "2404_D03",
+        "categorie": "menuiserie",
+        "type_defaut": "durabilité",
+        "resume": "Bois de structure/encadrement non protégé",
+        "details": "Les éléments de bois adjacents (structure existante) sont directement exposés à l'environnement humide de la salle de bains sans protection ou revêtement adéquat, nuisant à leur durabilité.",
+        "regle_ref": {
+          "norme": "SDB_REF_DOC.pdf",
+          "partie": "Choix des parois & systèmes"
+        },
+        "gravite": 2,
+        "priorite": 2,
+        "temps": 3,
+        "conf_score": 0.9,
+        "incertitude": 0.09999999999999998
+      },
+      {
+        "rule_type": "Norme",
+        "annotation_refs": [
+          "2404_D04_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Joints de carrelage irréguliers par rapport aux éléments fixes.",
+        "origin_viewtype_ID": "DET",
+        "origin_focus": "détail",
+        "origin_layer": "revêtement",
+        "id_defaut": "2404_D04",
+        "categorie": "revêtement",
+        "type_defaut": "esthétique/mise en œuvre",
+        "resume": "Défaut de calepinage/Finition du carrelage",
+        "details": "La coupe du carrelage (visible sur 2403) est irrégulière et le joint d'angle est mal fini ou trop large à l'interface de la menuiserie existante. Ceci est un défaut de calepinage et d'esthétique (G3).",
+        "regle_ref": {
+          "norme": "DTU 52.2_2022",
+          "partie": "Partie 1-1 > 7"
+        },
+        "gravite": 3,
+        "priorite": 3,
+        "temps": 3,
+        "conf_score": 0.95,
+        "incertitude": 0.050000000000000044
+      }
+    ],
+    "transform_history": [
+      {
+        "step": "gdocs-repair",
+        "seed": 42
+      }
+    ]
+  },
+  "presentation": {
+    "caption": "Absence/Défaillance du joint d'étanchéité Menuiserie/Appui",
+    "padded_bbox_norm": [
+      0.59,
+      0.34,
+      0.96,
+      0.51
+    ],
+    "style": "highlight-color:#00FFFF; opacity:0.35; border:2px solid #00FFFF;",
+    "refined": true,
+    "confidence_before": 0.95,
+    "confidence_after": 0.98
+  },
+  "validation": {
+    "ok": true,
+    "erreurs": [],
+    "avertissements": []
+  },
+  "protocol": {
+    "mode_tracabilite": "EXTENDED_DEBUG",
+    "determinisme": {
+      "force_seed": 42
+    },
+    "exigence_materielle": {
+      "require_certification": [
+        "SPEC/SEL",
+        "Mortier-colle C2-S1/S2",
+        "Plaque H1"
+      ]
+    }
+  }
+}

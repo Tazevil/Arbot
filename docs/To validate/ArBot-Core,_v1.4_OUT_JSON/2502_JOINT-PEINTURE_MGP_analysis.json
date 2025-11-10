@@ -1,0 +1,242 @@
+{
+  "meta": {
+    "SOP_name": "ArBot-Core",
+    "SOP_ver": "v1.4",
+    "generated_at": "2025-10-16T15:26:00Z",
+    "tool_list": [
+      "vision",
+      "knowledge",
+      "repair",
+      "normalize"
+    ],
+    "schema_ref": "schemas/arbot-vision-analysis.schema.json",
+    "schema_ver": "v1.0.1",
+    "ingestion_log": {
+      "mode": "GDocs-repair"
+    }
+  },
+  "context": {
+    "project_ID": "EX70",
+    "project_name": "Sinistre baignoire RDC",
+    "project_type": "Expertise Sinistre",
+    "phase_ID": "PH2",
+    "phase_name": "Diagnostic sinistre"
+  },
+  "source_file": {
+    "file_cat": "Photo",
+    "file_ID": "2502",
+    "file_name": "2502_JOINT-PEINTURE_MGP.jpg",
+    "file_ext": "jpg",
+    "file_img_width": 3768,
+    "file_img_height": 8160,
+    "file_date": "2025-08-18",
+    "zone_ID": 2,
+    "zone_name": "SDB",
+    "cat_ID": 5,
+    "cat_img_ID": "02",
+    "cat_name": "PLAFOND",
+    "viewtype_ID": "MGP",
+    "viewtype_name": "INTERACTION MUR-PLAFOND",
+    "full_exif_data": {
+      "enabled": true
+    }
+  },
+  "vision": {
+    "passes": 3,
+    "scales": [
+      1,
+      0.75,
+      0.5
+    ],
+    "nms_iou": 0.5,
+    "refine_below": 0.82,
+    "trust_score": 0.96,
+    "focus_type": "détail",
+    "target_zone": "MGP/Menuiserie",
+    "viewtype_ID": "MGP",
+    "viewtype_name": "INTERACTION MUR-PLAFOND",
+    "evidence_crops": [
+      "2502_crop1.jpg"
+    ],
+    "annotations": [
+      {
+        "ann_ID": "2502_D01_A01",
+        "ann_type": "polygon",
+        "ann_label": "Finition du joint Mur-Plafond grossière",
+        "ann_linked_def_ID": "2502_D01",
+        "ann_layer": "finition",
+        "ann_confidence": 0.95,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#D2B48C",
+          "stroke_width": 2,
+          "fill": "#D2B48C",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2502_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.6,
+          0.05,
+          0.95,
+          0.2
+        ],
+        "polygon_norm": [
+          [
+            0.6,
+            0.1
+          ],
+          [
+            0.9,
+            0.2
+          ],
+          [
+            0.95,
+            0.15
+          ],
+          [
+            0.65,
+            0.05
+          ],
+          [
+            0.6,
+            0.1
+          ]
+        ]
+      },
+      {
+        "ann_ID": "2502_D02_A01",
+        "ann_type": "polygon",
+        "ann_label": "Absence/Défaillance du joint d'étanchéité Menuiserie/Mur",
+        "ann_linked_def_ID": "2502_D02",
+        "ann_layer": "étanchéité",
+        "ann_confidence": 0.98,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#FFD700",
+          "stroke_width": 2,
+          "fill": "#FFD700",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2502_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.7,
+          0.2,
+          0.95,
+          0.4
+        ],
+        "polygon_norm": [
+          [
+            0.7,
+            0.2
+          ],
+          [
+            0.95,
+            0.35
+          ],
+          [
+            0.95,
+            0.4
+          ],
+          [
+            0.7,
+            0.25
+          ],
+          [
+            0.7,
+            0.2
+          ]
+        ]
+      }
+    ],
+    "metrics": [],
+    "defects": [
+      {
+        "rule_type": "Notice",
+        "annotation_refs": [
+          "2502_D01_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Bavures d'enduit/peinture visibles sur les joints et les interfaces.",
+        "origin_viewtype_ID": "MGP",
+        "origin_focus": "détail",
+        "origin_layer": "finition",
+        "id_defaut": "2502_D01",
+        "categorie": "finition",
+        "type_defaut": "esthétique",
+        "resume": "Finition du joint Mur-Plafond et Mur-Menuiserie grossière",
+        "details": "Le joint d'angle Mur-Plafond et le calfeutrement autour de la menuiserie sont appliqués de manière irrégulière (bavures, épaisseur non uniforme) et sans lissage, ce qui est un défaut de finition esthétique.",
+        "regle_ref": {
+          "norme": "SDB_REF_DOC.pdf",
+          "partie": "Revêtements & pentes"
+        },
+        "gravite": 3,
+        "priorite": 3,
+        "temps": 3,
+        "conf_score": 0.95,
+        "incertitude": 0.050000000000000044
+      },
+      {
+        "rule_type": "Notice",
+        "annotation_refs": [
+          "2502_D02_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Manque de joint souple/élastomère au coin supérieur de la menuiserie.",
+        "origin_viewtype_ID": "MGP",
+        "origin_focus": "détail",
+        "origin_layer": "étanchéité",
+        "id_defaut": "2502_D02",
+        "categorie": "étanchéité",
+        "type_defaut": "non-conformité d'interface",
+        "resume": "Absence/Défaillance du joint d'étanchéité Menuiserie/Mur",
+        "details": "Le joint à l'interface entre la menuiserie existante et le mur/encadrement bois (coin supérieur droit) est absent ou rigide. L'étanchéité périphérique (mastic élastomère) est requise pour les menuiseries afin de prévenir les entrées d'eau (G1).",
+        "regle_ref": {
+          "norme": "SDB_REF_DOC.pdf",
+          "partie": "Interfaces critiques"
+        },
+        "gravite": 1,
+        "priorite": 1,
+        "temps": 1,
+        "conf_score": 0.98,
+        "incertitude": 0.020000000000000018
+      }
+    ],
+    "transform_history": [
+      {
+        "step": "gdocs-repair",
+        "seed": 42
+      }
+    ]
+  },
+  "presentation": {
+    "caption": "Absence/Défaillance du joint d'étanchéité Menuiserie/Mur",
+    "padded_bbox_norm": [
+      0.69,
+      0.19,
+      0.96,
+      0.41
+    ],
+    "style": "highlight-color:#00FFFF; opacity:0.35; border:2px solid #00FFFF;",
+    "refined": true,
+    "confidence_before": 0.95,
+    "confidence_after": 0.98
+  },
+  "validation": {
+    "ok": true,
+    "erreurs": [],
+    "avertissements": []
+  },
+  "protocol": {
+    "mode_tracabilite": "EXTENDED_DEBUG",
+    "determinisme": {
+      "force_seed": 42
+    },
+    "exigence_materielle": {
+      "require_certification": [
+        "SPEC/SEL",
+        "Mortier-colle C2-S1/S2",
+        "Plaque H1"
+      ]
+    }
+  }
+}

@@ -1,0 +1,427 @@
+{
+  "meta": {
+    "SOP_name": "ArBot-Core",
+    "SOP_ver": "v1.4",
+    "generated_at": "2025-10-17T12:17:15Z",
+    "tool_list": [
+      "vision",
+      "knowledge",
+      "repair",
+      "normalize"
+    ],
+    "schema_ref": "schemas/arbot-vision-analysis.schema.json",
+    "schema_ver": "v1.0.1",
+    "ingestion_log": {
+      "mode": "GDocs-repair"
+    }
+  },
+  "context": {
+    "project_ID": "EX70",
+    "project_name": "Sinistre baignoire RDC",
+    "project_type": "Expertise Sinistre",
+    "phase_ID": "PH2",
+    "phase_name": "Diagnostic sinistre"
+  },
+  "source_file": {
+    "file_cat": "Photo",
+    "file_ID": "2001",
+    "file_name": "2001_SDB_GEN.jpg",
+    "file_ext": "jpg",
+    "file_img_width": 7332,
+    "file_img_height": 8759,
+    "file_date": "2025-08-18",
+    "zone_ID": 2,
+    "zone_name": "SDB",
+    "cat_ID": 2,
+    "cat_img_ID": "01",
+    "cat_name": "BAIGNOIRE",
+    "viewtype_ID": "GEN",
+    "viewtype_name": "VUE GENERALE",
+    "full_exif_data": {
+      "enabled": true
+    }
+  },
+  "vision": {
+    "passes": 3,
+    "scales": [
+      1,
+      0.75,
+      0.5
+    ],
+    "nms_iou": 0.5,
+    "refine_below": 0.82,
+    "trust_score": 0.98,
+    "focus_type": "général",
+    "target_zone": "EB+ Intégral",
+    "viewtype_ID": "GEN",
+    "viewtype_name": "VUE GENERALE",
+    "evidence_crops": [
+      "2001_crop1.jpg"
+    ],
+    "annotations": [
+      {
+        "ann_ID": "2001_D01_A01",
+        "ann_type": "polygon",
+        "ann_label": "Absence de joint d'étanchéité Mur-Baignoire",
+        "ann_linked_def_ID": "2001_D01",
+        "ann_layer": "étanchéité",
+        "ann_confidence": 0.99,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#FFD700",
+          "stroke_width": 2,
+          "fill": "#FFD700",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2001_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.1,
+          0.45,
+          0.7,
+          0.5
+        ],
+        "polygon_norm": [
+          [
+            0.1,
+            0.45
+          ],
+          [
+            0.7,
+            0.45
+          ],
+          [
+            0.7,
+            0.5
+          ],
+          [
+            0.1,
+            0.5
+          ],
+          [
+            0.1,
+            0.45
+          ]
+        ]
+      },
+      {
+        "ann_ID": "2001_D02_A01",
+        "ann_type": "polygon",
+        "ann_label": "Absence de joint d'étanchéité Meuble/Mur",
+        "ann_linked_def_ID": "2001_D02",
+        "ann_layer": "étanchéité",
+        "ann_confidence": 0.98,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#800080",
+          "stroke_width": 2,
+          "fill": "#800080",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2001_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.75,
+          0.5,
+          0.95,
+          0.55
+        ],
+        "polygon_norm": [
+          [
+            0.75,
+            0.5
+          ],
+          [
+            0.95,
+            0.5
+          ],
+          [
+            0.95,
+            0.55
+          ],
+          [
+            0.75,
+            0.55
+          ],
+          [
+            0.75,
+            0.5
+          ]
+        ]
+      },
+      {
+        "ann_ID": "2001_D03_A01",
+        "ann_type": "point",
+        "ann_label": "Absence d'étanchéité traversée Mitigeur",
+        "ann_linked_def_ID": "2001_D03",
+        "ann_layer": "étanchéité",
+        "ann_confidence": 0.99,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#FFD700",
+          "stroke_width": 2,
+          "fill": "#FFD700",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2001_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.38,
+          0.38,
+          0.42,
+          0.42
+        ]
+      },
+      {
+        "ann_ID": "2001_D04_A01",
+        "ann_type": "polygon",
+        "ann_label": "Ventilation présente mais inefficace (Conduit vu en 2110)",
+        "ann_linked_def_ID": "2001_D04",
+        "ann_layer": "ventilation",
+        "ann_confidence": 0.9,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#ADD8E6",
+          "stroke_width": 2,
+          "fill": "#ADD8E6",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2001_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.1,
+          0.05,
+          0.3,
+          0.15
+        ],
+        "polygon_norm": [
+          [
+            0.1,
+            0.05
+          ],
+          [
+            0.3,
+            0.05
+          ],
+          [
+            0.3,
+            0.15
+          ],
+          [
+            0.1,
+            0.15
+          ],
+          [
+            0.1,
+            0.05
+          ]
+        ]
+      },
+      {
+        "ann_ID": "2001_D05_A01",
+        "ann_type": "polygon",
+        "ann_label": "Dommages sur le meuble vasque existant",
+        "ann_linked_def_ID": "2001_D05",
+        "ann_layer": "menuiserie",
+        "ann_confidence": 0.95,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#DC143C",
+          "stroke_width": 2,
+          "fill": "#DC143C",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2001_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.6,
+          0.55,
+          0.9,
+          0.7
+        ],
+        "polygon_norm": [
+          [
+            0.6,
+            0.55
+          ],
+          [
+            0.9,
+            0.55
+          ],
+          [
+            0.9,
+            0.7
+          ],
+          [
+            0.6,
+            0.7
+          ],
+          [
+            0.6,
+            0.55
+          ]
+        ]
+      }
+    ],
+    "metrics": [],
+    "defects": [
+      {
+        "rule_type": "Notice",
+        "annotation_refs": [
+          "2001_D01_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Manque de mastic d'étanchéité sur tout le pourtour de la baignoire.",
+        "origin_viewtype_ID": "GEN",
+        "origin_focus": "général",
+        "origin_layer": "étanchéité",
+        "id_defaut": "2001_D01",
+        "categorie": "étanchéité",
+        "type_defaut": "non-conformité d'interface",
+        "resume": "Absence de joint d'étanchéité périphérique Mur-Baignoire",
+        "details": "L'interface Mur-Baignoire est dépourvue de joint élastomère (mastic sanitaire), ce qui est obligatoire pour prévenir l'infiltration d'eau derrière la baignoire.",
+        "regle_ref": {
+          "norme": "FT_Baignoire_E6D122.pdf",
+          "partie": "Étanchéité et finitions"
+        },
+        "gravite": 1,
+        "priorite": 1,
+        "temps": 1,
+        "conf_score": 0.99,
+        "incertitude": 0.010000000000000009
+      },
+      {
+        "rule_type": "Notice",
+        "annotation_refs": [
+          "2001_D02_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Manque de mastic d'étanchéité souple entre le meuble et le mur.",
+        "origin_viewtype_ID": "GEN",
+        "origin_focus": "général",
+        "origin_layer": "étanchéité",
+        "id_defaut": "2001_D02",
+        "categorie": "étanchéité",
+        "type_defaut": "non-conformité d'interface",
+        "resume": "Absence de joint d'étanchéité Meuble Vasque/Mur",
+        "details": "L'interface entre le meuble vasque existant et le mur (zone de projection) est dépourvue de joint élastomère (mastic sanitaire), créant un point d'infiltration d'eau.",
+        "regle_ref": {
+          "norme": "SDB_REF_DOC.pdf",
+          "partie": "Interfaces critiques"
+        },
+        "gravite": 1,
+        "priorite": 1,
+        "temps": 1,
+        "conf_score": 0.98,
+        "incertitude": 0.020000000000000018
+      },
+      {
+        "rule_type": "Notice",
+        "annotation_refs": [
+          "2001_D03_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Les attentes de plomberie traversent le carrelage sans étanchéité visible.",
+        "origin_viewtype_ID": "GEN",
+        "origin_focus": "détail",
+        "origin_layer": "étanchéité",
+        "id_defaut": "2001_D03",
+        "categorie": "étanchéité",
+        "type_defaut": "non-conformité SPEC/Traversée",
+        "resume": "Absence de manchon d'étanchéité aux traversées de mitigeur",
+        "details": "L'absence de manchons d'étanchéité et l'échec du calfeutrement (vu sur 2113) confirment une non-conformité G1 aux traversées de plomberie.",
+        "regle_ref": {
+          "norme": "NOTICE_CSTB-SPEC_2021",
+          "partie": "Chapitre 3.2"
+        },
+        "gravite": 1,
+        "priorite": 1,
+        "temps": 1,
+        "conf_score": 0.99,
+        "incertitude": 0.010000000000000009
+      },
+      {
+        "rule_type": "Notice",
+        "annotation_refs": [
+          "2001_D04_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Présence d'une bouche de ventilation, mais efficacité et conformité du système non garanties.",
+        "origin_viewtype_ID": "GEN",
+        "origin_focus": "général",
+        "origin_layer": "ventilation",
+        "id_defaut": "2001_D04",
+        "categorie": "ventilation",
+        "type_defaut": "non-conformité",
+        "resume": "Ventilation insuffisante ou non conforme",
+        "details": "L'extraction visible au plafond n'est pas une garantie de VMC conforme. Les analyses contextuelles ont montré des défauts du conduit (2110), suggérant une ventilation inefficace, cause probable des écaillements de peinture.",
+        "regle_ref": {
+          "norme": "SDB_REF_DOC.pdf",
+          "partie": "6) Ventilation"
+        },
+        "gravite": 2,
+        "priorite": 2,
+        "temps": 2,
+        "conf_score": 0.9,
+        "incertitude": 0.09999999999999998
+      },
+      {
+        "rule_type": "Classification",
+        "annotation_refs": [
+          "2001_D05_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Dommages et salissures visibles sur le meuble existant (non nettoyé).",
+        "origin_viewtype_ID": "GEN",
+        "origin_focus": "général",
+        "origin_layer": "menuiserie",
+        "id_defaut": "2001_D05",
+        "categorie": "menuiserie",
+        "type_defaut": "dégradation sur existant",
+        "resume": "Dommages sur le meuble vasque existant",
+        "details": "Le meuble vasque existant présente des signes de dégradation (rayures, salissures de plâtre/peinture) causés par le manque de protection et les travaux (Défaut G3 sur existant).",
+        "regle_ref": {
+          "norme": "SDB_def_class.pdf",
+          "partie": "Gravité"
+        },
+        "gravite": 3,
+        "priorite": 3,
+        "temps": 3,
+        "conf_score": 0.95,
+        "incertitude": 0.050000000000000044
+      }
+    ],
+    "transform_history": [
+      {
+        "step": "gdocs-repair",
+        "seed": 42
+      }
+    ]
+  },
+  "presentation": {
+    "caption": "Absence de joint d'étanchéité Mur-Baignoire",
+    "padded_bbox_norm": [
+      0.09,
+      0.44,
+      0.71,
+      0.51
+    ],
+    "style": "highlight-color:#00FFFF; opacity:0.35; border:2px solid #00FFFF;",
+    "refined": true,
+    "confidence_before": 0.95,
+    "confidence_after": 0.99
+  },
+  "validation": {
+    "ok": true,
+    "erreurs": [],
+    "avertissements": []
+  },
+  "protocol": {
+    "mode_tracabilite": "EXTENDED_DEBUG",
+    "determinisme": {
+      "force_seed": 42
+    },
+    "exigence_materielle": {
+      "require_certification": [
+        "SPEC/SEL",
+        "Mortier-colle C2-S1/S2",
+        "Plaque H1"
+      ]
+    }
+  }
+}

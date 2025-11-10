@@ -1,0 +1,381 @@
+{
+  "meta": {
+    "SOP_name": "ArBot-Core",
+    "SOP_ver": "v1.4",
+    "generated_at": "2025-10-16T14:05:11Z",
+    "tool_list": [
+      "vision",
+      "knowledge",
+      "repair",
+      "normalize"
+    ],
+    "schema_ref": "schemas/arbot-vision-analysis.schema.json",
+    "schema_ver": "v1.0.1",
+    "ingestion_log": {
+      "mode": "GDocs-repair"
+    }
+  },
+  "context": {
+    "project_ID": "EX70",
+    "project_name": "Sinistre baignoire RDC",
+    "project_type": "Expertise Sinistre",
+    "phase_ID": "PH2",
+    "phase_name": "Diagnostic sinistre"
+  },
+  "source_file": {
+    "file_cat": "Photo",
+    "file_ID": "2106",
+    "file_name": "2106_EVACUATION_MAC.jpg",
+    "file_ext": "jpg",
+    "file_img_width": 1884,
+    "file_img_height": 4080,
+    "file_date": "2025-08-18",
+    "zone_ID": 2,
+    "zone_name": "SDB",
+    "cat_ID": 1,
+    "cat_img_ID": "06",
+    "cat_name": "PLOMBERIE",
+    "viewtype_ID": "MAC",
+    "viewtype_name": "VUE MACRO",
+    "full_exif_data": {
+      "enabled": true
+    }
+  },
+  "vision": {
+    "passes": 3,
+    "scales": [
+      1,
+      0.75,
+      0.5
+    ],
+    "nms_iou": 0.5,
+    "refine_below": 0.82,
+    "trust_score": 0.96,
+    "focus_type": "détail",
+    "target_zone": "MGS",
+    "viewtype_ID": "MAC",
+    "viewtype_name": "VUE MACRO",
+    "evidence_crops": [
+      "2106_crop1.jpg",
+      "2106_crop2.jpg"
+    ],
+    "annotations": [
+      {
+        "ann_ID": "2106_D01_A01",
+        "ann_type": "polygon",
+        "ann_label": "pente d'évacuation insuffisante",
+        "ann_linked_def_ID": "2106_D01",
+        "ann_layer": "plomberie",
+        "ann_confidence": 0.98,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#FFD700",
+          "stroke_width": 2,
+          "fill": "#FFD700",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2106_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.6,
+          0.38,
+          0.8,
+          0.48
+        ],
+        "polygon_norm": [
+          [
+            0.6,
+            0.4
+          ],
+          [
+            0.75,
+            0.48
+          ],
+          [
+            0.8,
+            0.45
+          ],
+          [
+            0.65,
+            0.38
+          ],
+          [
+            0.6,
+            0.4
+          ]
+        ]
+      },
+      {
+        "ann_ID": "2106_D02_A01",
+        "ann_type": "polygon",
+        "ann_label": "absence de joint d'étanchéité",
+        "ann_linked_def_ID": "2106_D02",
+        "ann_layer": "étanchéité",
+        "ann_confidence": 0.97,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#800080",
+          "stroke_width": 2,
+          "fill": "#800080",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2106_crop1.jpg",
+        "bbox_xyxy_norm": [
+          0.81,
+          0.37,
+          0.92,
+          0.45
+        ],
+        "polygon_norm": [
+          [
+            0.81,
+            0.4
+          ],
+          [
+            0.9,
+            0.45
+          ],
+          [
+            0.92,
+            0.42
+          ],
+          [
+            0.83,
+            0.37
+          ],
+          [
+            0.81,
+            0.4
+          ]
+        ]
+      },
+      {
+        "ann_ID": "2106_D03_A01",
+        "ann_type": "polygon",
+        "ann_label": "support dégradé",
+        "ann_linked_def_ID": "2106_D03",
+        "ann_layer": "platrerie",
+        "ann_confidence": 0.95,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#DC143C",
+          "stroke_width": 2,
+          "fill": "#DC143C",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2106_crop2.jpg",
+        "bbox_xyxy_norm": [
+          0.85,
+          0.45,
+          0.98,
+          0.6
+        ],
+        "polygon_norm": [
+          [
+            0.85,
+            0.45
+          ],
+          [
+            0.98,
+            0.45
+          ],
+          [
+            0.98,
+            0.6
+          ],
+          [
+            0.85,
+            0.6
+          ],
+          [
+            0.85,
+            0.45
+          ]
+        ]
+      },
+      {
+        "ann_ID": "2106_D04_A01",
+        "ann_type": "polygon",
+        "ann_label": "absence de SPEC",
+        "ann_linked_def_ID": "2106_D04",
+        "ann_layer": "étanchéité",
+        "ann_confidence": 0.97,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#800080",
+          "stroke_width": 2,
+          "fill": "#800080",
+          "opacity": 0.35
+        },
+        "evidence_crop": "2106_crop2.jpg",
+        "bbox_xyxy_norm": [
+          0.65,
+          0.15,
+          0.95,
+          0.35
+        ],
+        "polygon_norm": [
+          [
+            0.65,
+            0.15
+          ],
+          [
+            0.95,
+            0.15
+          ],
+          [
+            0.95,
+            0.35
+          ],
+          [
+            0.65,
+            0.35
+          ],
+          [
+            0.65,
+            0.15
+          ]
+        ]
+      }
+    ],
+    "metrics": [],
+    "defects": [
+      {
+        "rule_type": "Norme",
+        "annotation_refs": [
+          "2106_D01_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "The pipe does not have a proper slope for drainage.",
+        "origin_viewtype_ID": "MAC",
+        "origin_focus": "détail",
+        "origin_layer": "plomberie",
+        "id_defaut": "2106_D01",
+        "categorie": "plomberie",
+        "type_defaut": "non-conformité DTU",
+        "resume": "Pente d'évacuation insuffisante",
+        "details": "The horizontal evacuation pipe appears to have a slight counter-slope or an insufficient slope, which does not comply with the DTU 60.1 requirement of a 1% to 3% slope.",
+        "regle_ref": {
+          "norme": "DTU 60.1_2012",
+          "partie": "Chapitre 5.3.1"
+        },
+        "gravite": 1,
+        "priorite": 1,
+        "temps": 1,
+        "conf_score": 0.98,
+        "incertitude": 0.020000000000000018
+      },
+      {
+        "rule_type": "Notice",
+        "annotation_refs": [
+          "2106_D02_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "No seal is visible at the pipe connection, which is a major leak risk.",
+        "origin_viewtype_ID": "MAC",
+        "origin_focus": "détail",
+        "origin_layer": "étanchéité",
+        "id_defaut": "2106_D02",
+        "categorie": "étanchéité",
+        "type_defaut": "non-conformité plomberie",
+        "resume": "Absence de joint d'étanchéité à la connexion",
+        "details": "No visible gasket or sealing joint is present at the pipe connection to the T-joint, posing a high risk of leakage.",
+        "regle_ref": {
+          "norme": "FT_Vidange_E6D124.pdf",
+          "partie": "Étape 4: Test d'étanchéité"
+        },
+        "gravite": 1,
+        "priorite": 1,
+        "temps": 1,
+        "conf_score": 0.97,
+        "incertitude": 0.030000000000000027
+      },
+      {
+        "rule_type": "Norme",
+        "annotation_refs": [
+          "2106_D03_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "The plasterboard around the pipe is broken and not a suitable substrate.",
+        "origin_viewtype_ID": "MAC",
+        "origin_focus": "détail",
+        "origin_layer": "platrerie",
+        "id_defaut": "2106_D03",
+        "categorie": "platrerie",
+        "type_defaut": "préparation du support",
+        "resume": "Support de plaque de plâtre dégradé",
+        "details": "The plasterboard is damaged around the pipe, failing to provide a sound and cohesive surface for proper sealing and finishing.",
+        "regle_ref": {
+          "norme": "DTU 52.2_2022",
+          "partie": "Partie 1-1 > 5.2.2"
+        },
+        "gravite": 2,
+        "priorite": 2,
+        "temps": 1,
+        "conf_score": 0.95,
+        "incertitude": 0.050000000000000044
+      },
+      {
+        "rule_type": "Norme",
+        "annotation_refs": [
+          "2106_D04_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "The wall around the pipe lacks a protective waterproof membrane.",
+        "origin_viewtype_ID": "MAC",
+        "origin_focus": "détail",
+        "origin_layer": "étanchéité",
+        "id_defaut": "2106_D04",
+        "categorie": "étanchéité",
+        "type_defaut": "non-conformité SPEC",
+        "resume": "Absence de SPEC et de traitement de traversée",
+        "details": "No SPEC membrane or sealing accessories (like sealing sleeves) are visible around the pipe penetration, which is a required treatment for EB+ zones.",
+        "regle_ref": {
+          "norme": "DTU 25.41_1993",
+          "partie": "Annexe A.1"
+        },
+        "gravite": 1,
+        "priorite": 1,
+        "temps": 1,
+        "conf_score": 0.97,
+        "incertitude": 0.030000000000000027
+      }
+    ],
+    "transform_history": [
+      {
+        "step": "gdocs-repair",
+        "seed": 42
+      }
+    ]
+  },
+  "presentation": {
+    "caption": "Pente d'évacuation insuffisante",
+    "padded_bbox_norm": [
+      0.59,
+      0.37,
+      0.81,
+      0.49
+    ],
+    "style": "highlight-color:#00FFFF; opacity:0.35; border:2px solid #00FFFF;",
+    "refined": true,
+    "confidence_before": 0.9,
+    "confidence_after": 0.98
+  },
+  "validation": {
+    "ok": true,
+    "erreurs": [],
+    "avertissements": []
+  },
+  "protocol": {
+    "mode_tracabilite": "EXTENDED_DEBUG",
+    "determinisme": {
+      "force_seed": 42
+    },
+    "exigence_materielle": {
+      "require_certification": [
+        "SPEC/SEL",
+        "Mortier-colle C2-S1/S2",
+        "Plaque H1"
+      ]
+    }
+  }
+}

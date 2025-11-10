@@ -1,0 +1,309 @@
+{
+  "meta": {
+    "SOP_name": "ArBot-Core",
+    "SOP_ver": "v1.4",
+    "generated_at": "2025-10-17T12:09:40Z",
+    "tool_list": [
+      "vision",
+      "knowledge",
+      "repair",
+      "normalize"
+    ],
+    "schema_ref": "schemas/arbot-vision-analysis.schema.json",
+    "schema_ver": "v1.0.1",
+    "ingestion_log": {
+      "mode": "GDocs-repair"
+    }
+  },
+  "context": {
+    "project_ID": "EX70",
+    "project_name": "Sinistre baignoire RDC",
+    "project_type": "Expertise Sinistre",
+    "phase_ID": "PH2",
+    "phase_name": "Diagnostic sinistre"
+  },
+  "source_file": {
+    "file_cat": "Photo",
+    "file_ID": "0015",
+    "file_name": "0015_SDB_GEN_20250826.jpg",
+    "file_ext": "jpg",
+    "file_img_width": 1884,
+    "file_img_height": 4080,
+    "file_date": "2025-08-26",
+    "zone_ID": 2,
+    "zone_name": "SDB",
+    "cat_ID": 0,
+    "cat_img_ID": "15",
+    "cat_name": "VUE GENERALE",
+    "viewtype_ID": "GEN",
+    "viewtype_name": "VUE GENERALE",
+    "full_exif_data": {
+      "enabled": true
+    }
+  },
+  "vision": {
+    "passes": 3,
+    "scales": [
+      1,
+      0.75,
+      0.5
+    ],
+    "nms_iou": 0.5,
+    "refine_below": 0.82,
+    "trust_score": 0.96,
+    "focus_type": "général",
+    "target_zone": "MGB/Interface Dormant",
+    "viewtype_ID": "GEN",
+    "viewtype_name": "VUE GENERALE",
+    "evidence_crops": [],
+    "annotations": [
+      {
+        "ann_ID": "0015_D01_A01",
+        "ann_type": "polygon",
+        "ann_label": "Absence de joint d'étanchéité MGB",
+        "ann_linked_def_ID": "0015_D01",
+        "ann_layer": "étanchéité",
+        "ann_confidence": 0.99,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#FFD700",
+          "stroke_width": 2,
+          "fill": "#FFD700",
+          "opacity": 0.35
+        },
+        "evidence_crop": "",
+        "bbox_xyxy_norm": [
+          0.1,
+          0.4,
+          0.6,
+          0.47
+        ],
+        "polygon_norm": [
+          [
+            0.1,
+            0.4
+          ],
+          [
+            0.6,
+            0.45
+          ],
+          [
+            0.6,
+            0.47
+          ],
+          [
+            0.1,
+            0.42
+          ],
+          [
+            0.1,
+            0.4
+          ]
+        ]
+      },
+      {
+        "ann_ID": "0015_D02_A01",
+        "ann_type": "polygon",
+        "ann_label": "Dommage sur Dormant/Finition porte",
+        "ann_linked_def_ID": "0015_D02",
+        "ann_layer": "finition",
+        "ann_confidence": 0.95,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#DC143C",
+          "stroke_width": 2,
+          "fill": "#DC143C",
+          "opacity": 0.35
+        },
+        "evidence_crop": "",
+        "bbox_xyxy_norm": [
+          0,
+          0,
+          0.35,
+          0.8
+        ],
+        "polygon_norm": [
+          [
+            0,
+            0
+          ],
+          [
+            0.35,
+            0
+          ],
+          [
+            0.35,
+            0.8
+          ],
+          [
+            0,
+            0.8
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "ann_ID": "0015_D03_A01",
+        "ann_type": "polygon",
+        "ann_label": "Joints Plafond/Mur non lissés",
+        "ann_linked_def_ID": "0015_D03",
+        "ann_layer": "platrerie",
+        "ann_confidence": 0.9,
+        "source_pass": "o3-pro",
+        "style": {
+          "stroke": "#D2B48C",
+          "stroke_width": 2,
+          "fill": "#D2B48C",
+          "opacity": 0.35
+        },
+        "evidence_crop": "",
+        "bbox_xyxy_norm": [
+          0.05,
+          0.8,
+          0.95,
+          0.95
+        ],
+        "polygon_norm": [
+          [
+            0.05,
+            0.8
+          ],
+          [
+            0.95,
+            0.8
+          ],
+          [
+            0.95,
+            0.95
+          ],
+          [
+            0.05,
+            0.95
+          ],
+          [
+            0.05,
+            0.8
+          ]
+        ]
+      }
+    ],
+    "metrics": [],
+    "defects": [
+      {
+        "rule_type": "Notice",
+        "annotation_refs": [
+          "0015_D01_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Manque de mastic d'étanchéité sur le pourtour de la baignoire.",
+        "origin_viewtype_ID": "GEN",
+        "origin_focus": "général",
+        "origin_layer": "étanchéité",
+        "id_defaut": "0015_D01",
+        "categorie": "étanchéité",
+        "type_defaut": "non-conformité d'interface",
+        "resume": "Absence de joint d'étanchéité périphérique Mur-Baignoire",
+        "details": "L'interface Mur-Baignoire (MGB) est dépourvue de joint élastomère (mastic sanitaire), ce qui est obligatoire pour prévenir l'infiltration d'eau derrière la baignoire. Défaut de G1 systémique.",
+        "regle_ref": {
+          "norme": "SDB_REF_DOC.pdf",
+          "partie": "Interfaces critiques"
+        },
+        "gravite": 1,
+        "priorite": 1,
+        "temps": 1,
+        "conf_score": 0.99,
+        "incertitude": 0.010000000000000009
+      },
+      {
+        "rule_type": "Classification",
+        "annotation_refs": [
+          "0015_D02_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Traces et salissures visibles sur le dormant de la porte.",
+        "origin_viewtype_ID": "GEN",
+        "origin_focus": "détail",
+        "origin_layer": "finition",
+        "id_defaut": "0015_D02",
+        "categorie": "finition",
+        "type_defaut": "esthétique/propreté",
+        "resume": "Dommage/Dégradation du dormant de la porte existante",
+        "details": "Le dormant de la porte existante (côté gauche) présente des salissures de plâtre/peinture et des dommages causés par les travaux, indiquant un manque de protection lors du chantier (Défaut G3 sur existant).",
+        "regle_ref": {
+          "norme": "SDB_def_class.pdf",
+          "partie": "Gravité"
+        },
+        "gravite": 3,
+        "priorite": 3,
+        "temps": 3,
+        "conf_score": 0.95,
+        "incertitude": 0.050000000000000044
+      },
+      {
+        "rule_type": "Norme",
+        "annotation_refs": [
+          "0015_D03_A01"
+        ],
+        "metric_refs": [],
+        "evidence_summary": "Joints de plâtre grossiers, visibles sur le plafond et les jonctions murales.",
+        "origin_viewtype_ID": "GEN",
+        "origin_focus": "détail",
+        "origin_layer": "platrerie",
+        "id_defaut": "0015_D03",
+        "categorie": "platrerie",
+        "type_defaut": "esthétique",
+        "resume": "Joints de plaque Mur-Plafond non lissés",
+        "details": "Les bandes d'enduit des joints Mur-Plafond sont visibles et brutes, sans lissage ni ponçage, ce qui est une finition insuffisante avant l'application de la peinture (Défaut G3).",
+        "regle_ref": {
+          "norme": "DTU 25.41_1993",
+          "partie": "Chapitre 5.5.1"
+        },
+        "gravite": 3,
+        "priorite": 3,
+        "temps": 3,
+        "conf_score": 0.9,
+        "incertitude": 0.09999999999999998
+      }
+    ],
+    "transform_history": [
+      {
+        "step": "gdocs-repair",
+        "seed": 42
+      }
+    ]
+  },
+  "presentation": {
+    "caption": "Absence de joint d'étanchéité périphérique Mur-Baignoire",
+    "padded_bbox_norm": [
+      0.09,
+      0.39,
+      0.61,
+      0.48
+    ],
+    "style": "highlight-color:#00FFFF; opacity:0.35; border:2px solid #00FFFF;",
+    "refined": true,
+    "confidence_before": 0.95,
+    "confidence_after": 0.99
+  },
+  "validation": {
+    "ok": true,
+    "erreurs": [],
+    "avertissements": []
+  },
+  "protocol": {
+    "mode_tracabilite": "EXTENDED_DEBUG",
+    "determinisme": {
+      "force_seed": 42
+    },
+    "exigence_materielle": {
+      "require_certification": [
+        "SPEC/SEL",
+        "Mortier-colle C2-S1/S2",
+        "Plaque H1"
+      ]
+    }
+  }
+}

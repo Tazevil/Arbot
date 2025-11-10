@@ -1,0 +1,159 @@
+{
+  "name": "NameGen_GEN",
+  "version": "v1.5",
+  "date_iso": "2025-10-15",
+  "pattern": "^(?<file_ID>\\d{4})_(?<detail>[A-Z0-9À-ÖØ-Ý]+(?:-[A-Z0-9À-ÖØ-Ý]+)*)_(?<viewtype>[A-Z]{3})\\.(?<ext>jpg|jpeg|png|webp|tiff)$",
+  "fields": {
+    "zone_ID": "int [0..9]",
+    "cat_ID": "int [0..99]",
+    "cat_img_ID": "int [1..99]",
+    "file_ID_formula": "zone_ID*1000 + cat_ID*100 + cat_img_ID",
+    "file_ID_padding": "filename uses file_ID padded to 4 digits",
+    "detail": "UPPERCASE, accents allowed, hyphens, no spaces",
+    "viewtype": "enum code",
+    "ext": [
+      "jpg",
+      "jpeg",
+      "png",
+      "webp",
+      "tiff"
+    ]
+  },
+  "dictionaries": {
+    "zone": [
+      {
+        "zone_name": "CHANTIER",
+        "zone_ID": 0
+      },
+      {
+        "zone_name": "PLAN",
+        "zone_ID": 1
+      },
+      {
+        "zone_name": "SDB",
+        "zone_ID": 2
+      },
+      {
+        "zone_name": "WC",
+        "zone_ID": 3
+      }
+    ],
+    "category": [
+      {
+        "cat_name": "VUE GENERALE",
+        "cat_ID": 0
+      },
+      {
+        "cat_name": "PLOMBERIE",
+        "cat_ID": 1
+      },
+      {
+        "cat_name": "BAIGNOIRE",
+        "cat_ID": 2
+      },
+      {
+        "cat_name": "CARRELAGE",
+        "cat_ID": 3
+      },
+      {
+        "cat_name": "FENETRE",
+        "cat_ID": 4
+      },
+      {
+        "cat_name": "PLAFOND",
+        "cat_ID": 5
+      },
+      {
+        "cat_name": "PLATRERIE",
+        "cat_ID": 6
+      },
+      {
+        "cat_name": "SANITAIRE",
+        "cat_ID": 7
+      },
+      {
+        "cat_name": "PLACARD",
+        "cat_ID": 8
+      }
+    ],
+    "viewtype": [
+      {
+        "viewtype_name": "VUE PANORAMIQUE",
+        "viewtype_ID": "PAN"
+      },
+      {
+        "viewtype_name": "VUE GENERALE",
+        "viewtype_ID": "GEN"
+      },
+      {
+        "viewtype_name": "VUE PROCHE",
+        "viewtype_ID": "DET"
+      },
+      {
+        "viewtype_name": "VUE MACRO",
+        "viewtype_ID": "MAC"
+      },
+      {
+        "viewtype_name": "INTERACTION MUR-MUR",
+        "viewtype_ID": "MGM"
+      },
+      {
+        "viewtype_name": "INTERACTION MUR-SOL",
+        "viewtype_ID": "MGS"
+      },
+      {
+        "viewtype_name": "INTERACTION MUR-PLAFOND",
+        "viewtype_ID": "MGP"
+      },
+      {
+        "viewtype_name": "INTERACTION MUR-BAIGNOIRE",
+        "viewtype_ID": "MGB"
+      },
+      {
+        "viewtype_name": "DEGAT SUR EXISTANT",
+        "viewtype_ID": "DEG"
+      }
+    ]
+  },
+  "validations": {
+    "id_consistency": "file_ID == zone_ID*1000 + cat_ID*100 + cat_img_ID",
+    "id_uniqueness_scope": "cat_img_ID unique per (zone_ID, cat_ID)",
+    "detail_charset": "^[A-Z0-9À-ÖØ-Ý]+(?:-[A-Z0-9À-ÖØ-Ý]+)*$",
+    "no_spaces_in_detail": true,
+    "viewtype_enum": [
+      "PAN",
+      "GEN",
+      "DET",
+      "MAC",
+      "MGM",
+      "MGS",
+      "MGP",
+      "MGB",
+      "DEG"
+    ],
+    "file_ID_zero_pad": 4
+  },
+  "examples": [
+    {
+      "zone_ID": 3,
+      "cat_ID": 6,
+      "cat_img_ID": 1,
+      "file_ID": 3601,
+      "file_name": "3601_JOINT_DET.jpg"
+    },
+    {
+      "zone_ID": 3,
+      "cat_ID": 7,
+      "cat_img_ID": 5,
+      "file_ID": 3705,
+      "file_name": "3705_PIED_DET.jpg"
+    },
+    {
+      "zone_ID": 0,
+      "cat_ID": 0,
+      "cat_img_ID": 1,
+      "file_ID": 1,
+      "file_name": "0001_SALON_DEG.jpg"
+    }
+  ]
+}
