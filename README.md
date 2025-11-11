@@ -1,5 +1,7 @@
 # ArBot-MiniDB
 
+[![CI](https://github.com/Tazevil/ArBot-MiniDB/actions/workflows/ci.yml/badge.svg)](https://github.com/Tazevil/ArBot-MiniDB/actions/workflows/ci.yml) ![Python](https://img.shields.io/badge/python-3.11%20%7C%203.12-blue)
+
 Comprehensive dataset for ArBot Vision AI training and water damage assessment case studies.
 
 ## Project Overview
@@ -197,6 +199,21 @@ Example: 2301 = (2*1000) + (3*100) + (1*10)
 **Work Period:** August 18-29, 2025
 **Claim Amount:** €4,287.06 TTC
 **Insurer:** MAAF Assurances (Habitation Tempo product)
+
+---
+
+## Running Tests Locally
+
+```bash
+python -m venv .venv
+# Windows
+.\\.venv\\Scripts\\activate
+# macOS/Linux
+# source .venv/bin/activate
+
+pip install -r requirements-dev.txt
+pytest -q
+```
 
 ---
 

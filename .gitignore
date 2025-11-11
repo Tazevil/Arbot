@@ -4,3 +4,33 @@ docs/Context/PROCESS/desktop.ini
 docs/Context/desktop.ini
 docs/Context/call/desktop.ini
 docs/Context/ARCHIVE/desktop.ini
+
+# OAuth & Environment Credentials (NEVER commit these!)
+.env
+.env.local
+.env.*.local
+oauth_token.json
+.oauth/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Analysis outputs
+*.log
+.tmp.driveupload/

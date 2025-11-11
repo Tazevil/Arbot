@@ -1,0 +1,70 @@
+================================================================================
+FILL IN YOUR OAUTH CREDENTIALS HERE
+================================================================================
+
+AFTER you get your OAuth credentials from: https://platform.openai.com/apps
+
+Replace the values below and paste them into: .env.local
+
+================================================================================
+COPY THIS TEMPLATE:
+================================================================================
+
+OPENAI_CLIENT_ID=YOUR_CLIENT_ID_HERE
+OPENAI_CLIENT_SECRET=YOUR_CLIENT_SECRET_HERE
+OPENAI_REDIRECT_URI=http://localhost:8000/callback
+
+
+================================================================================
+EXAMPLE (what it looks like with real credentials):
+================================================================================
+
+OPENAI_CLIENT_ID=oauth-abc123def456ghi789jkl012mno3456pqr789
+OPENAI_CLIENT_SECRET=oauth_xyz789abc456def123ghi456jkl789mnopqr123
+OPENAI_REDIRECT_URI=http://localhost:8000/callback
+
+
+================================================================================
+STEPS:
+================================================================================
+
+1. Go to: https://platform.openai.com/apps
+2. Click: "Create new app"
+3. Fill in:
+   - App Name: ArBot-MiniDB Analysis
+   - Redirect URI: http://localhost:8000/callback
+   - Scopes: read:models, write:files, read:files
+4. Click: "Create"
+5. Copy the Client ID shown
+6. Copy the Client Secret shown
+7. Paste both values into .env.local in the locations above
+
+
+================================================================================
+WHERE IS .env.local?
+================================================================================
+
+Location: C:\Dev\personal\ArBot-MiniDB\.env.local
+
+The file is already created and ready for your credentials!
+
+
+================================================================================
+⚠️  SECURITY WARNING
+================================================================================
+
+- NEVER share your Client Secret with anyone
+- NEVER commit this file to git (it's in .gitignore)
+- NEVER post your credentials online
+- The Client Secret is like a password - keep it private!
+
+
+================================================================================
+READY TO RUN?
+================================================================================
+
+After filling in .env.local with your credentials, you can run:
+
+python gpt4o_batch_analysis_oauth.py
+
+This will analyze all 94 images with GPT-4o Vision!
