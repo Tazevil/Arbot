@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogue de Formation - Défauts Rénovation Salle de Bain</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: white;
+            padding: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .header h1 {
+            color: #667eea;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .stats {
+            background: white;
+            margin: 2rem auto;
+            max-width: 1200px;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 8px;
+        }
+
+        .stat-card h3 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-card p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .search-bar {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 50px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            outline: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .category-section {
+            background: white;
+            margin-bottom: 3rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .category-header {
+            padding: 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .category-header h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .category-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .meta-tag {
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .learning-objectives {
+            background: #f8f9fa;
+            padding: 1.5rem 2rem;
+            border-left: 4px solid #667eea;
+        }
+
+        .learning-objectives h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .learning-objectives ul {
+            list-style-position: inside;
+            color: #555;
+        }
+
+        .learning-objectives li {
+            margin-bottom: 0.5rem;
+        }
+
+        .image-gallery {
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .image-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .image-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .image-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .image-info {
+            padding: 1rem;
+        }
+
+        .image-info h4 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .image-info p {
+            color: #666;
+            font-size: 0.85rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .view-badge {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            background: #667eea;
+            color: white;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        .footer {
+            background: white;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        @media print {
+            body { background: white; }
+            .image-gallery { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📚 Catalogue de Formation Professionnel</h1>
+        <p>Défauts de Rénovation en Salle de Bain - Guide Technique DTU</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem; color: #999;">
+            ArBot-MiniDB | Case #25-001508-RLY-M1 | Version 1.0.0
+        </p>
+    </div>
+
+    <div class="stats">
+        <div class="stat-card">
+            <h3>94</h3>
+            <p>Images Totales</p>
+        </div>
+        <div class="stat-card">
+            <h3>55</h3>
+            <p>Exemples Sélectionnés</p>
+        </div>
+        <div class="stat-card">
+            <h3>6</h3>
+            <p>Catégories de Défauts</p>
+        </div>
+        <div class="stat-card">
+            <h3>DTU</h3>
+            <p>Normes Référencées</p>
+        </div>
+    </div>
+
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="🔍 Rechercher un type de défaut, une zone, ou une référence DTU..." onkeyup="searchCatalog()">
+    </div>
+
+    <div class="container" id="catalogContent">
+        
+        <div class="category-section" data-category="ETANCHEITE">
+            <div class="category-header">
+                <h2>Étanchéité</h2>
+                <div class="category-meta">
+                    <span class="meta-tag">📋 8 exemples</span>
+                    <span class="meta-tag">📚 DTU 52.2 Art. 4, DTU 25.41</span>
+                    <span class="meta-tag">⚠️ Sévérité: MAJEUR / CRITIQUE</span>
+                </div>
+            </div>
+
+            <div class="learning-objectives">
+                <h3>🎯 Objectifs Pédagogiques</h3>
+                <ul>
+                    <li>Reconnaître membranes d'étanchéité conformes</li><li>Identifier zones à risque (angles, pénétrations)</li><li>Évaluer impact sur structure bâtiment</li>
+                </ul>
+            </div>
+
+            <div class="image-gallery">
+        
+                <div class="image-card" onclick="openImage('https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2201_APPUI_DET.jpg')">
+                    <img src="https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2201_APPUI_DET.webp" alt="2201_APPUI_DET.jpg" loading="lazy">
+                    <div class="image-info">
+                        <h4>Appui</h4>
+                        <span class="view-badge">DET</span>
+                        <p><strong>ID:</strong> 2201 | <strong>Phase:</strong> sinistre</p>
+                        <p style="margin-top: 0.5rem; font-style: italic;">Focus sur défaut spécifique</p>
+                    </div>
+                </div>
+            
+                <div class="image-card" onclick="openImage('https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2203_APPUI_DET.jpg')">
+                    <img src="https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2203_APPUI_DET.webp" alt="2203_APPUI_DET.jpg" loading="lazy">
+                    <div class="image-info">
+                        <h4>Appui</h4>
+                        <span class="view-badge">DET</span>
+                        <p><strong>ID:</strong> 2203 | <strong>Phase:</strong> sinistre</p>
+                        <p style="margin-top: 0.5rem; font-style: italic;">Focus sur défaut spécifique</p>
+                    </div>
+                </div>
+            
+                <div class="image-card" onclick="openImage('https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2206_APPUI_DET.jpg')">
+                    <img src="https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2206_APPUI_DET.webp" alt="2206_APPUI_DET.jpg" loading="lazy">
+                    <div class="image-info">
+                        <h4>Appui</h4>
+                        <span class="view-badge">DET</span>
+                        <p><strong>ID:</strong> 2206 | <strong>Phase:</strong> sinistre</p>
+                        <p style="margin-top: 0.5rem; font-style: italic;">Focus sur défaut spécifique</p>
+                    </div>
+                </div>
+            
+                <div class="image-card" onclick="openImage('https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2207_APPUI_DET.jpg')">
+                    <img src="https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2207_APPUI_DET.webp" alt="2207_APPUI_DET.jpg" loading="lazy">
+                    <div class="image-info">
+                        <h4>Appui</h4>
+                        <span class="view-badge">DET</span>
+                        <p><strong>ID:</strong> 2207 | <strong>Phase:</strong> sinistre</p>
+                        <p style="margin-top: 0.5rem; font-style: italic;">Focus sur défaut spécifique</p>
+                    </div>
+                </div>
+            
+                <div class="image-card" onclick="openImage('https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2204_APPUI_MAC.jpg')">
+                    <img src="https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2204_APPUI_MAC.webp" alt="2204_APPUI_MAC.jpg" loading="lazy">
+                    <div class="image-info">
+                        <h4>Appui</h4>
+                        <span class="view-badge">MAC</span>
+                        <p><strong>ID:</strong> 2204 | <strong>Phase:</strong> sinistre</p>
+                        <p style="margin-top: 0.5rem; font-style: italic;">Analyse microscopique du défaut</p>
+                    </div>
+                </div>
+            
+                <div class="image-card" onclick="openImage('https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2205_APPUI_MAC.jpg')">
+                    <img src="https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2205_APPUI_MAC.webp" alt="2205_APPUI_MAC.jpg" loading="lazy">
+                    <div class="image-info">
+                        <h4>Appui</h4>
+                        <span class="view-badge">MAC</span>
+                        <p><strong>ID:</strong> 2205 | <strong>Phase:</strong> sinistre</p>
+                        <p style="margin-top: 0.5rem; font-style: italic;">Analyse microscopique du défaut</p>
+                    </div>
+                </div>
+            
+                <div class="image-card" onclick="openImage('https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2002_BAIGNOIRE_GEN.jpg')">
+                    <img src="https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2002_BAIGNOIRE_GEN.webp" alt="2002_BAIGNOIRE_GEN.jpg" loading="lazy">
+                    <div class="image-info">
+                        <h4>Baignoire</h4>
+                        <span class="view-badge">GEN</span>
+                        <p><strong>ID:</strong> 2002 | <strong>Phase:</strong> sinistre</p>
+                        <p style="margin-top: 0.5rem; font-style: italic;">Vision d'ensemble, contexte spatial</p>
+                    </div>
+                </div>
+            
+                <div class="image-card" onclick="openImage('https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2003_BAIGNOIRE_GEN.jpg')">
+                    <img src="https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2003_BAIGNOIRE_GEN.webp" alt="2003_BAIGNOIRE_GEN.jpg" loading="lazy">
+                    <div class="image-info">
+                        <h4>Baignoire</h4>
+                        <span class="view-badge">GEN</span>
+                        <p><strong>ID:</strong> 2003 | <strong>Phase:</strong> sinistre</p>
+                        <p style="margin-top: 0.5rem; font-style: italic;">Vision d'ensemble, contexte spatial</p>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="category-section" data-category="PLOMBERIE">
+            <div class="category-header">
+                <h2>Plomberie</h2>
+                <div class="category-meta">
+                    <span class="meta-tag">📋 8 exemples</span>
+                    <span class="meta-tag">📚 DTU 60.1, DTU 60.11</span>
+                    <span class="meta-tag">⚠️ Sévérité: MAJEUR / CRITIQUE</span>
+                </div>
+            </div>
+
+            <div class="learning-objectives">
+                <h3>🎯 Objectifs Pédagogiques</h3>
+                <ul>
+                    <li>Identifier signes de corrosion sur tuyauterie</li><li>Évaluer conformité des raccords</li><li>Détecter fuites actives vs anciennes</li>
+                </ul>
+            </div>
+
+            <div class="image-gallery">
+        
+                <div class="image-card" onclick="openImage('https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2101_ALIMENTATION-EVACUATION_DET.jpg')">
+                    <img src="https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2101_ALIMENTATION-EVACUATION_DET.webp" alt="2101_ALIMENTATION-EVACUATION_DET.jpg" loading="lazy">
+                    <div class="image-info">
+                        <h4>Alimentation Evacuation</h4>
+                        <span class="view-badge">DET</span>
+                        <p><strong>ID:</strong> 2101 | <strong>Phase:</strong> sinistre</p>
+                        <p style="margin-top: 0.5rem; font-style: italic;">Focus sur défaut spécifique</p>
+                    </div>
+                </div>
+            
+                <div class="image-card" onclick="openImage('https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2102_EVACUATION_DET.jpg')">
+                    <img src="https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2102_EVACUATION_DET.webp" alt="2102_EVACUATION_DET.jpg" loading="lazy">
+                    <div class="image-info">
+                        <h4>Evacuation</h4>
+                        <span class="view-badge">DET</span>
+                        <p><strong>ID:</strong> 2102 | <strong>Phase:</strong> sinistre</p>
+                        <p style="margin-top: 0.5rem; font-style: italic;">Focus sur défaut spécifique</p>
+                    </div>
+                </div>
+            
+                <div class="image-card" onclick="openImage('https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2105_ALIMENTATION-EVACUATION_DET.jpg')">
+                    <img src="https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2105_ALIMENTATION-EVACUATION_DET.webp" alt="2105_ALIMENTATION-EVACUATION_DET.jpg" loading="lazy">
+                    <div class="image-info">
+                        <h4>Alimentation Evacuation</h4>
+                        <span class="view-badge">DET</span>
+                        <p><strong>ID:</strong> 2105 | <strong>Phase:</strong> sinistre</p>
+                        <p style="margin-top: 0.5rem; font-style: italic;">Focus sur défaut spécifique</p>
+                    </div>
+                </div>
+            
+                <div class="image-card" onclick="openImage('https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2108_EVACUATION_DET.jpg')">
+                    <img src="https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2108_EVACUATION_DET.webp" alt="2108_EVACUATION_DET.jpg" loading="lazy">
+                    <div class="image-info">
+                        <h4>Evacuation</h4>
+                        <span class="view-badge">DET</span>
+                        <p><strong>ID:</strong> 2108 | <strong>Phase:</strong> sinistre</p>
+                        <p style="margin-top: 0.5rem; font-style: italic;">Focus sur défaut spécifique</p>
+                    </div>
+                </div>
+            
+                <div class="image-card" onclick="openImage('https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2109_ALIMENTATION-EVACUATION_DET.jpg')">
+                    <img src="https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2109_ALIMENTATION-EVACUATION_DET.webp" alt="2109_ALIMENTATION-EVACUATION_DET.jpg" loading="lazy">
+                    <div class="image-info">
+                        <h4>Alimentation Evacuation</h4>
+                        <span class="view-badge">DET</span>
+                        <p><strong>ID:</strong> 2109 | <strong>Phase:</strong> sinistre</p>
+                        <p style="margin-top: 0.5rem; font-style: italic;">Focus sur défaut spécifique</p>
+                    </div>
+                </div>
+            
+                <div class="image-card" onclick="openImage('https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2112_MITIGEUR-BAIN_DET.jpg')">
+                    <img src="https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2112_MITIGEUR-BAIN_DET.webp" alt="2112_MITIGEUR-BAIN_DET.jpg" loading="lazy">
+                    <div class="image-info">
+                        <h4>Mitigeur Bain</h4>
+                        <span class="view-badge">DET</span>
+                        <p><strong>ID:</strong> 2112 | <strong>Phase:</strong> sinistre</p>
+                        <p style="margin-top: 0.5rem; font-style: italic;">Focus sur défaut spécifique</p>
+                    </div>
+                </div>
+            
+                <div class="image-card" onclick="openImage('https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2116_MITIGEUR-BAIN_DET.jpg')">
+                    <img src="https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2116_MITIGEUR-BAIN_DET.webp" alt="2116_MITIGEUR-BAIN_DET.jpg" loading="lazy">
+                    <div class="image-info">
+                        <h4>Mitigeur Bain</h4>
+                        <span class="view-badge">DET</span>
+                        <p><strong>ID:</strong> 2116 | <strong>Phase:</strong> sinistre</p>
+                        <p style="margin-top: 0.5rem; font-style: italic;">Focus sur défaut spécifique</p>
+                    </div>
+                </div>
+            
+                <div class="image-card" onclick="openImage('https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2103_EVACUATION_MAC.jpg')">
+                    <img src="https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2103_EVACUATION_MAC.webp" alt="2103_EVACUATION_MAC.jpg" loading="lazy">
+                    <div class="image-info">
+                        <h4>Evacuation</h4>
+                        <span class="view-badge">MAC</span>
+                        <p><strong>ID:</strong> 2103 | <strong>Phase:</strong> sinistre</p>
+                        <p style="margin-top: 0.5rem; font-style: italic;">Analyse microscopique du défaut</p>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="category-section" data-category="JOINTS">
+            <div class="category-header">
+                <h2>Joints</h2>
+                <div class="category-meta">
+                    <span class="meta-tag">📋 8 exemples</span>
+                    <span class="meta-tag">📚 DTU 52.2, DTU 59.1</span>
+                    <span class="meta-tag">⚠️ Sévérité: MINEUR / MAJEUR / CRITIQUE</span>
+                </div>
+            </div>
+
+            <div class="learning-objectives">
+                <h3>🎯 Objectifs Pédagogiques</h3>
+                <ul>
+                    <li>Différencier joints silicone vs ciment</li><li>Identifier dégradations liées à l'humidité</li><li>Évaluer nécessité de réfection</li>
+                </ul>
+            </div>
+
+            <div class="image-gallery">
+        
+                <div class="image-card" onclick="openImage('https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/3601_JOINT_DET.jpg')">
+                    <img src="https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/3601_JOINT_DET.webp" alt="3601_JOINT_DET.jpg" loading="lazy">
+                    <div class="image-info">
+                        <h4>Joint</h4>
+                        <span class="view-badge">DET</span>
+                        <p><strong>ID:</strong> 3601 | <strong>Phase:</strong> sinistre</p>
+                        <p style="margin-top: 0.5rem; font-style: italic;">Focus sur défaut spécifique</p>
+                    </div>
+                </div>
+            
+                <div class="image-card" onclick="openImage('https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/3602_JOINT_DET.jpg')">
+                    <img src="https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/3602_JOINT_DET.webp" alt="3602_JOINT_DET.jpg" loading="lazy">
+                    <div class="image-info">
+                        <h4>Joint</h4>
+                        <span class="view-badge">DET</span>
+                        <p><strong>ID:</strong> 3602 | <strong>Phase:</strong> sinistre</p>
+                        <p style="margin-top: 0.5rem; font-style: italic;">Focus sur défaut spécifique</p>
+                    </div>
+                </div>
+            
+                <div class="image-card" onclick="openImage('https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/3603_JOINT_DET.jpg')">
+                    <img src="https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/3603_JOINT_DET.webp" alt="3603_JOINT_DET.jpg" loading="lazy">
+                    <div class="image-info">
+                        <h4>Joint</h4>
+                        <span class="view-badge">DET</span>
+                        <p><strong>ID:</strong> 3603 | <strong>Phase:</strong> sinistre</p>
+                        <p style="margin-top: 0.5rem; font-style: italic;">Focus sur défaut spécifique</p>
+                    </div>
+                </div>
+            
+                <div class="image-card" onclick="openImage('https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2202_JOINT_MAC.jpg')">
+                    <img src="https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2202_JOINT_MAC.webp" alt="2202_JOINT_MAC.jpg" loading="lazy">
+                    <div class="image-info">
+                        <h4>Joint</h4>
+                        <span class="view-badge">MAC</span>
+                        <p><strong>ID:</strong> 2202 | <strong>Phase:</strong> sinistre</p>
+                        <p style="margin-top: 0.5rem; font-style: italic;">Analyse microscopique du défaut</p>
+                    </div>
+                </div>
+            
+                <div class="image-card" onclick="openImage('https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2312_JOINT_MAC.jpg')">
+                    <img src="https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2312_JOINT_MAC.webp" alt="2312_JOINT_MAC.jpg" loading="lazy">
+                    <div class="image-info">
+                        <h4>Joint</h4>
+                        <span class="view-badge">MAC</span>
+                        <p><strong>ID:</strong> 2312 | <strong>Phase:</strong> sinistre</p>
+                        <p style="margin-top: 0.5rem; font-style: italic;">Analyse microscopique du défaut</p>
+                    </div>
+                </div>
+            
+                <div class="image-card" onclick="openImage('https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2301_JOINT_MGM.jpg')">
+                    <img src="https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2301_JOINT_MGM.webp" alt="2301_JOINT_MGM.jpg" loading="lazy">
+                    <div class="image-info">
+                        <h4>Joint</h4>
+                        <span class="view-badge">MGM</span>
+                        <p><strong>ID:</strong> 2301 | <strong>Phase:</strong> sinistre</p>
+                        <p style="margin-top: 0.5rem; font-style: italic;">Détail intermédiaire</p>
+                    </div>
+                </div>
+            
+                <div class="image-card" onclick="openImage('https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2302_JOINT_MGM.jpg')">
+                    <img src="https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2302_JOINT_MGM.webp" alt="2302_JOINT_MGM.jpg" loading="lazy">
+                    <div class="image-info">
+                        <h4>Joint</h4>
+                        <span class="view-badge">MGM</span>
+                        <p><strong>ID:</strong> 2302 | <strong>Phase:</strong> sinistre</p>
+                        <p style="margin-top: 0.5rem; font-style: italic;">Détail intermédiaire</p>
+                    </div>
+                </div>
+            
+                <div class="image-card" onclick="openImage('https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2303_JOINT_MGM.jpg')">
+                    <img src="https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2303_JOINT_MGM.webp" alt="2303_JOINT_MGM.jpg" loading="lazy">
+                    <div class="image-info">
+                        <h4>Joint</h4>
+                        <span class="view-badge">MGM</span>
+                        <p><strong>ID:</strong> 2303 | <strong>Phase:</strong> sinistre</p>
+                        <p style="margin-top: 0.5rem; font-style: italic;">Détail intermédiaire</p>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="category-section" data-category="ELECTRICITE">
+            <div class="category-header">
+                <h2>Électricité</h2>
+                <div class="category-meta">
+                    <span class="meta-tag">📋 3 exemples</span>
+                    <span class="meta-tag">📚 NF C 15-100, DTU 60.33</span>
+                    <span class="meta-tag">⚠️ Sévérité: CRITIQUE</span>
+                </div>
+            </div>
+
+            <div class="learning-objectives">
+                <h3>🎯 Objectifs Pédagogiques</h3>
+                <ul>
+                    <li>Connaître volumes de sécurité (0, 1, 2)</li><li>Identifier installations dangereuses</li><li>Évaluer conformité NF C 15-100</li>
+                </ul>
+            </div>
+
+            <div class="image-gallery">
+        
+                <div class="image-card" onclick="openImage('https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2304_INTERRUPTEUR-PRISE_MAC.jpg')">
+                    <img src="https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2304_INTERRUPTEUR-PRISE_MAC.webp" alt="2304_INTERRUPTEUR-PRISE_MAC.jpg" loading="lazy">
+                    <div class="image-info">
+                        <h4>Interrupteur Prise</h4>
+                        <span class="view-badge">MAC</span>
+                        <p><strong>ID:</strong> 2304 | <strong>Phase:</strong> sinistre</p>
+                        <p style="margin-top: 0.5rem; font-style: italic;">Analyse microscopique du défaut</p>
+                    </div>
+                </div>
+            
+                <div class="image-card" onclick="openImage('https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2505_SPOT_DEG.jpg')">
+                    <img src="https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2505_SPOT_DEG.webp" alt="2505_SPOT_DEG.jpg" loading="lazy">
+                    <div class="image-info">
+                        <h4>Spot</h4>
+                        <span class="view-badge">DEG</span>
+                        <p><strong>ID:</strong> 2505 | <strong>Phase:</strong> sinistre</p>
+                        <p style="margin-top: 0.5rem; font-style: italic;">Vue dégagée sans obstacles</p>
+                    </div>
+                </div>
+            
+                <div class="image-card" onclick="openImage('https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2506_SPOT-VMC_DEG.jpg')">
+                    <img src="https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2506_SPOT-VMC_DEG.webp" alt="2506_SPOT-VMC_DEG.jpg" loading="lazy">
+                    <div class="image-info">
+                        <h4>Spot Vmc</h4>
+                        <span class="view-badge">DEG</span>
+                        <p><strong>ID:</strong> 2506 | <strong>Phase:</strong> sinistre</p>
+                        <p style="margin-top: 0.5rem; font-style: italic;">Vue dégagée sans obstacles</p>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="category-section" data-category="CARRELAGE">
+            <div class="category-header">
+                <h2>Carrelage</h2>
+                <div class="category-meta">
+                    <span class="meta-tag">📋 4 exemples</span>
+                    <span class="meta-tag">📚 DTU 52.2, DTU 25.41</span>
+                    <span class="meta-tag">⚠️ Sévérité: MINEUR / MAJEUR / CRITIQUE</span>
+                </div>
+            </div>
+
+            <div class="learning-objectives">
+                <h3>🎯 Objectifs Pédagogiques</h3>
+                <ul>
+                    <li>Identifier défauts de pose sur carrelage mural et sol</li><li>Évaluer l'adhérence et la planéité</li><li>Détecter signes avant-coureurs de délamination</li>
+                </ul>
+            </div>
+
+            <div class="image-gallery">
+        
+                <div class="image-card" onclick="openImage('https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2401_CARRELAGE-DESALIGNEMENT_DET.jpg')">
+                    <img src="https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2401_CARRELAGE-DESALIGNEMENT_DET.webp" alt="2401_CARRELAGE-DESALIGNEMENT_DET.jpg" loading="lazy">
+                    <div class="image-info">
+                        <h4>Carrelage Desalignement</h4>
+                        <span class="view-badge">DET</span>
+                        <p><strong>ID:</strong> 2401 | <strong>Phase:</strong> sinistre</p>
+                        <p style="margin-top: 0.5rem; font-style: italic;">Focus sur défaut spécifique</p>
+                    </div>
+                </div>
+            
+                <div class="image-card" onclick="openImage('https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2403_CARRELAGE-DESALIGNEMENT_DET.jpg')">
+                    <img src="https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2403_CARRELAGE-DESALIGNEMENT_DET.webp" alt="2403_CARRELAGE-DESALIGNEMENT_DET.jpg" loading="lazy">
+                    <div class="image-info">
+                        <h4>Carrelage Desalignement</h4>
+                        <span class="view-badge">DET</span>
+                        <p><strong>ID:</strong> 2403 | <strong>Phase:</strong> sinistre</p>
+                        <p style="margin-top: 0.5rem; font-style: italic;">Focus sur défaut spécifique</p>
+                    </div>
+                </div>
+            
+                <div class="image-card" onclick="openImage('https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2404_CARRELAGE-DESALIGNEMENT_DET.jpg')">
+                    <img src="https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2404_CARRELAGE-DESALIGNEMENT_DET.webp" alt="2404_CARRELAGE-DESALIGNEMENT_DET.jpg" loading="lazy">
+                    <div class="image-info">
+                        <h4>Carrelage Desalignement</h4>
+                        <span class="view-badge">DET</span>
+                        <p><strong>ID:</strong> 2404 | <strong>Phase:</strong> sinistre</p>
+                        <p style="margin-top: 0.5rem; font-style: italic;">Focus sur défaut spécifique</p>
+                    </div>
+                </div>
+            
+                <div class="image-card" onclick="openImage('https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2405_CARRELAGE-DESALIGNEMENT_DET.jpg')">
+                    <img src="https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2405_CARRELAGE-DESALIGNEMENT_DET.webp" alt="2405_CARRELAGE-DESALIGNEMENT_DET.jpg" loading="lazy">
+                    <div class="image-info">
+                        <h4>Carrelage Desalignement</h4>
+                        <span class="view-badge">DET</span>
+                        <p><strong>ID:</strong> 2405 | <strong>Phase:</strong> sinistre</p>
+                        <p style="margin-top: 0.5rem; font-style: italic;">Focus sur défaut spécifique</p>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="category-section" data-category="REVETEMENTS">
+            <div class="category-header">
+                <h2>Revêtements</h2>
+                <div class="category-meta">
+                    <span class="meta-tag">📋 6 exemples</span>
+                    <span class="meta-tag">📚 DTU 59.3, DTU 59.1</span>
+                    <span class="meta-tag">⚠️ Sévérité: MINEUR / MAJEUR</span>
+                </div>
+            </div>
+
+            <div class="learning-objectives">
+                <h3>🎯 Objectifs Pédagogiques</h3>
+                <ul>
+                    <li>Diagnostiquer causes de dégradation</li><li>Distinguer problème esthétique vs structurel</li><li>Identifier solutions de réparation adaptées</li>
+                </ul>
+            </div>
+
+            <div class="image-gallery">
+        
+                <div class="image-card" onclick="openImage('https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2402_BAGUETTE-BOIS_DET.jpg')">
+                    <img src="https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2402_BAGUETTE-BOIS_DET.webp" alt="2402_BAGUETTE-BOIS_DET.jpg" loading="lazy">
+                    <div class="image-info">
+                        <h4>Baguette Bois</h4>
+                        <span class="view-badge">DET</span>
+                        <p><strong>ID:</strong> 2402 | <strong>Phase:</strong> sinistre</p>
+                        <p style="margin-top: 0.5rem; font-style: italic;">Focus sur défaut spécifique</p>
+                    </div>
+                </div>
+            
+                <div class="image-card" onclick="openImage('https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2406_BAGUETTE-BOIS_DET.jpg')">
+                    <img src="https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2406_BAGUETTE-BOIS_DET.webp" alt="2406_BAGUETTE-BOIS_DET.jpg" loading="lazy">
+                    <div class="image-info">
+                        <h4>Baguette Bois</h4>
+                        <span class="view-badge">DET</span>
+                        <p><strong>ID:</strong> 2406 | <strong>Phase:</strong> sinistre</p>
+                        <p style="margin-top: 0.5rem; font-style: italic;">Focus sur défaut spécifique</p>
+                    </div>
+                </div>
+            
+                <div class="image-card" onclick="openImage('https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2902_BAGUETTES-BOIS_DEG.jpg')">
+                    <img src="https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2902_BAGUETTES-BOIS_DEG.webp" alt="2902_BAGUETTES-BOIS_DEG.jpg" loading="lazy">
+                    <div class="image-info">
+                        <h4>Baguettes Bois</h4>
+                        <span class="view-badge">DEG</span>
+                        <p><strong>ID:</strong> 2902 | <strong>Phase:</strong> sinistre</p>
+                        <p style="margin-top: 0.5rem; font-style: italic;">Vue dégagée sans obstacles</p>
+                    </div>
+                </div>
+            
+                <div class="image-card" onclick="openImage('https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2903_DECOR-BOIS_DEG.jpg')">
+                    <img src="https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2903_DECOR-BOIS_DEG.webp" alt="2903_DECOR-BOIS_DEG.jpg" loading="lazy">
+                    <div class="image-info">
+                        <h4>Decor Bois</h4>
+                        <span class="view-badge">DEG</span>
+                        <p><strong>ID:</strong> 2903 | <strong>Phase:</strong> sinistre</p>
+                        <p style="margin-top: 0.5rem; font-style: italic;">Vue dégagée sans obstacles</p>
+                    </div>
+                </div>
+            
+                <div class="image-card" onclick="openImage('https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2904_DECOR-BOIS_DEG.jpg')">
+                    <img src="https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2904_DECOR-BOIS_DEG.webp" alt="2904_DECOR-BOIS_DEG.jpg" loading="lazy">
+                    <div class="image-info">
+                        <h4>Decor Bois</h4>
+                        <span class="view-badge">DEG</span>
+                        <p><strong>ID:</strong> 2904 | <strong>Phase:</strong> sinistre</p>
+                        <p style="margin-top: 0.5rem; font-style: italic;">Vue dégagée sans obstacles</p>
+                    </div>
+                </div>
+            
+                <div class="image-card" onclick="openImage('https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2905_DECOR-BOIS_DEG.jpg')">
+                    <img src="https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2905_DECOR-BOIS_DEG.webp" alt="2905_DECOR-BOIS_DEG.jpg" loading="lazy">
+                    <div class="image-info">
+                        <h4>Decor Bois</h4>
+                        <span class="view-badge">DEG</span>
+                        <p><strong>ID:</strong> 2905 | <strong>Phase:</strong> sinistre</p>
+                        <p style="margin-top: 0.5rem; font-style: italic;">Vue dégagée sans obstacles</p>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="footer">
+        <p><strong>ArBot Vision Boost Pro Plus</strong> | Généré le 2025-11-11</p>
+        <p style="margin-top: 0.5rem; color: #999;">
+            Document pédagogique pour formation professionnelle aux diagnostics de défauts en rénovation
+        </p>
+    </div>
+
+    <!-- Modal for image zoom -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        function openImage(url) {
+            document.getElementById('imageModal').style.display = 'block';
+            document.getElementById('modalImage').src = url;
+        }
+
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+
+        function searchCatalog() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const sections = document.querySelectorAll('.category-section');
+
+            sections.forEach(section => {
+                const text = section.textContent.toLowerCase();
+                section.style.display = text.includes(input) ? 'block' : 'none';
+            });
+        }
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
+    </script>
+</body>
+</html>

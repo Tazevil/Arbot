@@ -1,0 +1,1184 @@
+{
+  "meta": {
+    "name": "Catalogue de Formation - Défauts Rénovation Salle de Bain",
+    "version": "1.0.0",
+    "total_images": 94,
+    "selected_examples": 55,
+    "defect_categories": 6,
+    "pedagogical_progression": "Général → Détail → Macro",
+    "target_audience": "Professionnels du bâtiment, experts sinistres, inspecteurs"
+  },
+  "taxonomy": {
+    "CARRELAGE": {
+      "name_fr": "Carrelage",
+      "subcategories": {
+        "DESALIGNEMENT": "Désalignement / Planéité",
+        "FISSURE": "Fissures et cassures",
+        "DECOLLEMENT": "Décollement / Délamination",
+        "JOINT_INEGAL": "Joints irréguliers"
+      },
+      "severity_range": [
+        "MINEUR",
+        "MAJEUR",
+        "CRITIQUE"
+      ],
+      "dtu_refs": [
+        "DTU 52.2",
+        "DTU 25.41"
+      ],
+      "learning_objectives": [
+        "Identifier défauts de pose sur carrelage mural et sol",
+        "Évaluer l'adhérence et la planéité",
+        "Détecter signes avant-coureurs de délamination"
+      ]
+    },
+    "JOINTS": {
+      "name_fr": "Joints",
+      "subcategories": {
+        "SILICONE": "Joints silicone dégradés",
+        "CIMENT": "Joints ciment fissurés",
+        "ABSENCE": "Joints manquants",
+        "MOISISSURE": "Joints moisis"
+      },
+      "severity_range": [
+        "MINEUR",
+        "MAJEUR",
+        "CRITIQUE"
+      ],
+      "dtu_refs": [
+        "DTU 52.2",
+        "DTU 59.1"
+      ],
+      "learning_objectives": [
+        "Différencier joints silicone vs ciment",
+        "Identifier dégradations liées à l'humidité",
+        "Évaluer nécessité de réfection"
+      ]
+    },
+    "PLOMBERIE": {
+      "name_fr": "Plomberie",
+      "subcategories": {
+        "FUITE": "Fuites et infiltrations",
+        "CORROSION": "Corrosion des raccords",
+        "EVACUATION": "Problèmes d'évacuation",
+        "ALIMENTATION": "Défauts d'alimentation"
+      },
+      "severity_range": [
+        "MAJEUR",
+        "CRITIQUE"
+      ],
+      "dtu_refs": [
+        "DTU 60.1",
+        "DTU 60.11"
+      ],
+      "learning_objectives": [
+        "Identifier signes de corrosion sur tuyauterie",
+        "Évaluer conformité des raccords",
+        "Détecter fuites actives vs anciennes"
+      ]
+    },
+    "ETANCHEITE": {
+      "name_fr": "Étanchéité",
+      "subcategories": {
+        "MEMBRANE": "Membrane déchirée/dégradée",
+        "INFILTRATION": "Infiltrations d'eau",
+        "SIPHON": "Siphon de sol défaillant",
+        "ANGLE": "Angles non protégés"
+      },
+      "severity_range": [
+        "MAJEUR",
+        "CRITIQUE"
+      ],
+      "dtu_refs": [
+        "DTU 52.2 Art. 4",
+        "DTU 25.41"
+      ],
+      "learning_objectives": [
+        "Reconnaître membranes d'étanchéité conformes",
+        "Identifier zones à risque (angles, pénétrations)",
+        "Évaluer impact sur structure bâtiment"
+      ]
+    },
+    "REVETEMENTS": {
+      "name_fr": "Revêtements",
+      "subcategories": {
+        "PEINTURE": "Peinture écaillée/dégradée",
+        "ENDUIT": "Enduit décollé",
+        "HUMIDITE": "Traces d'humidité",
+        "MOISISSURE": "Moisissures visibles"
+      },
+      "severity_range": [
+        "MINEUR",
+        "MAJEUR"
+      ],
+      "dtu_refs": [
+        "DTU 59.3",
+        "DTU 59.1"
+      ],
+      "learning_objectives": [
+        "Diagnostiquer causes de dégradation",
+        "Distinguer problème esthétique vs structurel",
+        "Identifier solutions de réparation adaptées"
+      ]
+    },
+    "ELECTRICITE": {
+      "name_fr": "Électricité",
+      "subcategories": {
+        "VOLUME": "Non-respect des volumes",
+        "PROTECTION": "Protection IP insuffisante",
+        "INSTALLATION": "Installation non conforme"
+      },
+      "severity_range": [
+        "CRITIQUE"
+      ],
+      "dtu_refs": [
+        "NF C 15-100",
+        "DTU 60.33"
+      ],
+      "learning_objectives": [
+        "Connaître volumes de sécurité (0, 1, 2)",
+        "Identifier installations dangereuses",
+        "Évaluer conformité NF C 15-100"
+      ]
+    }
+  },
+  "view_types": {
+    "GEN": {
+      "name": "Vue Générale",
+      "use": "Vision d'ensemble, contexte spatial"
+    },
+    "DET": {
+      "name": "Vue Détail",
+      "use": "Focus sur défaut spécifique"
+    },
+    "MAC": {
+      "name": "Macro",
+      "use": "Analyse microscopique du défaut"
+    },
+    "MGM": {
+      "name": "Moyenne Macro",
+      "use": "Détail intermédiaire"
+    },
+    "MGS": {
+      "name": "Super Macro",
+      "use": "Détail maximum"
+    },
+    "MGP": {
+      "name": "Macro Panoramique",
+      "use": "Large zone en détail"
+    },
+    "MGB": {
+      "name": "Macro Basique",
+      "use": "Détail simple"
+    },
+    "DEG": {
+      "name": "Vue Dégagée",
+      "use": "Vue dégagée sans obstacles"
+    },
+    "PAN": {
+      "name": "Panoramique",
+      "use": "Vue à 360°"
+    }
+  },
+  "categories": {
+    "ETANCHEITE": {
+      "name": "Étanchéité",
+      "subcategories": {
+        "MEMBRANE": "Membrane déchirée/dégradée",
+        "INFILTRATION": "Infiltrations d'eau",
+        "SIPHON": "Siphon de sol défaillant",
+        "ANGLE": "Angles non protégés"
+      },
+      "dtu_references": [
+        "DTU 52.2 Art. 4",
+        "DTU 25.41"
+      ],
+      "learning_objectives": [
+        "Reconnaître membranes d'étanchéité conformes",
+        "Identifier zones à risque (angles, pénétrations)",
+        "Évaluer impact sur structure bâtiment"
+      ],
+      "severity_range": [
+        "MAJEUR",
+        "CRITIQUE"
+      ],
+      "images": [
+        {
+          "id": "2201",
+          "filename": "2201_APPUI_DET.jpg",
+          "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2201_APPUI_DET.jpg",
+          "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2201_APPUI_DET.webp",
+          "view_type": "DET",
+          "view_type_description": "Focus sur défaut spécifique",
+          "zone": "APPUI",
+          "phase": "sinistre",
+          "date": null,
+          "roi_hints": [
+            {
+              "x": 0.39,
+              "y": 0.39,
+              "w": 0.22,
+              "h": 0.22
+            }
+          ],
+          "pedagogical_use": "Exemple det de défaut etancheite"
+        },
+        {
+          "id": "2203",
+          "filename": "2203_APPUI_DET.jpg",
+          "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2203_APPUI_DET.jpg",
+          "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2203_APPUI_DET.webp",
+          "view_type": "DET",
+          "view_type_description": "Focus sur défaut spécifique",
+          "zone": "APPUI",
+          "phase": "sinistre",
+          "date": null,
+          "roi_hints": [
+            {
+              "x": 0.39,
+              "y": 0.39,
+              "w": 0.22,
+              "h": 0.22
+            }
+          ],
+          "pedagogical_use": "Exemple det de défaut etancheite"
+        },
+        {
+          "id": "2206",
+          "filename": "2206_APPUI_DET.jpg",
+          "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2206_APPUI_DET.jpg",
+          "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2206_APPUI_DET.webp",
+          "view_type": "DET",
+          "view_type_description": "Focus sur défaut spécifique",
+          "zone": "APPUI",
+          "phase": "sinistre",
+          "date": null,
+          "roi_hints": [
+            {
+              "x": 0.39,
+              "y": 0.39,
+              "w": 0.22,
+              "h": 0.22
+            }
+          ],
+          "pedagogical_use": "Exemple det de défaut etancheite"
+        },
+        {
+          "id": "2207",
+          "filename": "2207_APPUI_DET.jpg",
+          "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2207_APPUI_DET.jpg",
+          "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2207_APPUI_DET.webp",
+          "view_type": "DET",
+          "view_type_description": "Focus sur défaut spécifique",
+          "zone": "APPUI",
+          "phase": "sinistre",
+          "date": null,
+          "roi_hints": [
+            {
+              "x": 0.39,
+              "y": 0.39,
+              "w": 0.22,
+              "h": 0.22
+            }
+          ],
+          "pedagogical_use": "Exemple det de défaut etancheite"
+        },
+        {
+          "id": "2204",
+          "filename": "2204_APPUI_MAC.jpg",
+          "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2204_APPUI_MAC.jpg",
+          "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2204_APPUI_MAC.webp",
+          "view_type": "MAC",
+          "view_type_description": "Analyse microscopique du défaut",
+          "zone": "APPUI",
+          "phase": "sinistre",
+          "date": null,
+          "roi_hints": [
+            {
+              "x": 0.35,
+              "y": 0.35,
+              "w": 0.3,
+              "h": 0.3
+            }
+          ],
+          "pedagogical_use": "Exemple mac de défaut etancheite"
+        },
+        {
+          "id": "2205",
+          "filename": "2205_APPUI_MAC.jpg",
+          "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2205_APPUI_MAC.jpg",
+          "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2205_APPUI_MAC.webp",
+          "view_type": "MAC",
+          "view_type_description": "Analyse microscopique du défaut",
+          "zone": "APPUI",
+          "phase": "sinistre",
+          "date": null,
+          "roi_hints": [
+            {
+              "x": 0.35,
+              "y": 0.35,
+              "w": 0.3,
+              "h": 0.3
+            }
+          ],
+          "pedagogical_use": "Exemple mac de défaut etancheite"
+        },
+        {
+          "id": "2002",
+          "filename": "2002_BAIGNOIRE_GEN.jpg",
+          "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2002_BAIGNOIRE_GEN.jpg",
+          "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2002_BAIGNOIRE_GEN.webp",
+          "view_type": "GEN",
+          "view_type_description": "Vision d'ensemble, contexte spatial",
+          "zone": "BAIGNOIRE",
+          "phase": "sinistre",
+          "date": null,
+          "roi_hints": [
+            {
+              "x": 0.325,
+              "y": 0.325,
+              "w": 0.35,
+              "h": 0.35
+            }
+          ],
+          "pedagogical_use": "Exemple gen de défaut etancheite"
+        },
+        {
+          "id": "2003",
+          "filename": "2003_BAIGNOIRE_GEN.jpg",
+          "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2003_BAIGNOIRE_GEN.jpg",
+          "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2003_BAIGNOIRE_GEN.webp",
+          "view_type": "GEN",
+          "view_type_description": "Vision d'ensemble, contexte spatial",
+          "zone": "BAIGNOIRE",
+          "phase": "sinistre",
+          "date": null,
+          "roi_hints": [
+            {
+              "x": 0.325,
+              "y": 0.325,
+              "w": 0.35,
+              "h": 0.35
+            }
+          ],
+          "pedagogical_use": "Exemple gen de défaut etancheite"
+        }
+      ]
+    },
+    "PLOMBERIE": {
+      "name": "Plomberie",
+      "subcategories": {
+        "FUITE": "Fuites et infiltrations",
+        "CORROSION": "Corrosion des raccords",
+        "EVACUATION": "Problèmes d'évacuation",
+        "ALIMENTATION": "Défauts d'alimentation"
+      },
+      "dtu_references": [
+        "DTU 60.1",
+        "DTU 60.11"
+      ],
+      "learning_objectives": [
+        "Identifier signes de corrosion sur tuyauterie",
+        "Évaluer conformité des raccords",
+        "Détecter fuites actives vs anciennes"
+      ],
+      "severity_range": [
+        "MAJEUR",
+        "CRITIQUE"
+      ],
+      "images": [
+        {
+          "id": "2101",
+          "filename": "2101_ALIMENTATION-EVACUATION_DET.jpg",
+          "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2101_ALIMENTATION-EVACUATION_DET.jpg",
+          "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2101_ALIMENTATION-EVACUATION_DET.webp",
+          "view_type": "DET",
+          "view_type_description": "Focus sur défaut spécifique",
+          "zone": "ALIMENTATION-EVACUATION",
+          "phase": "sinistre",
+          "date": null,
+          "roi_hints": [
+            {
+              "x": 0.39,
+              "y": 0.39,
+              "w": 0.22,
+              "h": 0.22
+            }
+          ],
+          "pedagogical_use": "Exemple det de défaut plomberie"
+        },
+        {
+          "id": "2102",
+          "filename": "2102_EVACUATION_DET.jpg",
+          "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2102_EVACUATION_DET.jpg",
+          "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2102_EVACUATION_DET.webp",
+          "view_type": "DET",
+          "view_type_description": "Focus sur défaut spécifique",
+          "zone": "EVACUATION",
+          "phase": "sinistre",
+          "date": null,
+          "roi_hints": [
+            {
+              "x": 0.39,
+              "y": 0.39,
+              "w": 0.22,
+              "h": 0.22
+            }
+          ],
+          "pedagogical_use": "Exemple det de défaut plomberie"
+        },
+        {
+          "id": "2105",
+          "filename": "2105_ALIMENTATION-EVACUATION_DET.jpg",
+          "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2105_ALIMENTATION-EVACUATION_DET.jpg",
+          "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2105_ALIMENTATION-EVACUATION_DET.webp",
+          "view_type": "DET",
+          "view_type_description": "Focus sur défaut spécifique",
+          "zone": "ALIMENTATION-EVACUATION",
+          "phase": "sinistre",
+          "date": null,
+          "roi_hints": [
+            {
+              "x": 0.39,
+              "y": 0.39,
+              "w": 0.22,
+              "h": 0.22
+            }
+          ],
+          "pedagogical_use": "Exemple det de défaut plomberie"
+        },
+        {
+          "id": "2108",
+          "filename": "2108_EVACUATION_DET.jpg",
+          "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2108_EVACUATION_DET.jpg",
+          "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2108_EVACUATION_DET.webp",
+          "view_type": "DET",
+          "view_type_description": "Focus sur défaut spécifique",
+          "zone": "EVACUATION",
+          "phase": "sinistre",
+          "date": null,
+          "roi_hints": [
+            {
+              "x": 0.39,
+              "y": 0.39,
+              "w": 0.22,
+              "h": 0.22
+            }
+          ],
+          "pedagogical_use": "Exemple det de défaut plomberie"
+        },
+        {
+          "id": "2109",
+          "filename": "2109_ALIMENTATION-EVACUATION_DET.jpg",
+          "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2109_ALIMENTATION-EVACUATION_DET.jpg",
+          "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2109_ALIMENTATION-EVACUATION_DET.webp",
+          "view_type": "DET",
+          "view_type_description": "Focus sur défaut spécifique",
+          "zone": "ALIMENTATION-EVACUATION",
+          "phase": "sinistre",
+          "date": null,
+          "roi_hints": [
+            {
+              "x": 0.39,
+              "y": 0.39,
+              "w": 0.22,
+              "h": 0.22
+            }
+          ],
+          "pedagogical_use": "Exemple det de défaut plomberie"
+        },
+        {
+          "id": "2112",
+          "filename": "2112_MITIGEUR-BAIN_DET.jpg",
+          "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2112_MITIGEUR-BAIN_DET.jpg",
+          "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2112_MITIGEUR-BAIN_DET.webp",
+          "view_type": "DET",
+          "view_type_description": "Focus sur défaut spécifique",
+          "zone": "MITIGEUR-BAIN",
+          "phase": "sinistre",
+          "date": null,
+          "roi_hints": [
+            {
+              "x": 0.39,
+              "y": 0.39,
+              "w": 0.22,
+              "h": 0.22
+            }
+          ],
+          "pedagogical_use": "Exemple det de défaut plomberie"
+        },
+        {
+          "id": "2116",
+          "filename": "2116_MITIGEUR-BAIN_DET.jpg",
+          "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2116_MITIGEUR-BAIN_DET.jpg",
+          "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2116_MITIGEUR-BAIN_DET.webp",
+          "view_type": "DET",
+          "view_type_description": "Focus sur défaut spécifique",
+          "zone": "MITIGEUR-BAIN",
+          "phase": "sinistre",
+          "date": null,
+          "roi_hints": [
+            {
+              "x": 0.39,
+              "y": 0.39,
+              "w": 0.22,
+              "h": 0.22
+            }
+          ],
+          "pedagogical_use": "Exemple det de défaut plomberie"
+        },
+        {
+          "id": "2103",
+          "filename": "2103_EVACUATION_MAC.jpg",
+          "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2103_EVACUATION_MAC.jpg",
+          "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2103_EVACUATION_MAC.webp",
+          "view_type": "MAC",
+          "view_type_description": "Analyse microscopique du défaut",
+          "zone": "EVACUATION",
+          "phase": "sinistre",
+          "date": null,
+          "roi_hints": [
+            {
+              "x": 0.35,
+              "y": 0.35,
+              "w": 0.3,
+              "h": 0.3
+            }
+          ],
+          "pedagogical_use": "Exemple mac de défaut plomberie"
+        }
+      ]
+    },
+    "JOINTS": {
+      "name": "Joints",
+      "subcategories": {
+        "SILICONE": "Joints silicone dégradés",
+        "CIMENT": "Joints ciment fissurés",
+        "ABSENCE": "Joints manquants",
+        "MOISISSURE": "Joints moisis"
+      },
+      "dtu_references": [
+        "DTU 52.2",
+        "DTU 59.1"
+      ],
+      "learning_objectives": [
+        "Différencier joints silicone vs ciment",
+        "Identifier dégradations liées à l'humidité",
+        "Évaluer nécessité de réfection"
+      ],
+      "severity_range": [
+        "MINEUR",
+        "MAJEUR",
+        "CRITIQUE"
+      ],
+      "images": [
+        {
+          "id": "3601",
+          "filename": "3601_JOINT_DET.jpg",
+          "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/3601_JOINT_DET.jpg",
+          "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/3601_JOINT_DET.webp",
+          "view_type": "DET",
+          "view_type_description": "Focus sur défaut spécifique",
+          "zone": "JOINT",
+          "phase": "sinistre",
+          "date": null,
+          "roi_hints": [
+            {
+              "x": 0.39,
+              "y": 0.39,
+              "w": 0.22,
+              "h": 0.22
+            }
+          ],
+          "pedagogical_use": "Exemple det de défaut joints"
+        },
+        {
+          "id": "3602",
+          "filename": "3602_JOINT_DET.jpg",
+          "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/3602_JOINT_DET.jpg",
+          "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/3602_JOINT_DET.webp",
+          "view_type": "DET",
+          "view_type_description": "Focus sur défaut spécifique",
+          "zone": "JOINT",
+          "phase": "sinistre",
+          "date": null,
+          "roi_hints": [
+            {
+              "x": 0.39,
+              "y": 0.39,
+              "w": 0.22,
+              "h": 0.22
+            }
+          ],
+          "pedagogical_use": "Exemple det de défaut joints"
+        },
+        {
+          "id": "3603",
+          "filename": "3603_JOINT_DET.jpg",
+          "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/3603_JOINT_DET.jpg",
+          "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/3603_JOINT_DET.webp",
+          "view_type": "DET",
+          "view_type_description": "Focus sur défaut spécifique",
+          "zone": "JOINT",
+          "phase": "sinistre",
+          "date": null,
+          "roi_hints": [
+            {
+              "x": 0.39,
+              "y": 0.39,
+              "w": 0.22,
+              "h": 0.22
+            }
+          ],
+          "pedagogical_use": "Exemple det de défaut joints"
+        },
+        {
+          "id": "2202",
+          "filename": "2202_JOINT_MAC.jpg",
+          "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2202_JOINT_MAC.jpg",
+          "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2202_JOINT_MAC.webp",
+          "view_type": "MAC",
+          "view_type_description": "Analyse microscopique du défaut",
+          "zone": "JOINT",
+          "phase": "sinistre",
+          "date": null,
+          "roi_hints": [
+            {
+              "x": 0.35,
+              "y": 0.35,
+              "w": 0.3,
+              "h": 0.3
+            }
+          ],
+          "pedagogical_use": "Exemple mac de défaut joints"
+        },
+        {
+          "id": "2312",
+          "filename": "2312_JOINT_MAC.jpg",
+          "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2312_JOINT_MAC.jpg",
+          "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2312_JOINT_MAC.webp",
+          "view_type": "MAC",
+          "view_type_description": "Analyse microscopique du défaut",
+          "zone": "JOINT",
+          "phase": "sinistre",
+          "date": null,
+          "roi_hints": [
+            {
+              "x": 0.35,
+              "y": 0.35,
+              "w": 0.3,
+              "h": 0.3
+            }
+          ],
+          "pedagogical_use": "Exemple mac de défaut joints"
+        },
+        {
+          "id": "2301",
+          "filename": "2301_JOINT_MGM.jpg",
+          "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2301_JOINT_MGM.jpg",
+          "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2301_JOINT_MGM.webp",
+          "view_type": "MGM",
+          "view_type_description": "Détail intermédiaire",
+          "zone": "JOINT",
+          "phase": "sinistre",
+          "date": null,
+          "roi_hints": [
+            {
+              "x": 0.35,
+              "y": 0.35,
+              "w": 0.3,
+              "h": 0.3
+            }
+          ],
+          "pedagogical_use": "Exemple mgm de défaut joints"
+        },
+        {
+          "id": "2302",
+          "filename": "2302_JOINT_MGM.jpg",
+          "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2302_JOINT_MGM.jpg",
+          "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2302_JOINT_MGM.webp",
+          "view_type": "MGM",
+          "view_type_description": "Détail intermédiaire",
+          "zone": "JOINT",
+          "phase": "sinistre",
+          "date": null,
+          "roi_hints": [
+            {
+              "x": 0.35,
+              "y": 0.35,
+              "w": 0.3,
+              "h": 0.3
+            }
+          ],
+          "pedagogical_use": "Exemple mgm de défaut joints"
+        },
+        {
+          "id": "2303",
+          "filename": "2303_JOINT_MGM.jpg",
+          "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2303_JOINT_MGM.jpg",
+          "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2303_JOINT_MGM.webp",
+          "view_type": "MGM",
+          "view_type_description": "Détail intermédiaire",
+          "zone": "JOINT",
+          "phase": "sinistre",
+          "date": null,
+          "roi_hints": [
+            {
+              "x": 0.35,
+              "y": 0.35,
+              "w": 0.3,
+              "h": 0.3
+            }
+          ],
+          "pedagogical_use": "Exemple mgm de défaut joints"
+        }
+      ]
+    },
+    "ELECTRICITE": {
+      "name": "Électricité",
+      "subcategories": {
+        "VOLUME": "Non-respect des volumes",
+        "PROTECTION": "Protection IP insuffisante",
+        "INSTALLATION": "Installation non conforme"
+      },
+      "dtu_references": [
+        "NF C 15-100",
+        "DTU 60.33"
+      ],
+      "learning_objectives": [
+        "Connaître volumes de sécurité (0, 1, 2)",
+        "Identifier installations dangereuses",
+        "Évaluer conformité NF C 15-100"
+      ],
+      "severity_range": [
+        "CRITIQUE"
+      ],
+      "images": [
+        {
+          "id": "2304",
+          "filename": "2304_INTERRUPTEUR-PRISE_MAC.jpg",
+          "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2304_INTERRUPTEUR-PRISE_MAC.jpg",
+          "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2304_INTERRUPTEUR-PRISE_MAC.webp",
+          "view_type": "MAC",
+          "view_type_description": "Analyse microscopique du défaut",
+          "zone": "INTERRUPTEUR-PRISE",
+          "phase": "sinistre",
+          "date": null,
+          "roi_hints": [
+            {
+              "x": 0.35,
+              "y": 0.35,
+              "w": 0.3,
+              "h": 0.3
+            }
+          ],
+          "pedagogical_use": "Exemple mac de défaut electricite"
+        },
+        {
+          "id": "2505",
+          "filename": "2505_SPOT_DEG.jpg",
+          "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2505_SPOT_DEG.jpg",
+          "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2505_SPOT_DEG.webp",
+          "view_type": "DEG",
+          "view_type_description": "Vue dégagée sans obstacles",
+          "zone": "SPOT",
+          "phase": "sinistre",
+          "date": null,
+          "roi_hints": [
+            {
+              "x": 0.35,
+              "y": 0.35,
+              "w": 0.3,
+              "h": 0.3
+            }
+          ],
+          "pedagogical_use": "Exemple deg de défaut electricite"
+        },
+        {
+          "id": "2506",
+          "filename": "2506_SPOT-VMC_DEG.jpg",
+          "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2506_SPOT-VMC_DEG.jpg",
+          "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2506_SPOT-VMC_DEG.webp",
+          "view_type": "DEG",
+          "view_type_description": "Vue dégagée sans obstacles",
+          "zone": "SPOT-VMC",
+          "phase": "sinistre",
+          "date": null,
+          "roi_hints": [
+            {
+              "x": 0.35,
+              "y": 0.35,
+              "w": 0.3,
+              "h": 0.3
+            }
+          ],
+          "pedagogical_use": "Exemple deg de défaut electricite"
+        }
+      ]
+    },
+    "CARRELAGE": {
+      "name": "Carrelage",
+      "subcategories": {
+        "DESALIGNEMENT": "Désalignement / Planéité",
+        "FISSURE": "Fissures et cassures",
+        "DECOLLEMENT": "Décollement / Délamination",
+        "JOINT_INEGAL": "Joints irréguliers"
+      },
+      "dtu_references": [
+        "DTU 52.2",
+        "DTU 25.41"
+      ],
+      "learning_objectives": [
+        "Identifier défauts de pose sur carrelage mural et sol",
+        "Évaluer l'adhérence et la planéité",
+        "Détecter signes avant-coureurs de délamination"
+      ],
+      "severity_range": [
+        "MINEUR",
+        "MAJEUR",
+        "CRITIQUE"
+      ],
+      "images": [
+        {
+          "id": "2401",
+          "filename": "2401_CARRELAGE-DESALIGNEMENT_DET.jpg",
+          "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2401_CARRELAGE-DESALIGNEMENT_DET.jpg",
+          "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2401_CARRELAGE-DESALIGNEMENT_DET.webp",
+          "view_type": "DET",
+          "view_type_description": "Focus sur défaut spécifique",
+          "zone": "CARRELAGE-DESALIGNEMENT",
+          "phase": "sinistre",
+          "date": null,
+          "roi_hints": [
+            {
+              "x": 0.39,
+              "y": 0.39,
+              "w": 0.22,
+              "h": 0.22
+            }
+          ],
+          "pedagogical_use": "Exemple det de défaut carrelage"
+        },
+        {
+          "id": "2403",
+          "filename": "2403_CARRELAGE-DESALIGNEMENT_DET.jpg",
+          "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2403_CARRELAGE-DESALIGNEMENT_DET.jpg",
+          "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2403_CARRELAGE-DESALIGNEMENT_DET.webp",
+          "view_type": "DET",
+          "view_type_description": "Focus sur défaut spécifique",
+          "zone": "CARRELAGE-DESALIGNEMENT",
+          "phase": "sinistre",
+          "date": null,
+          "roi_hints": [
+            {
+              "x": 0.39,
+              "y": 0.39,
+              "w": 0.22,
+              "h": 0.22
+            }
+          ],
+          "pedagogical_use": "Exemple det de défaut carrelage"
+        },
+        {
+          "id": "2404",
+          "filename": "2404_CARRELAGE-DESALIGNEMENT_DET.jpg",
+          "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2404_CARRELAGE-DESALIGNEMENT_DET.jpg",
+          "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2404_CARRELAGE-DESALIGNEMENT_DET.webp",
+          "view_type": "DET",
+          "view_type_description": "Focus sur défaut spécifique",
+          "zone": "CARRELAGE-DESALIGNEMENT",
+          "phase": "sinistre",
+          "date": null,
+          "roi_hints": [
+            {
+              "x": 0.39,
+              "y": 0.39,
+              "w": 0.22,
+              "h": 0.22
+            }
+          ],
+          "pedagogical_use": "Exemple det de défaut carrelage"
+        },
+        {
+          "id": "2405",
+          "filename": "2405_CARRELAGE-DESALIGNEMENT_DET.jpg",
+          "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2405_CARRELAGE-DESALIGNEMENT_DET.jpg",
+          "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2405_CARRELAGE-DESALIGNEMENT_DET.webp",
+          "view_type": "DET",
+          "view_type_description": "Focus sur défaut spécifique",
+          "zone": "CARRELAGE-DESALIGNEMENT",
+          "phase": "sinistre",
+          "date": null,
+          "roi_hints": [
+            {
+              "x": 0.39,
+              "y": 0.39,
+              "w": 0.22,
+              "h": 0.22
+            }
+          ],
+          "pedagogical_use": "Exemple det de défaut carrelage"
+        }
+      ]
+    },
+    "REVETEMENTS": {
+      "name": "Revêtements",
+      "subcategories": {
+        "PEINTURE": "Peinture écaillée/dégradée",
+        "ENDUIT": "Enduit décollé",
+        "HUMIDITE": "Traces d'humidité",
+        "MOISISSURE": "Moisissures visibles"
+      },
+      "dtu_references": [
+        "DTU 59.3",
+        "DTU 59.1"
+      ],
+      "learning_objectives": [
+        "Diagnostiquer causes de dégradation",
+        "Distinguer problème esthétique vs structurel",
+        "Identifier solutions de réparation adaptées"
+      ],
+      "severity_range": [
+        "MINEUR",
+        "MAJEUR"
+      ],
+      "images": [
+        {
+          "id": "2402",
+          "filename": "2402_BAGUETTE-BOIS_DET.jpg",
+          "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2402_BAGUETTE-BOIS_DET.jpg",
+          "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2402_BAGUETTE-BOIS_DET.webp",
+          "view_type": "DET",
+          "view_type_description": "Focus sur défaut spécifique",
+          "zone": "BAGUETTE-BOIS",
+          "phase": "sinistre",
+          "date": null,
+          "roi_hints": [
+            {
+              "x": 0.39,
+              "y": 0.39,
+              "w": 0.22,
+              "h": 0.22
+            }
+          ],
+          "pedagogical_use": "Exemple det de défaut revetements"
+        },
+        {
+          "id": "2406",
+          "filename": "2406_BAGUETTE-BOIS_DET.jpg",
+          "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2406_BAGUETTE-BOIS_DET.jpg",
+          "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2406_BAGUETTE-BOIS_DET.webp",
+          "view_type": "DET",
+          "view_type_description": "Focus sur défaut spécifique",
+          "zone": "BAGUETTE-BOIS",
+          "phase": "sinistre",
+          "date": null,
+          "roi_hints": [
+            {
+              "x": 0.39,
+              "y": 0.39,
+              "w": 0.22,
+              "h": 0.22
+            }
+          ],
+          "pedagogical_use": "Exemple det de défaut revetements"
+        },
+        {
+          "id": "2902",
+          "filename": "2902_BAGUETTES-BOIS_DEG.jpg",
+          "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2902_BAGUETTES-BOIS_DEG.jpg",
+          "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2902_BAGUETTES-BOIS_DEG.webp",
+          "view_type": "DEG",
+          "view_type_description": "Vue dégagée sans obstacles",
+          "zone": "BAGUETTES-BOIS",
+          "phase": "sinistre",
+          "date": null,
+          "roi_hints": [
+            {
+              "x": 0.35,
+              "y": 0.35,
+              "w": 0.3,
+              "h": 0.3
+            }
+          ],
+          "pedagogical_use": "Exemple deg de défaut revetements"
+        },
+        {
+          "id": "2903",
+          "filename": "2903_DECOR-BOIS_DEG.jpg",
+          "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2903_DECOR-BOIS_DEG.jpg",
+          "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2903_DECOR-BOIS_DEG.webp",
+          "view_type": "DEG",
+          "view_type_description": "Vue dégagée sans obstacles",
+          "zone": "DECOR-BOIS",
+          "phase": "sinistre",
+          "date": null,
+          "roi_hints": [
+            {
+              "x": 0.35,
+              "y": 0.35,
+              "w": 0.3,
+              "h": 0.3
+            }
+          ],
+          "pedagogical_use": "Exemple deg de défaut revetements"
+        },
+        {
+          "id": "2904",
+          "filename": "2904_DECOR-BOIS_DEG.jpg",
+          "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2904_DECOR-BOIS_DEG.jpg",
+          "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2904_DECOR-BOIS_DEG.webp",
+          "view_type": "DEG",
+          "view_type_description": "Vue dégagée sans obstacles",
+          "zone": "DECOR-BOIS",
+          "phase": "sinistre",
+          "date": null,
+          "roi_hints": [
+            {
+              "x": 0.35,
+              "y": 0.35,
+              "w": 0.3,
+              "h": 0.3
+            }
+          ],
+          "pedagogical_use": "Exemple deg de défaut revetements"
+        },
+        {
+          "id": "2905",
+          "filename": "2905_DECOR-BOIS_DEG.jpg",
+          "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/2905_DECOR-BOIS_DEG.jpg",
+          "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/2905_DECOR-BOIS_DEG.webp",
+          "view_type": "DEG",
+          "view_type_description": "Vue dégagée sans obstacles",
+          "zone": "DECOR-BOIS",
+          "phase": "sinistre",
+          "date": null,
+          "roi_hints": [
+            {
+              "x": 0.35,
+              "y": 0.35,
+              "w": 0.3,
+              "h": 0.3
+            }
+          ],
+          "pedagogical_use": "Exemple deg de défaut revetements"
+        }
+      ]
+    }
+  },
+  "statistics": {
+    "images_by_category": {
+      "OVERVIEW": 15,
+      "AUTRES": 21,
+      "ETANCHEITE": 11,
+      "PLOMBERIE": 15,
+      "JOINTS": 19,
+      "ELECTRICITE": 3,
+      "CARRELAGE": 4,
+      "REVETEMENTS": 6
+    },
+    "selected_by_category": {
+      "OVERVIEW": 10,
+      "AUTRES": 8,
+      "ETANCHEITE": 8,
+      "PLOMBERIE": 8,
+      "JOINTS": 8,
+      "ELECTRICITE": 3,
+      "CARRELAGE": 4,
+      "REVETEMENTS": 6
+    },
+    "images_by_view_type": {
+      "DET": 20,
+      "MAC": 6,
+      "GEN": 2,
+      "MGM": 3,
+      "DEG": 6
+    },
+    "images_by_phase": {
+      "chantier": 0,
+      "sinistre": 37
+    }
+  },
+  "overview_images": [
+    {
+      "id": "0001",
+      "filename": "0001_SDB_GEN_20250818.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/0001_SDB_GEN_20250818.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/0001_SDB_GEN_20250818.webp",
+      "phase": "chantier",
+      "use": "Compréhension du contexte général du chantier/sinistre"
+    },
+    {
+      "id": "0002",
+      "filename": "0002_SDB_GEN_20250818.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/0002_SDB_GEN_20250818.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/0002_SDB_GEN_20250818.webp",
+      "phase": "chantier",
+      "use": "Compréhension du contexte général du chantier/sinistre"
+    },
+    {
+      "id": "0003",
+      "filename": "0003_SALON-PROTECTION_GEN_20250818.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/0003_SALON-PROTECTION_GEN_20250818.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/0003_SALON-PROTECTION_GEN_20250818.webp",
+      "phase": "chantier",
+      "use": "Compréhension du contexte général du chantier/sinistre"
+    },
+    {
+      "id": "0004",
+      "filename": "0004_SALON-PROTECTION_GEN_20250818.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/0004_SALON-PROTECTION_GEN_20250818.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/0004_SALON-PROTECTION_GEN_20250818.webp",
+      "phase": "chantier",
+      "use": "Compréhension du contexte général du chantier/sinistre"
+    },
+    {
+      "id": "0005",
+      "filename": "0005_WC_GEN_20250818.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/0005_WC_GEN_20250818.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/0005_WC_GEN_20250818.webp",
+      "phase": "chantier",
+      "use": "Compréhension du contexte général du chantier/sinistre"
+    },
+    {
+      "id": "0006",
+      "filename": "0006_SDB_GEN_20250819.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/0006_SDB_GEN_20250819.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/0006_SDB_GEN_20250819.webp",
+      "phase": "chantier",
+      "use": "Compréhension du contexte général du chantier/sinistre"
+    },
+    {
+      "id": "0007",
+      "filename": "0007_SDB_GEN_20250819.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/0007_SDB_GEN_20250819.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/0007_SDB_GEN_20250819.webp",
+      "phase": "chantier",
+      "use": "Compréhension du contexte général du chantier/sinistre"
+    },
+    {
+      "id": "0008",
+      "filename": "0008_SDB_GEN_20250819.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/0008_SDB_GEN_20250819.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/0008_SDB_GEN_20250819.webp",
+      "phase": "chantier",
+      "use": "Compréhension du contexte général du chantier/sinistre"
+    },
+    {
+      "id": "0011",
+      "filename": "0011_WC_GEN_20250819.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/0011_WC_GEN_20250819.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/0011_WC_GEN_20250819.webp",
+      "phase": "chantier",
+      "use": "Compréhension du contexte général du chantier/sinistre"
+    },
+    {
+      "id": "0012",
+      "filename": "0012_SDB_GEN_20250826.jpg",
+      "url": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/0012_SDB_GEN_20250826.jpg",
+      "url_preview": "https://raw.githubusercontent.com/Tazevil/ArBot-MiniDB/main/images/preview/0012_SDB_GEN_20250826.webp",
+      "phase": "chantier",
+      "use": "Compréhension du contexte général du chantier/sinistre"
+    }
+  ]
+}
